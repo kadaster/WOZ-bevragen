@@ -25,5 +25,5 @@ Haal Centraal is een G5 initiatief (Amsterdam, Rotterdam, Den Haag, Utrecht en E
 Deze repository beschrijft het project om tot een API voor de Basisregistratie Waarde Onroerende Zaken (WOZ) te komen.
 
 ## Licentie
-Copyright (C) VNG Realisatie 2018
-Licensed under the [EUPL](https://github.com/VNG-Realisatie/Haal-Centraal-BGT-bevragen/blob/master/LICENCE.md)
+Copyright &copy; VNG Realisatie 2018
+Licensed under the [EUPL](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/blob/master/LICENCE.md)
