@@ -128,7 +128,7 @@ Feature: leveren van waarden bij een WOZ-object
     ]
     """
 
-  Scenario: WOZ-object heeft nieuwe eigenaar en vorige eigenaar heeft verlaging van de WOZ-waarde na beroep
+  Scenario: verlaging van de WOZ-waarde na beroep niet zichtbaar door latere ingangsdatum nieuwe belanghebbende eigenaar
     Gegeven WOZ-object met objectnummer "050300024029" heeft met ingang van 01-05-2019 een nieuwe eigenaar W. Jansen
     En de gemeente heeft een beschikking gestuurd naar de nieuwe eigenaar over 01-01-2018 met ingangsdatum 01-05-2019
     En de vorige eigenaar R. Krol heeft beroep ingediend over de WOZ-waarde op 01-01-2018
