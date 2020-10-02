@@ -10,7 +10,7 @@ Feature: leveren van waarden bij een WOZ-object
   N.B. De provider van de API kan een maximum aantal op te nemen waarden bepalen.
   N.B. Niet elke waarde bij het WOZ-object hoeft te komen uit een beschikking op naam van de actuele belanghebbende(n).
 
-  indicatieLopendGeding krijgt de waarde true wanneer StatusBeschikking een van de volgende waarden heeft:
+  indicatieBezwaarBeroep krijgt de waarde true wanneer StatusBeschikking een van de volgende waarden heeft:
     - bezwaar ingediend
     - beroep aangetekend
     - hoger beroep aangetekend
@@ -114,7 +114,7 @@ Feature: leveren van waarden bij een WOZ-object
       },
       {
         "vastgesteldeWaarde": 176000,
-        "indicatieLopendGeding": true,
+        "indicatieBezwaarBeroep": true,
         "waardepeildatum": "2018-01-01"
       },
       {
