@@ -1,9 +1,9 @@
 # language: nl
 
 Feature: zoeken van WOZ-objecten
-  Zoeken van WOZ-objecten met de BAG adresseerbaar object identificatie:
+  Zoeken van WOZ-objecten met de BAG adresseerbaar object identificatie (BAG identificatie van een verblijfsobject, standplaats of ligplaats):
     - vindt WOZ-objecten waarbij de aanduiding WOZ-object is ontleend aan dit adresseerbaar object
-    - vindt WOZ-objecten die verbonden zijn met die adresseerbaar object
+    - vindt WOZ-objecten die verbonden zijn met dit adresseerbaar object
 
   Zoeken van WOZ-objecten met postcode en huisnummer of nummeraanduidingIdentificatie:
     - vindt WOZ-objecten die worden aangeduid met dit adres
@@ -15,10 +15,10 @@ Feature: zoeken van WOZ-objecten
     Als ik een WOZ-object zoek met /wozobjecten?adresseerbaarObjectIdentificatie=0518010000842214
     Dan bevat het antwoord het WOZ-object met identificatie "051812345678"
 
-  Scenario: zoek WOZ-object met adresseerbaar object identificatie van een verbonden verblijfsobject
+  Scenario: zoek WOZ-object met adresseerbaar object identificatie van een verbonden adresseerbaar object
     Gegeven de LV WOZ kent een WOZ-object met objectnummer "051812345678"
     En de aanduiding WOZ-object is ontleend aan adresseerbaar object identificatie "0518010000842214"
-    En in de LV WOZ heeft is dit WOZ-object verbonden met verblijfsobjecten "0518010000842214", "0518010000609764" en "0518010000852970"
+    En in de LV WOZ is dit WOZ-object verbonden met adresseerbare objecten "0518010000842214", "0518010000609764" en "0518010000852970"
     Als ik een WOZ-object zoek met /wozobjecten?adresseerbaarObjectIdentificatie=0518010000852970
     Dan bevat het antwoord het WOZ-object met identificatie "051812345678"
 
