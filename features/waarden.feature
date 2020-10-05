@@ -57,7 +57,7 @@ Feature: leveren van waarden bij een WOZ-object
     ]
     """
 
-  Scenario: WOZ-object wijzigt gedurende een jaar van eigenaar
+  Scenario: WOZ-object wijzigt gedurende een jaar van eigenaar: bij beschikkingen met zelfde waardepeildatum gebruiken we de beschikking met de meest recente ingangsdatum
     Gegeven WOZ-object met objectnummer "002500003118" heeft de volgende beschikkingen voor P. Keizer:
       | Peildatum  | WOZ-waarde   | Belanghebbende | Ingangsdatum | Datum beschikking |
       | 01-01-2018 | 160.000 euro | P. Keizer      | 01-01-2019   | 12-02-2019        |
@@ -92,7 +92,7 @@ Feature: leveren van waarden bij een WOZ-object
     ]
     """
 
-  Scenario: Belanghebbende krijgt verlaging van de WOZ-waarde na bezwaar
+  Scenario: Belanghebbende krijgt verlaging van de WOZ-waarde na bezwaar: bij beschikkingen met zelfde waardepeildatum en zelfde ingangsdatum gebruiken we de meest recente beschikking
     Gegeven WOZ-object met objectnummer "082600014669" heeft de belanghebbende eigenaar bezwaar ingediend over de WOZ-waarde op 01-01-2017
     En dat bezwaar is afgehandeld met de status "bezwaar afgehandeld, vastgestelde waarde veranderd"
     En de belanghebbende eigenaar heeft bezwaar ingediend over de WOZ-waarde op 01-01-2018
