@@ -1,28 +1,34 @@
 # Haal Centraal WOZ bevragen
 
 ## Introductie
-Doel van het programma Haal Centraal is om de verstrekking van basisgegevens aan binnengemeentelijke afnemers te outsourcen naar Landelijke Registraties (RvIG, Kadaster, KVK). Dit moet leiden tot een forse reductie van lokale kopieën bij gemeenten. 
+Deze API WOZ bevragen maakt het mogelijk gegevens uit de landelijke voorziening WOZ (Waardering Onroerende Zaken) op te vragen.
 
-In principe willen we voor iedere activiteit op een lokale kopie een Haal Centraal alternatief te bieden in de vorm van een API. 
+Deze API is ontwikkeld vanuit het programma Haal Centraal. Doel van het programma Haal Centraal is om de verstrekking van basisgegevens aan binnengemeentelijke afnemers te outsourcen naar Landelijke Registraties (RvIG, Kadaster, KVK). Dit moet leiden tot een forse reductie van lokale kopieën bij gemeenten.
+
+## Documentatie
+* [Technische specificaties](./specificatie/openapi.yaml) (Open API Specificaties en JSON schema) en in [Swagger-formaat](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/master/specificatie/openapi.yaml)
+* [Goals Canvas](WOZBevragen_GoalsCanvas.xlsx) met een overzicht van beoogd gebruik van de API (wat en hoe)
+* Functionele specificaties voor de [WOZ-waarden](./features/waarden.feature) die de API teruggeeft
+* Functionele specificaties voor het [zoeken van WOZ-objecten](./features/zoeken.feature)
+
+## Contactpersonen:
+* Product owner: [@CathyDingemanse](https://github.com/CathyDingemanse)
 
 ### Toegevoegde waarde voor gemeenten
-- sneller aansluiten afnemers 
+- sneller aansluiten afnemers
 - goedkoper aansluiten afnemers (x aantal binnegemeentelijke aansluiters x 355 gemeenten)
 - lagere investeringen (geen lokale kopie/ gegevensmagazijn)
 - lagere beheerkosten (geen gegevensbeheer lokale kopieën)
 - hogere ROI: hergebruik API Landelijke Registratie door alle gemeenten
-- betere technologie-business alignment (Landelijke Registratie voert sneller een wijziging door dan 355 afzonderlijke gemeenten) 
+- betere technologie-business alignment (Landelijke Registratie voert sneller een wijziging door dan 355 afzonderlijke gemeenten)
 - meer focus op de businessvraag van afnemers (i.p.v. op betrouwbaarheid etc. lokale kopieën)
 - maximale compliancy op de gemeentelijke softwaremarkt (aansluiting gemeente x = 100% herbruikbaar in gemeente y)
 
 ### Toegevoegde waarde voor leveranciers
 - leveranciers kunnen zich richten op het bieden van toegevoegde waarde voor burgers, bedrijven en medewerkers i.p.v. plumbing concerns.
 
-## Context
-Haal Centraal is een G5 initiatief (Amsterdam, Rotterdam, Den Haag, Utrecht en Eindhoven). Het concept is getoetst in de BRK pilot van de gemeente Den Haag met het Kadaster op basis van de RSGB bevragingen standaard (voorloper BRP- en BRK-bevragen). De businesscase is gebaseerd op ervaringscijfers van de gemeente Den Haag en de softwareontwikkeling gedurende de pilot. 
-
-## WOZ bevragen
-Deze repository beschrijft het project om tot een API voor de Basisregistratie Waarde Onroerende Zaken (WOZ) te komen.
+## Bronnen
+* [Landelijke API strategie voor de overheid](https://geonovum.github.io/KP-APIs/)
 
 ## Licentie
 Copyright &copy; VNG Realisatie 2018
