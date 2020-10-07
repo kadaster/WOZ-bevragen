@@ -6,7 +6,7 @@ Deze API WOZ bevragen maakt het mogelijk gegevens uit de landelijke voorziening 
 Deze API is ontwikkeld vanuit het programma Haal Centraal. Doel van het programma Haal Centraal is om de verstrekking van basisgegevens aan binnengemeentelijke afnemers te outsourcen naar Landelijke Registraties (RvIG, Kadaster, KVK). Dit moet leiden tot een forse reductie van lokale kopieën bij gemeenten.
 
 ## Documentatie
-* [Technische specificaties](./specificatie/openapi.yaml) (Open API Specificaties en JSON schema) en in [Swagger-formaat](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/master/specificatie/openapi.yaml)
+* [Technische specificaties](./specificatie/genereervariant/openapi.yaml) (Open API Specificaties en JSON schema) en in [Swagger-formaat](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/master/specificatie/genereervariant/openapi.yaml)
 * [Goals Canvas](WOZBevragen_GoalsCanvas.xlsx) met een overzicht van beoogd gebruik van de API (wat en hoe)
 * Functionele specificaties voor de [WOZ-waarden](./features/waarden.feature) die de API teruggeeft
 * Functionele specificaties voor het [zoeken van WOZ-objecten](./features/zoeken.feature)
