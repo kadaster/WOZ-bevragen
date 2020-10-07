@@ -1,0 +1,278 @@
+openapi: 3.0.0
+info:
+  description: |
+    Deze API levert actuele gegevens over WOZ-objecten
+  version: "1.0.0"
+  title: Waardering onroerende zaken
+  contact:
+    url: https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen
+  license:
+    name: European Union Public License, version 1.2 (EUPL-1.2)
+    url: https://eupl.eu/1.2/nl/
+servers:
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/VNG-sandbox/Waardering-onroerende-zaken/1.0.0
+tags:
+  - name: WOZ-objecten
+paths:
+  /wozobjecten:
+    get:
+      tags:
+        - WOZ-objecten
+      summary: Zoek WOZ-objecten
+      description: Zoek WOZ-objecten op eigenaar of adres. Het resultaat zijn de actuele gegevens van de gevonden objecten.
+      operationId: zoekActueleWozobjecten
+      parameters:
+        - name: rsin
+          in: query
+          description: Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven niet-natuurlijk persoon
+          schema:
+            type: string
+            example: "857567433"
+        - name: kvkNummer
+          in: query
+          description: Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven maatschappelijke activiteit of een van de daaronder vallende ondernemingen en vestigingen
+          schema:
+            type: string
+            example: "68727720"
+        - name: adresseerbaarObjectIdentificatie
+          in: query
+          description: Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is of waar het object zijn aanduiding aan ontleent
+          schema:
+            type: string
+            example: "0226010000038820"
+        - name: nummeraanduidingIdentificatie
+          in: query
+          description: Zoek op de BAG identificatie van een nummeraanduiding (adres) waarmee het WOZ-object wordt aangeduid
+          schema:
+            type: string
+            example: "0226200000038820"
+        - in: query
+          name: postcode
+          description: Zoek WOZ-objecten met postcode
+          required: false
+          schema:
+            type: string
+            pattern: "^[1-9][0-9][0-9][0-9][A-Z][A-Z]$"
+            example: "1234AB"
+        - in: query
+          name: huisnummer
+          description: Zoek WOZ-objecten met huisnummer"
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 99999
+        - $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/parameters/fields"
+      responses:
+        '200':
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/WozObjectHalCollectie'
+          headers:
+            api-version:
+              $ref: 'https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/headers/api_version'
+            warning:
+              $ref: 'https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/headers/warning'
+        '400':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/400"
+        '401':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/401"
+        '403':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/403"
+        '406':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/406"
+        '500':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/500"
+  /wozobjecten/{identificatie}:
+    get:
+      tags:
+        - WOZ-objecten
+      summary: Raadpleeg een WOZ-object
+      description: Raadpleeg de actuele eigenschappen van een WOZ-object
+      operationId: raadpleegActueelWozobject
+      parameters:
+        - name: identificatie
+          in: path
+          description: Unieke identificatie van een WOZ-object
+          required: true
+          explode: true
+          schema:
+            type: string
+        - $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/parameters/fields"
+      responses:
+        '200':
+          description: OK
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/WozObjectHal'
+          headers:
+            api-version:
+              $ref: 'https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/headers/api_version'
+            warning:
+              $ref: 'https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/headers/warning'
+        '400':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/400"
+        '401':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/401"
+        '403':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/403"
+        '404':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/404"
+        '406':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/406"
+        '500':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/responses/500"
+components:
+  schemas:
+    Belanghebbende :
+      type: object
+      properties:
+        burgerservicenummer:
+          type: string
+        geheimhoudingPersoonsgegevens:
+            type: boolean
+            title: "Indicatie geheim"
+            description: "Indien true: op verzoek van deze persoon is het verstrekken van gegevens over deze persoon aan bepaalde derden niet toegestaan."
+        kvkNummer:
+          type: string
+        naam:
+          type: string
+          example: "Jan de Vries"
+        rsin:
+          type: string
+          description: unieke identificatie van een niet-natuurlijk persoon (rechtspersoon of samenwerkingsverband)
+        type:
+          $ref: '#/components/schemas/PersoonType_enum'
+        vestigingsnummer:
+          type: string
+    BelanghebbendeEigenaar:
+      allOf:
+        - $ref: '#/components/schemas/Belanghebbende'
+        - type: object
+          description: Belanghebbende eigenaar, erfpachter of houder van een opstalrecht of een vruchtgebruiker
+          properties:
+            soort:
+              type: string
+              description: omschrijving van het soort zakelijk recht dat de eigenaar heeft op het WOZ-object
+              example: "recht van erfpacht"
+    PersoonType_enum:
+      type: string
+      enum:
+        - "natuurlijk_persoon"
+        - "niet_natuurlijk_persoon"
+        - "vestiging"
+    KadastraalOnroerendeZaak:
+      type: object
+      properties:
+        identificatie:
+          type: string
+    ObjectAanduiding:
+      allOf:
+        - $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-BAG-bevragen/v1.1.0/specificatie/openapi.yaml#/components/schemas/Adres"
+        - type: object
+          description: "De aanduiding van het WOZ-object zoals wordt weergegeven op de WOZ-beschikking"
+          properties:
+            locatieomschrijving:
+              type: "string"
+              description: De aanvullende omschrijving van de ligging van een WOZ-object ten opzichte van de dichtstbijzijnde verblijfsobject, standplaats, ligplaats of openbare ruimte.
+              example: "Naast de derde brug"
+            nummeraanduidingIdentificatie:
+              description: "Identificatie van de nummeraanduiding in de BAG waarmee het WOZ-object wordt aangeduid"
+              type: string
+              example: "0226200000038923"
+    Waarde:
+      type: object
+      description: "Waarde op de meest recente beschikking met betrekking tot de peildatum"
+      properties:
+        vastgesteldeWaarde:
+          type: integer
+          description: "Waarde van het WOZ-object op de peildatum in Euro"
+        indicatieBezwaarBeroep:
+          type: boolean
+          description: "Bij waarde true is er een lopende zaak voor bezwaar, beroep, hoger beroep of cassatie"
+        waardepeildatum:
+          description: "Datum waarvoor de vastgestelde waarde geldt"
+          type: string
+          format: date
+          example: "2019-01-01"
+    WozObject:
+      type: object
+      properties:
+        aanduiding:
+          $ref: "#/components/schemas/ObjectAanduiding"
+        adresseerbaarObjectIdentificaties:
+          type: array
+          description: "BAG identificaties van verblijfsobjecten, standplaatsen en ligplaatsen die aan dit WOZ-object verbonden zijn."
+          items:
+            type: string
+            example: "0226010000038820"
+        belanghebbendeEigenaar:
+          $ref: '#/components/schemas/BelanghebbendeEigenaar'
+        belanghebbendeGebruiker:
+          $ref: '#/components/schemas/Belanghebbende'
+        grondoppervlakte:
+          type: integer
+          description: "De oppervlakte grond in vierkante meters die behoort tot het WOZ-object."
+        identificatie:
+          type: string
+          title: WOZ-objectnummer
+          description: Unieke identificatie van het WOZ-object
+        kadastraalOnroerendeZaken:
+          type: array
+          description: De kadastraal onroerende zaken die geheel of gedeeltelijk deel uitmaken van het WOZ-object
+          items:
+            $ref: '#/components/schemas/KadastraalOnroerendeZaak'
+        pandIdentificaties:
+          type: array
+          items:
+            type: string
+        verantwoordelijkeGemeente:
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/schemas/Waardetabel"
+        waarden:
+          type: array
+          items:
+            $ref: '#/components/schemas/Waarde'
+    WozObjectBasis_links:
+      type: object
+      properties:
+        self:
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/schemas/HalLink"
+        adres:
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/schemas/HalLink"
+        adresseerbaarObjecten:
+          type: array
+          items:
+            $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/schemas/HalLink"
+        belanghebbendEigenaar:
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/schemas/HalLink"
+        belanghebbendGebruiker:
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/schemas/HalLink"
+        panden:
+          type: array
+          items:
+            $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/schemas/HalLink"
+    WozObjectHal:
+      allOf:
+        - $ref: '#/components/schemas/WozObject'
+        - type: object
+          properties:
+            _links:
+              $ref: '#/components/schemas/WozObjectBasis_links'
+    WozObjectHalCollectie:
+      type: object
+      properties:
+        _links:
+          $ref: 'https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/schemas/HalCollectionLinks'
+        _embedded:
+          $ref: '#/components/schemas/WozObjectHalCollectie_embedded'
+    WozObjectHalCollectie_embedded:
+      type: object
+      properties:
+        wozObjecten:
+          type: array
+          items:
+            $ref: '#/components/schemas/WozObjectHal'
