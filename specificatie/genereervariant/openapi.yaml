@@ -1,0 +1,654 @@
+openapi: 3.0.0
+info:
+  title: Waardering onroerende zaken
+  description: |
+    Deze API levert actuele gegevens over WOZ-objecten
+  contact:
+    url: https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen
+  license:
+    name: European Union Public License, version 1.2 (EUPL-1.2)
+    url: https://eupl.eu/1.2/nl/
+  version: 1.0.0
+servers:
+- url: https://virtserver.swaggerhub.com/VNG-sandbox/Waardering-onroerende-zaken/1.0.0
+  description: SwaggerHub API Auto Mocking
+tags:
+- name: WOZ-objecten
+paths:
+  /wozobjecten:
+    get:
+      tags:
+      - WOZ-objecten
+      summary: Zoek WOZ-objecten
+      description: Zoek WOZ-objecten op eigenaar of adres. Het resultaat zijn de actuele
+        gegevens van de gevonden objecten.
+      operationId: zoekActueleWozobjecten
+      parameters:
+      - name: rsin
+        in: query
+        description: Zoek WOZ-objecten in eigendom van een bij het Handelsregister
+          ingeschreven niet-natuurlijk persoon
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: "857567433"
+      - name: kvkNummer
+        in: query
+        description: Zoek WOZ-objecten in eigendom van een bij het Handelsregister
+          ingeschreven maatschappelijke activiteit of een van de daaronder vallende
+          ondernemingen en vestigingen
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: "68727720"
+      - name: adresseerbaarObjectIdentificatie
+        in: query
+        description: Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject,
+          standplaats of ligplaats) waar het WOZ-object aan verbonden is of waar het
+          object zijn aanduiding aan ontleent
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: "0226010000038820"
+      - name: nummeraanduidingIdentificatie
+        in: query
+        description: Zoek op de BAG identificatie van een nummeraanduiding (adres)
+          waarmee het WOZ-object wordt aangeduid
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: "0226200000038820"
+      - name: postcode
+        in: query
+        description: Zoek WOZ-objecten met postcode
+        required: false
+        style: form
+        explode: true
+        schema:
+          pattern: ^[1-9][0-9][0-9][0-9][A-Z][A-Z]$
+          type: string
+          example: 1234AB
+      - name: huisnummer
+        in: query
+        description: Zoek WOZ-objecten met huisnummer"
+        required: false
+        style: form
+        explode: true
+        schema:
+          maximum: 99999
+          minimum: 1
+          type: integer
+      - name: fields
+        in: query
+        description: Hiermee kun je de inhoud van de resource naar behoefte aanpassen
+          door een door komma's gescheiden lijst van property namen op te geven. Bij
+          opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven.
+          Wanneer de fields parameter niet is opgegeven, worden alle properties met
+          een waarde teruggegeven. Zie [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.2.0/features/fields.feature)
+        required: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+            warning:
+              $ref: '#/components/headers/warning'
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/WozObjectHalCollectie'
+        "400":
+          description: Bad Request
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/BadRequestFoutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1
+                title: Ten minste één parameter moet worden opgegeven.
+                status: 400
+                detail: The request could not be understood by the server due to malformed
+                  syntax. The client SHOULD NOT repeat the request without modification.
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: paramsRequired
+                invalidParams:
+                - type: https://www.vng.nl/realisatie/api/validaties/integer
+                  name: verblijfplaats__huisnummer
+                  code: integer
+                  reason: Waarde is geen geldige integer.
+        "401":
+          description: Unauthorized
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Foutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.2
+                title: Niet correct geauthenticeerd.
+                status: 401
+                detail: The request requires user authentication. The response MUST
+                  include a WWW-Authenticate header field (section 14.47) containing
+                  a challenge applicable to the requested resource.
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: authentication
+        "403":
+          description: Forbidden
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Foutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.4
+                title: U bent niet geautoriseerd voor deze operatie.
+                status: 403
+                detail: The server understood the request, but is refusing to fulfill
+                  it.
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: autorisation
+        "406":
+          description: Not Acceptable
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Foutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.7
+                title: Gevraagde contenttype wordt niet ondersteund.
+                status: 406
+                detail: The resource identified by the request is only capable of
+                  generating response entities which have content characteristics
+                  not acceptable according to thr accept headers sent in the request
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: notAcceptable
+        "500":
+          description: Internal Server Error
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Foutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.5.1
+                title: Interne server fout.
+                status: 500
+                detail: The server encountered an unexpected condition which prevented
+                  it from fulfilling the request.
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: serverError
+  /wozobjecten/{identificatie}:
+    get:
+      tags:
+      - WOZ-objecten
+      summary: Raadpleeg een WOZ-object
+      description: Raadpleeg de actuele eigenschappen van een WOZ-object
+      operationId: raadpleegActueelWozobject
+      parameters:
+      - name: identificatie
+        in: path
+        description: Unieke identificatie van een WOZ-object
+        required: true
+        style: simple
+        explode: true
+        schema:
+          type: string
+      - name: fields
+        in: query
+        description: Hiermee kun je de inhoud van de resource naar behoefte aanpassen
+          door een door komma's gescheiden lijst van property namen op te geven. Bij
+          opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven.
+          Wanneer de fields parameter niet is opgegeven, worden alle properties met
+          een waarde teruggegeven. Zie [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.2.0/features/fields.feature)
+        required: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: OK
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+            warning:
+              $ref: '#/components/headers/warning'
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/WozObjectHal'
+        "400":
+          description: Bad Request
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/BadRequestFoutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1
+                title: Ten minste één parameter moet worden opgegeven.
+                status: 400
+                detail: The request could not be understood by the server due to malformed
+                  syntax. The client SHOULD NOT repeat the request without modification.
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: paramsRequired
+                invalidParams:
+                - type: https://www.vng.nl/realisatie/api/validaties/integer
+                  name: verblijfplaats__huisnummer
+                  code: integer
+                  reason: Waarde is geen geldige integer.
+        "401":
+          description: Unauthorized
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Foutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.2
+                title: Niet correct geauthenticeerd.
+                status: 401
+                detail: The request requires user authentication. The response MUST
+                  include a WWW-Authenticate header field (section 14.47) containing
+                  a challenge applicable to the requested resource.
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: authentication
+        "403":
+          description: Forbidden
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Foutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.4
+                title: U bent niet geautoriseerd voor deze operatie.
+                status: 403
+                detail: The server understood the request, but is refusing to fulfill
+                  it.
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: autorisation
+        "404":
+          description: Not Found
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Foutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5
+                title: Opgevraagde resource bestaat niet.
+                status: 404
+                detail: The server has not found anything matching the Request-URI.
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: notFound
+        "406":
+          description: Not Acceptable
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Foutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.7
+                title: Gevraagde contenttype wordt niet ondersteund.
+                status: 406
+                detail: The resource identified by the request is only capable of
+                  generating response entities which have content characteristics
+                  not acceptable according to thr accept headers sent in the request
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: notAcceptable
+        "500":
+          description: Internal Server Error
+          headers:
+            api-version:
+              $ref: '#/components/headers/api_version'
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Foutbericht'
+              example:
+                type: https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.5.1
+                title: Interne server fout.
+                status: 500
+                detail: The server encountered an unexpected condition which prevented
+                  it from fulfilling the request.
+                instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
+                code: serverError
+components:
+  schemas:
+    Belanghebbende:
+      type: object
+      properties:
+        burgerservicenummer:
+          type: string
+        geheimhoudingPersoonsgegevens:
+          title: Indicatie geheim
+          type: boolean
+          description: 'Indien true: op verzoek van deze persoon is het verstrekken
+            van gegevens over deze persoon aan bepaalde derden niet toegestaan.'
+        kvkNummer:
+          type: string
+        naam:
+          type: string
+          example: Jan de Vries
+        rsin:
+          type: string
+          description: unieke identificatie van een niet-natuurlijk persoon (rechtspersoon
+            of samenwerkingsverband)
+        type:
+          $ref: '#/components/schemas/PersoonType_enum'
+        vestigingsnummer:
+          type: string
+    BelanghebbendeEigenaar:
+      allOf:
+      - $ref: '#/components/schemas/Belanghebbende'
+      - type: object
+        properties:
+          soort:
+            type: string
+            description: omschrijving van het soort zakelijk recht dat de eigenaar
+              heeft op het WOZ-object
+            example: recht van erfpacht
+        description: Belanghebbende eigenaar, erfpachter of houder van een opstalrecht
+          of een vruchtgebruiker
+    PersoonType_enum:
+      type: string
+      enum:
+      - natuurlijk_persoon
+      - niet_natuurlijk_persoon
+      - vestiging
+    KadastraalOnroerendeZaak:
+      type: object
+      properties:
+        identificatie:
+          type: string
+    ObjectAanduiding:
+      allOf:
+      - $ref: '#/components/schemas/Adres'
+      - type: object
+        properties:
+          locatieomschrijving:
+            type: string
+            description: De aanvullende omschrijving van de ligging van een WOZ-object
+              ten opzichte van de dichtstbijzijnde verblijfsobject, standplaats, ligplaats
+              of openbare ruimte.
+            example: Naast de derde brug
+          nummeraanduidingIdentificatie:
+            type: string
+            description: Identificatie van de nummeraanduiding in de BAG waarmee het
+              WOZ-object wordt aangeduid
+            example: "0226200000038923"
+        description: De aanduiding van het WOZ-object zoals wordt weergegeven op de
+          WOZ-beschikking
+    Waarde:
+      type: object
+      properties:
+        vastgesteldeWaarde:
+          type: integer
+          description: Waarde van het WOZ-object op de peildatum in Euro
+        indicatieBezwaarBeroep:
+          type: boolean
+          description: Bij waarde true is er een lopende zaak voor bezwaar, beroep,
+            hoger beroep of cassatie
+        waardepeildatum:
+          type: string
+          description: Datum waarvoor de vastgestelde waarde geldt
+          format: date
+          example: 2019-01-01
+      description: Waarde op de meest recente beschikking met betrekking tot de peildatum
+    WozObject:
+      type: object
+      properties:
+        aanduiding:
+          $ref: '#/components/schemas/ObjectAanduiding'
+        adresseerbaarObjectIdentificaties:
+          type: array
+          description: BAG identificaties van verblijfsobjecten, standplaatsen en
+            ligplaatsen die aan dit WOZ-object verbonden zijn.
+          items:
+            type: string
+            example: "0226010000038820"
+        belanghebbendeEigenaar:
+          $ref: '#/components/schemas/BelanghebbendeEigenaar'
+        belanghebbendeGebruiker:
+          $ref: '#/components/schemas/Belanghebbende'
+        grondoppervlakte:
+          type: integer
+          description: De oppervlakte grond in vierkante meters die behoort tot het
+            WOZ-object.
+        identificatie:
+          title: WOZ-objectnummer
+          type: string
+          description: Unieke identificatie van het WOZ-object
+        kadastraalOnroerendeZaken:
+          type: array
+          description: De kadastraal onroerende zaken die geheel of gedeeltelijk deel
+            uitmaken van het WOZ-object
+          items:
+            $ref: '#/components/schemas/KadastraalOnroerendeZaak'
+        pandIdentificaties:
+          type: array
+          items:
+            type: string
+        verantwoordelijkeGemeente:
+          $ref: '#/components/schemas/Waardetabel'
+        waarden:
+          type: array
+          items:
+            $ref: '#/components/schemas/Waarde'
+    WozObjectBasis_links:
+      type: object
+      properties:
+        self:
+          $ref: '#/components/schemas/HalLink'
+        adres:
+          $ref: '#/components/schemas/HalLink'
+        adresseerbaarObjecten:
+          type: array
+          items:
+            $ref: '#/components/schemas/HalLink'
+        belanghebbendEigenaar:
+          $ref: '#/components/schemas/HalLink'
+        belanghebbendGebruiker:
+          $ref: '#/components/schemas/HalLink'
+        panden:
+          type: array
+          items:
+            $ref: '#/components/schemas/HalLink'
+    WozObjectHal:
+      allOf:
+      - $ref: '#/components/schemas/WozObject'
+      - type: object
+        properties:
+          _links:
+            $ref: '#/components/schemas/WozObjectBasis_links'
+    WozObjectHalCollectie:
+      type: object
+      properties:
+        _links:
+          $ref: '#/components/schemas/HalCollectionLinks'
+        _embedded:
+          $ref: '#/components/schemas/WozObjectHalCollectie_embedded'
+    WozObjectHalCollectie_embedded:
+      type: object
+      properties:
+        wozObjecten:
+          type: array
+          items:
+            $ref: '#/components/schemas/WozObjectHal'
+    BadRequestFoutbericht:
+      allOf:
+      - $ref: '#/components/schemas/Foutbericht'
+      - type: object
+        properties:
+          invalidParams:
+            type: array
+            description: Foutmelding per fout in een parameter. Alle gevonden fouten
+              worden één keer teruggemeld.
+            items:
+              $ref: '#/components/schemas/InvalidParams'
+    Foutbericht:
+      type: object
+      properties:
+        type:
+          type: string
+          description: Link naar meer informatie over deze fout
+          format: uri
+        title:
+          type: string
+          description: Beschrijving van de fout
+        status:
+          type: integer
+          description: Http status code
+        detail:
+          type: string
+          description: Details over de fout
+        instance:
+          type: string
+          description: Uri van de aanroep die de fout heeft veroorzaakt
+          format: uri
+        code:
+          minLength: 1
+          type: string
+          description: Systeemcode die het type fout aangeeft
+      description: Terugmelding bij een fout. JSON representatie in lijn met [RFC7807](https://tools.ietf.org/html/rfc7807).
+    InvalidParams:
+      type: object
+      properties:
+        type:
+          type: string
+          format: uri
+          example: https://www.vng.nl/realisatie/api/{major-versie}/validaties/integer
+        name:
+          type: string
+          description: Naam van de parameter
+          example: verblijfplaats__huisnummer
+        code:
+          minLength: 1
+          type: string
+          description: Systeemcode die het type fout aangeeft
+          example: integer
+        reason:
+          type: string
+          description: Beschrijving van de fout op de parameterwaarde
+          example: Waarde is geen geldige integer.
+      description: Details over fouten in opgegeven parameters
+    Adres:
+      type: object
+      properties:
+        straat:
+          title: openbareruimte naam
+          type: string
+          description: Een naam die door de gemeente aan een openbare ruimte is gegeven.
+          example: Laan van de landinrichtingscommissie Duiven-Westervoort
+        huisnummer:
+          type: integer
+          description: Een nummer dat door de gemeente aan een adresseerbaar object
+            is gegeven.
+          example: 1
+        huisletter:
+          type: string
+          description: Een toevoeging aan een huisnummer in de vorm van een letter
+            die door de gemeente aan een adresseerbaar object is gegeven.
+          example: A
+        huisnummertoevoeging:
+          type: string
+          description: Een toevoeging aan een huisnummer of een combinatie van huisnummer
+            en huisletter die door de gemeente aan een adresseerbaar object is gegeven.
+          example: bis
+        postcode:
+          type: string
+          description: De door PostNL vastgestelde code die bij een bepaalde combinatie
+            van een straatnaam en een huisnummer hoort.
+          example: 6922KZ
+        woonplaats:
+          title: woonplaats naam
+          type: string
+          description: Een woonplaats is een gedeelte van het grondgebied van de gemeente
+            met een naam.
+          example: Duiven
+      description: 'Eigenschappen van het adres die kunnen worden hergebruikt in andere
+        API''s waarin adresgegevens worden opgenomen. '
+    Waardetabel:
+      type: object
+      properties:
+        code:
+          type: string
+          example: "6030"
+        omschrijving:
+          type: string
+          example: Nederland
+    HalLink:
+      required:
+      - href
+      type: object
+      properties:
+        href:
+          $ref: '#/components/schemas/Href'
+        templated:
+          type: boolean
+        title:
+          type: string
+          description: Voor mens leesbaar label bij de link
+      description: De Link Object zoals gespecificeerd in https://tools.ietf.org/html/draft-kelly-json-hal-08#section-5;
+        Deze link kan als templated link worden aangeboden. [URI-templating is hier
+        beschreven](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.2.0/features/uri-templating.feature).
+    Href:
+      type: string
+      example: https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}
+    HalCollectionLinks:
+      type: object
+      properties:
+        self:
+          $ref: '#/components/schemas/HalLink'
+      description: |
+        HalCollectionLinks bevat de self link die elke HAL Resource minimaal moet hebben in zijn _links property
+  headers:
+    api_version:
+      schema:
+        type: string
+        description: Geeft een specifieke API-versie aan in de context van een specifieke
+          aanroep.
+        example: 1.0.0
+    warning:
+      schema:
+        type: string
+        description: zie RFC 7234. In het geval een major versie wordt uitgefaseerd,
+          gebruiken we warn-code 299 ("Miscellaneous Persistent Warning") en het API
+          end-point (inclusief versienummer) als de warn-agent van de warning, gevolgd
+          door de warn-text met de human-readable waarschuwing
+        example: '299 https://service.../api/.../v1 "Deze versie van de API is verouderd
+          en zal uit dienst worden genomen op 2018-02-01. Raadpleeg voor meer informatie
+          hier de documentatie: https://omgevingswet.../api/.../v1".'
