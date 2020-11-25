@@ -19,7 +19,7 @@ nav:
         target: blank
 #      - title: Goals canvas
 #        path: /goals-canvas
-  - title: Specificaties v. 1.1 (Live)
+  - title: Specificaties v. 1.0 (IO)
     subnav:
       - title: Bevragen API (swagger-ui)
         path: /swagger-ui
