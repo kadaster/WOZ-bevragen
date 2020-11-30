@@ -6,8 +6,8 @@ title: Haal Centraal WOZ bevragen
 API voor het zoeken en raadplegen van WOZ objecten en WOZ waardes.
 
 ## Direct uitproberen?
-* Bekijk de specificaties met [Swagger UI](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/master/specificatie/genereervariant/openapi.yaml)
-* Download de [Technische specificaties](./specificatie/genereervariant/openapi.yaml)
+* Bekijk de specificaties met [Swagger UI](https://vng-realisatie.github.io/Haal-Centraal-WOZ-bevragen/swagger-ui) en in [Redoc](https://vng-realisatie.github.io/Haal-Centraal-WOZ-bevragen/redoc)
+* Download de [Technische specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/specificatie/genereervariant/openapi.yaml)
 
 ## Bronnen
 * [Productvisie Haal Centraal](https://vng-realisatie.github.io/Haal-Centraal){:target="_blank" rel="noopener"}
@@ -17,10 +17,10 @@ API voor het zoeken en raadplegen van WOZ objecten en WOZ waardes.
 
 ## Contact
 * Product Owner: Cathy Dingemanse, [cathy.dingemanse@denhaag.nl](mailto:cathy.dingemanse@denhaag.nl)
+* Designer/tester: Frank Samwel, [frank.samwel@denhaag.nl](mailto:frank.samwel@denhaag.nl)
 * Designer: Johan Boer, [johan.boer@vng.nl](mailto:johan.boer@vng.nl)
 * Designer: Robert Melskens, [robert.melskens@vng.nl](mailto:robert.melskens@vng.nl)
 * Customer zero: Melvin Lee, [melvin.lee@iswish.nl](mailto:melvin.lee@iswish.nl)
-* Tester: Frank Samwel, [frank.samwel@denhaag.nl](mailto:frank.samwel@denhaag.nl)
 
 ## Licentie
 Copyright &copy; VNG Realisatie 2020
