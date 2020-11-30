@@ -11,12 +11,12 @@ nav:
     subnav:
       - title: Main
         path: /
-#      - title: Goals canvas
-#        path: /goals-canvas
+      - title: Goals canvas
+        path: /goals-canvas
   - title: Specificaties v. 1.0 (IO)
     subnav:
-      - title: Getting started
-        path: /getting-started
+#      - title: Getting started
+#        path: /getting-started
       - title: User stories
         url: https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/issues?q=is%3Aissue+label%3A%22user+story%22
         path: /user-stories
