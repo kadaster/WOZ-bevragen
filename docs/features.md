@@ -4,8 +4,8 @@ title: Features
 ---
 # Features
 Deze voorbeelden illustreren en specificeren zoveel mogelijk de functionaliteit van de API:
-- [leveren van waarden bij een WOZ-object](https://github.com/VNG-Realisatie/Haal-Centraal-HR-bevragen/blob/master/features/waarden.feature){:target="_blank" rel="noopener"}
-- [zoeken van WOZ-objecten](https://github.com/VNG-Realisatie/Haal-Centraal-HR-bevragen/blob/master/features/zoeken.feature){:target="_blank" rel="noopener"}
+- [leveren van waarden bij een WOZ-object](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/blob/master/features/waarden.feature){:target="_blank" rel="noopener"}
+- [zoeken van WOZ-objecten](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/blob/master/features/zoeken.feature){:target="_blank" rel="noopener"}
 
 
 ## Algemene Haal Centraal features
