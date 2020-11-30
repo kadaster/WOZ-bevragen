@@ -1,8 +1,8 @@
-
-
+---
 layout: page-with-side-nav
 title: Haal Centraal WOZ bevragen
 ---
+
 # Haal Centraal WOZ bevragen
 API voor het zoeken en raadplegen van WOZ objecten en WOZ waardes.
 
