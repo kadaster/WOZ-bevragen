@@ -29,7 +29,7 @@ import org.openapitools.client.model.WozObjectHalCollectieEmbedded;
 /**
  * WozObjectHalCollectie
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-06T08:39:14.200Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-06T08:45:57.957Z[Etc/UTC]")
 public class WozObjectHalCollectie {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)

@@ -29,7 +29,7 @@ import org.openapitools.client.model.HalLink;
  * HalCollectionLinks bevat de self link die elke HAL Resource minimaal moet hebben in zijn _links property 
  */
 @ApiModel(description = "HalCollectionLinks bevat de self link die elke HAL Resource minimaal moet hebben in zijn _links property ")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-06T08:39:14.200Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-06T08:45:57.957Z[Etc/UTC]")
 public class HalCollectionLinks {
   public static final String SERIALIZED_NAME_SELF = "self";
   @SerializedName(SERIALIZED_NAME_SELF)

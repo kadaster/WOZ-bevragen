@@ -2,7 +2,7 @@
 
 Waardering onroerende zaken
 - API version: 1.0.0
-  - Build date: 2021-01-06T08:39:14.200Z[Etc/UTC]
+  - Build date: 2021-01-06T08:45:57.957Z[Etc/UTC]
 
 Deze API levert actuele gegevens over WOZ-objecten
 
