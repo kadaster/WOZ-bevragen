@@ -590,7 +590,7 @@
           }
         }
       },
-      "WozObjectBasis_links" : {
+      "WozObjectBasisLinks" : {
         "type" : "object",
         "properties" : {
           "self" : {
@@ -605,10 +605,10 @@
               "$ref" : "#/components/schemas/HalLink"
             }
           },
-          "belanghebbendEigenaar" : {
+          "belanghebbendeEigenaar" : {
             "$ref" : "#/components/schemas/HalLink"
           },
-          "belanghebbendGebruiker" : {
+          "belanghebbendeGebruiker" : {
             "$ref" : "#/components/schemas/HalLink"
           },
           "panden" : {
@@ -626,7 +626,7 @@
           "type" : "object",
           "properties" : {
             "_links" : {
-              "$ref" : "#/components/schemas/WozObjectBasis_links"
+              "$ref" : "#/components/schemas/WozObjectBasisLinks"
             }
           }
         } ]
@@ -638,11 +638,11 @@
             "$ref" : "#/components/schemas/HalCollectionLinks"
           },
           "_embedded" : {
-            "$ref" : "#/components/schemas/WozObjectHalCollectie_embedded"
+            "$ref" : "#/components/schemas/WozObjectHalCollectieEmbedded"
           }
         }
       },
-      "WozObjectHalCollectie_embedded" : {
+      "WozObjectHalCollectieEmbedded" : {
         "type" : "object",
         "properties" : {
           "wozObjecten" : {
