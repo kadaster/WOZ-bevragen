@@ -1,35 +1,25 @@
 # Haal Centraal WOZ bevragen
 
-## Introductie
-Deze API WOZ bevragen maakt het mogelijk gegevens uit de landelijke voorziening WOZ (Waardering Onroerende Zaken) op te vragen.
+API voor het zoeken en raadplegen van WOZ objecten en WOZ waardes.
 
-Deze API is ontwikkeld vanuit het programma Haal Centraal. Doel van het programma Haal Centraal is om de verstrekking van basisgegevens aan binnengemeentelijke afnemers te outsourcen naar Landelijke Registraties (RvIG, Kadaster, KVK). Dit moet leiden tot een forse reductie van lokale kopieën bij gemeenten.
-
-## Documentatie
-* [Technische specificaties](./specificatie/genereervariant/openapi.yaml) (Open API Specificaties en JSON schema) en in [Swagger-formaat](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/master/specificatie/genereervariant/openapi.yaml)
-* [Goals Canvas](WOZBevragen_GoalsCanvas.xlsx) met een overzicht van beoogd gebruik van de API (wat en hoe)
-* Functionele specificaties voor de [WOZ-waarden](./features/waarden.feature) die de API teruggeeft
-* Functionele specificaties voor het [zoeken van WOZ-objecten](./features/zoeken.feature)
-
-## Contactpersonen:
-* Product owner: [@CathyDingemanse](https://github.com/CathyDingemanse)
-
-### Toegevoegde waarde voor gemeenten
-- sneller aansluiten afnemers
-- goedkoper aansluiten afnemers (x aantal binnegemeentelijke aansluiters x 355 gemeenten)
-- lagere investeringen (geen lokale kopie/ gegevensmagazijn)
-- lagere beheerkosten (geen gegevensbeheer lokale kopieën)
-- hogere ROI: hergebruik API Landelijke Registratie door alle gemeenten
-- betere technologie-business alignment (Landelijke Registratie voert sneller een wijziging door dan 355 afzonderlijke gemeenten)
-- meer focus op de businessvraag van afnemers (i.p.v. op betrouwbaarheid etc. lokale kopieën)
-- maximale compliancy op de gemeentelijke softwaremarkt (aansluiting gemeente x = 100% herbruikbaar in gemeente y)
-
-### Toegevoegde waarde voor leveranciers
-- leveranciers kunnen zich richten op het bieden van toegevoegde waarde voor burgers, bedrijven en medewerkers i.p.v. plumbing concerns.
+## Direct uitproberen?
+* Bekijk de specificaties met [Swagger UI](https://vng-realisatie.github.io/Haal-Centraal-WOZ-bevragen/swagger-ui) en in [Redoc](https://vng-realisatie.github.io/Haal-Centraal-WOZ-bevragen/redoc)
+* Download de [Technische specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/tree/master/specificatie/genereervariant/openapi.yaml)
 
 ## Bronnen
+
+* [Productvisie Haal Centraal](https://vng-realisatie.github.io/Haal-Centraal)
+* [API Design Visie](https://github.com/Geonovum/KP-APIs/tree/master/Werkgroep%20Design%20Visie)
+* [REST API Design Rules](https://docs.geostandaarden.nl/api/API-Designrules/)
 * [Landelijke API strategie voor de overheid](https://geonovum.github.io/KP-APIs/)
 
+## Contact
+* Product Owner: Cathy Dingemanse, [cathy.dingemanse@denhaag.nl](mailto:cathy.dingemanse@denhaag.nl)
+* Designer/tester: Frank Samwel, [frank.samwel@denhaag.nl](mailto:frank.samwel@denhaag.nl)
+* Designer: Johan Boer, [johan.boer@vng.nl](mailto:johan.boer@vng.nl)
+* Designer: Robert Melskens, [robert.melskens@vng.nl](mailto:robert.melskens@vng.nl)
+* Customer zero: Melvin Lee, [melvin.lee@iswish.nl](mailto:melvin.lee@iswish.nl)
+
 ## Licentie
-Copyright &copy; VNG Realisatie 2018
+Copyright &copy; VNG Realisatie 2020
 Licensed under the [EUPL](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/blob/master/LICENCE.md)
