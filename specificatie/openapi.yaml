@@ -221,11 +221,11 @@ components:
           type: string
           title: WOZ-objectnummer
           description: Unieke identificatie van het WOZ-object
-        kadastraalOnroerendeZaken:
+        kadastraalOnroerendeZaakIdentificaties:
           type: array
           description: De kadastraal onroerende zaken die geheel of gedeeltelijk deel uitmaken van het WOZ-object
           items:
-            $ref: '#/components/schemas/KadastraalOnroerendeZaak'
+            type: string
         pandIdentificaties:
           type: array
           items:
