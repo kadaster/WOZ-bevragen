@@ -456,11 +456,11 @@ components:
           description: Unieke identificatie van het WOZ-object
           title: WOZ-objectnummer
           type: string
-        kadastraalOnroerendeZaken:
+        kadastraalOnroerendeZaakIdentificaties:
           description: De kadastraal onroerende zaken die geheel of gedeeltelijk deel
             uitmaken van het WOZ-object
           items:
-            $ref: '#/components/schemas/KadastraalOnroerendeZaak'
+            type: string
           type: array
         pandIdentificaties:
           items:
