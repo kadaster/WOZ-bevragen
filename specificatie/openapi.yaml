@@ -165,11 +165,6 @@ components:
         - "natuurlijk_persoon"
         - "niet_natuurlijk_persoon"
         - "vestiging"
-    KadastraalOnroerendeZaak:
-      type: object
-      properties:
-        identificatie:
-          type: string
     ObjectAanduiding:
       allOf:
         - $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-BAG-bevragen/v1.1.0/specificatie/openapi.yaml#/components/schemas/Adres"
