@@ -27,7 +27,6 @@ import java.util.ArrayList;
 import java.util.List;
 import org.openapitools.client.model.Belanghebbende;
 import org.openapitools.client.model.BelanghebbendeEigenaar;
-import org.openapitools.client.model.KadastraalOnroerendeZaak;
 import org.openapitools.client.model.ObjectAanduiding;
 import org.openapitools.client.model.Waarde;
 import org.openapitools.client.model.Waardetabel;
@@ -38,7 +37,7 @@ import org.openapitools.client.model.WozObjectHalAllOf;
 /**
  * WozObjectHal
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-06T08:45:57.957Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-12T10:15:17.976Z[Etc/UTC]")
 public class WozObjectHal {
   public static final String SERIALIZED_NAME_AANDUIDING = "aanduiding";
   @SerializedName(SERIALIZED_NAME_AANDUIDING)
@@ -64,9 +63,9 @@ public class WozObjectHal {
   @SerializedName(SERIALIZED_NAME_IDENTIFICATIE)
   private String identificatie;
 
-  public static final String SERIALIZED_NAME_KADASTRAAL_ONROERENDE_ZAKEN = "kadastraalOnroerendeZaken";
-  @SerializedName(SERIALIZED_NAME_KADASTRAAL_ONROERENDE_ZAKEN)
-  private List<KadastraalOnroerendeZaak> kadastraalOnroerendeZaken = null;
+  public static final String SERIALIZED_NAME_KADASTRAAL_ONROERENDE_ZAAK_IDENTIFICATIES = "kadastraalOnroerendeZaakIdentificaties";
+  @SerializedName(SERIALIZED_NAME_KADASTRAAL_ONROERENDE_ZAAK_IDENTIFICATIES)
+  private List<String> kadastraalOnroerendeZaakIdentificaties = null;
 
   public static final String SERIALIZED_NAME_PAND_IDENTIFICATIES = "pandIdentificaties";
   @SerializedName(SERIALIZED_NAME_PAND_IDENTIFICATIES)
@@ -231,34 +230,34 @@ public class WozObjectHal {
   }
 
 
-  public WozObjectHal kadastraalOnroerendeZaken(List<KadastraalOnroerendeZaak> kadastraalOnroerendeZaken) {
+  public WozObjectHal kadastraalOnroerendeZaakIdentificaties(List<String> kadastraalOnroerendeZaakIdentificaties) {
     
-    this.kadastraalOnroerendeZaken = kadastraalOnroerendeZaken;
+    this.kadastraalOnroerendeZaakIdentificaties = kadastraalOnroerendeZaakIdentificaties;
     return this;
   }
 
-  public WozObjectHal addKadastraalOnroerendeZakenItem(KadastraalOnroerendeZaak kadastraalOnroerendeZakenItem) {
-    if (this.kadastraalOnroerendeZaken == null) {
-      this.kadastraalOnroerendeZaken = new ArrayList<>();
+  public WozObjectHal addKadastraalOnroerendeZaakIdentificatiesItem(String kadastraalOnroerendeZaakIdentificatiesItem) {
+    if (this.kadastraalOnroerendeZaakIdentificaties == null) {
+      this.kadastraalOnroerendeZaakIdentificaties = new ArrayList<>();
     }
-    this.kadastraalOnroerendeZaken.add(kadastraalOnroerendeZakenItem);
+    this.kadastraalOnroerendeZaakIdentificaties.add(kadastraalOnroerendeZaakIdentificatiesItem);
     return this;
   }
 
    /**
    * De kadastraal onroerende zaken die geheel of gedeeltelijk deel uitmaken van het WOZ-object
-   * @return kadastraalOnroerendeZaken
+   * @return kadastraalOnroerendeZaakIdentificaties
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "De kadastraal onroerende zaken die geheel of gedeeltelijk deel uitmaken van het WOZ-object")
 
-  public List<KadastraalOnroerendeZaak> getKadastraalOnroerendeZaken() {
-    return kadastraalOnroerendeZaken;
+  public List<String> getKadastraalOnroerendeZaakIdentificaties() {
+    return kadastraalOnroerendeZaakIdentificaties;
   }
 
 
-  public void setKadastraalOnroerendeZaken(List<KadastraalOnroerendeZaak> kadastraalOnroerendeZaken) {
-    this.kadastraalOnroerendeZaken = kadastraalOnroerendeZaken;
+  public void setKadastraalOnroerendeZaakIdentificaties(List<String> kadastraalOnroerendeZaakIdentificaties) {
+    this.kadastraalOnroerendeZaakIdentificaties = kadastraalOnroerendeZaakIdentificaties;
   }
 
 
@@ -385,7 +384,7 @@ public class WozObjectHal {
         Objects.equals(this.belanghebbendeGebruiker, wozObjectHal.belanghebbendeGebruiker) &&
         Objects.equals(this.grondoppervlakte, wozObjectHal.grondoppervlakte) &&
         Objects.equals(this.identificatie, wozObjectHal.identificatie) &&
-        Objects.equals(this.kadastraalOnroerendeZaken, wozObjectHal.kadastraalOnroerendeZaken) &&
+        Objects.equals(this.kadastraalOnroerendeZaakIdentificaties, wozObjectHal.kadastraalOnroerendeZaakIdentificaties) &&
         Objects.equals(this.pandIdentificaties, wozObjectHal.pandIdentificaties) &&
         Objects.equals(this.verantwoordelijkeGemeente, wozObjectHal.verantwoordelijkeGemeente) &&
         Objects.equals(this.waarden, wozObjectHal.waarden) &&
@@ -394,7 +393,7 @@ public class WozObjectHal {
 
   @Override
   public int hashCode() {
-    return Objects.hash(aanduiding, adresseerbaarObjectIdentificaties, belanghebbendeEigenaar, belanghebbendeGebruiker, grondoppervlakte, identificatie, kadastraalOnroerendeZaken, pandIdentificaties, verantwoordelijkeGemeente, waarden, links);
+    return Objects.hash(aanduiding, adresseerbaarObjectIdentificaties, belanghebbendeEigenaar, belanghebbendeGebruiker, grondoppervlakte, identificatie, kadastraalOnroerendeZaakIdentificaties, pandIdentificaties, verantwoordelijkeGemeente, waarden, links);
   }
 
 
@@ -408,7 +407,7 @@ public class WozObjectHal {
     sb.append("    belanghebbendeGebruiker: ").append(toIndentedString(belanghebbendeGebruiker)).append("\n");
     sb.append("    grondoppervlakte: ").append(toIndentedString(grondoppervlakte)).append("\n");
     sb.append("    identificatie: ").append(toIndentedString(identificatie)).append("\n");
-    sb.append("    kadastraalOnroerendeZaken: ").append(toIndentedString(kadastraalOnroerendeZaken)).append("\n");
+    sb.append("    kadastraalOnroerendeZaakIdentificaties: ").append(toIndentedString(kadastraalOnroerendeZaakIdentificaties)).append("\n");
     sb.append("    pandIdentificaties: ").append(toIndentedString(pandIdentificaties)).append("\n");
     sb.append("    verantwoordelijkeGemeente: ").append(toIndentedString(verantwoordelijkeGemeente)).append("\n");
     sb.append("    waarden: ").append(toIndentedString(waarden)).append("\n");
