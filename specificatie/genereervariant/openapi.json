@@ -489,14 +489,6 @@
         "type" : "string",
         "enum" : [ "natuurlijk_persoon", "niet_natuurlijk_persoon", "vestiging" ]
       },
-      "KadastraalOnroerendeZaak" : {
-        "type" : "object",
-        "properties" : {
-          "identificatie" : {
-            "type" : "string"
-          }
-        }
-      },
       "ObjectAanduiding" : {
         "allOf" : [ {
           "$ref" : "#/components/schemas/Adres"
