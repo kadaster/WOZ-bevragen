@@ -236,7 +236,7 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Waarde'
-    WozObjectBasis_links:
+    WozObjectBasisLinks:
       type: object
       properties:
         self:
@@ -247,9 +247,9 @@ components:
           type: array
           items:
             $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/schemas/HalLink"
-        belanghebbendEigenaar:
+        belanghebbendeEigenaar:
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/schemas/HalLink"
-        belanghebbendGebruiker:
+        belanghebbendeGebruiker:
           $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/schemas/HalLink"
         panden:
           type: array
@@ -261,15 +261,15 @@ components:
         - type: object
           properties:
             _links:
-              $ref: '#/components/schemas/WozObjectBasis_links'
+              $ref: '#/components/schemas/WozObjectBasisLinks'
     WozObjectHalCollectie:
       type: object
       properties:
         _links:
           $ref: 'https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/schemas/HalCollectionLinks'
         _embedded:
-          $ref: '#/components/schemas/WozObjectHalCollectie_embedded'
-    WozObjectHalCollectie_embedded:
+          $ref: '#/components/schemas/WozObjectHalCollectieEmbedded'
+    WozObjectHalCollectieEmbedded:
       type: object
       properties:
         wozObjecten:
