@@ -12,6 +12,7 @@ API voor het zoeken en raadplegen van WOZ objecten en WOZ waardes.
 * [API Design Visie](https://github.com/Geonovum/KP-APIs/tree/master/Werkgroep%20Design%20Visie)
 * [REST API Design Rules](https://docs.geostandaarden.nl/api/API-Designrules/)
 * [Landelijke API strategie voor de overheid](https://geonovum.github.io/KP-APIs/)
+* [Stelselcatalogus](https://www.stelselcatalogus.nl/registraties/WOZ/)
 
 ## Contact
 * Product Owner: Cathy Dingemanse, [cathy.dingemanse@denhaag.nl](mailto:cathy.dingemanse@denhaag.nl)
