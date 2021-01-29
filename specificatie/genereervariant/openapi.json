@@ -489,14 +489,6 @@
         "type" : "string",
         "enum" : [ "natuurlijk_persoon", "niet_natuurlijk_persoon", "vestiging" ]
       },
-      "KadastraalOnroerendeZaak" : {
-        "type" : "object",
-        "properties" : {
-          "identificatie" : {
-            "type" : "string"
-          }
-        }
-      },
       "ObjectAanduiding" : {
         "allOf" : [ {
           "$ref" : "#/components/schemas/Adres"
@@ -566,11 +558,11 @@
             "type" : "string",
             "description" : "Unieke identificatie van het WOZ-object"
           },
-          "kadastraalOnroerendeZaken" : {
+          "kadastraalOnroerendeZaakIdentificaties" : {
             "type" : "array",
             "description" : "De kadastraal onroerende zaken die geheel of gedeeltelijk deel uitmaken van het WOZ-object",
             "items" : {
-              "$ref" : "#/components/schemas/KadastraalOnroerendeZaak"
+              "type" : "string"
             }
           },
           "pandIdentificaties" : {

@@ -31,13 +31,11 @@ from openapi_client.model_utils import (  # noqa: F401
 def lazy_import():
     from openapi_client.model.belanghebbende import Belanghebbende
     from openapi_client.model.belanghebbende_eigenaar import BelanghebbendeEigenaar
-    from openapi_client.model.kadastraal_onroerende_zaak import KadastraalOnroerendeZaak
     from openapi_client.model.object_aanduiding import ObjectAanduiding
     from openapi_client.model.waarde import Waarde
     from openapi_client.model.waardetabel import Waardetabel
     globals()['Belanghebbende'] = Belanghebbende
     globals()['BelanghebbendeEigenaar'] = BelanghebbendeEigenaar
-    globals()['KadastraalOnroerendeZaak'] = KadastraalOnroerendeZaak
     globals()['ObjectAanduiding'] = ObjectAanduiding
     globals()['Waarde'] = Waarde
     globals()['Waardetabel'] = Waardetabel
@@ -95,7 +93,7 @@ class WozObject(ModelNormal):
             'belanghebbende_gebruiker': (Belanghebbende,),  # noqa: E501
             'grondoppervlakte': (int,),  # noqa: E501
             'identificatie': (str,),  # noqa: E501
-            'kadastraal_onroerende_zaken': ([KadastraalOnroerendeZaak],),  # noqa: E501
+            'kadastraal_onroerende_zaak_identificaties': ([str],),  # noqa: E501
             'pand_identificaties': ([str],),  # noqa: E501
             'verantwoordelijke_gemeente': (Waardetabel,),  # noqa: E501
             'waarden': ([Waarde],),  # noqa: E501
@@ -113,7 +111,7 @@ class WozObject(ModelNormal):
         'belanghebbende_gebruiker': 'belanghebbendeGebruiker',  # noqa: E501
         'grondoppervlakte': 'grondoppervlakte',  # noqa: E501
         'identificatie': 'identificatie',  # noqa: E501
-        'kadastraal_onroerende_zaken': 'kadastraalOnroerendeZaken',  # noqa: E501
+        'kadastraal_onroerende_zaak_identificaties': 'kadastraalOnroerendeZaakIdentificaties',  # noqa: E501
         'pand_identificaties': 'pandIdentificaties',  # noqa: E501
         'verantwoordelijke_gemeente': 'verantwoordelijkeGemeente',  # noqa: E501
         'waarden': 'waarden',  # noqa: E501
@@ -171,7 +169,7 @@ class WozObject(ModelNormal):
             belanghebbende_gebruiker (Belanghebbende): [optional]  # noqa: E501
             grondoppervlakte (int): De oppervlakte grond in vierkante meters die behoort tot het WOZ-object.. [optional]  # noqa: E501
             identificatie (str): Unieke identificatie van het WOZ-object. [optional]  # noqa: E501
-            kadastraal_onroerende_zaken ([KadastraalOnroerendeZaak]): De kadastraal onroerende zaken die geheel of gedeeltelijk deel uitmaken van het WOZ-object. [optional]  # noqa: E501
+            kadastraal_onroerende_zaak_identificaties ([str]): De kadastraal onroerende zaken die geheel of gedeeltelijk deel uitmaken van het WOZ-object. [optional]  # noqa: E501
             pand_identificaties ([str]): [optional]  # noqa: E501
             verantwoordelijke_gemeente (Waardetabel): [optional]  # noqa: E501
             waarden ([Waarde]): [optional]  # noqa: E501

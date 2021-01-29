@@ -28,7 +28,7 @@ import java.io.IOException;
  * Belanghebbende eigenaar, erfpachter of houder van een opstalrecht of een vruchtgebruiker
  */
 @ApiModel(description = "Belanghebbende eigenaar, erfpachter of houder van een opstalrecht of een vruchtgebruiker")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-06T08:45:57.957Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-12T10:15:17.976Z[Etc/UTC]")
 public class BelanghebbendeEigenaarAllOf {
   public static final String SERIALIZED_NAME_SOORT = "soort";
   @SerializedName(SERIALIZED_NAME_SOORT)
