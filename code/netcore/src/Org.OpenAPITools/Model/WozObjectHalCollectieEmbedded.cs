@@ -28,7 +28,7 @@ namespace Org.OpenAPITools.Model
     /// <summary>
     /// WozObjectHalCollectieEmbedded
     /// </summary>
-    [DataContract(Name = "WozObjectHalCollectie_embedded")]
+    [DataContract(Name = "WozObjectHalCollectieEmbedded")]
     public partial class WozObjectHalCollectieEmbedded : IEquatable<WozObjectHalCollectieEmbedded>, IValidatableObject
     {
         /// <summary>

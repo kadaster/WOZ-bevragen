@@ -30,7 +30,7 @@ import org.openapitools.client.model.PersoonTypeEnum;
 /**
  * BelanghebbendeEigenaar
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-12T10:15:17.976Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-29T15:06:01.841Z[Etc/UTC]")
 public class BelanghebbendeEigenaar {
   public static final String SERIALIZED_NAME_BURGERSERVICENUMMER = "burgerservicenummer";
   @SerializedName(SERIALIZED_NAME_BURGERSERVICENUMMER)

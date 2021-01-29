@@ -31,7 +31,6 @@ src/Org.OpenAPITools/Model/Foutbericht.cs
 src/Org.OpenAPITools/Model/HalCollectionLinks.cs
 src/Org.OpenAPITools/Model/HalLink.cs
 src/Org.OpenAPITools/Model/InvalidParams.cs
-src/Org.OpenAPITools/Model/KadastraalOnroerendeZaak.cs
 src/Org.OpenAPITools/Model/ObjectAanduiding.cs
 src/Org.OpenAPITools/Model/ObjectAanduidingAllOf.cs
 src/Org.OpenAPITools/Model/PersoonTypeEnum.cs

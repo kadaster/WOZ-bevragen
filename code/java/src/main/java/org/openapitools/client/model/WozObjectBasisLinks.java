@@ -30,7 +30,7 @@ import org.openapitools.client.model.HalLink;
 /**
  * WozObjectBasisLinks
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-12T10:15:17.976Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-29T15:06:01.841Z[Etc/UTC]")
 public class WozObjectBasisLinks {
   public static final String SERIALIZED_NAME_SELF = "self";
   @SerializedName(SERIALIZED_NAME_SELF)
@@ -44,13 +44,13 @@ public class WozObjectBasisLinks {
   @SerializedName(SERIALIZED_NAME_ADRESSEERBAAR_OBJECTEN)
   private List<HalLink> adresseerbaarObjecten = null;
 
-  public static final String SERIALIZED_NAME_BELANGHEBBEND_EIGENAAR = "belanghebbendEigenaar";
-  @SerializedName(SERIALIZED_NAME_BELANGHEBBEND_EIGENAAR)
-  private HalLink belanghebbendEigenaar;
+  public static final String SERIALIZED_NAME_BELANGHEBBENDE_EIGENAAR = "belanghebbendeEigenaar";
+  @SerializedName(SERIALIZED_NAME_BELANGHEBBENDE_EIGENAAR)
+  private HalLink belanghebbendeEigenaar;
 
-  public static final String SERIALIZED_NAME_BELANGHEBBEND_GEBRUIKER = "belanghebbendGebruiker";
-  @SerializedName(SERIALIZED_NAME_BELANGHEBBEND_GEBRUIKER)
-  private HalLink belanghebbendGebruiker;
+  public static final String SERIALIZED_NAME_BELANGHEBBENDE_GEBRUIKER = "belanghebbendeGebruiker";
+  @SerializedName(SERIALIZED_NAME_BELANGHEBBENDE_GEBRUIKER)
+  private HalLink belanghebbendeGebruiker;
 
   public static final String SERIALIZED_NAME_PANDEN = "panden";
   @SerializedName(SERIALIZED_NAME_PANDEN)
@@ -134,49 +134,49 @@ public class WozObjectBasisLinks {
   }
 
 
-  public WozObjectBasisLinks belanghebbendEigenaar(HalLink belanghebbendEigenaar) {
+  public WozObjectBasisLinks belanghebbendeEigenaar(HalLink belanghebbendeEigenaar) {
     
-    this.belanghebbendEigenaar = belanghebbendEigenaar;
+    this.belanghebbendeEigenaar = belanghebbendeEigenaar;
     return this;
   }
 
    /**
-   * Get belanghebbendEigenaar
-   * @return belanghebbendEigenaar
+   * Get belanghebbendeEigenaar
+   * @return belanghebbendeEigenaar
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public HalLink getBelanghebbendEigenaar() {
-    return belanghebbendEigenaar;
+  public HalLink getBelanghebbendeEigenaar() {
+    return belanghebbendeEigenaar;
   }
 
 
-  public void setBelanghebbendEigenaar(HalLink belanghebbendEigenaar) {
-    this.belanghebbendEigenaar = belanghebbendEigenaar;
+  public void setBelanghebbendeEigenaar(HalLink belanghebbendeEigenaar) {
+    this.belanghebbendeEigenaar = belanghebbendeEigenaar;
   }
 
 
-  public WozObjectBasisLinks belanghebbendGebruiker(HalLink belanghebbendGebruiker) {
+  public WozObjectBasisLinks belanghebbendeGebruiker(HalLink belanghebbendeGebruiker) {
     
-    this.belanghebbendGebruiker = belanghebbendGebruiker;
+    this.belanghebbendeGebruiker = belanghebbendeGebruiker;
     return this;
   }
 
    /**
-   * Get belanghebbendGebruiker
-   * @return belanghebbendGebruiker
+   * Get belanghebbendeGebruiker
+   * @return belanghebbendeGebruiker
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public HalLink getBelanghebbendGebruiker() {
-    return belanghebbendGebruiker;
+  public HalLink getBelanghebbendeGebruiker() {
+    return belanghebbendeGebruiker;
   }
 
 
-  public void setBelanghebbendGebruiker(HalLink belanghebbendGebruiker) {
-    this.belanghebbendGebruiker = belanghebbendGebruiker;
+  public void setBelanghebbendeGebruiker(HalLink belanghebbendeGebruiker) {
+    this.belanghebbendeGebruiker = belanghebbendeGebruiker;
   }
 
 
@@ -223,14 +223,14 @@ public class WozObjectBasisLinks {
     return Objects.equals(this.self, wozObjectBasisLinks.self) &&
         Objects.equals(this.adres, wozObjectBasisLinks.adres) &&
         Objects.equals(this.adresseerbaarObjecten, wozObjectBasisLinks.adresseerbaarObjecten) &&
-        Objects.equals(this.belanghebbendEigenaar, wozObjectBasisLinks.belanghebbendEigenaar) &&
-        Objects.equals(this.belanghebbendGebruiker, wozObjectBasisLinks.belanghebbendGebruiker) &&
+        Objects.equals(this.belanghebbendeEigenaar, wozObjectBasisLinks.belanghebbendeEigenaar) &&
+        Objects.equals(this.belanghebbendeGebruiker, wozObjectBasisLinks.belanghebbendeGebruiker) &&
         Objects.equals(this.panden, wozObjectBasisLinks.panden);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(self, adres, adresseerbaarObjecten, belanghebbendEigenaar, belanghebbendGebruiker, panden);
+    return Objects.hash(self, adres, adresseerbaarObjecten, belanghebbendeEigenaar, belanghebbendeGebruiker, panden);
   }
 
 
@@ -241,8 +241,8 @@ public class WozObjectBasisLinks {
     sb.append("    self: ").append(toIndentedString(self)).append("\n");
     sb.append("    adres: ").append(toIndentedString(adres)).append("\n");
     sb.append("    adresseerbaarObjecten: ").append(toIndentedString(adresseerbaarObjecten)).append("\n");
-    sb.append("    belanghebbendEigenaar: ").append(toIndentedString(belanghebbendEigenaar)).append("\n");
-    sb.append("    belanghebbendGebruiker: ").append(toIndentedString(belanghebbendGebruiker)).append("\n");
+    sb.append("    belanghebbendeEigenaar: ").append(toIndentedString(belanghebbendeEigenaar)).append("\n");
+    sb.append("    belanghebbendeGebruiker: ").append(toIndentedString(belanghebbendeGebruiker)).append("\n");
     sb.append("    panden: ").append(toIndentedString(panden)).append("\n");
     sb.append("}");
     return sb.toString();

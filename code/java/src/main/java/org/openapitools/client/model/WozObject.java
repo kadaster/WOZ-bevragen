@@ -34,7 +34,7 @@ import org.openapitools.client.model.Waardetabel;
 /**
  * WozObject
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-12T10:15:17.976Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-29T15:06:01.841Z[Etc/UTC]")
 public class WozObject {
   public static final String SERIALIZED_NAME_AANDUIDING = "aanduiding";
   @SerializedName(SERIALIZED_NAME_AANDUIDING)
@@ -238,11 +238,11 @@ public class WozObject {
   }
 
    /**
-   * De kadastraal onroerende zaken die geheel of gedeeltelijk deel uitmaken van het WOZ-object
+   * De identificaties van kadastraal onroerende zaken die geheel of gedeeltelijk deel uitmaken van het WOZ-object
    * @return kadastraalOnroerendeZaakIdentificaties
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "De kadastraal onroerende zaken die geheel of gedeeltelijk deel uitmaken van het WOZ-object")
+  @ApiModelProperty(value = "De identificaties van kadastraal onroerende zaken die geheel of gedeeltelijk deel uitmaken van het WOZ-object")
 
   public List<String> getKadastraalOnroerendeZaakIdentificaties() {
     return kadastraalOnroerendeZaakIdentificaties;

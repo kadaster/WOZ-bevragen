@@ -169,7 +169,7 @@ class WozObject(ModelNormal):
             belanghebbende_gebruiker (Belanghebbende): [optional]  # noqa: E501
             grondoppervlakte (int): De oppervlakte grond in vierkante meters die behoort tot het WOZ-object.. [optional]  # noqa: E501
             identificatie (str): Unieke identificatie van het WOZ-object. [optional]  # noqa: E501
-            kadastraal_onroerende_zaak_identificaties ([str]): De kadastraal onroerende zaken die geheel of gedeeltelijk deel uitmaken van het WOZ-object. [optional]  # noqa: E501
+            kadastraal_onroerende_zaak_identificaties ([str]): De identificaties van kadastraal onroerende zaken die geheel of gedeeltelijk deel uitmaken van het WOZ-object. [optional]  # noqa: E501
             pand_identificaties ([str]): [optional]  # noqa: E501
             verantwoordelijke_gemeente (Waardetabel): [optional]  # noqa: E501
             waarden ([Waarde]): [optional]  # noqa: E501

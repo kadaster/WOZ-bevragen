@@ -19,7 +19,6 @@ from openapi_client.model.foutbericht import Foutbericht
 from openapi_client.model.hal_collection_links import HalCollectionLinks
 from openapi_client.model.hal_link import HalLink
 from openapi_client.model.invalid_params import InvalidParams
-from openapi_client.model.kadastraal_onroerende_zaak import KadastraalOnroerendeZaak
 from openapi_client.model.object_aanduiding import ObjectAanduiding
 from openapi_client.model.object_aanduiding_all_of import ObjectAanduidingAllOf
 from openapi_client.model.persoon_type_enum import PersoonTypeEnum

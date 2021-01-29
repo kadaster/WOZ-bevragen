@@ -39,7 +39,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="belanghebbendeGebruiker">belanghebbendeGebruiker.</param>
         /// <param name="grondoppervlakte">De oppervlakte grond in vierkante meters die behoort tot het WOZ-object..</param>
         /// <param name="identificatie">Unieke identificatie van het WOZ-object.</param>
-        /// <param name="kadastraalOnroerendeZaakIdentificaties">De kadastraal onroerende zaken die geheel of gedeeltelijk deel uitmaken van het WOZ-object.</param>
+        /// <param name="kadastraalOnroerendeZaakIdentificaties">De identificaties van kadastraal onroerende zaken die geheel of gedeeltelijk deel uitmaken van het WOZ-object.</param>
         /// <param name="pandIdentificaties">pandIdentificaties.</param>
         /// <param name="verantwoordelijkeGemeente">verantwoordelijkeGemeente.</param>
         /// <param name="waarden">waarden.</param>
@@ -97,9 +97,9 @@ namespace Org.OpenAPITools.Model
         public string Identificatie { get; set; }
 
         /// <summary>
-        /// De kadastraal onroerende zaken die geheel of gedeeltelijk deel uitmaken van het WOZ-object
+        /// De identificaties van kadastraal onroerende zaken die geheel of gedeeltelijk deel uitmaken van het WOZ-object
         /// </summary>
-        /// <value>De kadastraal onroerende zaken die geheel of gedeeltelijk deel uitmaken van het WOZ-object</value>
+        /// <value>De identificaties van kadastraal onroerende zaken die geheel of gedeeltelijk deel uitmaken van het WOZ-object</value>
         [DataMember(Name="kadastraalOnroerendeZaakIdentificaties", EmitDefaultValue=false)]
         public List<string> KadastraalOnroerendeZaakIdentificaties { get; set; }
 

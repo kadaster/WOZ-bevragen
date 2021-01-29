@@ -41,7 +41,6 @@ src/main/java/org/openapitools/client/model/Foutbericht.java
 src/main/java/org/openapitools/client/model/HalCollectionLinks.java
 src/main/java/org/openapitools/client/model/HalLink.java
 src/main/java/org/openapitools/client/model/InvalidParams.java
-src/main/java/org/openapitools/client/model/KadastraalOnroerendeZaak.java
 src/main/java/org/openapitools/client/model/ObjectAanduiding.java
 src/main/java/org/openapitools/client/model/ObjectAanduidingAllOf.java
 src/main/java/org/openapitools/client/model/PersoonTypeEnum.java
