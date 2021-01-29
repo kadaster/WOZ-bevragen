@@ -560,7 +560,7 @@
           },
           "kadastraalOnroerendeZaakIdentificaties" : {
             "type" : "array",
-            "description" : "De kadastraal onroerende zaken die geheel of gedeeltelijk deel uitmaken van het WOZ-object",
+            "description" : "De identificaties van kadastraal onroerende zaken die geheel of gedeeltelijk deel uitmaken van het WOZ-object",
             "items" : {
               "type" : "string"
             }
