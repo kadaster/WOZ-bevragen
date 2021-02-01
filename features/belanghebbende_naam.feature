@@ -37,8 +37,8 @@ Feature: Als gebruiker wil ik de naam zien van de geleverde belanghebbende
     """
 
   Scenario: de naam van een niet-natuurlijk persoon is de statutaire naam
-    Gegeven de belanghebbendeEigenaar van het WOZ object met identificatie "050300024029" is de vestiging met rsin "858311537"
-    En deze vestiging heeft als statutaire naam "Test Stichting Bolderbast"
+    Gegeven de belanghebbendeEigenaar van het WOZ object met identificatie "050300024029" is de niet-natuurlijk persoon met rsin "858311537"
+    En deze niet-natuurlijk persoon heeft als statutaire naam "Test Stichting Bolderbast"
     Als het WOZ object wordt opgevraagd met /wozobjecten/050300024029
     Dan bevat het antwoord:
     """
@@ -52,7 +52,7 @@ Feature: Als gebruiker wil ik de naam zien van de geleverde belanghebbende
     """
 
   Scenario: de naam van een vestiging is de handelsnaam
-    Gegeven de belanghebbendeEigenaar van het WOZ object met identificatie "051800823525" is de niet-natuurlijk persoon met vestigingsnummer "000037143557"
+    Gegeven de belanghebbendeEigenaar van het WOZ object met identificatie "051800823525" is de vestiging met vestigingsnummer "000037143557"
     En deze vestiging heeft als handelsnaam "Test NV Katrien"
     Als het WOZ object wordt opgevraagd met /wozobjecten/050300024029
     Dan bevat het antwoord:
