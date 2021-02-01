@@ -5,7 +5,7 @@ Feature: leveren van waarden bij een WOZ-object
   Voor een waardepeildatum wordt de waarde genomen met de meest recente ingangsdatum met betrekking tot die waardepeildatum.
   Voor een waardepeildatum en ingangsdatum wordt de waarde genomen met de meest recente beschikkingsdatum.
 
-  Waarden worden opgenomen gesorteerd op waardepeildatum met de meest recente waardepeildatum eerst.
+  Waarden worden gesorteerd op waardepeildatum met de meest recente waardepeildatum eerst.
 
   N.B. De provider van de API kan een maximum aantal op te nemen waarden bepalen.
   N.B. Niet elke waarde bij het WOZ-object hoeft te komen uit een beschikking op naam van de actuele belanghebbende(n).
