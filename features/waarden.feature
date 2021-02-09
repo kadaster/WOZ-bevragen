@@ -7,8 +7,8 @@ Feature: leveren van waarden bij een WOZ-object
   Voor een waardepeildatum wordt de waarde genomen met de meest recente ingangsdatum met betrekking tot die waardepeildatum.
 
   Een waarde met alleen een beschikking status "vernietigingbeschikking" (02) en geen enkele andere status, wordt genegeerd.
-
-  Waarden worden aflopend gesorteerd op waardepeildatum (met de meest recente waardepeildatum eerst).
+  
+  Waarden worden gesorteerd op waardepeildatum met de meest recente waardepeildatum eerst.
 
   N.B. De API levert alleen actuele waarden. Dit betekent dat voor een waardepeildatum en ingangsdatum alleen de waarde wordt genomen met de meest recente beschikkingsdatum.
   N.B. De provider van de API kan een maximum aantal op te nemen waarden bepalen.
