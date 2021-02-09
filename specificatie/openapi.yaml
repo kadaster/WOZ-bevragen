@@ -149,16 +149,6 @@ components:
           $ref: '#/components/schemas/PersoonType_enum'
         vestigingsnummer:
           type: string
-    BelanghebbendeEigenaar:
-      allOf:
-        - $ref: '#/components/schemas/Belanghebbende'
-        - type: object
-          description: Belanghebbende eigenaar, erfpachter of houder van een opstalrecht of een vruchtgebruiker
-          properties:
-            soort:
-              type: string
-              description: omschrijving van het soort zakelijk recht dat de eigenaar heeft op het WOZ-object
-              example: "recht van erfpacht"
     PersoonType_enum:
       type: string
       enum:
@@ -206,7 +196,7 @@ components:
             type: string
             example: "0226010000038820"
         belanghebbendeEigenaar:
-          $ref: '#/components/schemas/BelanghebbendeEigenaar'
+          $ref: '#/components/schemas/Belanghebbende'
         belanghebbendeGebruiker:
           $ref: '#/components/schemas/Belanghebbende'
         grondoppervlakte:
