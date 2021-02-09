@@ -82,8 +82,8 @@ class WozObjectBasisLinks(ModelNormal):
             '_self': (HalLink,),  # noqa: E501
             'adres': (HalLink,),  # noqa: E501
             'adresseerbaar_objecten': ([HalLink],),  # noqa: E501
-            'belanghebbend_eigenaar': (HalLink,),  # noqa: E501
-            'belanghebbend_gebruiker': (HalLink,),  # noqa: E501
+            'belanghebbende_eigenaar': (HalLink,),  # noqa: E501
+            'belanghebbende_gebruiker': (HalLink,),  # noqa: E501
             'panden': ([HalLink],),  # noqa: E501
         }
 
@@ -96,8 +96,8 @@ class WozObjectBasisLinks(ModelNormal):
         '_self': 'self',  # noqa: E501
         'adres': 'adres',  # noqa: E501
         'adresseerbaar_objecten': 'adresseerbaarObjecten',  # noqa: E501
-        'belanghebbend_eigenaar': 'belanghebbendEigenaar',  # noqa: E501
-        'belanghebbend_gebruiker': 'belanghebbendGebruiker',  # noqa: E501
+        'belanghebbende_eigenaar': 'belanghebbendeEigenaar',  # noqa: E501
+        'belanghebbende_gebruiker': 'belanghebbendeGebruiker',  # noqa: E501
         'panden': 'panden',  # noqa: E501
     }
 
@@ -150,8 +150,8 @@ class WozObjectBasisLinks(ModelNormal):
             _self (HalLink): [optional]  # noqa: E501
             adres (HalLink): [optional]  # noqa: E501
             adresseerbaar_objecten ([HalLink]): [optional]  # noqa: E501
-            belanghebbend_eigenaar (HalLink): [optional]  # noqa: E501
-            belanghebbend_gebruiker (HalLink): [optional]  # noqa: E501
+            belanghebbende_eigenaar (HalLink): [optional]  # noqa: E501
+            belanghebbende_gebruiker (HalLink): [optional]  # noqa: E501
             panden ([HalLink]): [optional]  # noqa: E501
         """
 

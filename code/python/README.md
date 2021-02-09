@@ -101,7 +101,6 @@ Class | Method | HTTP request | Description
  - [HalCollectionLinks](docs/HalCollectionLinks.md)
  - [HalLink](docs/HalLink.md)
  - [InvalidParams](docs/InvalidParams.md)
- - [KadastraalOnroerendeZaak](docs/KadastraalOnroerendeZaak.md)
  - [ObjectAanduiding](docs/ObjectAanduiding.md)
  - [ObjectAanduidingAllOf](docs/ObjectAanduidingAllOf.md)
  - [PersoonTypeEnum](docs/PersoonTypeEnum.md)

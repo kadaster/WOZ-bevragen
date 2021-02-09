@@ -21,7 +21,6 @@ openapi_client/model/foutbericht.py
 openapi_client/model/hal_collection_links.py
 openapi_client/model/hal_link.py
 openapi_client/model/invalid_params.py
-openapi_client/model/kadastraal_onroerende_zaak.py
 openapi_client/model/object_aanduiding.py
 openapi_client/model/object_aanduiding_all_of.py
 openapi_client/model/persoon_type_enum.py

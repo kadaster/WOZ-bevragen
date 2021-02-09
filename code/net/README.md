@@ -124,7 +124,6 @@ Class | Method | HTTP request | Description
  - [Model.HalCollectionLinks](docs/HalCollectionLinks.md)
  - [Model.HalLink](docs/HalLink.md)
  - [Model.InvalidParams](docs/InvalidParams.md)
- - [Model.KadastraalOnroerendeZaak](docs/KadastraalOnroerendeZaak.md)
  - [Model.ObjectAanduiding](docs/ObjectAanduiding.md)
  - [Model.ObjectAanduidingAllOf](docs/ObjectAanduidingAllOf.md)
  - [Model.PersoonTypeEnum](docs/PersoonTypeEnum.md)

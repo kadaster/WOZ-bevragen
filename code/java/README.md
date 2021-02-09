@@ -2,7 +2,7 @@
 
 Waardering onroerende zaken
 - API version: 1.0.0
-  - Build date: 2021-01-12T10:15:17.976Z[Etc/UTC]
+  - Build date: 2021-01-29T15:06:01.841Z[Etc/UTC]
 
 Deze API levert actuele gegevens over WOZ-objecten
 
@@ -126,7 +126,6 @@ Class | Method | HTTP request | Description
  - [HalCollectionLinks](docs/HalCollectionLinks.md)
  - [HalLink](docs/HalLink.md)
  - [InvalidParams](docs/InvalidParams.md)
- - [KadastraalOnroerendeZaak](docs/KadastraalOnroerendeZaak.md)
  - [ObjectAanduiding](docs/ObjectAanduiding.md)
  - [ObjectAanduidingAllOf](docs/ObjectAanduidingAllOf.md)
  - [PersoonTypeEnum](docs/PersoonTypeEnum.md)

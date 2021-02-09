@@ -29,7 +29,7 @@ import java.time.LocalDate;
  * Waarde op de meest recente beschikking met betrekking tot de peildatum
  */
 @ApiModel(description = "Waarde op de meest recente beschikking met betrekking tot de peildatum")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-12T10:15:17.976Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-29T15:06:01.841Z[Etc/UTC]")
 public class Waarde {
   public static final String SERIALIZED_NAME_VASTGESTELDE_WAARDE = "vastgesteldeWaarde";
   @SerializedName(SERIALIZED_NAME_VASTGESTELDE_WAARDE)

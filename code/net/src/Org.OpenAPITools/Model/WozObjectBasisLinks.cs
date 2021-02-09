@@ -36,16 +36,16 @@ namespace Org.OpenAPITools.Model
         /// <param name="self">self.</param>
         /// <param name="adres">adres.</param>
         /// <param name="adresseerbaarObjecten">adresseerbaarObjecten.</param>
-        /// <param name="belanghebbendEigenaar">belanghebbendEigenaar.</param>
-        /// <param name="belanghebbendGebruiker">belanghebbendGebruiker.</param>
+        /// <param name="belanghebbendeEigenaar">belanghebbendeEigenaar.</param>
+        /// <param name="belanghebbendeGebruiker">belanghebbendeGebruiker.</param>
         /// <param name="panden">panden.</param>
-        public WozObjectBasisLinks(HalLink self = default(HalLink), HalLink adres = default(HalLink), List<HalLink> adresseerbaarObjecten = default(List<HalLink>), HalLink belanghebbendEigenaar = default(HalLink), HalLink belanghebbendGebruiker = default(HalLink), List<HalLink> panden = default(List<HalLink>))
+        public WozObjectBasisLinks(HalLink self = default(HalLink), HalLink adres = default(HalLink), List<HalLink> adresseerbaarObjecten = default(List<HalLink>), HalLink belanghebbendeEigenaar = default(HalLink), HalLink belanghebbendeGebruiker = default(HalLink), List<HalLink> panden = default(List<HalLink>))
         {
             this.Self = self;
             this.Adres = adres;
             this.AdresseerbaarObjecten = adresseerbaarObjecten;
-            this.BelanghebbendEigenaar = belanghebbendEigenaar;
-            this.BelanghebbendGebruiker = belanghebbendGebruiker;
+            this.BelanghebbendeEigenaar = belanghebbendeEigenaar;
+            this.BelanghebbendeGebruiker = belanghebbendeGebruiker;
             this.Panden = panden;
         }
         
@@ -68,16 +68,16 @@ namespace Org.OpenAPITools.Model
         public List<HalLink> AdresseerbaarObjecten { get; set; }
 
         /// <summary>
-        /// Gets or Sets BelanghebbendEigenaar
+        /// Gets or Sets BelanghebbendeEigenaar
         /// </summary>
-        [DataMember(Name="belanghebbendEigenaar", EmitDefaultValue=false)]
-        public HalLink BelanghebbendEigenaar { get; set; }
+        [DataMember(Name="belanghebbendeEigenaar", EmitDefaultValue=false)]
+        public HalLink BelanghebbendeEigenaar { get; set; }
 
         /// <summary>
-        /// Gets or Sets BelanghebbendGebruiker
+        /// Gets or Sets BelanghebbendeGebruiker
         /// </summary>
-        [DataMember(Name="belanghebbendGebruiker", EmitDefaultValue=false)]
-        public HalLink BelanghebbendGebruiker { get; set; }
+        [DataMember(Name="belanghebbendeGebruiker", EmitDefaultValue=false)]
+        public HalLink BelanghebbendeGebruiker { get; set; }
 
         /// <summary>
         /// Gets or Sets Panden
@@ -96,8 +96,8 @@ namespace Org.OpenAPITools.Model
             sb.Append("  Self: ").Append(Self).Append("\n");
             sb.Append("  Adres: ").Append(Adres).Append("\n");
             sb.Append("  AdresseerbaarObjecten: ").Append(AdresseerbaarObjecten).Append("\n");
-            sb.Append("  BelanghebbendEigenaar: ").Append(BelanghebbendEigenaar).Append("\n");
-            sb.Append("  BelanghebbendGebruiker: ").Append(BelanghebbendGebruiker).Append("\n");
+            sb.Append("  BelanghebbendeEigenaar: ").Append(BelanghebbendeEigenaar).Append("\n");
+            sb.Append("  BelanghebbendeGebruiker: ").Append(BelanghebbendeGebruiker).Append("\n");
             sb.Append("  Panden: ").Append(Panden).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -150,14 +150,14 @@ namespace Org.OpenAPITools.Model
                     this.AdresseerbaarObjecten.SequenceEqual(input.AdresseerbaarObjecten)
                 ) && 
                 (
-                    this.BelanghebbendEigenaar == input.BelanghebbendEigenaar ||
-                    (this.BelanghebbendEigenaar != null &&
-                    this.BelanghebbendEigenaar.Equals(input.BelanghebbendEigenaar))
+                    this.BelanghebbendeEigenaar == input.BelanghebbendeEigenaar ||
+                    (this.BelanghebbendeEigenaar != null &&
+                    this.BelanghebbendeEigenaar.Equals(input.BelanghebbendeEigenaar))
                 ) && 
                 (
-                    this.BelanghebbendGebruiker == input.BelanghebbendGebruiker ||
-                    (this.BelanghebbendGebruiker != null &&
-                    this.BelanghebbendGebruiker.Equals(input.BelanghebbendGebruiker))
+                    this.BelanghebbendeGebruiker == input.BelanghebbendeGebruiker ||
+                    (this.BelanghebbendeGebruiker != null &&
+                    this.BelanghebbendeGebruiker.Equals(input.BelanghebbendeGebruiker))
                 ) && 
                 (
                     this.Panden == input.Panden ||
@@ -182,10 +182,10 @@ namespace Org.OpenAPITools.Model
                     hashCode = hashCode * 59 + this.Adres.GetHashCode();
                 if (this.AdresseerbaarObjecten != null)
                     hashCode = hashCode * 59 + this.AdresseerbaarObjecten.GetHashCode();
-                if (this.BelanghebbendEigenaar != null)
-                    hashCode = hashCode * 59 + this.BelanghebbendEigenaar.GetHashCode();
-                if (this.BelanghebbendGebruiker != null)
-                    hashCode = hashCode * 59 + this.BelanghebbendGebruiker.GetHashCode();
+                if (this.BelanghebbendeEigenaar != null)
+                    hashCode = hashCode * 59 + this.BelanghebbendeEigenaar.GetHashCode();
+                if (this.BelanghebbendeGebruiker != null)
+                    hashCode = hashCode * 59 + this.BelanghebbendeGebruiker.GetHashCode();
                 if (this.Panden != null)
                     hashCode = hashCode * 59 + this.Panden.GetHashCode();
                 return hashCode;

@@ -408,11 +408,6 @@ components:
       - niet_natuurlijk_persoon
       - vestiging
       type: string
-    KadastraalOnroerendeZaak:
-      properties:
-        identificatie:
-          type: string
-      type: object
     ObjectAanduiding:
       allOf:
       - $ref: '#/components/schemas/Adres'
@@ -457,8 +452,8 @@ components:
           title: WOZ-objectnummer
           type: string
         kadastraalOnroerendeZaakIdentificaties:
-          description: De kadastraal onroerende zaken die geheel of gedeeltelijk deel
-            uitmaken van het WOZ-object
+          description: De identificaties van kadastraal onroerende zaken die geheel
+            of gedeeltelijk deel uitmaken van het WOZ-object
           items:
             type: string
           type: array
@@ -473,7 +468,7 @@ components:
             $ref: '#/components/schemas/Waarde'
           type: array
       type: object
-    WozObjectBasis_links:
+    WozObjectBasisLinks:
       properties:
         self:
           $ref: '#/components/schemas/HalLink'
@@ -483,9 +478,9 @@ components:
           items:
             $ref: '#/components/schemas/HalLink'
           type: array
-        belanghebbendEigenaar:
+        belanghebbendeEigenaar:
           $ref: '#/components/schemas/HalLink'
-        belanghebbendGebruiker:
+        belanghebbendeGebruiker:
           $ref: '#/components/schemas/HalLink'
         panden:
           items:
@@ -501,9 +496,9 @@ components:
         _links:
           $ref: '#/components/schemas/HalCollectionLinks'
         _embedded:
-          $ref: '#/components/schemas/WozObjectHalCollectie_embedded'
+          $ref: '#/components/schemas/WozObjectHalCollectieEmbedded'
       type: object
-    WozObjectHalCollectie_embedded:
+    WozObjectHalCollectieEmbedded:
       properties:
         wozObjecten:
           items:
@@ -660,7 +655,7 @@ components:
     WozObjectHal_allOf:
       properties:
         _links:
-          $ref: '#/components/schemas/WozObjectBasis_links'
+          $ref: '#/components/schemas/WozObjectBasisLinks'
       type: object
     BadRequestFoutbericht_allOf:
       properties:
