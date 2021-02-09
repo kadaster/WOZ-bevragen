@@ -2,11 +2,11 @@
 
 Feature: Als gebruiker wil ik de naam zien van de geleverde belanghebbende
   In belanghebbendeEigenaar en belanghebbendeGebruiker wordt de naam geleverd.
-  Een belanghebbende kan een natuurlijk persoon zijn, een niet-natuurlijk persoon of een verstiging.
+  Een belanghebbende kan een natuurlijk persoon zijn, een niet-natuurlijk persoon of een vestiging.
 
   Scenario: de naam van een natuurlijk persoon is de voorletters, voorvoegsel en geslachtsnaam
     Gegeven de belanghebbendeEigenaar van het WOZ object met identificatie "002500003118" is de natuurlijk persoon met burgerservicenummer "999991234"
-    En deze persoon heeft als voorletters "A.B.C"
+    En deze persoon heeft als voorletters "A.B.C."
     En deze persoon heeft als voorvoegsel geslachtsnaam "in het"
     En deze persoon heeft als geslachtsnaam "Veld"
     Als het WOZ object wordt opgevraagd met /wozobjecten/002500003118
@@ -15,8 +15,7 @@ Feature: Als gebruiker wil ik de naam zien van de geleverde belanghebbende
     "belanghebbendeEigenaar": {
          "burgerservicenummer": "999991234",
          "naam": "A.B.C. in het Veld",
-         "type": "natuurlijk_persoon",
-         "soort": "recht van erfpacht"
+         "type": "natuurlijk_persoon"
     }
     """
 
@@ -31,8 +30,7 @@ Feature: Als gebruiker wil ik de naam zien van de geleverde belanghebbende
     "belanghebbendeEigenaar": {
          "burgerservicenummer": "999995678",
          "naam": "D. Groenen",
-         "type": "natuurlijk_persoon",
-         "soort": "vol eigendom"
+         "type": "natuurlijk_persoon"
     }
     """
 
@@ -46,8 +44,7 @@ Feature: Als gebruiker wil ik de naam zien van de geleverde belanghebbende
          "rsin": "858311537",
          "kvkNummer": "69599068",
          "naam": "Test Stichting Bolderbast",
-         "type": "niet_natuurlijk_persoon",
-         "soort": "vol eigendom"
+         "type": "niet_natuurlijk_persoon"
     }
     """
 
@@ -61,7 +58,6 @@ Feature: Als gebruiker wil ik de naam zien van de geleverde belanghebbende
          "vestigingsnummer": "000037143557",
          "kvkNummer": "68727720",
          "naam": "Test NV Katrien",
-         "type": "vestiging",
-         "soort": "vol eigendom"
+         "type": "vestiging"
     }
     """
