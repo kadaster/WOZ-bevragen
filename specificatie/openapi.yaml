@@ -169,6 +169,47 @@ components:
               description: "Identificatie van de nummeraanduiding in de BAG waarmee het WOZ-object wordt aangeduid"
               type: string
               example: "0226200000038923"
+    StatusBeschikkingEnum:
+      type: string
+      description: |
+        De status van een beschikking waarmee de waarde is vastgesteld.
+        * `beschikking_genomen` - 01: beschikking genomen
+        * `vernietigingbeschikking` - 02: vernietigingbeschikking
+        * `herzieningsbeschikking` - 03: herzieningsbeschikking
+        * `bezwaaringediend` - 10: bezwaaringediend
+        * `bezwaar_gehandhaafd` - 11: bezwaar afgehandeld, beschikking gehandhaafd
+        * `bezwaar_veranderd` - 12: bezwaar afgehandeld, vastgestelde waarde veranderd
+        * `waardeambtshalveverminderd` - 13: waardeambtshalveverminderd
+        * `beroepaangetekend` - 20: beroepaangetekend
+        * `beroep_gehandhaafd` - 21: uitspraak beroep, beschikking gehandhaafd
+        * `beroep_veranderd` - 22: uitspraak beroep, vastgestelde waarde veranderd
+        * `hogerberoepaangetekend` - 23: hogerberoepaangetekend
+        * `hoger_beroep_gehandhaafd` - 24: uitspraak hoger beroep, beschikking gehandhaafd
+        * `hoger_beroep_veranderd` - 25: uitspraak hoger beroep, vastgestelde waarde veranderd
+        * `cassatieingesteld` - 30: cassatieingesteld
+        * `hoge_raad_gehandhaafd` - 31: arrest Hoge Raad, beschikking gehandhaafd
+        * `hoge_raad_veranderd` - 32: arrest Hoge Raad, vastgestelde waarde veranderd
+        * `hoge_raad_gedingverwezen` - 33: arrestHogeRaad,gedingverwezen
+        * `voorlopige_aanslag` - 99: waarde te gebruiken voor voorlopige aanslag
+      enum:
+        - beschikking_genomen
+        - vernietigingbeschikking
+        - herzieningsbeschikking
+        - bezwaaringediend
+        - bezwaar_gehandhaafd
+        - bezwaar_veranderd
+        - waardeambtshalveverminderd
+        - beroepaangetekend
+        - beroep_gehandhaafd
+        - beroep_veranderd
+        - hogerberoepaangetekend
+        - hoger_beroep_gehandhaafd
+        - hoger_beroep_veranderd
+        - cassatieingesteld
+        - hoge_raad_gehandhaafd
+        - hoge_raad_veranderd
+        - hoge_raad_gedingverwezen
+        - voorlopige_aanslag
     Waarde:
       type: object
       description: "Waarde op de meest recente beschikking met betrekking tot de peildatum"
@@ -184,6 +225,10 @@ components:
           type: string
           format: date
           example: "2019-01-01"
+        beschikkingsStatussen:
+          type: array
+          items:
+            $ref: "#/components/schemas/StatusBeschikkingEnum"
     WozObject:
       type: object
       properties:
