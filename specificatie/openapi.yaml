@@ -217,18 +217,21 @@ components:
         vastgesteldeWaarde:
           type: integer
           description: "Waarde van het WOZ-object op de peildatum in Euro"
-        indicatieBezwaarBeroep:
-          type: boolean
-          description: "Bij waarde true is er een lopende zaak voor bezwaar, beroep, hoger beroep of cassatie"
         waardepeildatum:
           description: "Datum waarvoor de vastgestelde waarde geldt"
           type: string
           format: date
           example: "2019-01-01"
+        ingangsdatum:
+          description: "Datum vanaf wanneer de vastgestelde waarde geldt"
+          type: string
+          format: date
+          example: "2020-01-01"
         beschikkingsStatussen:
           type: array
           items:
             $ref: "#/components/schemas/StatusBeschikkingEnum"
+          description: "Een of meer actuele statussen van de vastgestelde waarde"
     WozObject:
       type: object
       properties:
