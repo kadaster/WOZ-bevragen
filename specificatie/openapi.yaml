@@ -217,6 +217,7 @@ components:
         vastgesteldeWaarde:
           type: integer
           description: "Waarde van het WOZ-object op de peildatum in Euro"
+          example: 127000
         waardepeildatum:
           description: "Datum waarvoor de vastgestelde waarde geldt"
           type: string
