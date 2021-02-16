@@ -282,7 +282,7 @@ Feature: leveren van waarden bij een WOZ-object
     """
 
     Scenario: een vernietigde beschikking wordt genegeerd
-      Gegeven voor WOZ-object met objectnummer "051800027395" heeft een beschikking met ingangsdatum 01-07-2019
+      Gegeven WOZ-object met objectnummer "051800027395" heeft een beschikking met ingangsdatum 01-07-2019
       En deze beschikking heeft als status "vernietigingbeschikking" (02)
       En WOZ-object met objectnummer "051800027395" heeft de volgende beschikkingen:
       | Peildatum  | WOZ-waarde   | Ingangsdatum | Datum beschikking |
@@ -336,7 +336,7 @@ Feature: leveren van waarden bij een WOZ-object
       """
 
     Scenario: een vernietigde beschikking wordt genegeerd, maar de andere beschikking(en) voor dezelfde peildatum en ingangsdatum niet
-      Gegeven voor WOZ-object met objectnummer "002500024901" heeft een beschikking met ingangsdatum 01-07-2019
+      Gegeven WOZ-object met objectnummer "002500024901" heeft een beschikking met ingangsdatum 01-07-2019
       En voor een andere belanghebbende is er ook een beschikking met ingangsdatum 01-07-2019
       En deze beschikking heeft als status "vernietigingbeschikking" (02)
       En WOZ-object met objectnummer "002500024901" heeft de volgende beschikkingen:
@@ -392,7 +392,7 @@ Feature: leveren van waarden bij een WOZ-object
       """
 
     Scenario: meerdere vernietigde beschikkingen met zelfde peildatum en ingangsdatum worden genegeerd
-      Gegeven voor WOZ-object met objectnummer "051800027395" heeft een beschikking met ingangsdatum 01-07-2019
+      Gegeven WOZ-object met objectnummer "051800027395" heeft een beschikking met ingangsdatum 01-07-2019
       En voor een andere belanghebbende is er ook een beschikking met ingangsdatum 01-07-2019
       En beide beschikkingen met ingangsdatum 01-07-2019 hebben als status "vernietigingbeschikking" (02)
       En WOZ-object met objectnummer "051800027395" heeft de volgende beschikkingen:
@@ -448,39 +448,39 @@ Feature: leveren van waarden bij een WOZ-object
       """
 
     Abstract Scenario: indicatieBezwaarBeroep wanneer een van de statussen bezwaar, (hoger)beroep of cassatie ingesteld maar niet afgehandeld is.
-      Gegeven een beschikking de status "<status>" (<statuscode>) heeft
+      Gegeven een beschikking heeft de status "<status>" (<statuscode>)
       Als het WOZ object wordt opgevraagd
-      Dan levert de API in de betreffende waarde property "beschikkingsStatussen" met de waarde ["status"]
+      Dan levert de API in de betreffende waarde de property "beschikkingsStatussen" met de waarde ["<status>"]
       En heeft de daaruit bepaalde relevante waarde property "indicatieBezwaarBeroep" met de waarde true
 
       Voorbeelden:
-        | statuscode | status |
-        | 10 | bezwaaringediend |
-        | 20 | beroepaangetekend |
-        | 23 | hogerberoepaangetekend |
-        | 30 | cassatieingesteld |
+        | statuscode | status                 |
+        | 10         | bezwaaringediend       |
+        | 20         | beroepaangetekend      |
+        | 23         | hogerberoepaangetekend |
+        | 30         | cassatieingesteld      |
 
     Abstract Scenario: indicatieBezwaarBeroep wordt niet opgenomen wanneer er geen bezwaar, (hoger)beroep of cassatie is ingesteld, of deze is afgehandeld.
       Gegeven een beschikking de status "<status>" (<statuscode>) heeft
       Als het WOZ object wordt opgevraagd
-      Dan levert de API in de betreffende waarde property "beschikkingsStatussen" met de waarde ["status_enum"]
+      Dan levert de API in de betreffende waarde property "beschikkingsStatussen" met de waarde ["<status_enum>"]
       En bevat de daaruit bepaalde relevante waarde geen property "indicatieBezwaarBeroep"
 
       Voorbeelden:
-        | status_enum | statuscode | status |
-        | beschikking_genomen | 01 | beschikking genomen |
-        | herzieningsbeschikking | 03 | herzieningsbeschikking |
-        | bezwaar_gehandhaafd | 11 | bezwaar afgehandeld, beschikking gehandhaafd |
-        | bezwaar_veranderd | 12 | bezwaar afgehandeld, vastgestelde waarde veranderd |
-        | waardeambtshalveverminderd | 13 | waardeambtshalveverminderd |
-        | beroep_gehandhaafd | 21 | uitspraak beroep, beschikking gehandhaafd |
-        | beroep_veranderd | 22 | uitspraak beroep, vastgestelde waarde veranderd |
-        | hoger_beroep_gehandhaafd | 24 | uitspraak hoger beroep, beschikking gehandhaafd |
-        | hoger_beroep_veranderd | 25 | uitspraak hoger beroep, vastgestelde waarde veranderd |
-        | hoge_raad_gehandhaafd | 31 | arrest Hoge Raad, beschikking gehandhaafd |
-        | hoge_raad_veranderd | 32 | arrest Hoge Raad, vastgestelde waarde veranderd |
-        | hoge_raad_gedingverwezen | 33 | arrestHogeRaad,gedingverwezen |
-        | voorlopige_aanslag | 99 | waarde te gebruiken voor voorlopige aanslag |
+        | status_enum                | statuscode | status                                                |
+        | beschikking_genomen        | 01         | beschikking genomen                                   |
+        | herzieningsbeschikking     | 03         | herzieningsbeschikking                                |
+        | bezwaar_gehandhaafd        | 11         | bezwaar afgehandeld, beschikking gehandhaafd          |
+        | bezwaar_veranderd          | 12         | bezwaar afgehandeld, vastgestelde waarde veranderd    |
+        | waardeambtshalveverminderd | 13         | waardeambtshalveverminderd                            |
+        | beroep_gehandhaafd         | 21         | uitspraak beroep, beschikking gehandhaafd             |
+        | beroep_veranderd           | 22         | uitspraak beroep, vastgestelde waarde veranderd       |
+        | hoger_beroep_gehandhaafd   | 24         | uitspraak hoger beroep, beschikking gehandhaafd       |
+        | hoger_beroep_veranderd     | 25         | uitspraak hoger beroep, vastgestelde waarde veranderd |
+        | hoge_raad_gehandhaafd      | 31         | arrest Hoge Raad, beschikking gehandhaafd             |
+        | hoge_raad_veranderd        | 32         | arrest Hoge Raad, vastgestelde waarde veranderd       |
+        | hoge_raad_gedingverwezen   | 33         | arrestHogeRaad,gedingverwezen                         |
+        | voorlopige_aanslag         | 99         | waarde te gebruiken voor voorlopige aanslag           |
 
     Scenario: indicatieBezwaarBeroep wanneer er meerdere statussen zijn bij een waardepeildatum en ingangsdatum
       Gegeven WOZ-object met objectnummer "23280647970000" heeft de volgende beschikkingen:
@@ -528,8 +528,8 @@ Feature: leveren van waarden bij een WOZ-object
       En de vorige eigenaar heeft beroep ingediend over de WOZ-waarde op waardepeildatum 01-01-2018
       En WOZ-object met objectnummer "22310827210003" heeft de volgende beschikkingen:
       | Peildatum  | WOZ-waarde   | Ingangsdatum | Datum beschikking | Status |
-      | 01-01-2018 | 215.000 euro | 01-01-2019   | 28-05-2019        | 01     |
-      | 01-01-2018 | 215.000 euro | 01-05-2019   | 14-01-2019        | 20     |
+      | 01-01-2018 | 215.000 euro | 01-05-2019   | 28-05-2019        | 01     |
+      | 01-01-2018 | 215.000 euro | 01-01-2019   | 14-01-2019        | 20     |
       Als het WOZ object wordt opgevraagd met /wozobjecten/22310827210003
       Dan levert de API de volgende waarden:
       """
@@ -537,7 +537,7 @@ Feature: leveren van waarden bij een WOZ-object
         {
           "vastgesteldeWaarde": 215000,
           "waardepeildatum": "2018-01-01",
-          "ingangsdatum": "2018-05-01",
+          "ingangsdatum": "2019-05-01",
           "beschikkingsStatussen": [ "beschikking_genomen" ]
         },{
           "vastgesteldeWaarde": 215000,
