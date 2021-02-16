@@ -9,7 +9,8 @@ Feature: leveren van waarden bij een WOZ-object
   Een waarde met alleen een of meerdere beschikking status (beschikkingsStatussen) "vernietigingbeschikking" (02) en geen enkele andere status, wordt genegeerd.
 
   Waarden worden gesorteerd op waardepeildatum met de meest recente waardepeildatum eerst.
-
+  
+  N.B. De API levert waarden aflopend gesorteerd op waardepeildatum en daarbinnen op ingangsdatum.
   N.B. De API levert alleen actuele waarden. Dit betekent dat voor een waardepeildatum en ingangsdatum alleen de waarde wordt genomen met de meest recente beschikkingsdatum. Ook levert de API alleen de actuele beschikkingsStatussen.
   N.B. De provider van de API kan een maximum aantal op te nemen waarden bepalen.
   N.B. Niet elke waarde bij het WOZ-object hoeft te komen uit een beschikking op naam van de actuele belanghebbende(n).
