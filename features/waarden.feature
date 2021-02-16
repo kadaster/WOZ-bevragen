@@ -45,7 +45,7 @@ Feature: leveren van waarden bij een WOZ-object
         "waardepeildatum": "2018-01-01",
         "ingangsdatum": "2019-01-01",
         "beschikkingsStatussen": [ "beschikking_genomen" ]
-      },
+      },{
         "vastgesteldeWaarde": 340000,
         "waardepeildatum": "2017-01-01",
         "ingangsdatum": "2018-01-01",
@@ -68,7 +68,7 @@ Feature: leveren van waarden bij een WOZ-object
       }
     ]
     """
-    En zijn de daaruit bepaalde relevante de waarden:
+    En zijn de daaruit bepaalde relevante waarden:
     """
     "waarden": [
       {
