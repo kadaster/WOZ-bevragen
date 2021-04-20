@@ -186,7 +186,7 @@ Feature: leveren van waarden bij een WOZ-object
         "vastgesteldeWaarde": 176000,
         "waardepeildatum": "2018-01-01",
         "ingangsdatum": "2019-01-01",
-        "beschikkingsStatussen": [ "bezwaaringediend" ]
+        "beschikkingsStatussen": [ "bezwaar_ingediend" ]
       },{
         "vastgesteldeWaarde": 152000,
         "waardepeildatum": "2017-01-01",
@@ -304,7 +304,7 @@ Feature: leveren van waarden bij een WOZ-object
           "vastgesteldeWaarde": 210000,
           "waardepeildatum": "2018-01-01",
           "ingangsdatum": "2019-07-01",
-          "beschikkingsStatussen": [ "vernietigingbeschikking" ]
+          "beschikkingsStatussen": [ "beschikking_vernietigd" ]
         },{
           "vastgesteldeWaarde": 283000,
           "waardepeildatum": "2018-01-01",
@@ -360,7 +360,7 @@ Feature: leveren van waarden bij een WOZ-object
           "vastgesteldeWaarde": 282000,
           "waardepeildatum": "2018-01-01",
           "ingangsdatum": "2019-07-01",
-          "beschikkingsStatussen": [ "vernietigingbeschikking", "bezwaar_gehandhaafd" ]
+          "beschikkingsStatussen": [ "beschikking_vernietigd", "bezwaar_gehandhaafd" ]
         },{
           "vastgesteldeWaarde": 306000,
           "waardepeildatum": "2018-01-01",
@@ -416,7 +416,7 @@ Feature: leveren van waarden bij een WOZ-object
           "vastgesteldeWaarde": 440000,
           "waardepeildatum": "2018-01-01",
           "ingangsdatum": "2019-07-01",
-          "beschikkingsStatussen": [ "vernietigingbeschikking", "vernietigingbeschikking" ]
+          "beschikkingsStatussen": [ "beschikking_vernietigd", "beschikking_vernietigd" ]
         },{
           "vastgesteldeWaarde": 430000,
           "waardepeildatum": "2018-01-01",
@@ -455,11 +455,11 @@ Feature: leveren van waarden bij een WOZ-object
       En heeft de daaruit bepaalde relevante waarde property "indicatieBezwaarBeroep" met de waarde true
 
       Voorbeelden:
-        | statuscode | status                 |
-        | 10         | bezwaaringediend       |
-        | 20         | beroepaangetekend      |
-        | 23         | hogerberoepaangetekend |
-        | 30         | cassatieingesteld      |
+        | statuscode | status                   |
+        | 10         | bezwaar_ingediend        |
+        | 20         | beroep_aangetekend       |
+        | 23         | hoger_beroep_aangetekend |
+        | 30         | cassatie_ingesteld       |
 
     Abstract Scenario: indicatieBezwaarBeroep wordt niet opgenomen wanneer er geen bezwaar, (hoger)beroep of cassatie is ingesteld, of deze is afgehandeld.
       Gegeven een beschikking de status "<status>" (<statuscode>) heeft
@@ -468,20 +468,20 @@ Feature: leveren van waarden bij een WOZ-object
       En bevat de daaruit bepaalde relevante waarde geen property "indicatieBezwaarBeroep"
 
       Voorbeelden:
-        | status_enum                | statuscode | status                                                |
-        | beschikking_genomen        | 01         | beschikking genomen                                   |
-        | herzieningsbeschikking     | 03         | herzieningsbeschikking                                |
-        | bezwaar_gehandhaafd        | 11         | bezwaar afgehandeld, beschikking gehandhaafd          |
-        | bezwaar_veranderd          | 12         | bezwaar afgehandeld, vastgestelde waarde veranderd    |
-        | waardeambtshalveverminderd | 13         | waardeambtshalveverminderd                            |
-        | beroep_gehandhaafd         | 21         | uitspraak beroep, beschikking gehandhaafd             |
-        | beroep_veranderd           | 22         | uitspraak beroep, vastgestelde waarde veranderd       |
-        | hoger_beroep_gehandhaafd   | 24         | uitspraak hoger beroep, beschikking gehandhaafd       |
-        | hoger_beroep_veranderd     | 25         | uitspraak hoger beroep, vastgestelde waarde veranderd |
-        | hoge_raad_gehandhaafd      | 31         | arrest Hoge Raad, beschikking gehandhaafd             |
-        | hoge_raad_veranderd        | 32         | arrest Hoge Raad, vastgestelde waarde veranderd       |
-        | hoge_raad_gedingverwezen   | 33         | arrestHogeRaad,gedingverwezen                         |
-        | voorlopige_aanslag         | 99         | waarde te gebruiken voor voorlopige aanslag           |
+        | status_enum                  | statuscode | status                                                |
+        | beschikking_genomen          | 01         | beschikking genomen                                   |
+        | beschikking_herzien          | 03         | herzieningsbeschikking                                |
+        | bezwaar_gehandhaafd          | 11         | bezwaar afgehandeld, beschikking gehandhaafd          |
+        | bezwaar_veranderd            | 12         | bezwaar afgehandeld, vastgestelde waarde veranderd    |
+        | waarde_ambtshalve_verminderd | 13         | waardeambtshalveverminderd                            |
+        | beroep_gehandhaafd           | 21         | uitspraak beroep, beschikking gehandhaafd             |
+        | beroep_veranderd             | 22         | uitspraak beroep, vastgestelde waarde veranderd       |
+        | hoger_beroep_gehandhaafd     | 24         | uitspraak hoger beroep, beschikking gehandhaafd       |
+        | hoger_beroep_veranderd       | 25         | uitspraak hoger beroep, vastgestelde waarde veranderd |
+        | hoge_raad_gehandhaafd        | 31         | arrest Hoge Raad, beschikking gehandhaafd             |
+        | hoge_raad_veranderd          | 32         | arrest Hoge Raad, vastgestelde waarde veranderd       |
+        | hoge_raad_geding_verwezen    | 33         | arrestHogeRaad,gedingverwezen                         |
+        | voorlopige_aanslag           | 99         | waarde te gebruiken voor voorlopige aanslag           |
 
     Scenario: indicatieBezwaarBeroep wanneer er meerdere statussen zijn bij een waardepeildatum en ingangsdatum
       Gegeven WOZ-object met objectnummer "23280647970000" heeft de volgende beschikkingen:
@@ -498,12 +498,12 @@ Feature: leveren van waarden bij een WOZ-object
           "vastgesteldeWaarde": 437000,
           "waardepeildatum": "2019-01-01",
           "ingangsdatum": "2020-01-01",
-          "beschikkingsStatussen": [ "beroep_gehandhaafd", "beroepaangetekend" ]
+          "beschikkingsStatussen": [ "beroep_gehandhaafd", "beroep_aangetekend" ]
         },{
           "vastgesteldeWaarde": 392000,
           "waardepeildatum": "2018-01-01",
           "ingangsdatum": "2019-01-01",
-          "beschikkingsStatussen": [ "hogerberoepaangetekend", "beschikking_genomen" ]
+          "beschikkingsStatussen": [ "hoger_beroep_aangetekend", "beschikking_genomen" ]
         }
       ]
       """
@@ -544,7 +544,7 @@ Feature: leveren van waarden bij een WOZ-object
           "vastgesteldeWaarde": 215000,
           "waardepeildatum": "2018-01-01",
           "ingangsdatum": "2019-01-01",
-          "beschikkingsStatussen": [ "beroepaangetekend" ]
+          "beschikkingsStatussen": [ "beroep_aangetekend" ]
         }
       ]
       """
@@ -553,7 +553,7 @@ Feature: leveren van waarden bij een WOZ-object
       "waarden": [
         {
           "vastgesteldeWaarde": 215000,
-          "waardepeildatum": "2019-05-01"
+          "waardepeildatum": "2018-01-01"
         }
       ]
       """
