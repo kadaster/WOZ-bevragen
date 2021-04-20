@@ -368,10 +368,10 @@ components:
           description: unieke identificatie van een niet-natuurlijk persoon (rechtspersoon
             of samenwerkingsverband)
         type:
-          $ref: '#/components/schemas/PersoonType_enum'
+          $ref: '#/components/schemas/PersoonTypeEnum'
         vestigingsnummer:
           type: string
-    PersoonType_enum:
+    PersoonTypeEnum:
       type: string
       enum:
       - natuurlijk_persoon
@@ -400,41 +400,41 @@ components:
       description: |
         De status van een beschikking waarmee de waarde is vastgesteld.
         * `beschikking_genomen` - 01: beschikking genomen
-        * `vernietigingbeschikking` - 02: vernietigingbeschikking
-        * `herzieningsbeschikking` - 03: herzieningsbeschikking
-        * `bezwaaringediend` - 10: bezwaaringediend
+        * `beschikking_vernietigd` - 02: vernietigingbeschikking
+        * `beschikking_herzien` - 03: herzieningsbeschikking
+        * `bezwaar_ingediend` - 10: bezwaar ingediend
         * `bezwaar_gehandhaafd` - 11: bezwaar afgehandeld, beschikking gehandhaafd
         * `bezwaar_veranderd` - 12: bezwaar afgehandeld, vastgestelde waarde veranderd
-        * `waardeambtshalveverminderd` - 13: waardeambtshalveverminderd
-        * `beroepaangetekend` - 20: beroepaangetekend
+        * `waarde_ambtshalve_verminderd` - 13: waarde ambtshalve verminderd
+        * `beroep_aangetekend` - 20: beroepaangetekend
         * `beroep_gehandhaafd` - 21: uitspraak beroep, beschikking gehandhaafd
         * `beroep_veranderd` - 22: uitspraak beroep, vastgestelde waarde veranderd
-        * `hogerberoepaangetekend` - 23: hogerberoepaangetekend
+        * `hoger_beroep_aangetekend` - 23: hogerberoep aangetekend
         * `hoger_beroep_gehandhaafd` - 24: uitspraak hoger beroep, beschikking gehandhaafd
         * `hoger_beroep_veranderd` - 25: uitspraak hoger beroep, vastgestelde waarde veranderd
-        * `cassatieingesteld` - 30: cassatieingesteld
+        * `cassatie_ingesteld` - 30: cassatie ingesteld
         * `hoge_raad_gehandhaafd` - 31: arrest Hoge Raad, beschikking gehandhaafd
         * `hoge_raad_veranderd` - 32: arrest Hoge Raad, vastgestelde waarde veranderd
-        * `hoge_raad_gedingverwezen` - 33: arrestHogeRaad,gedingverwezen
+        * `hoge_raad_geding_verwezen` - 33: arrestHogeRaad,geding verwezen
         * `voorlopige_aanslag` - 99: waarde te gebruiken voor voorlopige aanslag
       enum:
       - beschikking_genomen
-      - vernietigingbeschikking
-      - herzieningsbeschikking
-      - bezwaaringediend
+      - beschikking_vernietigd
+      - beschikking_herzien
+      - bezwaar_ingediend
       - bezwaar_gehandhaafd
       - bezwaar_veranderd
-      - waardeambtshalveverminderd
-      - beroepaangetekend
+      - waarde_ambtshalve_verminderd
+      - beroep_aangetekend
       - beroep_gehandhaafd
       - beroep_veranderd
-      - hogerberoepaangetekend
+      - hoger_beroep_aangetekend
       - hoger_beroep_gehandhaafd
       - hoger_beroep_veranderd
-      - cassatieingesteld
+      - cassatie_ingesteld
       - hoge_raad_gehandhaafd
       - hoge_raad_veranderd
-      - hoge_raad_gedingverwezen
+      - hoge_raad_geding_verwezen
       - voorlopige_aanslag
     Waarde:
       type: object

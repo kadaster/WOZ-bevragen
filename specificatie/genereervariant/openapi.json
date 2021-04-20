@@ -463,14 +463,14 @@
             "description" : "unieke identificatie van een niet-natuurlijk persoon (rechtspersoon of samenwerkingsverband)"
           },
           "type" : {
-            "$ref" : "#/components/schemas/PersoonType_enum"
+            "$ref" : "#/components/schemas/PersoonTypeEnum"
           },
           "vestigingsnummer" : {
             "type" : "string"
           }
         }
       },
-      "PersoonType_enum" : {
+      "PersoonTypeEnum" : {
         "type" : "string",
         "enum" : [ "natuurlijk_persoon", "niet_natuurlijk_persoon", "vestiging" ]
       },
@@ -496,8 +496,8 @@
       },
       "StatusBeschikkingEnum" : {
         "type" : "string",
-        "description" : "De status van een beschikking waarmee de waarde is vastgesteld.\n* `beschikking_genomen` - 01: beschikking genomen\n* `vernietigingbeschikking` - 02: vernietigingbeschikking\n* `herzieningsbeschikking` - 03: herzieningsbeschikking\n* `bezwaaringediend` - 10: bezwaaringediend\n* `bezwaar_gehandhaafd` - 11: bezwaar afgehandeld, beschikking gehandhaafd\n* `bezwaar_veranderd` - 12: bezwaar afgehandeld, vastgestelde waarde veranderd\n* `waardeambtshalveverminderd` - 13: waardeambtshalveverminderd\n* `beroepaangetekend` - 20: beroepaangetekend\n* `beroep_gehandhaafd` - 21: uitspraak beroep, beschikking gehandhaafd\n* `beroep_veranderd` - 22: uitspraak beroep, vastgestelde waarde veranderd\n* `hogerberoepaangetekend` - 23: hogerberoepaangetekend\n* `hoger_beroep_gehandhaafd` - 24: uitspraak hoger beroep, beschikking gehandhaafd\n* `hoger_beroep_veranderd` - 25: uitspraak hoger beroep, vastgestelde waarde veranderd\n* `cassatieingesteld` - 30: cassatieingesteld\n* `hoge_raad_gehandhaafd` - 31: arrest Hoge Raad, beschikking gehandhaafd\n* `hoge_raad_veranderd` - 32: arrest Hoge Raad, vastgestelde waarde veranderd\n* `hoge_raad_gedingverwezen` - 33: arrestHogeRaad,gedingverwezen\n* `voorlopige_aanslag` - 99: waarde te gebruiken voor voorlopige aanslag\n",
-        "enum" : [ "beschikking_genomen", "vernietigingbeschikking", "herzieningsbeschikking", "bezwaaringediend", "bezwaar_gehandhaafd", "bezwaar_veranderd", "waardeambtshalveverminderd", "beroepaangetekend", "beroep_gehandhaafd", "beroep_veranderd", "hogerberoepaangetekend", "hoger_beroep_gehandhaafd", "hoger_beroep_veranderd", "cassatieingesteld", "hoge_raad_gehandhaafd", "hoge_raad_veranderd", "hoge_raad_gedingverwezen", "voorlopige_aanslag" ]
+        "description" : "De status van een beschikking waarmee de waarde is vastgesteld.\n* `beschikking_genomen` - 01: beschikking genomen\n* `beschikking_vernietigd` - 02: vernietigingbeschikking\n* `beschikking_herzien` - 03: herzieningsbeschikking\n* `bezwaar_ingediend` - 10: bezwaar ingediend\n* `bezwaar_gehandhaafd` - 11: bezwaar afgehandeld, beschikking gehandhaafd\n* `bezwaar_veranderd` - 12: bezwaar afgehandeld, vastgestelde waarde veranderd\n* `waarde_ambtshalve_verminderd` - 13: waarde ambtshalve verminderd\n* `beroep_aangetekend` - 20: beroepaangetekend\n* `beroep_gehandhaafd` - 21: uitspraak beroep, beschikking gehandhaafd\n* `beroep_veranderd` - 22: uitspraak beroep, vastgestelde waarde veranderd\n* `hoger_beroep_aangetekend` - 23: hogerberoep aangetekend\n* `hoger_beroep_gehandhaafd` - 24: uitspraak hoger beroep, beschikking gehandhaafd\n* `hoger_beroep_veranderd` - 25: uitspraak hoger beroep, vastgestelde waarde veranderd\n* `cassatie_ingesteld` - 30: cassatie ingesteld\n* `hoge_raad_gehandhaafd` - 31: arrest Hoge Raad, beschikking gehandhaafd\n* `hoge_raad_veranderd` - 32: arrest Hoge Raad, vastgestelde waarde veranderd\n* `hoge_raad_geding_verwezen` - 33: arrestHogeRaad,geding verwezen\n* `voorlopige_aanslag` - 99: waarde te gebruiken voor voorlopige aanslag\n",
+        "enum" : [ "beschikking_genomen", "beschikking_vernietigd", "beschikking_herzien", "bezwaar_ingediend", "bezwaar_gehandhaafd", "bezwaar_veranderd", "waarde_ambtshalve_verminderd", "beroep_aangetekend", "beroep_gehandhaafd", "beroep_veranderd", "hoger_beroep_aangetekend", "hoger_beroep_gehandhaafd", "hoger_beroep_veranderd", "cassatie_ingesteld", "hoge_raad_gehandhaafd", "hoge_raad_veranderd", "hoge_raad_geding_verwezen", "voorlopige_aanslag" ]
       },
       "Waarde" : {
         "type" : "object",
