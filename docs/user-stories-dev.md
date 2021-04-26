@@ -21,4 +21,3 @@ title: User Stories in Ontwikkeling
 - [Als medewerker bijstand wil ik weten wat de (WOZ) waarde is van het huis van aanvrager en de hypotheek die er op rust](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/issues/5){:target="_blank" rel="noopener"}
 - [Als medewerker bijstandverlening zelfstandigen, TOZO en de IOAZ ouderenregeling wil ik weten wat de WOZ waarde is van woning van aanvrager en bedrijfspanden van aanvrager ](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/issues/4){:target="_blank" rel="noopener"}
 - [Als medewerker vastgoedorganisatie wil ik informatie over de woonoppervlakte (gebruiksoppervlak GEO en BrutoVloerOppervlak BVO), het aantal verdiepingen (Aantal Woonlagen) weten](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/issues/1){:target="_blank" rel="noopener"}
-
