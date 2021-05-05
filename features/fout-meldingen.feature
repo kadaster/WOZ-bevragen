@@ -90,9 +90,9 @@ Rule: Een zoek actuele woz objecten aanroep mag slechts één identificatie para
     Abstract Scenario: Er zijn meerdere identificatie parameters opgegeven
         Als '/wozobjecten<query string>' wordt aangeroepen
         Dan bevat de response de volgende kenmerken
-        | title  | Een of meerdere parameters zijn niet correct. |
-        | status | 400                                           |
-        | detail | <fout detail>                                 |
+        | title  | De combinatie van opgegeven parameters is niet toegestaan. |
+        | status | 400                                                        |
+        | detail | <fout detail>                                              |
 
         Voorbeelden:
         | query string                                        | fout detail                                                                         |
