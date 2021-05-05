@@ -134,3 +134,30 @@ Rule: alle parameter fouten in een request worden samen geretourneerd
         | name   | reason                                    |
         | rsin   | waarde 'A' is geen getal?                 |
         | fields | ongeldige waarde: 'bestaatniet' opgegeven |
+
+Rule: Raadplegen met valide wozobject identificatie
+
+    Abstract Scenario: invalide wozobject identificatie
+        Als '/wozobjecten/<identificatie>' wordt aangeroepen
+        Dan bevat de response de volgende kenmerken
+        | naam   | waarde                                                           |
+        | title  | Een of meerdere parameters zijn niet correct.                    |
+        | status | 400                                                              |
+        | detail | Parameter 'identificatie' is geen valide wozobject identificatie |
+        En bevat de response de volgende invalidParams
+        | name          | reason   |
+        | identificatie | <reason> |
+
+        Voorbeelden:
+        | identificatie | reason                                  |
+        | 1             | waarde is korter dan minimale lengte 12 |
+        | 1234567890123 | waarde is langer dan maximale lengte 12 |
+        | A1234@567890  | waarde 'A1234@567890' is geen getal     |
+    
+    Scenario: niet gevonden
+        Als '/wozobjecten/123456789012' wordt aangeroepen
+        Dan bevat de response de volgende kenmerken
+        | naam   | waarde                                                     |
+        | title  | Opgevraagde resource bestaat niet.                         |
+        | status | 404                                                        |
+        | detail | Er bestaat geen wozobject met identificatie '123456789012' |
