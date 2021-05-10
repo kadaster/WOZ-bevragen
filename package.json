@@ -19,7 +19,7 @@
     "oas:resolve": "java -jar swagger-codegen-cli.jar generate -i ./specificatie/openapi.yaml -l openapi-yaml -o ./specificatie/genereervariant && java -jar swagger-codegen-cli.jar generate -i ./specificatie/openapi.yaml -l openapi -o ./specificatie/genereervariant",
     "postoas:resolve": "rm swagger-codegen-cli.jar",
     "unstage-generated": "git reset HEAD ./specificatie/genereervariant/openapi.* ./test/WOZ-Bevragen-postman-collection.json ./code/**",
-    "rollback-generated": "git checkout ./specificatie/genereervariant/openapi.* ./test/WOZ-Bevragen-postman-collection.json ./code/**",
+    "rollback-generated": "git checkout ./specificatie/genereervariant/openapi.* ./test/WOZ-Bevragen-postman-collection.json ./code/**"
   },
   "repository": {
     "type": "git",
@@ -33,19 +33,16 @@
   },
   "homepage": "https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen#readme",
   "devDependencies": {
-    "@openapitools/openapi-generator-cli": "^2.1.19",
-    "@stoplight/spectral": "^5.8.0",
+    "@openapitools/openapi-generator-cli": "^2.2.6",
+    "@stoplight/spectral": "^5.9.1",
     "husky": "^4.3.8",
-    "mvn-dl": "^5.1.0",
-    "openapi-to-postmanv2": "^2.2.0"
+    "mvn-dl": "^5.1.1",
+    "openapi-to-postmanv2": "^2.6.0"
   },
   "husky": {
     "hooks": {
       "pre-commit": "npm run oas:lint && npm run oas:resolve && npm run oas:lint-genereervariant && npm run unstage-generated",
       "post-commit": "npm run rollback-generated"
     }
-  },
-  "dependencies": {
-    "immer": "^8.0.1"
   }
 }
