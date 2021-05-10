@@ -10,24 +10,29 @@ Rule: minimaal één optionele parameter is opgegeven
     Scenario: Er zijn geen parameters opgegeven
         Als '/wozobjecten' wordt aangeroepen
         Dan bevat de response de volgende kenmerken
-        | naam   | waarde                                                                                                                                             |
-        | title  | Tenminste één parameter moet worden opgegeven.                                                                                                     |
-        | status | 400                                                                                                                                                |
-        | detail | Parameter 'rsin', 'kvkNummer', 'adresseerbaarObjectIdentificatie', 'nummeraanduidingIdentificatie' of 'postcode' en 'huisnummer' is niet opgegeven |
+        | naam   | waarde                                                                                                                                                                         |
+        | title  | Tenminste één parameter moet worden opgegeven.                                                                                                                                 |
+        | status | 400                                                                                                                                                                            |
+        | detail | Er moet minimaal één van de parameters 'rsin', 'kvkNummer', 'adresseerbaarObjectIdentificatie', 'nummeraanduidingIdentificatie' of 'postcode' en 'huisnummer' worden opgegeven |
         En bevat de response geen invalidParams
 
 Rule: alleen gespecificeerde parameters mogen worden opgegeven
 
-    Scenario: Niet gespecificeerd parameter
-        Als '/wozobjecten?identificatie=123456789' wordt aangeroepen
+    Abstract Scenario: Niet gespecificeerd parameter
+        Als '/wozobjecten?<parameter>=123456789' wordt aangeroepen
         Dan bevat de response de volgende kenmerken
-        | naam   | waarde                                                       |
-        | title  | Een of meerdere parameters zijn niet correct.                |
-        | status | 400                                                          |
-        | detail | Zoeken met parameter 'identificatie' wordt niet ondersteund. |
+        | naam   | waarde                                                     |
+        | title  | Een of meerdere parameters zijn niet correct.              |
+        | status | 400                                                        |
+        | detail | Zoeken met parameter '<parameter>' wordt niet ondersteund. |
         En bevat de response de volgende invalidParams
-        | name          | reason                 |
-        | identificatie | wordt niet ondersteund |
+        | name        | reason                 |
+        | <parameter> | wordt niet ondersteund |
+
+        Voorbeelden:
+        | description                                                                      | parameter     |
+        | gebruik van een WOZ-object kenmerk die niet wordt ondersteund als zoek parameter | identificatie |
+        | willekeurig string als zoek parameter                                            | bestaatniet   |
 
 Rule: opgegeven parameter(s) heeft een waarde
 
@@ -54,9 +59,9 @@ Rule: opgegeven parameter(s) heeft een waarde
         | rsin   | geen waarde opgegeven |
         | fields | geen waarde opgegeven |
 
-Rule: fields parameter bevat geen onbekende kenmerk namen
+Rule: fields parameter bevat geen onbekende kenmerknamen
 
-    Abstract Scenario: Er is één of meerdere onbekende kenmerk namen opgegeven
+    Abstract Scenario: Er is één of meerdere onbekende kenmerknamen opgegeven
         Als '/wozobjecten?rsin=0345100002016017&fields=<fields waarde>' wordt aangeroepen
         Dan bevat de response de volgende kenmerken
         | naam   | waarde                                                |
@@ -85,7 +90,7 @@ Rule: type van parameter waarde is correct
         | name       | reason                   |
         | huisnummer | waarde 'A' is geen getal |
 
-Rule: Een zoek actuele woz objecten aanroep mag slechts één identificatie parameter bevatten
+Rule: Een zoek actuele WOZ-objecten aanroep mag slechts één identificatie parameter bevatten
 
     Abstract Scenario: Er zijn meerdere identificatie parameters opgegeven
         Als '/wozobjecten<query string>' wordt aangeroepen
