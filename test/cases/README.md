@@ -4,27 +4,15 @@ Hier staan per operatie de beschikbare testgevallen waarbij per property is aang
 
 De bovenste rij van elke tabel bevat de identificaties van de test-resources.
 De linker kolom(men) bevatten de namen van properties van de resource.
-Aan het einde van een propertynaam toegevoegde
-- "{}" betekent dat dit property een object (gegevensgroep) is.
-- "[]" betekent dat dit property een array is.
-- "[{}]" betekent dat dit property een array van objecten is.
-- "()" betekent dat dit property een enumeratie is.
 
 Bij een testgeval betekent
 - "X" dat dit testgeval een waarde heeft voor het betreffende gegeven.
-- Een getal dat het aantal items van het gegeven het testgeval heeft.
+- Een getal dat het aantal items van het gegeven in het testgeval bevat.
 - Tekst dat dit de enumeratiewaarde is van het gegeven bij dit testgeval.
 
 **Operaties:**
 
-- [zoekActueleWozobjecten](#zoekActueleWozobjecten)
 - [raadpleegActueelWozobject](#raadpleegActueelWozobject)
-
-## zoekActueleWozobjecten
-
-||||
-|--- |--- |--- |
-|_links{}|||
 
 ## raadpleegActueelWozobject
 
@@ -42,7 +30,7 @@ Bij een testgeval betekent
 |adresseerbaarObjectIdentificaties[]|||1|1|1|
 |belanghebbendeEigenaar{}|||X|X|X|
 ||burgerservicenummer||X||X|
-||geheimhoudingPersoonsgegevens||X|X|X|
+||geheimhoudingPersoonsgegevens(?)||False|False|False|
 ||kvkNummer|||||
 ||naam||X|X|X|
 ||rsin|||X||
@@ -50,7 +38,7 @@ Bij een testgeval betekent
 ||vestigingsnummer|||||
 |belanghebbendeGebruiker{}||||X||
 ||burgerservicenummer|||||
-||geheimhoudingPersoonsgegevens|||X||
+||geheimhoudingPersoonsgegevens(?)|||False||
 ||kvkNummer|||||
 ||naam|||X||
 ||rsin|||X||
