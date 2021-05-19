@@ -13,7 +13,7 @@ Rule: minimaal één optionele parameter is opgegeven
         | naam   | waarde                                                                                                                                                                         |
         | title  | Tenminste één parameter moet worden opgegeven.                                                                                                                                 |
         | status | 400                                                                                                                                                                            |
-        | detail | Er moet minimaal één van de parameters 'rsin', 'kvkNummer', 'adresseerbaarObjectIdentificatie', 'nummeraanduidingIdentificatie' of 'postcode' en 'huisnummer' worden opgegeven |
+        | detail | Er moet minimaal één van de parameters 'rsin', 'kvkNummer', 'adresseerbaarObjectIdentificatie', 'nummeraanduidingIdentificatie' of 'postcode' met 'huisnummer' worden opgegeven |
         En bevat de response geen invalidParams
 
 Rule: alleen gespecificeerde parameters mogen worden opgegeven
@@ -104,7 +104,7 @@ Rule: Een zoek actuele WOZ-objecten aanroep mag slechts één identificatie para
         | ?rsin=12345&kvkNummer=12345                         | Alleen parameter 'rsin' of 'kvkNummer' moet worden opgegeven                        |
         | ?adresseerbaarObjectIdentificatie=123456&rsin=12345 | Alleen parameter 'adresseerbaarObjectIdentificatie' of 'rsin' moet worden opgegeven |
 
-Rule: Zoeken met postcode kan alleen in combinatie met huisnummer?
+Rule: Zoeken met postcode kan alleen in combinatie met huisnummer
 
     Scenario: huisnummer is niet opgegeven
         Als '/wozobjecten?postcode=1234AA' wordt aangeroepen
