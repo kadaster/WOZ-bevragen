@@ -101,6 +101,9 @@ paths:
           explode: true
           schema:
             type: string
+            pattern: "^[0-9]*$"
+            maxLength: 12
+            minLength: 12
         - $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.2.0/api-specificatie/common.yaml#/components/parameters/fields"
       responses:
         '200':
