@@ -70,7 +70,7 @@ Functionaliteit: leveren van waarden bij een WOZ-object
     """
     En zijn de daaruit bepaalde relevante waarden:
     """
-    "waarden": [
+    [
       {
         "vastgesteldeWaarde": 431000,
         "waardepeildatum": "2019-01-01"
@@ -139,9 +139,9 @@ Functionaliteit: leveren van waarden bij een WOZ-object
       }
     ]
     """
-    En zijn de daaruit bepaalde relevante de waarden:
+    En zijn de daaruit bepaalde relevante waarden:
     """
-    "waarden": [
+    [
       {
         "vastgesteldeWaarde": 171000,
         "waardepeildatum": "2019-01-01"
@@ -200,17 +200,17 @@ Functionaliteit: leveren van waarden bij een WOZ-object
       }
     ]
     """
-    En zijn de daaruit bepaalde relevante de waarden:
+    En zijn de daaruit bepaalde relevante waarden:
     """
-    "waarden": [
+    [
       {
         "vastgesteldeWaarde": 195000,
         "waardepeildatum": "2019-01-01"
       },
       {
         "vastgesteldeWaarde": 176000,
-        "indicatieBezwaarBeroep": true,
-        "waardepeildatum": "2018-01-01"
+        "waardepeildatum": "2018-01-01",
+        "indicatieBezwaarBeroep": true
       },
       {
         "vastgesteldeWaarde": 152000,
@@ -264,9 +264,9 @@ Functionaliteit: leveren van waarden bij een WOZ-object
       }
     ]
     """
-    En zijn de daaruit bepaalde relevante de waarden:
+    En zijn de daaruit bepaalde relevante waarden:
     """
-    "waarden": [
+    [
       {
         "vastgesteldeWaarde": 266000,
         "waardepeildatum": "2019-01-01"
@@ -318,9 +318,9 @@ Functionaliteit: leveren van waarden bij een WOZ-object
         }
       ]
       """
-      En zijn de daaruit bepaalde relevante de waarden:
+      En zijn de daaruit bepaalde relevante waarden:
       """
-      "waarden": [
+      [
         {
           "vastgesteldeWaarde": 295000,
           "waardepeildatum": "2019-01-01"
@@ -374,9 +374,9 @@ Functionaliteit: leveren van waarden bij een WOZ-object
         }
       ]
       """
-      En zijn de daaruit bepaalde relevante de waarden:
+      En zijn de daaruit bepaalde relevante waarden:
       """
-      "waarden": [
+      [
         {
           "vastgesteldeWaarde": 317000,
           "waardepeildatum": "2019-01-01"
@@ -430,9 +430,9 @@ Functionaliteit: leveren van waarden bij een WOZ-object
         }
       ]
       """
-      En zijn de daaruit bepaalde relevante de waarden:
+      En zijn de daaruit bepaalde relevante waarden:
       """
-      "waarden": [
+      [
         {
           "vastgesteldeWaarde": 455000,
           "waardepeildatum": "2019-01-01"
@@ -464,7 +464,7 @@ Functionaliteit: leveren van waarden bij een WOZ-object
     Abstract Scenario: indicatieBezwaarBeroep wordt niet opgenomen wanneer er geen bezwaar, (hoger)beroep of cassatie is ingesteld, of deze is afgehandeld.
       Gegeven een beschikking de status "<status>" (<statuscode>) heeft
       Als het WOZ object wordt opgevraagd
-      Dan levert de API in de betreffende waarde property "beschikkingsStatussen" met de waarde ["<status_enum>"]
+      Dan levert de API in de betreffende waarde de property "beschikkingsStatussen" met de waarde ["<status_enum>"]
       En bevat de daaruit bepaalde relevante waarde geen property "indicatieBezwaarBeroep"
 
       Voorbeelden:
@@ -507,9 +507,9 @@ Functionaliteit: leveren van waarden bij een WOZ-object
         }
       ]
       """
-      En zijn de daaruit bepaalde relevante de waarden:
+      En zijn de daaruit bepaalde relevante waarden:
       """
-      "waarden": [
+      [
         {
           "vastgesteldeWaarde": 437000,
           "waardepeildatum": "2019-01-01",
@@ -548,9 +548,9 @@ Functionaliteit: leveren van waarden bij een WOZ-object
         }
       ]
       """
-      En zijn de daaruit bepaalde relevante de waarden:
+      En zijn de daaruit bepaalde relevante waarden:
       """
-      "waarden": [
+      [
         {
           "vastgesteldeWaarde": 215000,
           "waardepeildatum": "2018-01-01"
