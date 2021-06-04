@@ -1,6 +1,6 @@
 # language: nl
 
-Feature: zoeken van WOZ-objecten
+Functionaliteit: zoeken van WOZ-objecten
   Zoeken van WOZ-objecten met de BAG adresseerbaar object identificatie (BAG identificatie van een verblijfsobject, standplaats of ligplaats):
     - vindt WOZ-objecten waarbij de aanduiding WOZ-object is ontleend aan dit adresseerbaar object
     - vindt WOZ-objecten die verbonden zijn met dit adresseerbaar object
