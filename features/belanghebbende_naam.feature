@@ -1,6 +1,6 @@
 # language: nl
 
-Feature: Als gebruiker wil ik de naam zien van de geleverde belanghebbende
+Functionaliteit: Als gebruiker wil ik de naam zien van de geleverde belanghebbende
   In belanghebbendeEigenaar en belanghebbendeGebruiker wordt de naam geleverd.
   Een belanghebbende kan een natuurlijk persoon zijn, een niet-natuurlijk persoon of een vestiging.
 

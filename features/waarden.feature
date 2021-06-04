@@ -1,6 +1,6 @@
 # language: nl
 
-Feature: leveren van waarden bij een WOZ-object
+Functionaliteit: leveren van waarden bij een WOZ-object
   Deze feature beschrijft hoe uit de door de API geleverde waarden (beschikkingen) de relevante actuele waarde per waardepeildatum kan worden bepaald.
 
   Per waardepeildatum wordt één waarde bepaald.
