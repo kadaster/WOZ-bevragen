@@ -69,7 +69,9 @@ paths:
           required: false
           schema:
             type: string
-            pattern: "^[0-9a-zA-Z]{1,4}$"
+            pattern: "^[0-9a-zA-Z]$"
+            maxLength: 4
+            minLength: 1
             example: "bis"
         - in: query
           name: huisletter
@@ -77,7 +79,9 @@ paths:
           required: false
           schema:
             type: string
-            pattern: "^[a-zA-Z]{1}$"
+            pattern: "^[a-zA-Z]$"
+            maxLength: 1
+            minLength: 1
             example: "A"
         - $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/parameters/fields"
         - $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/parameters/page"
