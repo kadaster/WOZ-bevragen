@@ -318,6 +318,10 @@ components:
           type: array
           items:
             $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/schemas/HalLink"
+        kadastraalOnroerendeZaken:
+          type: array
+          items:
+            $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/schemas/HalLink"
     WozObjectHal:
       allOf:
         - $ref: '#/components/schemas/WozObject'
