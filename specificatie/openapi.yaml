@@ -49,7 +49,7 @@ paths:
             example: "0226200000038820"
         - in: query
           name: postcode
-          description: Zoek WOZ-objecten met postcode
+          description: Zoek WOZ-objecten met postcode, in combinatie met huisnummer en eventueel met huisletter en/of huisnummertoevoeging
           required: false
           schema:
             type: string
@@ -57,7 +57,7 @@ paths:
             example: "1234AB"
         - in: query
           name: huisnummer
-          description: Zoek WOZ-objecten met huisnummer"
+          description: Zoek WOZ-objecten met huisnummer, in combinatie met postcode en eventueel met huisletter en/of huisnummertoevoeging"
           required: false
           schema:
             type: integer
@@ -65,7 +65,10 @@ paths:
             maximum: 99999
         - in: query
           name: huisnummertoevoeging
-          description: Huisnummertoevoeging behorende bij een nummeraanduiding.
+          description: |
+                        Zoek met een huisnummertoevoeging, in combinatie met postcode en huisnummer en eventueel huisnummtoevoeging.
+                        Een toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter. 
+                        bijvoorbeeld: "Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging
           required: false
           schema:
             type: string
@@ -73,7 +76,10 @@ paths:
             example: "bis"
         - in: query
           name: huisletter
-          description: Huisletter behorende bij een nummeraanduiding.
+          description: |
+                        Zoek met een huisnummerletter, in combinatie met postcode en huisnummer en eventueel huisnummertoevoeging.
+                        Een huisletter is een toevoeging aan een huisnummer en huisnummertoevoeging.
+                        bijvoorbeeld: "Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging
           required: false
           schema:
             type: string
