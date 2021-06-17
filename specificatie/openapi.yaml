@@ -66,9 +66,9 @@ paths:
         - in: query
           name: huisnummertoevoeging
           description: |
-                        Zoek met een huisnummertoevoeging, in combinatie met postcode en huisnummer en eventueel huisnummtoevoeging.
-                        Een toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter. 
-                        bijvoorbeeld: "Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging
+                        Zoek met een huisnummertoevoeging, in combinatie met postcode en huisnummer en eventueel huisletter.
+                        Dit is een toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter.
+                        Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging
           required: false
           schema:
             type: string
@@ -77,9 +77,9 @@ paths:
         - in: query
           name: huisletter
           description: |
-                        Zoek met een huisnummerletter, in combinatie met postcode en huisnummer en eventueel huisnummertoevoeging.
-                        Een huisletter is een toevoeging aan een huisnummer en huisnummertoevoeging.
-                        bijvoorbeeld: "Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging
+                        Zoek met een huisletter, in combinatie met postcode en huisnummer en eventueel huisnummertoevoeging.
+                        Dit is een toevoeging aan een huisnummer en huisnummertoevoeging.
+                        Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging
           required: false
           schema:
             type: string
