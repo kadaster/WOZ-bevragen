@@ -68,7 +68,8 @@ paths:
           example: "0226200000038820"
       - name: postcode
         in: query
-        description: Zoek WOZ-objecten met postcode
+        description: Zoek WOZ-objecten met postcode, in combinatie met huisnummer
+          en eventueel met huisletter en/of huisnummertoevoeging
         required: false
         style: form
         explode: true
@@ -78,7 +79,8 @@ paths:
           example: 1234AB
       - name: huisnummer
         in: query
-        description: Zoek WOZ-objecten met huisnummer"
+        description: Zoek WOZ-objecten met huisnummer, in combinatie met postcode
+          en eventueel met huisletter en/of huisnummertoevoeging"
         required: false
         style: form
         explode: true
@@ -86,6 +88,32 @@ paths:
           maximum: 99999
           minimum: 1
           type: integer
+      - name: huisnummertoevoeging
+        in: query
+        description: |
+          Zoek met een huisnummertoevoeging, in combinatie met postcode en huisnummer en eventueel huisletter.
+          Dit is een toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter.
+          Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging
+        required: false
+        style: form
+        explode: true
+        schema:
+          pattern: ^[0-9a-zA-Z]{1,4}$
+          type: string
+          example: bis
+      - name: huisletter
+        in: query
+        description: |
+          Zoek met een huisletter, in combinatie met postcode en huisnummer en eventueel huisnummertoevoeging.
+          Dit is een toevoeging aan een huisnummer en huisnummertoevoeging.
+          Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging
+        required: false
+        style: form
+        explode: true
+        schema:
+          pattern: ^[a-zA-Z]{1}$
+          type: string
+          example: A
       - name: fields
         in: query
         description: Hiermee kun je de inhoud van de resource naar behoefte aanpassen
@@ -96,12 +124,32 @@ paths:
         required: false
         schema:
           type: string
+      - name: page
+        in: query
+        description: Pagina nummer
+        required: false
+        schema:
+          minimum: 1
+          type: integer
+          default: 1
+      - name: pageSize
+        in: query
+        required: false
+        schema:
+          maximum: 100
+          minimum: 1
+          type: integer
+          default: 20
       responses:
         "200":
           description: OK
           headers:
             api-version:
               $ref: '#/components/headers/api_version'
+            X-Pagination-Page:
+              $ref: '#/components/headers/X_Pagination_Page'
+            X-Pagination-Limit:
+              $ref: '#/components/headers/X_Pagination_Limit'
             warning:
               $ref: '#/components/headers/warning'
           content:
@@ -215,6 +263,7 @@ paths:
         style: simple
         explode: true
         schema:
+          pattern: ^[0-9]{12}$
           type: string
       - name: fields
         in: query
@@ -506,7 +555,7 @@ components:
           $ref: '#/components/schemas/HalLink'
         adres:
           $ref: '#/components/schemas/HalLink'
-        adresseerbaarObjecten:
+        adresseerbareObjecten:
           type: array
           items:
             $ref: '#/components/schemas/HalLink'
@@ -515,6 +564,10 @@ components:
         belanghebbendeGebruiker:
           $ref: '#/components/schemas/HalLink'
         panden:
+          type: array
+          items:
+            $ref: '#/components/schemas/HalLink'
+        kadastraalOnroerendeZaken:
           type: array
           items:
             $ref: '#/components/schemas/HalLink'
@@ -529,7 +582,7 @@ components:
       type: object
       properties:
         _links:
-          $ref: '#/components/schemas/HalCollectionLinks'
+          $ref: '#/components/schemas/HalPaginationLinks'
         _embedded:
           $ref: '#/components/schemas/WozObjectHalCollectieEmbedded'
     WozObjectHalCollectieEmbedded:
@@ -659,6 +712,35 @@ components:
     Href:
       type: string
       example: https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}
+    HalPaginationLinks:
+      description: |
+        HalPaginationLinks bevat de link properties die nodig zijn om te kunnen navigeren in een collectie:
+
+        - first: uri voor het opvragen van de eerste pagina van deze collectie
+        - previous: uri voor het opvragen van de vorige pagina van deze collectie
+        - next: uri voor het opvragen van de volgende pagina van deze collectie
+      example:
+        self:
+          href: /resourcenaam?page=4
+        first:
+          href: /resourcenaam?page=1
+          title: Eerste pagina
+        previous:
+          href: /resourcenaam?page=3
+          title: Vorige pagina
+        next:
+          href: /resourcenaam?page=5
+          title: Volgende pagina
+      allOf:
+      - $ref: '#/components/schemas/HalCollectionLinks'
+      - type: object
+        properties:
+          first:
+            $ref: '#/components/schemas/HalLink'
+          previous:
+            $ref: '#/components/schemas/HalLink'
+          next:
+            $ref: '#/components/schemas/HalLink'
     HalCollectionLinks:
       type: object
       properties:
@@ -673,6 +755,16 @@ components:
         description: Geeft een specifieke API-versie aan in de context van een specifieke
           aanroep.
         example: 1.0.0
+    X_Pagination_Page:
+      schema:
+        type: integer
+        description: Huidige pagina.
+        example: 3
+    X_Pagination_Limit:
+      schema:
+        type: integer
+        description: Aantal resultaten per pagina.
+        example: 20
     warning:
       schema:
         type: string
