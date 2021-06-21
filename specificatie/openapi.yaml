@@ -37,7 +37,7 @@ paths:
             example: "68727720"
         - name: adresseerbaarObjectIdentificatie
           in: query
-          description: Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is of waar het object zijn aanduiding aan ontleent
+          description: Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is
           schema:
             type: string
             example: "0226010000038820"
