@@ -48,8 +48,7 @@ paths:
       - name: adresseerbaarObjectIdentificatie
         in: query
         description: Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject,
-          standplaats of ligplaats) waar het WOZ-object aan verbonden is of waar het
-          object zijn aanduiding aan ontleent
+          standplaats of ligplaats) waar het WOZ-object aan verbonden is
         required: false
         style: form
         explode: true
