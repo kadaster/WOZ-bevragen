@@ -28,24 +28,28 @@ paths:
           description: Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven niet-natuurlijk persoon
           schema:
             type: string
+            pattern: ^[0-9]{9}$
             example: "857567433"
         - name: kvkNummer
           in: query
           description: Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven maatschappelijke activiteit of een van de daaronder vallende ondernemingen en vestigingen
           schema:
             type: string
+            pattern: ^[0-9]{8}$
             example: "68727720"
         - name: adresseerbaarObjectIdentificatie
           in: query
           description: Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is
           schema:
             type: string
+            pattern: ^[0-9]{16}$
             example: "0226010000038820"
         - name: nummeraanduidingIdentificatie
           in: query
           description: Zoek op de BAG identificatie van een nummeraanduiding (adres) waarmee het WOZ-object wordt aangeduid
           schema:
             type: string
+            pattern: ^[0-9]{16}$
             example: "0226200000038820"
         - in: query
           name: postcode
