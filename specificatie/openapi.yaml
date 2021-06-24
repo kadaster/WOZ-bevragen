@@ -43,7 +43,7 @@ paths:
           schema:
             type: string
             pattern: ^[0-9]{16}$
-            example: "0122260100000388"
+            example: "0226010000038820"
         - name: nummeraanduidingIdentificatie
           in: query
           description: Zoek op de BAG identificatie van een nummeraanduiding (adres) waarmee het WOZ-object wordt aangeduid
