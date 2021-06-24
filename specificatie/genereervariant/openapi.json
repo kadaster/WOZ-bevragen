@@ -34,6 +34,7 @@
           "style" : "form",
           "explode" : true,
           "schema" : {
+            "pattern" : "^[0-9]{9}$",
             "type" : "string",
             "example" : "857567433"
           }
@@ -45,6 +46,7 @@
           "style" : "form",
           "explode" : true,
           "schema" : {
+            "pattern" : "^[0-9]{8}$",
             "type" : "string",
             "example" : "68727720"
           }
@@ -56,6 +58,7 @@
           "style" : "form",
           "explode" : true,
           "schema" : {
+            "pattern" : "^[0-9]{16}$",
             "type" : "string",
             "example" : "0226010000038820"
           }
@@ -67,6 +70,7 @@
           "style" : "form",
           "explode" : true,
           "schema" : {
+            "pattern" : "^[0-9]{16}$",
             "type" : "string",
             "example" : "0226200000038820"
           }
