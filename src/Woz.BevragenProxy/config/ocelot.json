@@ -1,0 +1,18 @@
+{
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/{everything}",
+      "DownstreamPathTemplate": "/lvwoz-eto-apikey/api/v1/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "api.kadaster.nl",
+          "Port": "443"
+        }
+      ],
+      "UpstreamHeaderTransform": {
+        "x-api-key": "woz-api-key"
+      }
+    }
+  ]
+}
