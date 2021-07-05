@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using Woz.BevragenProxy.Middlewares;
 
 namespace Woz.BevragenProxy
 {
@@ -24,6 +25,7 @@ namespace Woz.BevragenProxy
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseMiddleware<OverwriteResponseBodyMiddleware>();
             app.UseOcelot().Wait();
         }
     }
