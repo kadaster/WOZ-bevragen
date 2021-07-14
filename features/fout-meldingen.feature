@@ -86,6 +86,30 @@ Rule: type van parameter waarde is correct
         | name       | reason                                     |
         | huisnummer | waarde 'A' is geen getal tussen 1 en 99999 |
 
+Rule: parameter waarde voldoet aan de opgegeven validaties van de parameter
+
+    Scenario: parameter waarde is kleiner dan de gedefinieerde minimum waarde
+    Als '/wozobjecten?postcode=8000GB&huisnummer=1&page=0' wordt aangeroepen
+    Dan bevat de response de volgende kenmerken
+        | naam   | waarde                                              |
+        | title  | Een of meerdere parameters zijn niet correct.       |
+        | status | 400                                                 |
+        | detail | Parameter 'page' bevat een (deels) ongeldige waarde |
+    En bevat de response de volgende invalidParams
+        | name | reason                                                     |
+        | page | waarde '0' is kleiner dan de toegestane minimum waarde (1) |
+
+    Scenario: parameter waarde is groter dan de gedefinieerde maximum waarde
+    Als '/wozobjecten?postcode=8000GB&huisnummer=1&pageSize=101' wordt aangeroepen
+    Dan bevat de response de volgende kenmerken
+        | naam   | waarde                                                  |
+        | title  | Een of meerdere parameters zijn niet correct.           |
+        | status | 400                                                     |
+        | detail | Parameter 'pageSize' bevat een (deels) ongeldige waarde |
+    En bevat de response de volgende invalidParams
+        | name     | reason                                                        |
+        | pageSize | waarde '101' is groter dan de toegestane maximum waarde (100) |
+
 Rule: Een zoek actuele WOZ-objecten aanroep mag slechts één identificatie parameter bevatten
 
     Abstract Scenario: Er zijn meerdere identificatie parameters opgegeven
