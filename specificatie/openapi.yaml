@@ -57,7 +57,7 @@ paths:
           required: false
           schema:
             type: string
-            pattern: "^[1-9][0-9][0-9][0-9][A-Z][A-Z]$"
+            pattern: "^[1-9][0-9]{3}[A-Z]{2}$"
             example: "1234AB"
         - in: query
           name: huisnummer
@@ -87,7 +87,7 @@ paths:
           required: false
           schema:
             type: string
-            pattern: "^[a-zA-Z]{1}$"
+            pattern: "^[a-zA-Z]$"
             example: "A"
         - $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/parameters/fields"
         - $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/parameters/page"
