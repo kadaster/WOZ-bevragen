@@ -61,7 +61,7 @@ Functionaliteit: zoeken van WOZ-objecten
 
   Regel: zoeken met huisletter en huisnummertoevoeging is case-insensitive
 
-    Voorbeeld: zoek WOZ-object met postcode en huisnummer en huisletter en huisnummertoevoeging in andere casevan de aanduiding
+    Voorbeeld: zoek WOZ-object met postcode en huisnummer en huisletter en huisnummertoevoeging in andere case dan in de aanduiding
       Gegeven de LV WOZ kent een WOZ-object met objectnummer "000500000001"
       En de aanduiding WOZ-object heeft postcode "8000GB" en huisnummer 1 en huisletter "a" en huisnummertoevoeging "bis"
       Als ik een WOZ-object zoek met /wozobjecten?postcode=8000GB&huisnummer=1&huisletter=A&huisnummertoevoeging=BIS
