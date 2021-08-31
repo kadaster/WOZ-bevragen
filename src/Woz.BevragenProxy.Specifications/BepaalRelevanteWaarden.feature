@@ -1,6 +1,18 @@
 ﻿#language: nl
 Functionaliteit: Bepaal relevante waarden voor een WOZ-object
 
+Scenario: geen waarden
+	Gegeven een WOZ-object bevat geen waarden
+	Als de relevante waarden zijn bepaald voor het WOZ-object
+	Dan bevat het WOZ-object geen waarden
+
+Scenario: leeg waarden lijst
+	Gegeven een WOZ-object bevat de volgende waarden
+	| vastgesteldeWaarde | waardepeildatum | ingangsdatum | beschikkingsStatussen |
+	Als de relevante waarden zijn bepaald voor het WOZ-object
+	Dan bevat het WOZ-object de volgende waarden
+	| vastgesteldeWaarde | waardepeildatum | ingangsdatum | beschikkingsStatussen |
+
 Scenario: meerdere jaren met zelfde eigenaar en zonder bezwaar of beroep
 	Gegeven een WOZ-object bevat de volgende waarden
 	| vastgesteldeWaarde | waardepeildatum | ingangsdatum | beschikkingsStatussen |

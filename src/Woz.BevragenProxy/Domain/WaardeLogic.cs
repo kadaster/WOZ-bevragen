@@ -8,6 +8,11 @@ namespace Woz.BevragenProxy.Domain
     {
         public static IEnumerable<Waarde> BepaalRelevanteWaarden(this IEnumerable<Waarde> waarden)
         {
+            if(waarden == null)
+            {
+                return null;
+            }
+
             var retval = new List<Waarde>();
             foreach(var waarde in waarden.OrderByDescending(x => x.Waardepeildatum)
                                          .ThenByDescending(x => x.Ingangsdatum))

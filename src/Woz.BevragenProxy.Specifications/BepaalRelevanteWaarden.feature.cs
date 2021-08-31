@@ -80,15 +80,56 @@ namespace Woz.BevragenProxy.Specifications
             this.TestTearDown();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="meerdere jaren met zelfde eigenaar en zonder bezwaar of beroep")]
+        [Xunit.SkippableFactAttribute(DisplayName="geen waarden")]
         [Xunit.TraitAttribute("FeatureTitle", "Bepaal relevante waarden voor een WOZ-object")]
-        [Xunit.TraitAttribute("Description", "meerdere jaren met zelfde eigenaar en zonder bezwaar of beroep")]
-        public virtual void MeerdereJarenMetZelfdeEigenaarEnZonderBezwaarOfBeroep()
+        [Xunit.TraitAttribute("Description", "geen waarden")]
+        public virtual void GeenWaarden()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("meerdere jaren met zelfde eigenaar en zonder bezwaar of beroep", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("geen waarden", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 4
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 5
+ testRunner.Given("een WOZ-object bevat geen waarden", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Gegeven ");
+#line hidden
+#line 6
+ testRunner.When("de relevante waarden zijn bepaald voor het WOZ-object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Als ");
+#line hidden
+#line 7
+ testRunner.Then("bevat het WOZ-object geen waarden", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dan ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="leeg waarden lijst")]
+        [Xunit.TraitAttribute("FeatureTitle", "Bepaal relevante waarden voor een WOZ-object")]
+        [Xunit.TraitAttribute("Description", "leeg waarden lijst")]
+        public virtual void LeegWaardenLijst()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("leeg waarden lijst", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 9
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -113,40 +154,10 @@ this.ScenarioInitialize(scenarioInfo);
                             "waardepeildatum",
                             "ingangsdatum",
                             "beschikkingsStatussen"});
-                table1.AddRow(new string[] {
-                            "431000",
-                            "2019-01-01",
-                            "2020-01-01",
-                            "beschikking_genomen"});
-                table1.AddRow(new string[] {
-                            "390000",
-                            "2018-01-01",
-                            "2019-01-01",
-                            "beschikking_genomen"});
-                table1.AddRow(new string[] {
-                            "340000",
-                            "2017-01-01",
-                            "2018-01-01",
-                            "beschikking_genomen"});
-                table1.AddRow(new string[] {
-                            "340000",
-                            "2016-01-01",
-                            "2017-01-01",
-                            "beschikking_genomen"});
-                table1.AddRow(new string[] {
-                            "310000",
-                            "2015-01-01",
-                            "2016-01-01",
-                            "beschikking_genomen"});
-                table1.AddRow(new string[] {
-                            "308000",
-                            "2014-01-01",
-                            "2015-01-01",
-                            "beschikking_genomen"});
-#line 5
+#line 10
  testRunner.Given("een WOZ-object bevat de volgende waarden", ((string)(null)), table1, "Gegeven ");
 #line hidden
-#line 13
+#line 12
  testRunner.When("de relevante waarden zijn bepaald voor het WOZ-object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Als ");
 #line hidden
                 TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
@@ -154,55 +165,22 @@ this.ScenarioInitialize(scenarioInfo);
                             "waardepeildatum",
                             "ingangsdatum",
                             "beschikkingsStatussen"});
-                table2.AddRow(new string[] {
-                            "431000",
-                            "2019-01-01",
-                            "2020-01-01",
-                            "beschikking_genomen"});
-                table2.AddRow(new string[] {
-                            "390000",
-                            "2018-01-01",
-                            "2019-01-01",
-                            "beschikking_genomen"});
-                table2.AddRow(new string[] {
-                            "340000",
-                            "2017-01-01",
-                            "2018-01-01",
-                            "beschikking_genomen"});
-                table2.AddRow(new string[] {
-                            "340000",
-                            "2016-01-01",
-                            "2017-01-01",
-                            "beschikking_genomen"});
-                table2.AddRow(new string[] {
-                            "310000",
-                            "2015-01-01",
-                            "2016-01-01",
-                            "beschikking_genomen"});
-                table2.AddRow(new string[] {
-                            "308000",
-                            "2014-01-01",
-                            "2015-01-01",
-                            "beschikking_genomen"});
-#line 14
+#line 13
  testRunner.Then("bevat het WOZ-object de volgende waarden", ((string)(null)), table2, "Dan ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="WOZ-object wijzigt gedurende een jaar van eigenaar: bij meerdere waarden met zelf" +
-            "de waardepeildatum gebruiken we de waarde met de meest recente ingangsdatum")]
+        [Xunit.SkippableFactAttribute(DisplayName="meerdere jaren met zelfde eigenaar en zonder bezwaar of beroep")]
         [Xunit.TraitAttribute("FeatureTitle", "Bepaal relevante waarden voor een WOZ-object")]
-        [Xunit.TraitAttribute("Description", "WOZ-object wijzigt gedurende een jaar van eigenaar: bij meerdere waarden met zelf" +
-            "de waardepeildatum gebruiken we de waarde met de meest recente ingangsdatum")]
-        public virtual void WOZ_ObjectWijzigtGedurendeEenJaarVanEigenaarBijMeerdereWaardenMetZelfdeWaardepeildatumGebruikenWeDeWaardeMetDeMeestRecenteIngangsdatum()
+        [Xunit.TraitAttribute("Description", "meerdere jaren met zelfde eigenaar en zonder bezwaar of beroep")]
+        public virtual void MeerdereJarenMetZelfdeEigenaarEnZonderBezwaarOfBeroep()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("WOZ-object wijzigt gedurende een jaar van eigenaar: bij meerdere waarden met zelf" +
-                    "de waardepeildatum gebruiken we de waarde met de meest recente ingangsdatum", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 23
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("meerdere jaren met zelfde eigenaar en zonder bezwaar of beroep", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 16
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -228,34 +206,39 @@ this.ScenarioInitialize(scenarioInfo);
                             "ingangsdatum",
                             "beschikkingsStatussen"});
                 table3.AddRow(new string[] {
-                            "171000",
+                            "431000",
                             "2019-01-01",
                             "2020-01-01",
                             "beschikking_genomen"});
                 table3.AddRow(new string[] {
-                            "163000",
-                            "2018-01-01",
-                            "2019-03-17",
-                            "beschikking_genomen"});
-                table3.AddRow(new string[] {
-                            "160000",
+                            "390000",
                             "2018-01-01",
                             "2019-01-01",
                             "beschikking_genomen"});
                 table3.AddRow(new string[] {
-                            "155000",
+                            "340000",
                             "2017-01-01",
                             "2018-01-01",
                             "beschikking_genomen"});
                 table3.AddRow(new string[] {
-                            "149000",
+                            "340000",
                             "2016-01-01",
                             "2017-01-01",
                             "beschikking_genomen"});
-#line 24
+                table3.AddRow(new string[] {
+                            "310000",
+                            "2015-01-01",
+                            "2016-01-01",
+                            "beschikking_genomen"});
+                table3.AddRow(new string[] {
+                            "308000",
+                            "2014-01-01",
+                            "2015-01-01",
+                            "beschikking_genomen"});
+#line 17
  testRunner.Given("een WOZ-object bevat de volgende waarden", ((string)(null)), table3, "Gegeven ");
 #line hidden
-#line 31
+#line 25
  testRunner.When("de relevante waarden zijn bepaald voor het WOZ-object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Als ");
 #line hidden
                 TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
@@ -264,41 +247,54 @@ this.ScenarioInitialize(scenarioInfo);
                             "ingangsdatum",
                             "beschikkingsStatussen"});
                 table4.AddRow(new string[] {
-                            "171000",
+                            "431000",
                             "2019-01-01",
                             "2020-01-01",
                             "beschikking_genomen"});
                 table4.AddRow(new string[] {
-                            "163000",
+                            "390000",
                             "2018-01-01",
-                            "2019-03-17",
+                            "2019-01-01",
                             "beschikking_genomen"});
                 table4.AddRow(new string[] {
-                            "155000",
+                            "340000",
                             "2017-01-01",
                             "2018-01-01",
                             "beschikking_genomen"});
                 table4.AddRow(new string[] {
-                            "149000",
+                            "340000",
                             "2016-01-01",
                             "2017-01-01",
                             "beschikking_genomen"});
-#line 32
+                table4.AddRow(new string[] {
+                            "310000",
+                            "2015-01-01",
+                            "2016-01-01",
+                            "beschikking_genomen"});
+                table4.AddRow(new string[] {
+                            "308000",
+                            "2014-01-01",
+                            "2015-01-01",
+                            "beschikking_genomen"});
+#line 26
  testRunner.Then("bevat het WOZ-object de volgende waarden", ((string)(null)), table4, "Dan ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Belanghebbende krijgt verlaging van de WOZ-waarde na bezwaar")]
+        [Xunit.SkippableFactAttribute(DisplayName="WOZ-object wijzigt gedurende een jaar van eigenaar: bij meerdere waarden met zelf" +
+            "de waardepeildatum gebruiken we de waarde met de meest recente ingangsdatum")]
         [Xunit.TraitAttribute("FeatureTitle", "Bepaal relevante waarden voor een WOZ-object")]
-        [Xunit.TraitAttribute("Description", "Belanghebbende krijgt verlaging van de WOZ-waarde na bezwaar")]
-        public virtual void BelanghebbendeKrijgtVerlagingVanDeWOZ_WaardeNaBezwaar()
+        [Xunit.TraitAttribute("Description", "WOZ-object wijzigt gedurende een jaar van eigenaar: bij meerdere waarden met zelf" +
+            "de waardepeildatum gebruiken we de waarde met de meest recente ingangsdatum")]
+        public virtual void WOZ_ObjectWijzigtGedurendeEenJaarVanEigenaarBijMeerdereWaardenMetZelfdeWaardepeildatumGebruikenWeDeWaardeMetDeMeestRecenteIngangsdatum()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Belanghebbende krijgt verlaging van de WOZ-waarde na bezwaar", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 39
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("WOZ-object wijzigt gedurende een jaar van eigenaar: bij meerdere waarden met zelf" +
+                    "de waardepeildatum gebruiken we de waarde met de meest recente ingangsdatum", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 35
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -324,80 +320,77 @@ this.ScenarioInitialize(scenarioInfo);
                             "ingangsdatum",
                             "beschikkingsStatussen"});
                 table5.AddRow(new string[] {
-                            "195000",
+                            "171000",
                             "2019-01-01",
                             "2020-01-01",
                             "beschikking_genomen"});
                 table5.AddRow(new string[] {
-                            "176000",
+                            "163000",
+                            "2018-01-01",
+                            "2019-03-17",
+                            "beschikking_genomen"});
+                table5.AddRow(new string[] {
+                            "160000",
                             "2018-01-01",
                             "2019-01-01",
-                            "bezwaar_ingediend"});
+                            "beschikking_genomen"});
                 table5.AddRow(new string[] {
-                            "152000",
+                            "155000",
                             "2017-01-01",
                             "2018-01-01",
-                            "bezwaar_veranderd"});
+                            "beschikking_genomen"});
                 table5.AddRow(new string[] {
-                            "164000",
+                            "149000",
                             "2016-01-01",
                             "2017-01-01",
                             "beschikking_genomen"});
-#line 40
+#line 36
  testRunner.Given("een WOZ-object bevat de volgende waarden", ((string)(null)), table5, "Gegeven ");
 #line hidden
-#line 46
+#line 43
  testRunner.When("de relevante waarden zijn bepaald voor het WOZ-object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Als ");
 #line hidden
                 TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                             "vastgesteldeWaarde",
                             "waardepeildatum",
                             "ingangsdatum",
-                            "beschikkingsStatussen",
-                            "indicatieBezwaarBeroep"});
+                            "beschikkingsStatussen"});
                 table6.AddRow(new string[] {
-                            "195000",
+                            "171000",
                             "2019-01-01",
                             "2020-01-01",
-                            "beschikking_genomen",
-                            ""});
+                            "beschikking_genomen"});
                 table6.AddRow(new string[] {
-                            "176000",
+                            "163000",
                             "2018-01-01",
-                            "2019-01-01",
-                            "bezwaar_ingediend",
-                            "true"});
+                            "2019-03-17",
+                            "beschikking_genomen"});
                 table6.AddRow(new string[] {
-                            "152000",
+                            "155000",
                             "2017-01-01",
                             "2018-01-01",
-                            "bezwaar_veranderd",
-                            ""});
+                            "beschikking_genomen"});
                 table6.AddRow(new string[] {
-                            "164000",
+                            "149000",
                             "2016-01-01",
                             "2017-01-01",
-                            "beschikking_genomen",
-                            ""});
-#line 47
+                            "beschikking_genomen"});
+#line 44
  testRunner.Then("bevat het WOZ-object de volgende waarden", ((string)(null)), table6, "Dan ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="verlaging van de WOZ-waarde na beroep niet zichtbaar door latere ingangsdatum nie" +
-            "uwe belanghebbende eigenaar")]
+        [Xunit.SkippableFactAttribute(DisplayName="Belanghebbende krijgt verlaging van de WOZ-waarde na bezwaar")]
         [Xunit.TraitAttribute("FeatureTitle", "Bepaal relevante waarden voor een WOZ-object")]
-        [Xunit.TraitAttribute("Description", "verlaging van de WOZ-waarde na beroep niet zichtbaar door latere ingangsdatum nie" +
-            "uwe belanghebbende eigenaar")]
-        public virtual void VerlagingVanDeWOZ_WaardeNaBeroepNietZichtbaarDoorLatereIngangsdatumNieuweBelanghebbendeEigenaar()
+        [Xunit.TraitAttribute("Description", "Belanghebbende krijgt verlaging van de WOZ-waarde na bezwaar")]
+        public virtual void BelanghebbendeKrijgtVerlagingVanDeWOZ_WaardeNaBezwaar()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("verlaging van de WOZ-waarde na beroep niet zichtbaar door latere ingangsdatum nie" +
-                    "uwe belanghebbende eigenaar", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 54
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Belanghebbende krijgt verlaging van de WOZ-waarde na bezwaar", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 51
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -423,67 +416,80 @@ this.ScenarioInitialize(scenarioInfo);
                             "ingangsdatum",
                             "beschikkingsStatussen"});
                 table7.AddRow(new string[] {
-                            "266000",
+                            "195000",
                             "2019-01-01",
                             "2020-01-01",
                             "beschikking_genomen"});
                 table7.AddRow(new string[] {
-                            "223000",
-                            "2018-01-01",
-                            "2019-05-01",
-                            "beschikking_genomen"});
-                table7.AddRow(new string[] {
-                            "190000",
+                            "176000",
                             "2018-01-01",
                             "2019-01-01",
-                            "beroep_veranderd"});
+                            "bezwaar_ingediend"});
                 table7.AddRow(new string[] {
-                            "189000",
+                            "152000",
                             "2017-01-01",
                             "2018-01-01",
+                            "bezwaar_veranderd"});
+                table7.AddRow(new string[] {
+                            "164000",
+                            "2016-01-01",
+                            "2017-01-01",
                             "beschikking_genomen"});
-#line 55
+#line 52
  testRunner.Given("een WOZ-object bevat de volgende waarden", ((string)(null)), table7, "Gegeven ");
 #line hidden
-#line 61
+#line 58
  testRunner.When("de relevante waarden zijn bepaald voor het WOZ-object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Als ");
 #line hidden
                 TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
                             "vastgesteldeWaarde",
                             "waardepeildatum",
                             "ingangsdatum",
-                            "beschikkingsStatussen"});
+                            "beschikkingsStatussen",
+                            "indicatieBezwaarBeroep"});
                 table8.AddRow(new string[] {
-                            "266000",
+                            "195000",
                             "2019-01-01",
                             "2020-01-01",
-                            "beschikking_genomen"});
+                            "beschikking_genomen",
+                            ""});
                 table8.AddRow(new string[] {
-                            "223000",
+                            "176000",
                             "2018-01-01",
-                            "2019-05-01",
-                            "beschikking_genomen"});
+                            "2019-01-01",
+                            "bezwaar_ingediend",
+                            "true"});
                 table8.AddRow(new string[] {
-                            "189000",
+                            "152000",
                             "2017-01-01",
                             "2018-01-01",
-                            "beschikking_genomen"});
-#line 62
+                            "bezwaar_veranderd",
+                            ""});
+                table8.AddRow(new string[] {
+                            "164000",
+                            "2016-01-01",
+                            "2017-01-01",
+                            "beschikking_genomen",
+                            ""});
+#line 59
  testRunner.Then("bevat het WOZ-object de volgende waarden", ((string)(null)), table8, "Dan ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="een vernietigde beschikking wordt genegeerd")]
+        [Xunit.SkippableFactAttribute(DisplayName="verlaging van de WOZ-waarde na beroep niet zichtbaar door latere ingangsdatum nie" +
+            "uwe belanghebbende eigenaar")]
         [Xunit.TraitAttribute("FeatureTitle", "Bepaal relevante waarden voor een WOZ-object")]
-        [Xunit.TraitAttribute("Description", "een vernietigde beschikking wordt genegeerd")]
-        public virtual void EenVernietigdeBeschikkingWordtGenegeerd()
+        [Xunit.TraitAttribute("Description", "verlaging van de WOZ-waarde na beroep niet zichtbaar door latere ingangsdatum nie" +
+            "uwe belanghebbende eigenaar")]
+        public virtual void VerlagingVanDeWOZ_WaardeNaBeroepNietZichtbaarDoorLatereIngangsdatumNieuweBelanghebbendeEigenaar()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("een vernietigde beschikking wordt genegeerd", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 68
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("verlaging van de WOZ-waarde na beroep niet zichtbaar door latere ingangsdatum nie" +
+                    "uwe belanghebbende eigenaar", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 66
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -509,29 +515,29 @@ this.ScenarioInitialize(scenarioInfo);
                             "ingangsdatum",
                             "beschikkingsStatussen"});
                 table9.AddRow(new string[] {
-                            "295000",
+                            "266000",
                             "2019-01-01",
                             "2020-01-01",
                             "beschikking_genomen"});
                 table9.AddRow(new string[] {
-                            "210000",
+                            "223000",
                             "2018-01-01",
-                            "2019-07-01",
-                            "beschikking_vernietigd"});
-                table9.AddRow(new string[] {
-                            "283000",
-                            "2018-01-01",
-                            "2019-01-01",
+                            "2019-05-01",
                             "beschikking_genomen"});
                 table9.AddRow(new string[] {
-                            "274000",
+                            "190000",
+                            "2018-01-01",
+                            "2019-01-01",
+                            "beroep_veranderd"});
+                table9.AddRow(new string[] {
+                            "189000",
                             "2017-01-01",
                             "2018-01-01",
                             "beschikking_genomen"});
-#line 69
+#line 67
  testRunner.Given("een WOZ-object bevat de volgende waarden", ((string)(null)), table9, "Gegeven ");
 #line hidden
-#line 75
+#line 73
  testRunner.When("de relevante waarden zijn bepaald voor het WOZ-object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Als ");
 #line hidden
                 TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
@@ -540,39 +546,36 @@ this.ScenarioInitialize(scenarioInfo);
                             "ingangsdatum",
                             "beschikkingsStatussen"});
                 table10.AddRow(new string[] {
-                            "295000",
+                            "266000",
                             "2019-01-01",
                             "2020-01-01",
                             "beschikking_genomen"});
                 table10.AddRow(new string[] {
-                            "283000",
+                            "223000",
                             "2018-01-01",
-                            "2019-01-01",
+                            "2019-05-01",
                             "beschikking_genomen"});
                 table10.AddRow(new string[] {
-                            "274000",
+                            "189000",
                             "2017-01-01",
                             "2018-01-01",
                             "beschikking_genomen"});
-#line 76
+#line 74
  testRunner.Then("bevat het WOZ-object de volgende waarden", ((string)(null)), table10, "Dan ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="een vernietigde beschikking wordt genegeerd, maar de andere beschikking(en) voor " +
-            "dezelfde peildatum en ingangsdatum niet")]
+        [Xunit.SkippableFactAttribute(DisplayName="een vernietigde beschikking wordt genegeerd")]
         [Xunit.TraitAttribute("FeatureTitle", "Bepaal relevante waarden voor een WOZ-object")]
-        [Xunit.TraitAttribute("Description", "een vernietigde beschikking wordt genegeerd, maar de andere beschikking(en) voor " +
-            "dezelfde peildatum en ingangsdatum niet")]
-        public virtual void EenVernietigdeBeschikkingWordtGenegeerdMaarDeAndereBeschikkingEnVoorDezelfdePeildatumEnIngangsdatumNiet()
+        [Xunit.TraitAttribute("Description", "een vernietigde beschikking wordt genegeerd")]
+        public virtual void EenVernietigdeBeschikkingWordtGenegeerd()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("een vernietigde beschikking wordt genegeerd, maar de andere beschikking(en) voor " +
-                    "dezelfde peildatum en ingangsdatum niet", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 82
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("een vernietigde beschikking wordt genegeerd", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 80
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -598,29 +601,29 @@ this.ScenarioInitialize(scenarioInfo);
                             "ingangsdatum",
                             "beschikkingsStatussen"});
                 table11.AddRow(new string[] {
-                            "317000",
+                            "295000",
                             "2019-01-01",
                             "2020-01-01",
                             "beschikking_genomen"});
                 table11.AddRow(new string[] {
-                            "282000",
+                            "210000",
                             "2018-01-01",
                             "2019-07-01",
-                            "beschikking_vernietigd, bezwaar_gehandhaafd"});
+                            "beschikking_vernietigd"});
                 table11.AddRow(new string[] {
-                            "306000",
+                            "283000",
                             "2018-01-01",
                             "2019-01-01",
                             "beschikking_genomen"});
                 table11.AddRow(new string[] {
-                            "266000",
+                            "274000",
                             "2017-01-01",
                             "2018-01-01",
                             "beschikking_genomen"});
-#line 83
+#line 81
  testRunner.Given("een WOZ-object bevat de volgende waarden", ((string)(null)), table11, "Gegeven ");
 #line hidden
-#line 89
+#line 87
  testRunner.When("de relevante waarden zijn bepaald voor het WOZ-object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Als ");
 #line hidden
                 TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
@@ -629,39 +632,39 @@ this.ScenarioInitialize(scenarioInfo);
                             "ingangsdatum",
                             "beschikkingsStatussen"});
                 table12.AddRow(new string[] {
-                            "317000",
+                            "295000",
                             "2019-01-01",
                             "2020-01-01",
                             "beschikking_genomen"});
                 table12.AddRow(new string[] {
-                            "282000",
+                            "283000",
                             "2018-01-01",
-                            "2019-07-01",
-                            "beschikking_vernietigd, bezwaar_gehandhaafd"});
+                            "2019-01-01",
+                            "beschikking_genomen"});
                 table12.AddRow(new string[] {
-                            "266000",
+                            "274000",
                             "2017-01-01",
                             "2018-01-01",
                             "beschikking_genomen"});
-#line 90
+#line 88
  testRunner.Then("bevat het WOZ-object de volgende waarden", ((string)(null)), table12, "Dan ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="meerdere vernietigde beschikkingen met zelfde peildatum en ingangsdatum worden ge" +
-            "negeerd")]
+        [Xunit.SkippableFactAttribute(DisplayName="een vernietigde beschikking wordt genegeerd, maar de andere beschikking(en) voor " +
+            "dezelfde peildatum en ingangsdatum niet")]
         [Xunit.TraitAttribute("FeatureTitle", "Bepaal relevante waarden voor een WOZ-object")]
-        [Xunit.TraitAttribute("Description", "meerdere vernietigde beschikkingen met zelfde peildatum en ingangsdatum worden ge" +
-            "negeerd")]
-        public virtual void MeerdereVernietigdeBeschikkingenMetZelfdePeildatumEnIngangsdatumWordenGenegeerd()
+        [Xunit.TraitAttribute("Description", "een vernietigde beschikking wordt genegeerd, maar de andere beschikking(en) voor " +
+            "dezelfde peildatum en ingangsdatum niet")]
+        public virtual void EenVernietigdeBeschikkingWordtGenegeerdMaarDeAndereBeschikkingEnVoorDezelfdePeildatumEnIngangsdatumNiet()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("meerdere vernietigde beschikkingen met zelfde peildatum en ingangsdatum worden ge" +
-                    "negeerd", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 96
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("een vernietigde beschikking wordt genegeerd, maar de andere beschikking(en) voor " +
+                    "dezelfde peildatum en ingangsdatum niet", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 94
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -687,29 +690,29 @@ this.ScenarioInitialize(scenarioInfo);
                             "ingangsdatum",
                             "beschikkingsStatussen"});
                 table13.AddRow(new string[] {
-                            "455000",
+                            "317000",
                             "2019-01-01",
                             "2020-01-01",
                             "beschikking_genomen"});
                 table13.AddRow(new string[] {
-                            "440000",
+                            "282000",
                             "2018-01-01",
                             "2019-07-01",
-                            "beschikking_vernietigd, beschikking_vernietigd"});
+                            "beschikking_vernietigd, bezwaar_gehandhaafd"});
                 table13.AddRow(new string[] {
-                            "430000",
+                            "306000",
                             "2018-01-01",
                             "2019-01-01",
                             "beschikking_genomen"});
                 table13.AddRow(new string[] {
-                            "410000",
+                            "266000",
                             "2017-01-01",
                             "2018-01-01",
                             "beschikking_genomen"});
-#line 97
+#line 95
  testRunner.Given("een WOZ-object bevat de volgende waarden", ((string)(null)), table13, "Gegeven ");
 #line hidden
-#line 103
+#line 101
  testRunner.When("de relevante waarden zijn bepaald voor het WOZ-object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Als ");
 #line hidden
                 TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
@@ -718,22 +721,111 @@ this.ScenarioInitialize(scenarioInfo);
                             "ingangsdatum",
                             "beschikkingsStatussen"});
                 table14.AddRow(new string[] {
-                            "455000",
+                            "317000",
                             "2019-01-01",
                             "2020-01-01",
                             "beschikking_genomen"});
                 table14.AddRow(new string[] {
+                            "282000",
+                            "2018-01-01",
+                            "2019-07-01",
+                            "beschikking_vernietigd, bezwaar_gehandhaafd"});
+                table14.AddRow(new string[] {
+                            "266000",
+                            "2017-01-01",
+                            "2018-01-01",
+                            "beschikking_genomen"});
+#line 102
+ testRunner.Then("bevat het WOZ-object de volgende waarden", ((string)(null)), table14, "Dan ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="meerdere vernietigde beschikkingen met zelfde peildatum en ingangsdatum worden ge" +
+            "negeerd")]
+        [Xunit.TraitAttribute("FeatureTitle", "Bepaal relevante waarden voor een WOZ-object")]
+        [Xunit.TraitAttribute("Description", "meerdere vernietigde beschikkingen met zelfde peildatum en ingangsdatum worden ge" +
+            "negeerd")]
+        public virtual void MeerdereVernietigdeBeschikkingenMetZelfdePeildatumEnIngangsdatumWordenGenegeerd()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("meerdere vernietigde beschikkingen met zelfde peildatum en ingangsdatum worden ge" +
+                    "negeerd", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 108
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+                TechTalk.SpecFlow.Table table15 = new TechTalk.SpecFlow.Table(new string[] {
+                            "vastgesteldeWaarde",
+                            "waardepeildatum",
+                            "ingangsdatum",
+                            "beschikkingsStatussen"});
+                table15.AddRow(new string[] {
+                            "455000",
+                            "2019-01-01",
+                            "2020-01-01",
+                            "beschikking_genomen"});
+                table15.AddRow(new string[] {
+                            "440000",
+                            "2018-01-01",
+                            "2019-07-01",
+                            "beschikking_vernietigd, beschikking_vernietigd"});
+                table15.AddRow(new string[] {
                             "430000",
                             "2018-01-01",
                             "2019-01-01",
                             "beschikking_genomen"});
-                table14.AddRow(new string[] {
+                table15.AddRow(new string[] {
                             "410000",
                             "2017-01-01",
                             "2018-01-01",
                             "beschikking_genomen"});
-#line 104
- testRunner.Then("bevat het WOZ-object de volgende waarden", ((string)(null)), table14, "Dan ");
+#line 109
+ testRunner.Given("een WOZ-object bevat de volgende waarden", ((string)(null)), table15, "Gegeven ");
+#line hidden
+#line 115
+ testRunner.When("de relevante waarden zijn bepaald voor het WOZ-object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Als ");
+#line hidden
+                TechTalk.SpecFlow.Table table16 = new TechTalk.SpecFlow.Table(new string[] {
+                            "vastgesteldeWaarde",
+                            "waardepeildatum",
+                            "ingangsdatum",
+                            "beschikkingsStatussen"});
+                table16.AddRow(new string[] {
+                            "455000",
+                            "2019-01-01",
+                            "2020-01-01",
+                            "beschikking_genomen"});
+                table16.AddRow(new string[] {
+                            "430000",
+                            "2018-01-01",
+                            "2019-01-01",
+                            "beschikking_genomen"});
+                table16.AddRow(new string[] {
+                            "410000",
+                            "2017-01-01",
+                            "2018-01-01",
+                            "beschikking_genomen"});
+#line 116
+ testRunner.Then("bevat het WOZ-object de volgende waarden", ((string)(null)), table16, "Dan ");
 #line hidden
             }
             this.ScenarioCleanup();

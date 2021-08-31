@@ -14,6 +14,15 @@ namespace Woz.BevragenProxy.Specifications
         DataTransferObjects.WozObject WozObject { get; set; }
         IEnumerable<DataTransferObjects.Waarde> actual { get; set; }
 
+        [Given(@"een WOZ-object bevat geen waarden")]
+        public void GivenEenWOZ_ObjectBevatGeenWaarden()
+        {
+            WozObject = new DataTransferObjects.WozObject
+            {
+                Waarden = null
+            };
+        }
+
         [Given(@"een WOZ-object bevat de volgende waarden")]
         public void GivenEenWOZ_ObjectBevatDeVolgendeWaarden(Table table)
         {
@@ -27,6 +36,12 @@ namespace Woz.BevragenProxy.Specifications
         public void WhenDeRelevanteWaardenZijnBepaaldVoorHetWOZ_Object()
         {
             actual = WozObject.Waarden.BepaalRelevanteWaarden();
+        }
+
+        [Then(@"bevat het WOZ-object geen waarden")]
+        public void ThenBevatHetWOZ_ObjectGeenWaarden()
+        {
+            actual.Should().BeNull();
         }
 
         [Then(@"bevat het WOZ-object de volgende waarden")]
