@@ -30,7 +30,7 @@ namespace Woz.BevragenProxy.Middlewares
 
             _logger.LogInformation(body);
 
-            using var modifiedBodyStream = ("modified: " + body).ToMemoryStream();
+            using var modifiedBodyStream = body.ToMemoryStream();
 
             context.Response.ContentLength = modifiedBodyStream.Length;
             await modifiedBodyStream.CopyToAsync(orgBodyStream);
