@@ -182,12 +182,24 @@ components:
           $ref: '#/components/schemas/PersoonTypeEnum'
         vestigingsnummer:
           type: string
-    PersoonTypeEnum:
-      type: string
-      enum:
-        - "natuurlijk_persoon"
-        - "niet_natuurlijk_persoon"
-        - "vestiging"
+    KadastraleAanduiding:
+      type: object
+      properties:
+        kadastraleGemeentecode:
+          description: Waar het kadaster de kadastrale gemeentenaam hanteert in de KadstraleAanduiding is in de WOZ de gemeentecode gebruikt.
+          type: string
+        sectie:
+          description: Sectie is een onderverdeling van de kadastrale gemeente, bedoeld om het werk van de meetdienst en de kadastrale kaarten overzichtelijk te houden. Per kadastrale gemeente zijn er max. 26x26 secties . Elke sectie heeft een of twee letters (bijv. "A", 'B', ....'AA', 'AB', ....'ZZ' . Alleen de sectieletter 'J' werd niet gebruikt om verwarring (handgeschreven) te voorkomen met 'I'
+          type: string
+        perceelnummer:
+          description: Het perceelnummer dat een geheel perceel of een complex uniek identificeert binnen de sectie.
+          type: integer
+        appartementsrechtVolgnummer:
+          description: Nummer dat het kadastraal object uniek identificeert als een appartementsrecht binnen het complex.
+          type: integer
+        kadastraleAanduidingMetGemeentenaam:
+          description: De volledige kadastraleAanduiding waarbij alle delen zijn samengevoegd en waarbij de gemeentenaam is gebruikt.
+          type: string
     ObjectAanduiding:
       allOf:
         - $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-BAG-bevragen/v1.1.0/specificatie/openapi.yaml#/components/schemas/Adres"
@@ -202,6 +214,12 @@ components:
               description: "Identificatie van de nummeraanduiding in de BAG waarmee het WOZ-object wordt aangeduid"
               type: string
               example: "0226200000038923"
+    PersoonTypeEnum:
+      type: string
+      enum:
+        - "natuurlijk_persoon"
+        - "niet_natuurlijk_persoon"
+        - "vestiging"
     StatusBeschikkingEnum:
       type: string
       description: |
@@ -288,6 +306,8 @@ components:
           type: string
           title: WOZ-objectnummer
           description: Unieke identificatie van het WOZ-object
+        kadastraleAanduiding:
+          $ref: '#/components/schemas/KadastraleAanduiding'
         kadastraalOnroerendeZaakIdentificaties:
           type: array
           description: De identificaties van kadastraal onroerende zaken die geheel of gedeeltelijk deel uitmaken van het WOZ-object
