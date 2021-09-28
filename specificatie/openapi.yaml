@@ -189,7 +189,7 @@ components:
           description: Waar het kadaster de kadastrale gemeentenaam hanteert in de KadstraleAanduiding is in de WOZ de gemeentecode gebruikt.
           type: string
         sectie:
-          description: Sectie is een onderverdeling van de kadastrale gemeente, bedoeld om het werk van de meetdienst en de kadastrale kaarten overzichtelijk te houden. Per kadastrale gemeente zijn er max. 26x26 secties . Elke sectie heeft een of twee letters (bijv. "A", 'B', ....'AA', 'AB', ....'ZZ' . Alleen de sectieletter 'J' werd niet gebruikt om verwarring (handgeschreven) te voorkomen met 'I'
+          description: Sectie is een onderverdeling van de kadastrale gemeente, bedoeld om het werk van de meetdienst en de kadastrale kaarten overzichtelijk te houden. Per kadastrale gemeente zijn er max. 26x26 secties . Elke sectie heeft een of twee letters (bijv. "A", 'B', ....'AA', 'AB', ....'ZZ' . Alleen de sectieletter 'J' wordt niet gebruikt om verwarring (handgeschreven) te voorkomen met 'I'
           type: string
         perceelnummer:
           description: Het perceelnummer dat een geheel perceel of een complex uniek identificeert binnen de sectie.
