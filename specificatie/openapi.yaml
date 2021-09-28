@@ -185,7 +185,7 @@ components:
     KadastraleAanduiding:
       type: object
       properties:
-        kadastraleGemeentecode:
+        gemeentecode:
           description: Waar het kadaster de kadastrale gemeentenaam hanteert in de KadstraleAanduiding is in de WOZ de gemeentecode gebruikt.
           type: string
         sectie:
@@ -194,10 +194,19 @@ components:
         perceelnummer:
           description: Het perceelnummer dat een geheel perceel of een complex uniek identificeert binnen de sectie.
           type: integer
-        appartementsrechtVolgnummer:
+        deelperceelnummer:
+          type: string
+        appartementsindex:
           description: Nummer dat het kadastraal object uniek identificeert als een appartementsrecht binnen het complex.
           type: integer
-        kadastraleAanduidingMetGemeentenaam:
+    KadastraalOnroerendeZaken:
+      type: object
+      properties:
+        identificatie:
+          type: string
+        aanduiding:
+          $ref: "#/components/schemas/KadastraleAanduiding"
+        aanduidingMetGemeentenaam:
           description: De volledige kadastraleAanduiding waarbij alle delen zijn samengevoegd en waarbij de gemeentenaam is gebruikt.
           type: string
     ObjectAanduiding:
@@ -306,13 +315,8 @@ components:
           type: string
           title: WOZ-objectnummer
           description: Unieke identificatie van het WOZ-object
-        kadastraleAanduiding:
-          $ref: '#/components/schemas/KadastraleAanduiding'
-        kadastraalOnroerendeZaakIdentificaties:
-          type: array
-          description: De identificaties van kadastraal onroerende zaken die geheel of gedeeltelijk deel uitmaken van het WOZ-object
-          items:
-            type: string
+        kadastraalOnroerendeZaken:
+          $ref: '#/components/schemas/KadastraalOnroerendeZaken'
         pandIdentificaties:
           type: array
           items:
