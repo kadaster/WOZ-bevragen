@@ -199,7 +199,7 @@ components:
         appartementsindex:
           description: Nummer dat het kadastraal object uniek identificeert als een appartementsrecht binnen het complex.
           type: integer
-    KadastraalOnroerendeZaken:
+    KadastraalOnroerendeZaak:
       type: object
       properties:
         identificatie:
@@ -316,7 +316,9 @@ components:
           title: WOZ-objectnummer
           description: Unieke identificatie van het WOZ-object
         kadastraalOnroerendeZaken:
-          $ref: '#/components/schemas/KadastraalOnroerendeZaken'
+          type: array
+          items:
+            $ref: '#/components/schemas/KadastraalOnroerendeZaak'
         pandIdentificaties:
           type: array
           items:
