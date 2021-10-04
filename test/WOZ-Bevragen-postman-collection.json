@@ -1,0 +1,988 @@
+{
+    "item": [
+        {
+            "id": "b8e5101c-2d7a-498a-9e52-52db335bdd7e",
+            "name": "wozobjecten",
+            "item": [
+                {
+                    "id": "2fa3a083-f474-4127-b2b8-fa4369b6bc6a",
+                    "name": "Zoek WOZ-objecten",
+                    "request": {
+                        "name": "Zoek WOZ-objecten",
+                        "description": {
+                            "content": "Zoek WOZ-objecten op eigenaar of adres. Het resultaat zijn de actuele gegevens van de gevonden objecten.",
+                            "type": "text/plain"
+                        },
+                        "url": {
+                            "path": [
+                                "wozobjecten"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [
+                                {
+                                    "disabled": false,
+                                    "key": "rsin",
+                                    "value": "<string>",
+                                    "description": "Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven niet-natuurlijk persoon"
+                                },
+                                {
+                                    "disabled": false,
+                                    "key": "kvkNummer",
+                                    "value": "<string>",
+                                    "description": "Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven maatschappelijke activiteit of een van de daaronder vallende ondernemingen en vestigingen"
+                                },
+                                {
+                                    "disabled": false,
+                                    "key": "adresseerbaarObjectIdentificatie",
+                                    "value": "<string>",
+                                    "description": "Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is"
+                                },
+                                {
+                                    "disabled": false,
+                                    "key": "nummeraanduidingIdentificatie",
+                                    "value": "<string>",
+                                    "description": "Zoek op de BAG identificatie van een nummeraanduiding (adres) waarmee het WOZ-object wordt aangeduid"
+                                },
+                                {
+                                    "disabled": false,
+                                    "key": "postcode",
+                                    "value": "<string>",
+                                    "description": "Zoek WOZ-objecten met postcode, in combinatie met huisnummer en eventueel met huisletter en/of huisnummertoevoeging"
+                                },
+                                {
+                                    "disabled": false,
+                                    "key": "huisnummer",
+                                    "value": "<integer>",
+                                    "description": "Zoek WOZ-objecten met huisnummer, in combinatie met postcode en eventueel met huisletter en/of huisnummertoevoeging\""
+                                },
+                                {
+                                    "disabled": false,
+                                    "key": "huisnummertoevoeging",
+                                    "value": "<string>",
+                                    "description": "Zoek met een huisnummertoevoeging, in combinatie met postcode en huisnummer en eventueel huisletter.\nDit is een toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter.\nBijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging\n"
+                                },
+                                {
+                                    "disabled": false,
+                                    "key": "huisletter",
+                                    "value": "<string>",
+                                    "description": "Zoek met een huisletter, in combinatie met postcode en huisnummer en eventueel huisnummertoevoeging.\nDit is een toevoeging aan een huisnummer en huisnummertoevoeging.\nBijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging\n"
+                                },
+                                {
+                                    "disabled": false,
+                                    "key": "fields",
+                                    "value": "<string>",
+                                    "description": "Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.2.0/features/fields.feature)"
+                                },
+                                {
+                                    "disabled": false,
+                                    "key": "page",
+                                    "value": "1",
+                                    "description": "Pagina nummer"
+                                },
+                                {
+                                    "disabled": false,
+                                    "key": "pageSize",
+                                    "value": "20"
+                                }
+                            ],
+                            "variable": []
+                        },
+                        "method": "GET",
+                        "auth": null
+                    },
+                    "response": [
+                        {
+                            "id": "4d83b1e2-9217-4c87-9939-47420fd6891d",
+                            "name": "OK",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "wozobjecten"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "rsin",
+                                            "value": "857567433"
+                                        },
+                                        {
+                                            "key": "kvkNummer",
+                                            "value": "68727720"
+                                        },
+                                        {
+                                            "key": "adresseerbaarObjectIdentificatie",
+                                            "value": "0226010000038820"
+                                        },
+                                        {
+                                            "key": "nummeraanduidingIdentificatie",
+                                            "value": "0226200000038820"
+                                        },
+                                        {
+                                            "key": "postcode",
+                                            "value": "1234AB"
+                                        },
+                                        {
+                                            "key": "huisnummer",
+                                            "value": "<integer>"
+                                        },
+                                        {
+                                            "key": "huisnummertoevoeging",
+                                            "value": "bis"
+                                        },
+                                        {
+                                            "key": "huisletter",
+                                            "value": "A"
+                                        },
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "page",
+                                            "value": "1"
+                                        },
+                                        {
+                                            "key": "pageSize",
+                                            "value": "20"
+                                        }
+                                    ],
+                                    "variable": []
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "header": [
+                                {
+                                    "disabled": false,
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "disabled": false,
+                                    "key": "X-Pagination-Page",
+                                    "value": "3",
+                                    "description": ""
+                                },
+                                {
+                                    "disabled": false,
+                                    "key": "X-Pagination-Limit",
+                                    "value": "20",
+                                    "description": ""
+                                },
+                                {
+                                    "disabled": false,
+                                    "key": "warning",
+                                    "value": "299 https://service.../api/.../v1 \"Deze versie van de API is verouderd en zal uit dienst worden genomen op 2018-02-01. Raadpleeg voor meer informatie hier de documentatie: https://omgevingswet.../api/.../v1\".",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/hal+json"
+                                }
+                            ],
+                            "body": "{\n \"_links\": {\n  \"self\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": false,\n   \"title\": \"laborum\"\n  },\n  \"first\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": false,\n   \"title\": \"laborum sunt nostrud commodo\"\n  },\n  \"previous\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": true,\n   \"title\": \"veniam amet\"\n  },\n  \"next\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": true,\n   \"title\": \"adipisicing sint quis pariatur\"\n  }\n },\n \"_embedded\": {\n  \"wozObjecten\": [\n   {\n    \"aanduiding\": {\n     \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n    },\n    \"adresseerbaarObjectIdentificaties\": [\n     \"0226010000038820\",\n     \"0226010000038820\"\n    ],\n    \"belanghebbendeEigenaar\": {\n     \"burgerservicenummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"geheimhoudingPersoonsgegevens\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"kvkNummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"naam\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"rsin\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"type\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"vestigingsnummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    },\n    \"belanghebbendeGebruiker\": {\n     \"burgerservicenummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"geheimhoudingPersoonsgegevens\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"kvkNummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"naam\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"rsin\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"type\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"vestigingsnummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    },\n    \"grondoppervlakte\": -15686904,\n    \"identificatie\": \"ut\",\n    \"kadastraalOnroerendeZaakIdentificaties\": [\n     \"aute c\",\n     \"cillum aliquip voluptate sed ea\"\n    ],\n    \"pandIdentificaties\": [\n     \"laborum Ut magna\",\n     \"id eu\"\n    ],\n    \"verantwoordelijkeGemeente\": {\n     \"code\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"omschrijving\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    },\n    \"waarden\": [\n     {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    ],\n    \"_links\": {\n     \"self\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": true,\n      \"title\": \"in ut cillum\"\n     },\n     \"adres\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": false,\n      \"title\": \"est labore reprehenderit mollit\"\n     },\n     \"adresseerbareObjecten\": [\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n     ],\n     \"belanghebbendeEigenaar\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": true,\n      \"title\": \"laboris culpa\"\n     },\n     \"belanghebbendeGebruiker\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": true,\n      \"title\": \"ad cupidatat\"\n     },\n     \"panden\": [\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n     ],\n     \"kadastraalOnroerendeZaken\": [\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n     ]\n    }\n   },\n   {\n    \"aanduiding\": {\n     \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n    },\n    \"adresseerbaarObjectIdentificaties\": [\n     \"0226010000038820\",\n     \"0226010000038820\"\n    ],\n    \"belanghebbendeEigenaar\": {\n     \"burgerservicenummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"geheimhoudingPersoonsgegevens\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"kvkNummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"naam\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"rsin\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"type\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"vestigingsnummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    },\n    \"belanghebbendeGebruiker\": {\n     \"burgerservicenummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"geheimhoudingPersoonsgegevens\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"kvkNummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"naam\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"rsin\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"type\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"vestigingsnummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    },\n    \"grondoppervlakte\": 38992151,\n    \"identificatie\": \"magna Duis occaecat dolore\",\n    \"kadastraalOnroerendeZaakIdentificaties\": [\n     \"Lorem sint exercitation aute\",\n     \"fugiat\"\n    ],\n    \"pandIdentificaties\": [\n     \"in\",\n     \"deserunt dolor enim\"\n    ],\n    \"verantwoordelijkeGemeente\": {\n     \"code\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"omschrijving\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    },\n    \"waarden\": [\n     {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    ],\n    \"_links\": {\n     \"self\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": false,\n      \"title\": \"consectetur el\"\n     },\n     \"adres\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": true,\n      \"title\": \"proident ea ex\"\n     },\n     \"adresseerbareObjecten\": [\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n     ],\n     \"belanghebbendeEigenaar\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": true,\n      \"title\": \"velit tempor laboris dolore\"\n     },\n     \"belanghebbendeGebruiker\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": true,\n      \"title\": \"reprehenderit dolore culpa\"\n     },\n     \"panden\": [\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n     ],\n     \"kadastraalOnroerendeZaken\": [\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n     ]\n    }\n   }\n  ]\n }\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "9efc86ab-bfc9-4155-84d7-c8c95042a3da",
+                            "name": "Bad Request",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "wozobjecten"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "rsin",
+                                            "value": "857567433"
+                                        },
+                                        {
+                                            "key": "kvkNummer",
+                                            "value": "68727720"
+                                        },
+                                        {
+                                            "key": "adresseerbaarObjectIdentificatie",
+                                            "value": "0226010000038820"
+                                        },
+                                        {
+                                            "key": "nummeraanduidingIdentificatie",
+                                            "value": "0226200000038820"
+                                        },
+                                        {
+                                            "key": "postcode",
+                                            "value": "1234AB"
+                                        },
+                                        {
+                                            "key": "huisnummer",
+                                            "value": "<integer>"
+                                        },
+                                        {
+                                            "key": "huisnummertoevoeging",
+                                            "value": "bis"
+                                        },
+                                        {
+                                            "key": "huisletter",
+                                            "value": "A"
+                                        },
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "page",
+                                            "value": "1"
+                                        },
+                                        {
+                                            "key": "pageSize",
+                                            "value": "20"
+                                        }
+                                    ],
+                                    "variable": []
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Bad Request",
+                            "code": 400,
+                            "header": [
+                                {
+                                    "disabled": false,
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1\",\n \"title\": \"Ten minste één parameter moet worden opgegeven.\",\n \"status\": 400,\n \"detail\": \"The request could not be understood by the server due to malformed syntax. The client SHOULD NOT repeat the request without modification.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"paramsRequired\",\n \"invalidParams\": [\n  {\n   \"type\": \"https://www.vng.nl/realisatie/api/validaties/integer\",\n   \"name\": \"verblijfplaats__huisnummer\",\n   \"code\": \"integer\",\n   \"reason\": \"Waarde is geen geldige integer.\"\n  }\n ]\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "07a93b83-9fe9-48a4-a391-44ddf119418e",
+                            "name": "Unauthorized",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "wozobjecten"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "rsin",
+                                            "value": "857567433"
+                                        },
+                                        {
+                                            "key": "kvkNummer",
+                                            "value": "68727720"
+                                        },
+                                        {
+                                            "key": "adresseerbaarObjectIdentificatie",
+                                            "value": "0226010000038820"
+                                        },
+                                        {
+                                            "key": "nummeraanduidingIdentificatie",
+                                            "value": "0226200000038820"
+                                        },
+                                        {
+                                            "key": "postcode",
+                                            "value": "1234AB"
+                                        },
+                                        {
+                                            "key": "huisnummer",
+                                            "value": "<integer>"
+                                        },
+                                        {
+                                            "key": "huisnummertoevoeging",
+                                            "value": "bis"
+                                        },
+                                        {
+                                            "key": "huisletter",
+                                            "value": "A"
+                                        },
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "page",
+                                            "value": "1"
+                                        },
+                                        {
+                                            "key": "pageSize",
+                                            "value": "20"
+                                        }
+                                    ],
+                                    "variable": []
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Unauthorized",
+                            "code": 401,
+                            "header": [
+                                {
+                                    "disabled": false,
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.2\",\n \"title\": \"Niet correct geauthenticeerd.\",\n \"status\": 401,\n \"detail\": \"The request requires user authentication. The response MUST include a WWW-Authenticate header field (section 14.47) containing a challenge applicable to the requested resource.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"authentication\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "375b6302-0f84-4ad9-af3d-b2e51cf8d04f",
+                            "name": "Forbidden",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "wozobjecten"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "rsin",
+                                            "value": "857567433"
+                                        },
+                                        {
+                                            "key": "kvkNummer",
+                                            "value": "68727720"
+                                        },
+                                        {
+                                            "key": "adresseerbaarObjectIdentificatie",
+                                            "value": "0226010000038820"
+                                        },
+                                        {
+                                            "key": "nummeraanduidingIdentificatie",
+                                            "value": "0226200000038820"
+                                        },
+                                        {
+                                            "key": "postcode",
+                                            "value": "1234AB"
+                                        },
+                                        {
+                                            "key": "huisnummer",
+                                            "value": "<integer>"
+                                        },
+                                        {
+                                            "key": "huisnummertoevoeging",
+                                            "value": "bis"
+                                        },
+                                        {
+                                            "key": "huisletter",
+                                            "value": "A"
+                                        },
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "page",
+                                            "value": "1"
+                                        },
+                                        {
+                                            "key": "pageSize",
+                                            "value": "20"
+                                        }
+                                    ],
+                                    "variable": []
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Forbidden",
+                            "code": 403,
+                            "header": [
+                                {
+                                    "disabled": false,
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.4\",\n \"title\": \"U bent niet geautoriseerd voor deze operatie.\",\n \"status\": 403,\n \"detail\": \"The server understood the request, but is refusing to fulfill it.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"autorisation\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "48fc1282-38da-4f2e-b6b4-3d7a77af1bc3",
+                            "name": "Not Acceptable",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "wozobjecten"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "rsin",
+                                            "value": "857567433"
+                                        },
+                                        {
+                                            "key": "kvkNummer",
+                                            "value": "68727720"
+                                        },
+                                        {
+                                            "key": "adresseerbaarObjectIdentificatie",
+                                            "value": "0226010000038820"
+                                        },
+                                        {
+                                            "key": "nummeraanduidingIdentificatie",
+                                            "value": "0226200000038820"
+                                        },
+                                        {
+                                            "key": "postcode",
+                                            "value": "1234AB"
+                                        },
+                                        {
+                                            "key": "huisnummer",
+                                            "value": "<integer>"
+                                        },
+                                        {
+                                            "key": "huisnummertoevoeging",
+                                            "value": "bis"
+                                        },
+                                        {
+                                            "key": "huisletter",
+                                            "value": "A"
+                                        },
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "page",
+                                            "value": "1"
+                                        },
+                                        {
+                                            "key": "pageSize",
+                                            "value": "20"
+                                        }
+                                    ],
+                                    "variable": []
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Not Acceptable",
+                            "code": 406,
+                            "header": [
+                                {
+                                    "disabled": false,
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.7\",\n \"title\": \"Gevraagde contenttype wordt niet ondersteund.\",\n \"status\": 406,\n \"detail\": \"The resource identified by the request is only capable of generating response entities which have content characteristics not acceptable according to thr accept headers sent in the request\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"notAcceptable\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "4733a87c-aa4b-48b9-b57b-a31a75492e4b",
+                            "name": "Internal Server Error",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "wozobjecten"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "rsin",
+                                            "value": "857567433"
+                                        },
+                                        {
+                                            "key": "kvkNummer",
+                                            "value": "68727720"
+                                        },
+                                        {
+                                            "key": "adresseerbaarObjectIdentificatie",
+                                            "value": "0226010000038820"
+                                        },
+                                        {
+                                            "key": "nummeraanduidingIdentificatie",
+                                            "value": "0226200000038820"
+                                        },
+                                        {
+                                            "key": "postcode",
+                                            "value": "1234AB"
+                                        },
+                                        {
+                                            "key": "huisnummer",
+                                            "value": "<integer>"
+                                        },
+                                        {
+                                            "key": "huisnummertoevoeging",
+                                            "value": "bis"
+                                        },
+                                        {
+                                            "key": "huisletter",
+                                            "value": "A"
+                                        },
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "page",
+                                            "value": "1"
+                                        },
+                                        {
+                                            "key": "pageSize",
+                                            "value": "20"
+                                        }
+                                    ],
+                                    "variable": []
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Internal Server Error",
+                            "code": 500,
+                            "header": [
+                                {
+                                    "disabled": false,
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.5.1\",\n \"title\": \"Interne server fout.\",\n \"status\": 500,\n \"detail\": \"The server encountered an unexpected condition which prevented it from fulfilling the request.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"serverError\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        }
+                    ],
+                    "event": []
+                },
+                {
+                    "id": "aa3f4c2e-7a3b-485d-a1fe-d89d53479320",
+                    "name": "Raadpleeg een WOZ-object",
+                    "request": {
+                        "name": "Raadpleeg een WOZ-object",
+                        "description": {
+                            "content": "Raadpleeg de actuele eigenschappen van een WOZ-object",
+                            "type": "text/plain"
+                        },
+                        "url": {
+                            "path": [
+                                "wozobjecten",
+                                ":identificatie"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [
+                                {
+                                    "disabled": false,
+                                    "key": "fields",
+                                    "value": "<string>",
+                                    "description": "Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.2.0/features/fields.feature)"
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "disabled": false,
+                                    "type": "any",
+                                    "value": "<string>",
+                                    "key": "identificatie",
+                                    "description": "(Required) Unieke identificatie van een WOZ-object"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "auth": null
+                    },
+                    "response": [
+                        {
+                            "id": "bb9b307f-5afb-467a-9fe9-4aab731de5e6",
+                            "name": "OK",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "wozobjecten",
+                                        ":identificatie"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": [
+                                        {
+                                            "type": "any",
+                                            "key": "identificatie"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "header": [
+                                {
+                                    "disabled": false,
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "disabled": false,
+                                    "key": "warning",
+                                    "value": "299 https://service.../api/.../v1 \"Deze versie van de API is verouderd en zal uit dienst worden genomen op 2018-02-01. Raadpleeg voor meer informatie hier de documentatie: https://omgevingswet.../api/.../v1\".",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/hal+json"
+                                }
+                            ],
+                            "body": "{\n \"aanduiding\": {\n  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n },\n \"adresseerbaarObjectIdentificaties\": [\n  \"0226010000038820\",\n  \"0226010000038820\"\n ],\n \"belanghebbendeEigenaar\": {\n  \"burgerservicenummer\": {\n   \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n  },\n  \"geheimhoudingPersoonsgegevens\": {\n   \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n  },\n  \"kvkNummer\": {\n   \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n  },\n  \"naam\": {\n   \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n  },\n  \"rsin\": {\n   \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n  },\n  \"type\": {\n   \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n  },\n  \"vestigingsnummer\": {\n   \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n  }\n },\n \"belanghebbendeGebruiker\": {\n  \"burgerservicenummer\": {\n   \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n  },\n  \"geheimhoudingPersoonsgegevens\": {\n   \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n  },\n  \"kvkNummer\": {\n   \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n  },\n  \"naam\": {\n   \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n  },\n  \"rsin\": {\n   \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n  },\n  \"type\": {\n   \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n  },\n  \"vestigingsnummer\": {\n   \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n  }\n },\n \"grondoppervlakte\": 21084125,\n \"identificatie\": \"cillum\",\n \"kadastraalOnroerendeZaakIdentificaties\": [\n  \"Excepteur irure ex nisi\",\n  \"sed aliquip in sunt cupidatat\"\n ],\n \"pandIdentificaties\": [\n  \"laboris exercitation a\",\n  \"est elit cupidatat\"\n ],\n \"verantwoordelijkeGemeente\": {\n  \"code\": {\n   \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n  },\n  \"omschrijving\": {\n   \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n  }\n },\n \"waarden\": [\n  {\n   \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n  },\n  {\n   \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n  }\n ],\n \"_links\": {\n  \"self\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": true,\n   \"title\": \"Excepteur exercitation fugiat nostrud\"\n  },\n  \"adres\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": true,\n   \"title\": \"commodo\"\n  },\n  \"adresseerbareObjecten\": [\n   {\n    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n   },\n   {\n    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n   }\n  ],\n  \"belanghebbendeEigenaar\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": true,\n   \"title\": \"irure pariatur et\"\n  },\n  \"belanghebbendeGebruiker\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": true,\n   \"title\": \"do nostrud est\"\n  },\n  \"panden\": [\n   {\n    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n   },\n   {\n    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n   }\n  ],\n  \"kadastraalOnroerendeZaken\": [\n   {\n    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n   },\n   {\n    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n   }\n  ]\n }\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "a76fd657-ff12-4c0c-b527-9ffb1128965c",
+                            "name": "Bad Request",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "wozobjecten",
+                                        ":identificatie"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": [
+                                        {
+                                            "type": "any",
+                                            "key": "identificatie"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Bad Request",
+                            "code": 400,
+                            "header": [
+                                {
+                                    "disabled": false,
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1\",\n \"title\": \"Ten minste één parameter moet worden opgegeven.\",\n \"status\": 400,\n \"detail\": \"The request could not be understood by the server due to malformed syntax. The client SHOULD NOT repeat the request without modification.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"paramsRequired\",\n \"invalidParams\": [\n  {\n   \"type\": \"https://www.vng.nl/realisatie/api/validaties/integer\",\n   \"name\": \"verblijfplaats__huisnummer\",\n   \"code\": \"integer\",\n   \"reason\": \"Waarde is geen geldige integer.\"\n  }\n ]\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "fb22d5f1-9e51-4530-b90e-ec0bbbe15d0c",
+                            "name": "Unauthorized",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "wozobjecten",
+                                        ":identificatie"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": [
+                                        {
+                                            "type": "any",
+                                            "key": "identificatie"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Unauthorized",
+                            "code": 401,
+                            "header": [
+                                {
+                                    "disabled": false,
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.2\",\n \"title\": \"Niet correct geauthenticeerd.\",\n \"status\": 401,\n \"detail\": \"The request requires user authentication. The response MUST include a WWW-Authenticate header field (section 14.47) containing a challenge applicable to the requested resource.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"authentication\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "029d1f83-4a4d-4399-830a-54cc1a2f1ec9",
+                            "name": "Forbidden",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "wozobjecten",
+                                        ":identificatie"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": [
+                                        {
+                                            "type": "any",
+                                            "key": "identificatie"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Forbidden",
+                            "code": 403,
+                            "header": [
+                                {
+                                    "disabled": false,
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.4\",\n \"title\": \"U bent niet geautoriseerd voor deze operatie.\",\n \"status\": 403,\n \"detail\": \"The server understood the request, but is refusing to fulfill it.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"autorisation\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "b171d616-e3a1-4119-9c4b-6633af250a25",
+                            "name": "Not Found",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "wozobjecten",
+                                        ":identificatie"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": [
+                                        {
+                                            "type": "any",
+                                            "key": "identificatie"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Not Found",
+                            "code": 404,
+                            "header": [
+                                {
+                                    "disabled": false,
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5\",\n \"title\": \"Opgevraagde resource bestaat niet.\",\n \"status\": 404,\n \"detail\": \"The server has not found anything matching the Request-URI.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"notFound\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "876c6397-1dde-4ed9-bdb7-0845e22e9fda",
+                            "name": "Not Acceptable",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "wozobjecten",
+                                        ":identificatie"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": [
+                                        {
+                                            "type": "any",
+                                            "key": "identificatie"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Not Acceptable",
+                            "code": 406,
+                            "header": [
+                                {
+                                    "disabled": false,
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.7\",\n \"title\": \"Gevraagde contenttype wordt niet ondersteund.\",\n \"status\": 406,\n \"detail\": \"The resource identified by the request is only capable of generating response entities which have content characteristics not acceptable according to thr accept headers sent in the request\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"notAcceptable\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "0ae285c9-9cf5-495f-9578-ce2e3c24ad01",
+                            "name": "Internal Server Error",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "wozobjecten",
+                                        ":identificatie"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": [
+                                        {
+                                            "type": "any",
+                                            "key": "identificatie"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Internal Server Error",
+                            "code": 500,
+                            "header": [
+                                {
+                                    "disabled": false,
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.5.1\",\n \"title\": \"Interne server fout.\",\n \"status\": 500,\n \"detail\": \"The server encountered an unexpected condition which prevented it from fulfilling the request.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"serverError\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        }
+                    ],
+                    "event": []
+                }
+            ],
+            "event": []
+        }
+    ],
+    "event": [],
+    "variable": [
+        {
+            "type": "string",
+            "value": "https://virtserver.swaggerhub.com/VNG-sandbox/Waardering-onroerende-zaken/1.0.0",
+            "key": "baseUrl"
+        }
+    ],
+    "info": {
+        "_postman_id": "1a738e82-f410-4917-b218-6e9f7ab6ee2a",
+        "name": "Waardering onroerende zaken",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": {
+            "content": "Deze API levert actuele gegevens over WOZ-objecten\n",
+            "type": "text/plain"
+        }
+    }
+}
