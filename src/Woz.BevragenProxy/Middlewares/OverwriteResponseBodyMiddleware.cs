@@ -1,8 +1,12 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using System.IO;
 using System.IO.Compression;
+using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Woz.BevragenProxy.Domain;
 
 namespace Woz.BevragenProxy.Middlewares
 {
@@ -10,6 +14,7 @@ namespace Woz.BevragenProxy.Middlewares
     {
         private readonly RequestDelegate _next;
         private readonly ILogger<OverwriteResponseBodyMiddleware> _logger;
+        private static readonly Regex _isRaadpleegActueelWozobjectEndpoint = new(@"\/wozobjecten\/\d{12}");
 
         public OverwriteResponseBodyMiddleware(RequestDelegate next, ILogger<OverwriteResponseBodyMiddleware> logger)
         {
@@ -28,12 +33,55 @@ namespace Woz.BevragenProxy.Middlewares
 
             var body = await context.Response.ReadBodyAsync();
 
-            _logger.LogInformation(body);
+            _logger.LogInformation($"original:{body}");
 
-            using var modifiedBodyStream = body.ToMemoryStream();
+            if (context.Response.StatusCode == StatusCodes.Status200OK)
+            {
+                var modifiedBody = body.Transform(_isRaadpleegActueelWozobjectEndpoint.IsMatch(context.Request.Path));
+                _logger.LogInformation($"modified:{modifiedBody}");
 
-            context.Response.ContentLength = modifiedBodyStream.Length;
-            await modifiedBodyStream.CopyToAsync(orgBodyStream);
+                using var modifiedBodyStream = modifiedBody.ToMemoryStream();
+
+                context.Response.ContentLength = modifiedBodyStream.Length;
+                await modifiedBodyStream.CopyToAsync(orgBodyStream);
+            }
+            else
+            {
+                _logger.LogInformation($"received status code:{context.Response.StatusCode}");
+
+                using var modifiedBodyStream = body.ToMemoryStream();
+
+                context.Response.ContentLength = modifiedBodyStream.Length;
+                await modifiedBodyStream.CopyToAsync(orgBodyStream);
+            }
+        }
+    }
+
+    public static class WozObjectHelpers
+    {
+        public static string Transform(this string payload, bool isObject)
+        {
+            string retval;
+
+            if (isObject)
+            {
+                var wozObject = JsonConvert.DeserializeObject<DataTransferObjects.WozObjectHal>(payload);
+                wozObject.Waarden = wozObject.Waarden.BepaalRelevanteWaarden()?.ToArray();
+
+                retval = JsonConvert.SerializeObject(wozObject);
+            }
+            else
+            {
+                var wozObjecten = JsonConvert.DeserializeObject<DataTransferObjects.WozObjectHalCollectie>(payload);
+                foreach (var wozObject in wozObjecten._embedded.WozObjecten)
+                {
+                    wozObject.Waarden = wozObject.Waarden.BepaalRelevanteWaarden()?.ToArray();
+                }
+
+                retval = JsonConvert.SerializeObject(wozObjecten);
+            }
+
+            return retval;
         }
     }
 
