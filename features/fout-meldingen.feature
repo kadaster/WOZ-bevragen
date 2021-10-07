@@ -111,10 +111,7 @@ Rule: Een zoek actuele WOZ-objecten aanroep mag slechts één identificatie para
     Dan bevat de response de volgende kenmerken
         | title  | De combinatie van opgegeven parameters is niet toegestaan. |
         | status | 400                                                        |
-    En bevat de response de volgende invalidParams
-        | name     | reason                                                                      |
-        | <param1> | parameter '<param1>' kan niet worden opgegeven in combinatie met '<param2>' |
-        | <param2> | parameter '<param2>' kan niet worden opgegeven in combinatie met '<param1>' |
+    En bevat de response geen invalidParams
 
     Voorbeelden:
         | query string                                                      | param1                           | param2    |
