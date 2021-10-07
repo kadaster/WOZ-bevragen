@@ -37,7 +37,7 @@
   "homepage": "https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen#readme",
   "devDependencies": {
     "@cucumber/cucumber": "^7.3.1",
-    "@openapitools/openapi-generator-cli": "^2.4.10",
+    "@openapitools/openapi-generator-cli": "^2.4.12",
     "@stoplight/spectral": "^5.9.2",
     "axios": "^0.22.0",
     "chai": "^4.3.4",
