@@ -48,14 +48,15 @@ Then('bevat de response de volgende invalidParams', function (dataTable) {
 
     should.exist(invalidParams, JSON.stringify(data, null, "\t"));
 
+    const paramName = dataTable.rawTable[0][1];
     dataTable.rawTable.forEach(function(value, index) {
         if(index > 0) {
             const expected = value;
             let actual = invalidParams.find(function(value) {
-                return value["name"] = expected[0];
+                return value["name"] == expected[0];
             });
-            actual.should.not.be.null;
-            actual.reason.should.equal(expected[1], JSON.stringify(data, null, "\t"));
+            should.exist(actual, JSON.stringify(invalidParams, null, "\t"));
+            actual[paramName].should.equal(expected[1], JSON.stringify(invalidParams, null, "\t"));
         }
     });
 });

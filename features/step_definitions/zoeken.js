@@ -51,9 +51,12 @@ Then('bevat het antwoord het WOZ-object met identificatie {string}', function (e
 });
 
 Then('heeft het antwoord http-statuscode {string}', function (expected) {
-    const response = this.context["response"];
-
-    response.status.should.equal(Number(expected), response);
+    if(this.context["response"] !== undefined) {
+        this.context["response"].status.should.equal(Number(expected), this.context["response"]);
+    }
+    else {
+        this.context["exception"].response.status.should.equal(Number(expected), this.context["exception"]);
+    }
 });
 
 Then('bevat het antwoord header {string} met waarde {string}', function (key, value) {

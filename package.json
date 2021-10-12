@@ -21,7 +21,7 @@
     "unstage-generated": "git reset HEAD ./specificatie/genereervariant/openapi.* ./test/WOZ-Bevragen-postman-collection.json ./code/**",
     "rollback-generated": "git checkout ./specificatie/genereervariant/openapi.* ./test/WOZ-Bevragen-postman-collection.json ./code/**",
     "specs:report": "node ./helpers/generate-test-report.js",
-    "specs:verify": "cucumber-js -f json:docs/features/test-result.json features/zoeken.feature features/fout-meldingen.feature",
+    "specs:verify": "cucumber-js -f json:docs/features/test-result.json features/zoeken.feature features/fout-meldingen.feature features/fout-code.feature --tags \"not @ignore\"",
     "test": "npm run specs:verify && npm run specs:report"
   },
   "repository": {
