@@ -111,6 +111,7 @@ Rule: Een zoek actuele WOZ-objecten aanroep mag slechts één identificatie para
     Dan bevat de response de volgende kenmerken
         | title  | De combinatie van opgegeven parameters is niet toegestaan. |
         | status | 400                                                        |
+        | detail | Er zijn meerdere zoekingangen opgegeven. Graag 1 zoekingang gebruiken. |
     En bevat de response geen invalidParams
 
     Voorbeelden:

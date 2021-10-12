@@ -7,18 +7,18 @@ Functionaliteit: Fout code
     Zodat ik in de consumer applicatie programmatisch op fout responses kan reageren
 
 Abstract Scenario: Geen of ongeldig X-API-Key header
-Als '/wozobjecten' <scenario> wordt aangeroepen
-Dan heeft het antwoord http-statuscode "401"
-Dan bevat de response de volgende kenmerken
-    | naam   | waarde         |
-    | status | 401            |
-    | code   | authentication |
-En bevat de response geen invalidParams
+    Als '/wozobjecten' <scenario> wordt aangeroepen
+    Dan heeft het antwoord http-statuscode "401"
+    Dan bevat de response de volgende kenmerken
+        | naam   | waarde         |
+        | status | 401            |
+        | code   | authentication |
+    En bevat de response geen invalidParams
 
-Voorbeelden:
-| scenario                  |
-| zonder X-API-Key header   |
-| met lege X-API-Key header |
+    Voorbeelden:
+    | scenario                  |
+    | zonder X-API-Key header   |
+    | met lege X-API-Key header |
 
 Abstract Scenario: Geen parameters opgegeven
     Als '<path>' wordt aangeroepen
@@ -39,7 +39,7 @@ Abstract Scenario: Verplichte parameters combinatie is niet opgegeven
         | naam   | waarde            |
         | status | 400               |
         | code   | paramsCombination |
-    Dan bevat de response de volgende invalidParams
+    En bevat de response de volgende invalidParams
         | name    | code     |
         | <param> | required |
 
@@ -47,6 +47,19 @@ Abstract Scenario: Verplichte parameters combinatie is niet opgegeven
     | path                         | param      |
     | /wozobjecten?postcode=1234AA | huisnummer |
     | /wozobjecten?huisnummer=1    | postcode   |
+
+Abstract Scenario: Ongeldige parameter combinatie
+    Als '<path>' wordt aangeroepen
+    Dan bevat de response de volgende kenmerken
+        | naam   | waarde           |
+        | status | 400              |
+        | code   | unsupportedCombi |
+    En bevat de response geen invalidParams
+
+    Voorbeelden:
+    | path                                                                          |
+    | /wozobjecten?rsin=857567433&kvkNummer=68727720                                |
+    | /wozobjecten?adresseerbaarObjectIdentificatie=0226010000038820&rsin=857567433 |
 
 Abstract Scenario: Parameter is niet correct
     Als '<path>' wordt aangeroepen
