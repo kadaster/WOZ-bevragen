@@ -188,7 +188,7 @@ Functionaliteit: leveren van waarden bij een WOZ-object
         "ingangsdatum": "2019-01-01",
         "beschikkingsStatussen": [ "bezwaar_ingediend" ]
       },{
-        "vastgesteldeWaarde": 152000,
+        "vastgesteldeWaarde": 171000,
         "waardepeildatum": "2017-01-01",
         "ingangsdatum": "2018-01-01",
         "beschikkingsStatussen": [ "bezwaar_veranderd" ]
@@ -213,7 +213,7 @@ Functionaliteit: leveren van waarden bij een WOZ-object
         "indicatieBezwaarBeroep": true
       },
       {
-        "vastgesteldeWaarde": 152000,
+        "vastgesteldeWaarde": 171000,
         "waardepeildatum": "2017-01-01"
       },
       {
