@@ -525,9 +525,44 @@
           }
         }
       },
-      "PersoonTypeEnum" : {
-        "type" : "string",
-        "enum" : [ "natuurlijk_persoon", "niet_natuurlijk_persoon", "vestiging" ]
+      "KadastraleAanduiding" : {
+        "type" : "object",
+        "properties" : {
+          "gemeentecode" : {
+            "type" : "string",
+            "description" : "Waar het kadaster de kadastrale gemeentenaam hanteert in de KadstraleAanduiding is in de WOZ de gemeentecode gebruikt."
+          },
+          "sectie" : {
+            "type" : "string",
+            "description" : "Sectie is een onderverdeling van de kadastrale gemeente, bedoeld om het werk van de meetdienst en de kadastrale kaarten overzichtelijk te houden. Per kadastrale gemeente zijn er max. 26x26 secties . Elke sectie heeft een of twee letters (bijv. \"A\", 'B', ....'AA', 'AB', ....'ZZ' . Alleen de sectieletter 'J' wordt niet gebruikt om verwarring (handgeschreven) te voorkomen met 'I'"
+          },
+          "perceelnummer" : {
+            "type" : "integer",
+            "description" : "Het perceelnummer dat een geheel perceel of een complex uniek identificeert binnen de sectie."
+          },
+          "deelperceelnummer" : {
+            "type" : "string"
+          },
+          "appartementsindex" : {
+            "type" : "integer",
+            "description" : "Nummer dat het kadastraal object uniek identificeert als een appartementsrecht binnen het complex."
+          }
+        }
+      },
+      "KadastraalOnroerendeZaak" : {
+        "type" : "object",
+        "properties" : {
+          "identificatie" : {
+            "type" : "string"
+          },
+          "aanduiding" : {
+            "$ref" : "#/components/schemas/KadastraleAanduiding"
+          },
+          "aanduidingMetGemeentenaam" : {
+            "type" : "string",
+            "description" : "De volledige kadastraleAanduiding waarbij alle delen zijn samengevoegd en waarbij de gemeentenaam is gebruikt."
+          }
+        }
       },
       "ObjectAanduiding" : {
         "allOf" : [ {
@@ -548,6 +583,10 @@
           },
           "description" : "De aanduiding van het WOZ-object zoals wordt weergegeven op de WOZ-beschikking"
         } ]
+      },
+      "PersoonTypeEnum" : {
+        "type" : "string",
+        "enum" : [ "natuurlijk_persoon", "niet_natuurlijk_persoon", "vestiging" ]
       },
       "StatusBeschikkingEnum" : {
         "type" : "string",
@@ -613,11 +652,10 @@
             "type" : "string",
             "description" : "Unieke identificatie van het WOZ-object"
           },
-          "kadastraalOnroerendeZaakIdentificaties" : {
+          "kadastraalOnroerendeZaken" : {
             "type" : "array",
-            "description" : "De identificaties van kadastraal onroerende zaken die geheel of gedeeltelijk deel uitmaken van het WOZ-object",
             "items" : {
-              "type" : "string"
+              "$ref" : "#/components/schemas/KadastraalOnroerendeZaak"
             }
           },
           "pandIdentificaties" : {
