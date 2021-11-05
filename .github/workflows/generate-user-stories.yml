@@ -31,7 +31,6 @@ jobs:
         run: |
           echo -e '---\nlayout: page-with-side-nav\ntitle: User Stories in Productie\n---\n' >> user-stories-prod.md
           echo -e '# User stories\n' >> user-stories-prod.md
-          
       - name: List 'v1.0' user stories
         uses: lee-dohm/select-matching-issues@v1.2.0
         with:
