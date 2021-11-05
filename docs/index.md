@@ -11,6 +11,8 @@ title: Haal Centraal WOZ bevragen
 
 API voor het zoeken en raadplegen van WOZ objecten en WOZ waardes.
 
+<!-- Bekijk de [release notes](./releasenotes). -->
+
 ## Direct aan de slag?
 
 * Bekijk de specificaties met [Swagger UI](./swagger-ui) of [Redoc](./redoc)
