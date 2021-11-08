@@ -22,14 +22,14 @@ Je kunt een visuele representatie van de specificatie bekijken met [Swagger UI](
 Je kunt de [functionele documentatie](./features) vinden in de [features](./features).
 
 ### Resource WOZ-object 
-De API biedt de mogelijkheid om op de volgende manieren WOZ-objecten op te vragen:
+Je kunt op de volgende manieren WOZ objecten (met WOZ waardes) zoeken en raadplegen:
 
-- Opvragen van 1 specifiek WOZ-object op basis van de WOZ-object identificatie.
-- Opvragen van 1 specifiek WOZ-object op basis van de BAG identificatie van een nummeraanduiding (adres) waarmee het WOZ-object wordt aangeduid.
-- Opvragen van 1 specifiek WOZ-object op basis van een postcode, in combinatie met huisnummer en eventueel met huisletter en/of huisnummertoevoeging.
-- Opvragen van collectie WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven niet-natuurlijk persoon.
+- Opvragen van 1 specifiek WOZ-object met een identificatie van het WOZ object.
+- Opvragen van 1 specifiek WOZ-object met de identificatie van het adres.
+- Opvragen van 1 specifiek WOZ-object met de postcode en het huisnummer eventueel aangevuld met huisletter en/of huisnummertoevoeging.
+- Opvragen van collectie WOZ-objecten met een niet-natuurlijk persoon (rsin) of een maatschappelijke activiteit (kvknr) die in het Handelsregister is ingeschreven.
 - Opvragen van collectie WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven maatschappelijke activiteit of een van de daaronder vallende ondernemingen en vestigingen.
-- Opvragen van collectie WOZ-objecten op basis van de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is.
+- Opvragen van collectie WOZ-objecten met de identificatie van een adresseerbaar object (verblijfsobject, ligplaats, standplaats).
 
 ### Algemeen
 Verder zijn er nog een paar algemene functies die gelden voor alle bovenstaande aanvragen:
