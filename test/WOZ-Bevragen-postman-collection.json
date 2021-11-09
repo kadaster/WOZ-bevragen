@@ -1,11 +1,11 @@
 {
     "item": [
         {
-            "id": "688326c6-ef45-4a3a-a1c6-bca7f69798c2",
+            "id": "a689c354-b90d-4bf8-aa8d-26435292a0cf",
             "name": "wozobjecten",
             "item": [
                 {
-                    "id": "0f4dccc9-a401-4552-827d-a3393672070d",
+                    "id": "c4c40491-afe2-4ede-b7cf-803209560ddd",
                     "name": "Zoek WOZ-objecten",
                     "request": {
                         "name": "Zoek WOZ-objecten",
@@ -94,7 +94,7 @@
                     },
                     "response": [
                         {
-                            "id": "f1c4c6c1-e584-4425-8179-95c91b94425c",
+                            "id": "7a1ce707-3d25-4732-ba09-304e2a68174f",
                             "name": "OK",
                             "originalRequest": {
                                 "url": {
@@ -187,12 +187,12 @@
                                     "value": "application/hal+json"
                                 }
                             ],
-                            "body": "{\n \"_links\": {\n  \"self\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": false,\n   \"title\": \"esse sit nisi eiusmod magna\"\n  },\n  \"first\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": true,\n   \"title\": \"minim pariatur ut proident adipisicing\"\n  },\n  \"previous\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": false,\n   \"title\": \"ad\"\n  },\n  \"next\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": false,\n   \"title\": \"exercitation est culpa\"\n  }\n },\n \"_embedded\": {\n  \"wozObjecten\": [\n   {\n    \"aanduiding\": {\n     \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n    },\n    \"adresseerbaarObjectIdentificaties\": [\n     \"0226010000038820\",\n     \"0226010000038820\"\n    ],\n    \"belanghebbendeEigenaar\": {\n     \"burgerservicenummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"geheimhoudingPersoonsgegevens\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"kvkNummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"naam\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"rsin\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"type\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"vestigingsnummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    },\n    \"belanghebbendeGebruiker\": {\n     \"burgerservicenummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"geheimhoudingPersoonsgegevens\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"kvkNummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"naam\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"rsin\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"type\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"vestigingsnummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    },\n    \"grondoppervlakte\": -57065997,\n    \"identificatie\": \"ut proident cillum labore commodo\",\n    \"kadastraalOnroerendeZaakIdentificaties\": [\n     \"cupidatat aute ut aliqua consequat\",\n     \"mollit sed\"\n    ],\n    \"pandIdentificaties\": [\n     \"in cupidatat Duis labore\",\n     \"ut\"\n    ],\n    \"verantwoordelijkeGemeente\": {\n     \"code\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"omschrijving\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    },\n    \"waarden\": [\n     {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    ],\n    \"_links\": {\n     \"self\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": false,\n      \"title\": \"laboris veniam enim esse ex\"\n     },\n     \"adres\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": false,\n      \"title\": \"occaecat Lorem dolor qui labore\"\n     },\n     \"adresseerbareObjecten\": [\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n     ],\n     \"belanghebbendeEigenaar\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": false,\n      \"title\": \"sunt proident esse\"\n     },\n     \"belanghebbendeGebruiker\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": false,\n      \"title\": \"aliqua mollit\"\n     },\n     \"panden\": [\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n     ],\n     \"kadastraalOnroerendeZaken\": [\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n     ]\n    }\n   },\n   {\n    \"aanduiding\": {\n     \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n    },\n    \"adresseerbaarObjectIdentificaties\": [\n     \"0226010000038820\",\n     \"0226010000038820\"\n    ],\n    \"belanghebbendeEigenaar\": {\n     \"burgerservicenummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"geheimhoudingPersoonsgegevens\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"kvkNummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"naam\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"rsin\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"type\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"vestigingsnummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    },\n    \"belanghebbendeGebruiker\": {\n     \"burgerservicenummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"geheimhoudingPersoonsgegevens\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"kvkNummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"naam\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"rsin\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"type\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"vestigingsnummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    },\n    \"grondoppervlakte\": -20795492,\n    \"identificatie\": \"repr\",\n    \"kadastraalOnroerendeZaakIdentificaties\": [\n     \"aliquip laboris et\",\n     \"sint id dolor laboris\"\n    ],\n    \"pandIdentificaties\": [\n     \"aute dolor amet ipsum\",\n     \"laboris proident minim\"\n    ],\n    \"verantwoordelijkeGemeente\": {\n     \"code\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"omschrijving\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    },\n    \"waarden\": [\n     {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    ],\n    \"_links\": {\n     \"self\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": false,\n      \"title\": \"sed in ex\"\n     },\n     \"adres\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": false,\n      \"title\": \"dolor consequat\"\n     },\n     \"adresseerbareObjecten\": [\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n     ],\n     \"belanghebbendeEigenaar\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": true,\n      \"title\": \"nostrud qui\"\n     },\n     \"belanghebbendeGebruiker\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": false,\n      \"title\": \"quis pariatur dolore aute ex\"\n     },\n     \"panden\": [\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n     ],\n     \"kadastraalOnroerendeZaken\": [\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n     ]\n    }\n   }\n  ]\n }\n}",
+                            "body": "{\n \"_links\": {\n  \"self\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": false,\n   \"title\": \"pariatur labore do\"\n  },\n  \"first\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": false,\n   \"title\": \"qui commodo aute in\"\n  },\n  \"previous\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": true,\n   \"title\": \"proident non ex do reprehenderit\"\n  },\n  \"next\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": true,\n   \"title\": \"adipisicing amet\"\n  }\n },\n \"_embedded\": {\n  \"wozObjecten\": [\n   {\n    \"aanduiding\": {\n     \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n    },\n    \"adresseerbaarObjectIdentificaties\": [\n     \"0226010000038820\",\n     \"0226010000038820\"\n    ],\n    \"belanghebbendeEigenaar\": {\n     \"burgerservicenummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"geheimhoudingPersoonsgegevens\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"kvkNummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"naam\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"rsin\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"type\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"vestigingsnummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    },\n    \"belanghebbendeGebruiker\": {\n     \"burgerservicenummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"geheimhoudingPersoonsgegevens\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"kvkNummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"naam\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"rsin\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"type\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"vestigingsnummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    },\n    \"grondoppervlakte\": -4879350,\n    \"identificatie\": \"eu\",\n    \"kadastraalOnroerendeZaken\": [\n     {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    ],\n    \"pandIdentificaties\": [\n     \"pariatur sint culpa consequat \",\n     \"sed non eiusmod la\"\n    ],\n    \"verantwoordelijkeGemeente\": {\n     \"code\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"omschrijving\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    },\n    \"waarden\": [\n     {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    ],\n    \"_links\": {\n     \"self\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": true,\n      \"title\": \"et sint ullamco aliqua\"\n     },\n     \"adres\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": true,\n      \"title\": \"reprehenderit velit\"\n     },\n     \"adresseerbareObjecten\": [\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n     ],\n     \"belanghebbendeEigenaar\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": true,\n      \"title\": \"eiusmod sit ullamco in\"\n     },\n     \"belanghebbendeGebruiker\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": true,\n      \"title\": \"sed\"\n     },\n     \"panden\": [\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n     ],\n     \"kadastraalOnroerendeZaken\": [\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n     ]\n    }\n   },\n   {\n    \"aanduiding\": {\n     \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n    },\n    \"adresseerbaarObjectIdentificaties\": [\n     \"0226010000038820\",\n     \"0226010000038820\"\n    ],\n    \"belanghebbendeEigenaar\": {\n     \"burgerservicenummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"geheimhoudingPersoonsgegevens\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"kvkNummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"naam\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"rsin\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"type\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"vestigingsnummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    },\n    \"belanghebbendeGebruiker\": {\n     \"burgerservicenummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"geheimhoudingPersoonsgegevens\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"kvkNummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"naam\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"rsin\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"type\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"vestigingsnummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    },\n    \"grondoppervlakte\": 15657192,\n    \"identificatie\": \"exercitation commodo veniam\",\n    \"kadastraalOnroerendeZaken\": [\n     {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    ],\n    \"pandIdentificaties\": [\n     \"commodo mollit et \",\n     \"laboris do\"\n    ],\n    \"verantwoordelijkeGemeente\": {\n     \"code\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"omschrijving\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    },\n    \"waarden\": [\n     {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    ],\n    \"_links\": {\n     \"self\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": true,\n      \"title\": \"proident mollit Lorem\"\n     },\n     \"adres\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": false,\n      \"title\": \"labore Lorem minim\"\n     },\n     \"adresseerbareObjecten\": [\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n     ],\n     \"belanghebbendeEigenaar\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": true,\n      \"title\": \"veniam culpa non\"\n     },\n     \"belanghebbendeGebruiker\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": true,\n      \"title\": \"mollit eu\"\n     },\n     \"panden\": [\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n     ],\n     \"kadastraalOnroerendeZaken\": [\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n     ]\n    }\n   }\n  ]\n }\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "fcfae904-2b45-4c09-9757-c33ec19fef5c",
+                            "id": "48a26ad0-09e4-428d-9df9-c9628659e0f3",
                             "name": "Bad Request",
                             "originalRequest": {
                                 "url": {
@@ -272,7 +272,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "81538fd0-2573-40cf-a4b8-ec13f934ce6a",
+                            "id": "06af50ad-1d2d-4f22-874f-8fb33a62f562",
                             "name": "Unauthorized",
                             "originalRequest": {
                                 "url": {
@@ -352,7 +352,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "965497c6-ee81-4608-962f-727bdeca725e",
+                            "id": "b7971f2c-53c4-4776-bb6b-d31254b2b670",
                             "name": "Forbidden",
                             "originalRequest": {
                                 "url": {
@@ -432,7 +432,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "ab7b9abd-5505-4185-a5cb-7f284bb287c3",
+                            "id": "27d38698-570d-41b7-8a34-053a4ed6657f",
                             "name": "Not Acceptable",
                             "originalRequest": {
                                 "url": {
@@ -512,7 +512,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "31c964d7-c434-44e1-b07e-cdac88f5647e",
+                            "id": "49282dc1-ab79-43d5-b26a-8ddb72d577a5",
                             "name": "Internal Server Error",
                             "originalRequest": {
                                 "url": {
@@ -595,7 +595,7 @@
                     "event": []
                 },
                 {
-                    "id": "19078975-34cf-4041-bee7-92af108d06c6",
+                    "id": "9b0193a7-b856-4e15-81d0-b0dda20fb198",
                     "name": "Raadpleeg een WOZ-object",
                     "request": {
                         "name": "Raadpleeg een WOZ-object",
@@ -634,7 +634,7 @@
                     },
                     "response": [
                         {
-                            "id": "369bc110-4a3a-4497-91d0-1f78a5f97b40",
+                            "id": "f0214127-dc0a-4fc7-93c3-b5023e271ccf",
                             "name": "OK",
                             "originalRequest": {
                                 "url": {
@@ -653,8 +653,11 @@
                                     ],
                                     "variable": [
                                         {
+                                            "disabled": false,
                                             "type": "any",
-                                            "key": "identificatie"
+                                            "value": "<string>",
+                                            "key": "identificatie",
+                                            "description": "(Required) Unieke identificatie van een WOZ-object"
                                         }
                                     ]
                                 },
@@ -681,12 +684,12 @@
                                     "value": "application/hal+json"
                                 }
                             ],
-                            "body": "{\n \"aanduiding\": {\n  \"straat\": \"Laan van de landinrichtingscommissie Duiven-Westervoort\",\n  \"huisnummer\": 1,\n  \"huisletter\": \"A\",\n  \"huisnummertoevoeging\": \"bis\",\n  \"postcode\": \"6922KZ\",\n  \"woonplaats\": \"Duiven\",\n  \"locatieomschrijving\": \"Naast de derde brug\",\n  \"nummeraanduidingIdentificatie\": \"0226200000038923\"\n },\n \"adresseerbaarObjectIdentificaties\": [\n  \"0226010000038820\",\n  \"0226010000038820\"\n ],\n \"belanghebbendeEigenaar\": {\n  \"burgerservicenummer\": \"fugiat id in\",\n  \"geheimhoudingPersoonsgegevens\": true,\n  \"kvkNummer\": \"Lorem exercitation et\",\n  \"naam\": \"Jan de Vries\",\n  \"rsin\": \"minim esse ut\",\n  \"type\": \"natuurlijk_persoon\",\n  \"vestigingsnummer\": \"ut laborum ut\"\n },\n \"belanghebbendeGebruiker\": {\n  \"burgerservicenummer\": \"ex\",\n  \"geheimhoudingPersoonsgegevens\": true,\n  \"kvkNummer\": \"sunt labore fugiat commodo\",\n  \"naam\": \"Jan de Vries\",\n  \"rsin\": \"sunt veniam et ipsum aute\",\n  \"type\": \"niet_natuurlijk_persoon\",\n  \"vestigingsnummer\": \"culpa sunt in est officia\"\n },\n \"grondoppervlakte\": 63045227,\n \"identificatie\": \"incididunt in tempor Duis Lorem\",\n \"kadastraalOnroerendeZaakIdentificaties\": [\n  \"ut\",\n  \"proident sit Ut\"\n ],\n \"pandIdentificaties\": [\n  \"aliqua\",\n  \"commodo in Duis cillum nisi\"\n ],\n \"verantwoordelijkeGemeente\": {\n  \"code\": \"6030\",\n  \"omschrijving\": \"Nederland\"\n },\n \"waarden\": [\n  {\n   \"vastgesteldeWaarde\": 127000,\n   \"waardepeildatum\": \"2010-06-25\",\n   \"ingangsdatum\": \"1969-01-12\",\n   \"beschikkingsStatussen\": [\n    \"hoge_raad_veranderd\",\n    \"waarde_ambtshalve_verminderd\"\n   ]\n  },\n  {\n   \"vastgesteldeWaarde\": 127000,\n   \"waardepeildatum\": \"2006-05-21\",\n   \"ingangsdatum\": \"1970-11-10\",\n   \"beschikkingsStatussen\": [\n    \"hoger_beroep_aangetekend\",\n    \"beschikking_vernietigd\"\n   ]\n  }\n ],\n \"_links\": {\n  \"self\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": true,\n   \"title\": \"non eiusmod laboris\"\n  },\n  \"adres\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": false,\n   \"title\": \"aliqua sed pariatur labore culpa\"\n  },\n  \"adresseerbareObjecten\": [\n   {\n    \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n    \"templated\": true,\n    \"title\": \"deserunt\"\n   },\n   {\n    \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n    \"templated\": true,\n    \"title\": \"mollit pariatur aute ad sit\"\n   }\n  ],\n  \"belanghebbendeEigenaar\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": true,\n   \"title\": \"ipsu\"\n  },\n  \"belanghebbendeGebruiker\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": true,\n   \"title\": \"culpa dolore\"\n  },\n  \"panden\": [\n   {\n    \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n    \"templated\": false,\n    \"title\": \"dolore dol\"\n   },\n   {\n    \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n    \"templated\": true,\n    \"title\": \"sed\"\n   }\n  ],\n  \"kadastraalOnroerendeZaken\": [\n   {\n    \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n    \"templated\": true,\n    \"title\": \"aliquip quis Ut enim\"\n   },\n   {\n    \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n    \"templated\": false,\n    \"title\": \"proident culpa Lorem\"\n   }\n  ]\n }\n}",
+                            "body": "{\n \"aanduiding\": {\n  \"straat\": \"Laan van de landinrichtingscommissie Duiven-Westervoort\",\n  \"huisnummer\": 1,\n  \"huisletter\": \"A\",\n  \"huisnummertoevoeging\": \"bis\",\n  \"postcode\": \"6922KZ\",\n  \"woonplaats\": \"Duiven\",\n  \"locatieomschrijving\": \"Naast de derde brug\",\n  \"nummeraanduidingIdentificatie\": \"0226200000038923\"\n },\n \"adresseerbaarObjectIdentificaties\": [\n  \"0226010000038820\",\n  \"0226010000038820\"\n ],\n \"belanghebbendeEigenaar\": {\n  \"burgerservicenummer\": \"id ex Ut exercitation\",\n  \"geheimhoudingPersoonsgegevens\": false,\n  \"kvkNummer\": \"nisi irure deserunt nulla\",\n  \"naam\": \"Jan de Vries\",\n  \"rsin\": \"deserunt nisi\",\n  \"type\": \"vestiging\",\n  \"vestigingsnummer\": \"laborum ea\"\n },\n \"belanghebbendeGebruiker\": {\n  \"burgerservicenummer\": \"occaecat et\",\n  \"geheimhoudingPersoonsgegevens\": false,\n  \"kvkNummer\": \"Ut Lorem adipisicing\",\n  \"naam\": \"Jan de Vries\",\n  \"rsin\": \"cupidatat qui dolore et\",\n  \"type\": \"vestiging\",\n  \"vestigingsnummer\": \"eu\"\n },\n \"grondoppervlakte\": -8177870,\n \"identificatie\": \"magna minim non Duis velit\",\n \"kadastraalOnroerendeZaken\": [\n  {\n   \"identificatie\": \"tempor c\",\n   \"aanduiding\": {\n    \"gemeentecode\": \"esse voluptate\",\n    \"sectie\": \"laboris minim Lorem Duis\",\n    \"perceelnummer\": -87649951,\n    \"deelperceelnummer\": \"consectetur dolore ad ea amet\",\n    \"appartementsindex\": -33937489\n   },\n   \"aanduidingMetGemeentenaam\": \"aliquip c\"\n  },\n  {\n   \"identificatie\": \"sint pariatur nostrud\",\n   \"aanduiding\": {\n    \"gemeentecode\": \"Ut laborum magna ipsum\",\n    \"sectie\": \"enim\",\n    \"perceelnummer\": 83544980,\n    \"deelperceelnummer\": \"Lorem laborum minim\",\n    \"appartementsindex\": -92587641\n   },\n   \"aanduidingMetGemeentenaam\": \"eiusmod minim\"\n  }\n ],\n \"pandIdentificaties\": [\n  \"sint nisi\",\n  \"Excepteur\"\n ],\n \"verantwoordelijkeGemeente\": {\n  \"code\": \"6030\",\n  \"omschrijving\": \"Nederland\"\n },\n \"waarden\": [\n  {\n   \"vastgesteldeWaarde\": 127000,\n   \"waardepeildatum\": \"1988-05-21\",\n   \"ingangsdatum\": \"1943-01-11\",\n   \"beschikkingsStatussen\": [\n    \"bezwaar_veranderd\",\n    \"voorlopige_aanslag\"\n   ]\n  },\n  {\n   \"vastgesteldeWaarde\": 127000,\n   \"waardepeildatum\": \"2010-12-09\",\n   \"ingangsdatum\": \"1973-03-27\",\n   \"beschikkingsStatussen\": [\n    \"hoger_beroep_aangetekend\",\n    \"beroep_aangetekend\"\n   ]\n  }\n ],\n \"_links\": {\n  \"self\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": false,\n   \"title\": \"ad enim velit voluptate\"\n  },\n  \"adres\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": false,\n   \"title\": \"tempor ut Lorem incidi\"\n  },\n  \"adresseerbareObjecten\": [\n   {\n    \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n    \"templated\": true,\n    \"title\": \"dolor culpa est tempor labore\"\n   },\n   {\n    \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n    \"templated\": false,\n    \"title\": \"laborum minim eiusmod aute\"\n   }\n  ],\n  \"belanghebbendeEigenaar\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": true,\n   \"title\": \"id velit irure\"\n  },\n  \"belanghebbendeGebruiker\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": false,\n   \"title\": \"et occaecat aliquip\"\n  },\n  \"panden\": [\n   {\n    \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n    \"templated\": true,\n    \"title\": \"et mollit\"\n   },\n   {\n    \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n    \"templated\": false,\n    \"title\": \"dolore\"\n   }\n  ],\n  \"kadastraalOnroerendeZaken\": [\n   {\n    \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n    \"templated\": true,\n    \"title\": \"quis voluptate reprehenderit nulla in\"\n   },\n   {\n    \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n    \"templated\": false,\n    \"title\": \"elit\"\n   }\n  ]\n }\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "8d0d0568-ee06-4424-b954-47aab866c970",
+                            "id": "c74633c0-7c59-4cf0-a6cc-0304a80de55d",
                             "name": "Bad Request",
                             "originalRequest": {
                                 "url": {
@@ -705,8 +708,11 @@
                                     ],
                                     "variable": [
                                         {
+                                            "disabled": false,
                                             "type": "any",
-                                            "key": "identificatie"
+                                            "value": "<string>",
+                                            "key": "identificatie",
+                                            "description": "(Required) Unieke identificatie van een WOZ-object"
                                         }
                                     ]
                                 },
@@ -732,7 +738,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "52e1a904-08e5-4a10-b864-fc585b79661f",
+                            "id": "b1823f6c-29db-483a-abeb-0acc69b3700b",
                             "name": "Unauthorized",
                             "originalRequest": {
                                 "url": {
@@ -751,8 +757,11 @@
                                     ],
                                     "variable": [
                                         {
+                                            "disabled": false,
                                             "type": "any",
-                                            "key": "identificatie"
+                                            "value": "<string>",
+                                            "key": "identificatie",
+                                            "description": "(Required) Unieke identificatie van een WOZ-object"
                                         }
                                     ]
                                 },
@@ -778,7 +787,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "8af9651c-7451-4cf8-90a8-0515fc907c2f",
+                            "id": "d9651f21-3da1-4c9a-a14e-af06cbfdd167",
                             "name": "Forbidden",
                             "originalRequest": {
                                 "url": {
@@ -797,8 +806,11 @@
                                     ],
                                     "variable": [
                                         {
+                                            "disabled": false,
                                             "type": "any",
-                                            "key": "identificatie"
+                                            "value": "<string>",
+                                            "key": "identificatie",
+                                            "description": "(Required) Unieke identificatie van een WOZ-object"
                                         }
                                     ]
                                 },
@@ -824,7 +836,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "030a1220-5896-4542-835c-d6cbe1f6068a",
+                            "id": "fbce7761-fe31-4f05-bf7f-71ce08b7dcce",
                             "name": "Not Found",
                             "originalRequest": {
                                 "url": {
@@ -843,8 +855,11 @@
                                     ],
                                     "variable": [
                                         {
+                                            "disabled": false,
                                             "type": "any",
-                                            "key": "identificatie"
+                                            "value": "<string>",
+                                            "key": "identificatie",
+                                            "description": "(Required) Unieke identificatie van een WOZ-object"
                                         }
                                     ]
                                 },
@@ -870,7 +885,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "de93bda1-5f10-4698-94a7-6101103f25e5",
+                            "id": "9b6686ce-f4c2-4ad6-94bc-8796743ca32b",
                             "name": "Not Acceptable",
                             "originalRequest": {
                                 "url": {
@@ -889,8 +904,11 @@
                                     ],
                                     "variable": [
                                         {
+                                            "disabled": false,
                                             "type": "any",
-                                            "key": "identificatie"
+                                            "value": "<string>",
+                                            "key": "identificatie",
+                                            "description": "(Required) Unieke identificatie van een WOZ-object"
                                         }
                                     ]
                                 },
@@ -916,7 +934,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "13ba4ccb-5f52-4e83-a317-a896dc291bcf",
+                            "id": "5d72b752-e70f-4e98-adbd-f4be130c1a6c",
                             "name": "Internal Server Error",
                             "originalRequest": {
                                 "url": {
@@ -935,8 +953,11 @@
                                     ],
                                     "variable": [
                                         {
+                                            "disabled": false,
                                             "type": "any",
-                                            "key": "identificatie"
+                                            "value": "<string>",
+                                            "key": "identificatie",
+                                            "description": "(Required) Unieke identificatie van een WOZ-object"
                                         }
                                     ]
                                 },
@@ -977,7 +998,7 @@
         }
     ],
     "info": {
-        "_postman_id": "68c82e41-2d75-4474-b1bf-f90c441a219f",
+        "_postman_id": "0cde6f61-3917-47aa-9d01-7689a6c4d96d",
         "name": "Waardering onroerende zaken",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
         "description": {
