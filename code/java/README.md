@@ -2,7 +2,7 @@
 
 Waardering onroerende zaken
 - API version: 1.0.0
-  - Build date: 2021-01-29T15:06:01.841Z[Etc/UTC]
+  - Build date: 2021-11-09T07:56:59.068811Z[Etc/UTC]
 
 Deze API levert actuele gegevens over WOZ-objecten
 
@@ -120,15 +120,18 @@ Class | Method | HTTP request | Description
  - [BadRequestFoutbericht](docs/BadRequestFoutbericht.md)
  - [BadRequestFoutberichtAllOf](docs/BadRequestFoutberichtAllOf.md)
  - [Belanghebbende](docs/Belanghebbende.md)
- - [BelanghebbendeEigenaar](docs/BelanghebbendeEigenaar.md)
- - [BelanghebbendeEigenaarAllOf](docs/BelanghebbendeEigenaarAllOf.md)
  - [Foutbericht](docs/Foutbericht.md)
  - [HalCollectionLinks](docs/HalCollectionLinks.md)
  - [HalLink](docs/HalLink.md)
+ - [HalPaginationLinks](docs/HalPaginationLinks.md)
+ - [HalPaginationLinksAllOf](docs/HalPaginationLinksAllOf.md)
  - [InvalidParams](docs/InvalidParams.md)
+ - [KadastraalOnroerendeZaak](docs/KadastraalOnroerendeZaak.md)
+ - [KadastraleAanduiding](docs/KadastraleAanduiding.md)
  - [ObjectAanduiding](docs/ObjectAanduiding.md)
  - [ObjectAanduidingAllOf](docs/ObjectAanduidingAllOf.md)
  - [PersoonTypeEnum](docs/PersoonTypeEnum.md)
+ - [StatusBeschikkingEnum](docs/StatusBeschikkingEnum.md)
  - [Waarde](docs/Waarde.md)
  - [Waardetabel](docs/Waardetabel.md)
  - [WozObject](docs/WozObject.md)

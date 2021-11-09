@@ -1,4 +1,4 @@
-/* 
+/*
  * Waardering onroerende zaken
  *
  * Deze API levert actuele gegevens over WOZ-objecten 
@@ -57,13 +57,17 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="rsin">Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven niet-natuurlijk persoon (optional)</param>
         /// <param name="kvkNummer">Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven maatschappelijke activiteit of een van de daaronder vallende ondernemingen en vestigingen (optional)</param>
-        /// <param name="adresseerbaarObjectIdentificatie">Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is of waar het object zijn aanduiding aan ontleent (optional)</param>
+        /// <param name="adresseerbaarObjectIdentificatie">Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is (optional)</param>
         /// <param name="nummeraanduidingIdentificatie">Zoek op de BAG identificatie van een nummeraanduiding (adres) waarmee het WOZ-object wordt aangeduid (optional)</param>
-        /// <param name="postcode">Zoek WOZ-objecten met postcode (optional)</param>
-        /// <param name="huisnummer">Zoek WOZ-objecten met huisnummer\&quot; (optional)</param>
+        /// <param name="postcode">Zoek WOZ-objecten met postcode, in combinatie met huisnummer en eventueel met huisletter en/of huisnummertoevoeging (optional)</param>
+        /// <param name="huisnummer">Zoek WOZ-objecten met huisnummer, in combinatie met postcode en eventueel met huisletter en/of huisnummertoevoeging\&quot; (optional)</param>
+        /// <param name="huisnummertoevoeging">Zoek met een huisnummertoevoeging, in combinatie met postcode en huisnummer en eventueel huisletter. Dit is een toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter. Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging  (optional)</param>
+        /// <param name="huisletter">Zoek met een huisletter, in combinatie met postcode en huisnummer en eventueel huisnummertoevoeging. Dit is een toevoeging aan een huisnummer en huisnummertoevoeging. Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging  (optional)</param>
         /// <param name="fields">Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma&#39;s gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.2.0/features/fields.feature) (optional)</param>
+        /// <param name="page">Pagina nummer (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 20)</param>
         /// <returns>WozObjectHalCollectie</returns>
-        WozObjectHalCollectie ZoekActueleWozobjecten (string rsin = default(string), string kvkNummer = default(string), string adresseerbaarObjectIdentificatie = default(string), string nummeraanduidingIdentificatie = default(string), string postcode = default(string), int? huisnummer = default(int?), string fields = default(string));
+        WozObjectHalCollectie ZoekActueleWozobjecten (string rsin = default(string), string kvkNummer = default(string), string adresseerbaarObjectIdentificatie = default(string), string nummeraanduidingIdentificatie = default(string), string postcode = default(string), int? huisnummer = default(int?), string huisnummertoevoeging = default(string), string huisletter = default(string), string fields = default(string), int? page = default(int?), int? pageSize = default(int?));
 
         /// <summary>
         /// Zoek WOZ-objecten
@@ -74,13 +78,17 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="rsin">Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven niet-natuurlijk persoon (optional)</param>
         /// <param name="kvkNummer">Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven maatschappelijke activiteit of een van de daaronder vallende ondernemingen en vestigingen (optional)</param>
-        /// <param name="adresseerbaarObjectIdentificatie">Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is of waar het object zijn aanduiding aan ontleent (optional)</param>
+        /// <param name="adresseerbaarObjectIdentificatie">Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is (optional)</param>
         /// <param name="nummeraanduidingIdentificatie">Zoek op de BAG identificatie van een nummeraanduiding (adres) waarmee het WOZ-object wordt aangeduid (optional)</param>
-        /// <param name="postcode">Zoek WOZ-objecten met postcode (optional)</param>
-        /// <param name="huisnummer">Zoek WOZ-objecten met huisnummer\&quot; (optional)</param>
+        /// <param name="postcode">Zoek WOZ-objecten met postcode, in combinatie met huisnummer en eventueel met huisletter en/of huisnummertoevoeging (optional)</param>
+        /// <param name="huisnummer">Zoek WOZ-objecten met huisnummer, in combinatie met postcode en eventueel met huisletter en/of huisnummertoevoeging\&quot; (optional)</param>
+        /// <param name="huisnummertoevoeging">Zoek met een huisnummertoevoeging, in combinatie met postcode en huisnummer en eventueel huisletter. Dit is een toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter. Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging  (optional)</param>
+        /// <param name="huisletter">Zoek met een huisletter, in combinatie met postcode en huisnummer en eventueel huisnummertoevoeging. Dit is een toevoeging aan een huisnummer en huisnummertoevoeging. Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging  (optional)</param>
         /// <param name="fields">Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma&#39;s gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.2.0/features/fields.feature) (optional)</param>
+        /// <param name="page">Pagina nummer (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 20)</param>
         /// <returns>ApiResponse of WozObjectHalCollectie</returns>
-        ApiResponse<WozObjectHalCollectie> ZoekActueleWozobjectenWithHttpInfo (string rsin = default(string), string kvkNummer = default(string), string adresseerbaarObjectIdentificatie = default(string), string nummeraanduidingIdentificatie = default(string), string postcode = default(string), int? huisnummer = default(int?), string fields = default(string));
+        ApiResponse<WozObjectHalCollectie> ZoekActueleWozobjectenWithHttpInfo (string rsin = default(string), string kvkNummer = default(string), string adresseerbaarObjectIdentificatie = default(string), string nummeraanduidingIdentificatie = default(string), string postcode = default(string), int? huisnummer = default(int?), string huisnummertoevoeging = default(string), string huisletter = default(string), string fields = default(string), int? page = default(int?), int? pageSize = default(int?));
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -117,14 +125,18 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="rsin">Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven niet-natuurlijk persoon (optional)</param>
         /// <param name="kvkNummer">Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven maatschappelijke activiteit of een van de daaronder vallende ondernemingen en vestigingen (optional)</param>
-        /// <param name="adresseerbaarObjectIdentificatie">Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is of waar het object zijn aanduiding aan ontleent (optional)</param>
+        /// <param name="adresseerbaarObjectIdentificatie">Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is (optional)</param>
         /// <param name="nummeraanduidingIdentificatie">Zoek op de BAG identificatie van een nummeraanduiding (adres) waarmee het WOZ-object wordt aangeduid (optional)</param>
-        /// <param name="postcode">Zoek WOZ-objecten met postcode (optional)</param>
-        /// <param name="huisnummer">Zoek WOZ-objecten met huisnummer\&quot; (optional)</param>
+        /// <param name="postcode">Zoek WOZ-objecten met postcode, in combinatie met huisnummer en eventueel met huisletter en/of huisnummertoevoeging (optional)</param>
+        /// <param name="huisnummer">Zoek WOZ-objecten met huisnummer, in combinatie met postcode en eventueel met huisletter en/of huisnummertoevoeging\&quot; (optional)</param>
+        /// <param name="huisnummertoevoeging">Zoek met een huisnummertoevoeging, in combinatie met postcode en huisnummer en eventueel huisletter. Dit is een toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter. Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging  (optional)</param>
+        /// <param name="huisletter">Zoek met een huisletter, in combinatie met postcode en huisnummer en eventueel huisnummertoevoeging. Dit is een toevoeging aan een huisnummer en huisnummertoevoeging. Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging  (optional)</param>
         /// <param name="fields">Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma&#39;s gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.2.0/features/fields.feature) (optional)</param>
+        /// <param name="page">Pagina nummer (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 20)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of WozObjectHalCollectie</returns>
-        System.Threading.Tasks.Task<WozObjectHalCollectie> ZoekActueleWozobjectenAsync (string rsin = default(string), string kvkNummer = default(string), string adresseerbaarObjectIdentificatie = default(string), string nummeraanduidingIdentificatie = default(string), string postcode = default(string), int? huisnummer = default(int?), string fields = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<WozObjectHalCollectie> ZoekActueleWozobjectenAsync (string rsin = default(string), string kvkNummer = default(string), string adresseerbaarObjectIdentificatie = default(string), string nummeraanduidingIdentificatie = default(string), string postcode = default(string), int? huisnummer = default(int?), string huisnummertoevoeging = default(string), string huisletter = default(string), string fields = default(string), int? page = default(int?), int? pageSize = default(int?), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Zoek WOZ-objecten
@@ -135,14 +147,18 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="rsin">Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven niet-natuurlijk persoon (optional)</param>
         /// <param name="kvkNummer">Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven maatschappelijke activiteit of een van de daaronder vallende ondernemingen en vestigingen (optional)</param>
-        /// <param name="adresseerbaarObjectIdentificatie">Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is of waar het object zijn aanduiding aan ontleent (optional)</param>
+        /// <param name="adresseerbaarObjectIdentificatie">Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is (optional)</param>
         /// <param name="nummeraanduidingIdentificatie">Zoek op de BAG identificatie van een nummeraanduiding (adres) waarmee het WOZ-object wordt aangeduid (optional)</param>
-        /// <param name="postcode">Zoek WOZ-objecten met postcode (optional)</param>
-        /// <param name="huisnummer">Zoek WOZ-objecten met huisnummer\&quot; (optional)</param>
+        /// <param name="postcode">Zoek WOZ-objecten met postcode, in combinatie met huisnummer en eventueel met huisletter en/of huisnummertoevoeging (optional)</param>
+        /// <param name="huisnummer">Zoek WOZ-objecten met huisnummer, in combinatie met postcode en eventueel met huisletter en/of huisnummertoevoeging\&quot; (optional)</param>
+        /// <param name="huisnummertoevoeging">Zoek met een huisnummertoevoeging, in combinatie met postcode en huisnummer en eventueel huisletter. Dit is een toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter. Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging  (optional)</param>
+        /// <param name="huisletter">Zoek met een huisletter, in combinatie met postcode en huisnummer en eventueel huisnummertoevoeging. Dit is een toevoeging aan een huisnummer en huisnummertoevoeging. Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging  (optional)</param>
         /// <param name="fields">Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma&#39;s gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.2.0/features/fields.feature) (optional)</param>
+        /// <param name="page">Pagina nummer (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 20)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (WozObjectHalCollectie)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WozObjectHalCollectie>> ZoekActueleWozobjectenWithHttpInfoAsync (string rsin = default(string), string kvkNummer = default(string), string adresseerbaarObjectIdentificatie = default(string), string nummeraanduidingIdentificatie = default(string), string postcode = default(string), int? huisnummer = default(int?), string fields = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<WozObjectHalCollectie>> ZoekActueleWozobjectenWithHttpInfoAsync (string rsin = default(string), string kvkNummer = default(string), string adresseerbaarObjectIdentificatie = default(string), string nummeraanduidingIdentificatie = default(string), string postcode = default(string), int? huisnummer = default(int?), string huisnummertoevoeging = default(string), string huisletter = default(string), string fields = default(string), int? page = default(int?), int? pageSize = default(int?), CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -403,15 +419,19 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="rsin">Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven niet-natuurlijk persoon (optional)</param>
         /// <param name="kvkNummer">Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven maatschappelijke activiteit of een van de daaronder vallende ondernemingen en vestigingen (optional)</param>
-        /// <param name="adresseerbaarObjectIdentificatie">Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is of waar het object zijn aanduiding aan ontleent (optional)</param>
+        /// <param name="adresseerbaarObjectIdentificatie">Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is (optional)</param>
         /// <param name="nummeraanduidingIdentificatie">Zoek op de BAG identificatie van een nummeraanduiding (adres) waarmee het WOZ-object wordt aangeduid (optional)</param>
-        /// <param name="postcode">Zoek WOZ-objecten met postcode (optional)</param>
-        /// <param name="huisnummer">Zoek WOZ-objecten met huisnummer\&quot; (optional)</param>
+        /// <param name="postcode">Zoek WOZ-objecten met postcode, in combinatie met huisnummer en eventueel met huisletter en/of huisnummertoevoeging (optional)</param>
+        /// <param name="huisnummer">Zoek WOZ-objecten met huisnummer, in combinatie met postcode en eventueel met huisletter en/of huisnummertoevoeging\&quot; (optional)</param>
+        /// <param name="huisnummertoevoeging">Zoek met een huisnummertoevoeging, in combinatie met postcode en huisnummer en eventueel huisletter. Dit is een toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter. Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging  (optional)</param>
+        /// <param name="huisletter">Zoek met een huisletter, in combinatie met postcode en huisnummer en eventueel huisnummertoevoeging. Dit is een toevoeging aan een huisnummer en huisnummertoevoeging. Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging  (optional)</param>
         /// <param name="fields">Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma&#39;s gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.2.0/features/fields.feature) (optional)</param>
+        /// <param name="page">Pagina nummer (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 20)</param>
         /// <returns>WozObjectHalCollectie</returns>
-        public WozObjectHalCollectie ZoekActueleWozobjecten (string rsin = default(string), string kvkNummer = default(string), string adresseerbaarObjectIdentificatie = default(string), string nummeraanduidingIdentificatie = default(string), string postcode = default(string), int? huisnummer = default(int?), string fields = default(string))
+        public WozObjectHalCollectie ZoekActueleWozobjecten (string rsin = default(string), string kvkNummer = default(string), string adresseerbaarObjectIdentificatie = default(string), string nummeraanduidingIdentificatie = default(string), string postcode = default(string), int? huisnummer = default(int?), string huisnummertoevoeging = default(string), string huisletter = default(string), string fields = default(string), int? page = default(int?), int? pageSize = default(int?))
         {
-             ApiResponse<WozObjectHalCollectie> localVarResponse = ZoekActueleWozobjectenWithHttpInfo(rsin, kvkNummer, adresseerbaarObjectIdentificatie, nummeraanduidingIdentificatie, postcode, huisnummer, fields);
+             ApiResponse<WozObjectHalCollectie> localVarResponse = ZoekActueleWozobjectenWithHttpInfo(rsin, kvkNummer, adresseerbaarObjectIdentificatie, nummeraanduidingIdentificatie, postcode, huisnummer, huisnummertoevoeging, huisletter, fields, page, pageSize);
              return localVarResponse.Data;
         }
 
@@ -421,13 +441,17 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="rsin">Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven niet-natuurlijk persoon (optional)</param>
         /// <param name="kvkNummer">Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven maatschappelijke activiteit of een van de daaronder vallende ondernemingen en vestigingen (optional)</param>
-        /// <param name="adresseerbaarObjectIdentificatie">Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is of waar het object zijn aanduiding aan ontleent (optional)</param>
+        /// <param name="adresseerbaarObjectIdentificatie">Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is (optional)</param>
         /// <param name="nummeraanduidingIdentificatie">Zoek op de BAG identificatie van een nummeraanduiding (adres) waarmee het WOZ-object wordt aangeduid (optional)</param>
-        /// <param name="postcode">Zoek WOZ-objecten met postcode (optional)</param>
-        /// <param name="huisnummer">Zoek WOZ-objecten met huisnummer\&quot; (optional)</param>
+        /// <param name="postcode">Zoek WOZ-objecten met postcode, in combinatie met huisnummer en eventueel met huisletter en/of huisnummertoevoeging (optional)</param>
+        /// <param name="huisnummer">Zoek WOZ-objecten met huisnummer, in combinatie met postcode en eventueel met huisletter en/of huisnummertoevoeging\&quot; (optional)</param>
+        /// <param name="huisnummertoevoeging">Zoek met een huisnummertoevoeging, in combinatie met postcode en huisnummer en eventueel huisletter. Dit is een toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter. Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging  (optional)</param>
+        /// <param name="huisletter">Zoek met een huisletter, in combinatie met postcode en huisnummer en eventueel huisnummertoevoeging. Dit is een toevoeging aan een huisnummer en huisnummertoevoeging. Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging  (optional)</param>
         /// <param name="fields">Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma&#39;s gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.2.0/features/fields.feature) (optional)</param>
+        /// <param name="page">Pagina nummer (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 20)</param>
         /// <returns>ApiResponse of WozObjectHalCollectie</returns>
-        public ApiResponse<WozObjectHalCollectie> ZoekActueleWozobjectenWithHttpInfo (string rsin = default(string), string kvkNummer = default(string), string adresseerbaarObjectIdentificatie = default(string), string nummeraanduidingIdentificatie = default(string), string postcode = default(string), int? huisnummer = default(int?), string fields = default(string))
+        public ApiResponse<WozObjectHalCollectie> ZoekActueleWozobjectenWithHttpInfo (string rsin = default(string), string kvkNummer = default(string), string adresseerbaarObjectIdentificatie = default(string), string nummeraanduidingIdentificatie = default(string), string postcode = default(string), int? huisnummer = default(int?), string huisnummertoevoeging = default(string), string huisletter = default(string), string fields = default(string), int? page = default(int?), int? pageSize = default(int?))
         {
 
             var localVarPath = "/wozobjecten";
@@ -458,7 +482,11 @@ namespace Org.OpenAPITools.Api
             if (nummeraanduidingIdentificatie != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "nummeraanduidingIdentificatie", nummeraanduidingIdentificatie)); // query parameter
             if (postcode != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "postcode", postcode)); // query parameter
             if (huisnummer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "huisnummer", huisnummer)); // query parameter
+            if (huisnummertoevoeging != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "huisnummertoevoeging", huisnummertoevoeging)); // query parameter
+            if (huisletter != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "huisletter", huisletter)); // query parameter
             if (fields != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "fields", fields)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pageSize", pageSize)); // query parameter
 
 
             // make the HTTP request
@@ -485,16 +513,20 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="rsin">Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven niet-natuurlijk persoon (optional)</param>
         /// <param name="kvkNummer">Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven maatschappelijke activiteit of een van de daaronder vallende ondernemingen en vestigingen (optional)</param>
-        /// <param name="adresseerbaarObjectIdentificatie">Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is of waar het object zijn aanduiding aan ontleent (optional)</param>
+        /// <param name="adresseerbaarObjectIdentificatie">Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is (optional)</param>
         /// <param name="nummeraanduidingIdentificatie">Zoek op de BAG identificatie van een nummeraanduiding (adres) waarmee het WOZ-object wordt aangeduid (optional)</param>
-        /// <param name="postcode">Zoek WOZ-objecten met postcode (optional)</param>
-        /// <param name="huisnummer">Zoek WOZ-objecten met huisnummer\&quot; (optional)</param>
+        /// <param name="postcode">Zoek WOZ-objecten met postcode, in combinatie met huisnummer en eventueel met huisletter en/of huisnummertoevoeging (optional)</param>
+        /// <param name="huisnummer">Zoek WOZ-objecten met huisnummer, in combinatie met postcode en eventueel met huisletter en/of huisnummertoevoeging\&quot; (optional)</param>
+        /// <param name="huisnummertoevoeging">Zoek met een huisnummertoevoeging, in combinatie met postcode en huisnummer en eventueel huisletter. Dit is een toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter. Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging  (optional)</param>
+        /// <param name="huisletter">Zoek met een huisletter, in combinatie met postcode en huisnummer en eventueel huisnummertoevoeging. Dit is een toevoeging aan een huisnummer en huisnummertoevoeging. Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging  (optional)</param>
         /// <param name="fields">Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma&#39;s gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.2.0/features/fields.feature) (optional)</param>
+        /// <param name="page">Pagina nummer (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 20)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of WozObjectHalCollectie</returns>
-        public async System.Threading.Tasks.Task<WozObjectHalCollectie> ZoekActueleWozobjectenAsync (string rsin = default(string), string kvkNummer = default(string), string adresseerbaarObjectIdentificatie = default(string), string nummeraanduidingIdentificatie = default(string), string postcode = default(string), int? huisnummer = default(int?), string fields = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<WozObjectHalCollectie> ZoekActueleWozobjectenAsync (string rsin = default(string), string kvkNummer = default(string), string adresseerbaarObjectIdentificatie = default(string), string nummeraanduidingIdentificatie = default(string), string postcode = default(string), int? huisnummer = default(int?), string huisnummertoevoeging = default(string), string huisletter = default(string), string fields = default(string), int? page = default(int?), int? pageSize = default(int?), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<WozObjectHalCollectie> localVarResponse = await ZoekActueleWozobjectenWithHttpInfoAsync(rsin, kvkNummer, adresseerbaarObjectIdentificatie, nummeraanduidingIdentificatie, postcode, huisnummer, fields, cancellationToken);
+             ApiResponse<WozObjectHalCollectie> localVarResponse = await ZoekActueleWozobjectenWithHttpInfoAsync(rsin, kvkNummer, adresseerbaarObjectIdentificatie, nummeraanduidingIdentificatie, postcode, huisnummer, huisnummertoevoeging, huisletter, fields, page, pageSize, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -505,14 +537,18 @@ namespace Org.OpenAPITools.Api
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="rsin">Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven niet-natuurlijk persoon (optional)</param>
         /// <param name="kvkNummer">Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven maatschappelijke activiteit of een van de daaronder vallende ondernemingen en vestigingen (optional)</param>
-        /// <param name="adresseerbaarObjectIdentificatie">Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is of waar het object zijn aanduiding aan ontleent (optional)</param>
+        /// <param name="adresseerbaarObjectIdentificatie">Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is (optional)</param>
         /// <param name="nummeraanduidingIdentificatie">Zoek op de BAG identificatie van een nummeraanduiding (adres) waarmee het WOZ-object wordt aangeduid (optional)</param>
-        /// <param name="postcode">Zoek WOZ-objecten met postcode (optional)</param>
-        /// <param name="huisnummer">Zoek WOZ-objecten met huisnummer\&quot; (optional)</param>
+        /// <param name="postcode">Zoek WOZ-objecten met postcode, in combinatie met huisnummer en eventueel met huisletter en/of huisnummertoevoeging (optional)</param>
+        /// <param name="huisnummer">Zoek WOZ-objecten met huisnummer, in combinatie met postcode en eventueel met huisletter en/of huisnummertoevoeging\&quot; (optional)</param>
+        /// <param name="huisnummertoevoeging">Zoek met een huisnummertoevoeging, in combinatie met postcode en huisnummer en eventueel huisletter. Dit is een toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter. Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging  (optional)</param>
+        /// <param name="huisletter">Zoek met een huisletter, in combinatie met postcode en huisnummer en eventueel huisnummertoevoeging. Dit is een toevoeging aan een huisnummer en huisnummertoevoeging. Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging  (optional)</param>
         /// <param name="fields">Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma&#39;s gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.2.0/features/fields.feature) (optional)</param>
+        /// <param name="page">Pagina nummer (optional, default to 1)</param>
+        /// <param name="pageSize"> (optional, default to 20)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (WozObjectHalCollectie)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WozObjectHalCollectie>> ZoekActueleWozobjectenWithHttpInfoAsync (string rsin = default(string), string kvkNummer = default(string), string adresseerbaarObjectIdentificatie = default(string), string nummeraanduidingIdentificatie = default(string), string postcode = default(string), int? huisnummer = default(int?), string fields = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<WozObjectHalCollectie>> ZoekActueleWozobjectenWithHttpInfoAsync (string rsin = default(string), string kvkNummer = default(string), string adresseerbaarObjectIdentificatie = default(string), string nummeraanduidingIdentificatie = default(string), string postcode = default(string), int? huisnummer = default(int?), string huisnummertoevoeging = default(string), string huisletter = default(string), string fields = default(string), int? page = default(int?), int? pageSize = default(int?), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             var localVarPath = "/wozobjecten";
@@ -543,7 +579,11 @@ namespace Org.OpenAPITools.Api
             if (nummeraanduidingIdentificatie != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "nummeraanduidingIdentificatie", nummeraanduidingIdentificatie)); // query parameter
             if (postcode != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "postcode", postcode)); // query parameter
             if (huisnummer != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "huisnummer", huisnummer)); // query parameter
+            if (huisnummertoevoeging != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "huisnummertoevoeging", huisnummertoevoeging)); // query parameter
+            if (huisletter != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "huisletter", huisletter)); // query parameter
             if (fields != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "fields", fields)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (pageSize != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "pageSize", pageSize)); // query parameter
 
 
             // make the HTTP request

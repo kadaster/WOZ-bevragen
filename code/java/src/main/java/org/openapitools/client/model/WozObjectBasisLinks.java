@@ -30,7 +30,7 @@ import org.openapitools.client.model.HalLink;
 /**
  * WozObjectBasisLinks
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-29T15:06:01.841Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-09T07:56:59.068811Z[Etc/UTC]")
 public class WozObjectBasisLinks {
   public static final String SERIALIZED_NAME_SELF = "self";
   @SerializedName(SERIALIZED_NAME_SELF)
@@ -40,9 +40,9 @@ public class WozObjectBasisLinks {
   @SerializedName(SERIALIZED_NAME_ADRES)
   private HalLink adres;
 
-  public static final String SERIALIZED_NAME_ADRESSEERBAAR_OBJECTEN = "adresseerbaarObjecten";
-  @SerializedName(SERIALIZED_NAME_ADRESSEERBAAR_OBJECTEN)
-  private List<HalLink> adresseerbaarObjecten = null;
+  public static final String SERIALIZED_NAME_ADRESSEERBARE_OBJECTEN = "adresseerbareObjecten";
+  @SerializedName(SERIALIZED_NAME_ADRESSEERBARE_OBJECTEN)
+  private List<HalLink> adresseerbareObjecten = null;
 
   public static final String SERIALIZED_NAME_BELANGHEBBENDE_EIGENAAR = "belanghebbendeEigenaar";
   @SerializedName(SERIALIZED_NAME_BELANGHEBBENDE_EIGENAAR)
@@ -55,6 +55,10 @@ public class WozObjectBasisLinks {
   public static final String SERIALIZED_NAME_PANDEN = "panden";
   @SerializedName(SERIALIZED_NAME_PANDEN)
   private List<HalLink> panden = null;
+
+  public static final String SERIALIZED_NAME_KADASTRAAL_ONROERENDE_ZAKEN = "kadastraalOnroerendeZaken";
+  @SerializedName(SERIALIZED_NAME_KADASTRAAL_ONROERENDE_ZAKEN)
+  private List<HalLink> kadastraalOnroerendeZaken = null;
 
 
   public WozObjectBasisLinks self(HalLink self) {
@@ -103,34 +107,34 @@ public class WozObjectBasisLinks {
   }
 
 
-  public WozObjectBasisLinks adresseerbaarObjecten(List<HalLink> adresseerbaarObjecten) {
+  public WozObjectBasisLinks adresseerbareObjecten(List<HalLink> adresseerbareObjecten) {
     
-    this.adresseerbaarObjecten = adresseerbaarObjecten;
+    this.adresseerbareObjecten = adresseerbareObjecten;
     return this;
   }
 
-  public WozObjectBasisLinks addAdresseerbaarObjectenItem(HalLink adresseerbaarObjectenItem) {
-    if (this.adresseerbaarObjecten == null) {
-      this.adresseerbaarObjecten = new ArrayList<>();
+  public WozObjectBasisLinks addAdresseerbareObjectenItem(HalLink adresseerbareObjectenItem) {
+    if (this.adresseerbareObjecten == null) {
+      this.adresseerbareObjecten = new ArrayList<>();
     }
-    this.adresseerbaarObjecten.add(adresseerbaarObjectenItem);
+    this.adresseerbareObjecten.add(adresseerbareObjectenItem);
     return this;
   }
 
    /**
-   * Get adresseerbaarObjecten
-   * @return adresseerbaarObjecten
+   * Get adresseerbareObjecten
+   * @return adresseerbareObjecten
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<HalLink> getAdresseerbaarObjecten() {
-    return adresseerbaarObjecten;
+  public List<HalLink> getAdresseerbareObjecten() {
+    return adresseerbareObjecten;
   }
 
 
-  public void setAdresseerbaarObjecten(List<HalLink> adresseerbaarObjecten) {
-    this.adresseerbaarObjecten = adresseerbaarObjecten;
+  public void setAdresseerbareObjecten(List<HalLink> adresseerbareObjecten) {
+    this.adresseerbareObjecten = adresseerbareObjecten;
   }
 
 
@@ -211,6 +215,37 @@ public class WozObjectBasisLinks {
   }
 
 
+  public WozObjectBasisLinks kadastraalOnroerendeZaken(List<HalLink> kadastraalOnroerendeZaken) {
+    
+    this.kadastraalOnroerendeZaken = kadastraalOnroerendeZaken;
+    return this;
+  }
+
+  public WozObjectBasisLinks addKadastraalOnroerendeZakenItem(HalLink kadastraalOnroerendeZakenItem) {
+    if (this.kadastraalOnroerendeZaken == null) {
+      this.kadastraalOnroerendeZaken = new ArrayList<>();
+    }
+    this.kadastraalOnroerendeZaken.add(kadastraalOnroerendeZakenItem);
+    return this;
+  }
+
+   /**
+   * Get kadastraalOnroerendeZaken
+   * @return kadastraalOnroerendeZaken
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<HalLink> getKadastraalOnroerendeZaken() {
+    return kadastraalOnroerendeZaken;
+  }
+
+
+  public void setKadastraalOnroerendeZaken(List<HalLink> kadastraalOnroerendeZaken) {
+    this.kadastraalOnroerendeZaken = kadastraalOnroerendeZaken;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -222,17 +257,17 @@ public class WozObjectBasisLinks {
     WozObjectBasisLinks wozObjectBasisLinks = (WozObjectBasisLinks) o;
     return Objects.equals(this.self, wozObjectBasisLinks.self) &&
         Objects.equals(this.adres, wozObjectBasisLinks.adres) &&
-        Objects.equals(this.adresseerbaarObjecten, wozObjectBasisLinks.adresseerbaarObjecten) &&
+        Objects.equals(this.adresseerbareObjecten, wozObjectBasisLinks.adresseerbareObjecten) &&
         Objects.equals(this.belanghebbendeEigenaar, wozObjectBasisLinks.belanghebbendeEigenaar) &&
         Objects.equals(this.belanghebbendeGebruiker, wozObjectBasisLinks.belanghebbendeGebruiker) &&
-        Objects.equals(this.panden, wozObjectBasisLinks.panden);
+        Objects.equals(this.panden, wozObjectBasisLinks.panden) &&
+        Objects.equals(this.kadastraalOnroerendeZaken, wozObjectBasisLinks.kadastraalOnroerendeZaken);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(self, adres, adresseerbaarObjecten, belanghebbendeEigenaar, belanghebbendeGebruiker, panden);
+    return Objects.hash(self, adres, adresseerbareObjecten, belanghebbendeEigenaar, belanghebbendeGebruiker, panden, kadastraalOnroerendeZaken);
   }
-
 
   @Override
   public String toString() {
@@ -240,10 +275,11 @@ public class WozObjectBasisLinks {
     sb.append("class WozObjectBasisLinks {\n");
     sb.append("    self: ").append(toIndentedString(self)).append("\n");
     sb.append("    adres: ").append(toIndentedString(adres)).append("\n");
-    sb.append("    adresseerbaarObjecten: ").append(toIndentedString(adresseerbaarObjecten)).append("\n");
+    sb.append("    adresseerbareObjecten: ").append(toIndentedString(adresseerbareObjecten)).append("\n");
     sb.append("    belanghebbendeEigenaar: ").append(toIndentedString(belanghebbendeEigenaar)).append("\n");
     sb.append("    belanghebbendeGebruiker: ").append(toIndentedString(belanghebbendeGebruiker)).append("\n");
     sb.append("    panden: ").append(toIndentedString(panden)).append("\n");
+    sb.append("    kadastraalOnroerendeZaken: ").append(toIndentedString(kadastraalOnroerendeZaken)).append("\n");
     sb.append("}");
     return sb.toString();
   }

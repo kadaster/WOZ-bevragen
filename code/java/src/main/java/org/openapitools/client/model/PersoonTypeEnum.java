@@ -24,7 +24,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Gets or Sets PersoonType_enum
+ * Gets or Sets PersoonTypeEnum
  */
 @JsonAdapter(PersoonTypeEnum.Adapter.class)
 public enum PersoonTypeEnum {

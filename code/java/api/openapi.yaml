@@ -29,6 +29,7 @@ paths:
         required: false
         schema:
           example: "857567433"
+          pattern: ^[0-9]{9}$
           type: string
         style: form
       - description: Zoek WOZ-objecten in eigendom van een bij het Handelsregister
@@ -40,17 +41,18 @@ paths:
         required: false
         schema:
           example: "68727720"
+          pattern: ^[0-9]{8}$
           type: string
         style: form
       - description: Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject,
-          standplaats of ligplaats) waar het WOZ-object aan verbonden is of waar het
-          object zijn aanduiding aan ontleent
+          standplaats of ligplaats) waar het WOZ-object aan verbonden is
         explode: true
         in: query
         name: adresseerbaarObjectIdentificatie
         required: false
         schema:
           example: "0226010000038820"
+          pattern: ^[0-9]{16}$
           type: string
         style: form
       - description: Zoek op de BAG identificatie van een nummeraanduiding (adres)
@@ -61,19 +63,22 @@ paths:
         required: false
         schema:
           example: "0226200000038820"
+          pattern: ^[0-9]{16}$
           type: string
         style: form
-      - description: Zoek WOZ-objecten met postcode
+      - description: Zoek WOZ-objecten met postcode, in combinatie met huisnummer
+          en eventueel met huisletter en/of huisnummertoevoeging
         explode: true
         in: query
         name: postcode
         required: false
         schema:
           example: 1234AB
-          pattern: ^[1-9][0-9][0-9][0-9][A-Z][A-Z]$
+          pattern: ^[1-9][0-9]{3}[A-Z]{2}$
           type: string
         style: form
-      - description: Zoek WOZ-objecten met huisnummer"
+      - description: Zoek WOZ-objecten met huisnummer, in combinatie met postcode
+          en eventueel met huisletter en/of huisnummertoevoeging"
         explode: true
         in: query
         name: huisnummer
@@ -82,6 +87,32 @@ paths:
           maximum: 99999
           minimum: 1
           type: integer
+        style: form
+      - description: |
+          Zoek met een huisnummertoevoeging, in combinatie met postcode en huisnummer en eventueel huisletter.
+          Dit is een toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter.
+          Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging
+        explode: true
+        in: query
+        name: huisnummertoevoeging
+        required: false
+        schema:
+          example: bis
+          pattern: ^[0-9a-zA-Z]{1,4}$
+          type: string
+        style: form
+      - description: |
+          Zoek met een huisletter, in combinatie met postcode en huisnummer en eventueel huisnummertoevoeging.
+          Dit is een toevoeging aan een huisnummer en huisnummertoevoeging.
+          Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging
+        explode: true
+        in: query
+        name: huisletter
+        required: false
+        schema:
+          example: A
+          pattern: ^[a-zA-Z]$
+          type: string
         style: form
       - description: Hiermee kun je de inhoud van de resource naar behoefte aanpassen
           door een door komma's gescheiden lijst van property namen op te geven. Bij
@@ -95,6 +126,26 @@ paths:
         schema:
           type: string
         style: form
+      - description: Pagina nummer
+        explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          default: 1
+          minimum: 1
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: pageSize
+        required: false
+        schema:
+          default: 20
+          maximum: 100
+          minimum: 1
+          type: integer
+        style: form
       responses:
         "200":
           content:
@@ -105,6 +156,10 @@ paths:
           headers:
             api-version:
               $ref: '#/components/headers/api_version'
+            X-Pagination-Page:
+              $ref: '#/components/headers/X_Pagination_Page'
+            X-Pagination-Limit:
+              $ref: '#/components/headers/X_Pagination_Limit'
             warning:
               $ref: '#/components/headers/warning'
         "400":
@@ -214,6 +269,7 @@ paths:
         name: identificatie
         required: true
         schema:
+          pattern: ^[0-9]{12}$
           type: string
         style: simple
       - description: Hiermee kun je de inhoud van de resource naar behoefte aanpassen
@@ -362,6 +418,20 @@ components:
         example: 1.0.0
         type: string
       style: simple
+    X_Pagination_Page:
+      explode: false
+      schema:
+        description: Huidige pagina.
+        example: 3
+        type: integer
+      style: simple
+    X_Pagination_Limit:
+      explode: false
+      schema:
+        description: Aantal resultaten per pagina.
+        example: 20
+        type: integer
+      style: simple
     warning:
       explode: false
       schema:
@@ -394,39 +464,119 @@ components:
             of samenwerkingsverband)
           type: string
         type:
-          $ref: '#/components/schemas/PersoonType_enum'
+          $ref: '#/components/schemas/PersoonTypeEnum'
         vestigingsnummer:
           type: string
       type: object
-    BelanghebbendeEigenaar:
+    KadastraleAanduiding:
+      properties:
+        gemeentecode:
+          description: Waar het kadaster de kadastrale gemeentenaam hanteert in de
+            KadstraleAanduiding is in de WOZ de gemeentecode gebruikt.
+          type: string
+        sectie:
+          description: Sectie is een onderverdeling van de kadastrale gemeente, bedoeld
+            om het werk van de meetdienst en de kadastrale kaarten overzichtelijk
+            te houden. Per kadastrale gemeente zijn er max. 26x26 secties . Elke sectie
+            heeft een of twee letters (bijv. "A", 'B', ....'AA', 'AB', ....'ZZ' .
+            Alleen de sectieletter 'J' wordt niet gebruikt om verwarring (handgeschreven)
+            te voorkomen met 'I'
+          type: string
+        perceelnummer:
+          description: Het perceelnummer dat een geheel perceel of een complex uniek
+            identificeert binnen de sectie.
+          type: integer
+        deelperceelnummer:
+          type: string
+        appartementsindex:
+          description: Nummer dat het kadastraal object uniek identificeert als een
+            appartementsrecht binnen het complex.
+          type: integer
+      type: object
+    KadastraalOnroerendeZaak:
+      properties:
+        identificatie:
+          type: string
+        aanduiding:
+          $ref: '#/components/schemas/KadastraleAanduiding'
+        aanduidingMetGemeentenaam:
+          description: De volledige kadastraleAanduiding waarbij alle delen zijn samengevoegd
+            en waarbij de gemeentenaam is gebruikt.
+          type: string
+      type: object
+    ObjectAanduiding:
       allOf:
-      - $ref: '#/components/schemas/Belanghebbende'
-      - $ref: '#/components/schemas/BelanghebbendeEigenaar_allOf'
-    PersoonType_enum:
+      - $ref: '#/components/schemas/Adres'
+      - $ref: '#/components/schemas/ObjectAanduiding_allOf'
+    PersoonTypeEnum:
       enum:
       - natuurlijk_persoon
       - niet_natuurlijk_persoon
       - vestiging
       type: string
-    ObjectAanduiding:
-      allOf:
-      - $ref: '#/components/schemas/Adres'
-      - $ref: '#/components/schemas/ObjectAanduiding_allOf'
+    StatusBeschikkingEnum:
+      description: |
+        De status van een beschikking waarmee de waarde is vastgesteld.
+        * `beschikking_genomen` - 01: beschikking genomen
+        * `beschikking_vernietigd` - 02: vernietigingbeschikking
+        * `beschikking_herzien` - 03: herzieningsbeschikking
+        * `bezwaar_ingediend` - 10: bezwaar ingediend
+        * `bezwaar_gehandhaafd` - 11: bezwaar afgehandeld, beschikking gehandhaafd
+        * `bezwaar_veranderd` - 12: bezwaar afgehandeld, vastgestelde waarde veranderd
+        * `waarde_ambtshalve_verminderd` - 13: waarde ambtshalve verminderd
+        * `beroep_aangetekend` - 20: beroepaangetekend
+        * `beroep_gehandhaafd` - 21: uitspraak beroep, beschikking gehandhaafd
+        * `beroep_veranderd` - 22: uitspraak beroep, vastgestelde waarde veranderd
+        * `hoger_beroep_aangetekend` - 23: hogerberoep aangetekend
+        * `hoger_beroep_gehandhaafd` - 24: uitspraak hoger beroep, beschikking gehandhaafd
+        * `hoger_beroep_veranderd` - 25: uitspraak hoger beroep, vastgestelde waarde veranderd
+        * `cassatie_ingesteld` - 30: cassatie ingesteld
+        * `hoge_raad_gehandhaafd` - 31: arrest Hoge Raad, beschikking gehandhaafd
+        * `hoge_raad_veranderd` - 32: arrest Hoge Raad, vastgestelde waarde veranderd
+        * `hoge_raad_geding_verwezen` - 33: arrestHogeRaad,geding verwezen
+        * `voorlopige_aanslag` - 99: waarde te gebruiken voor voorlopige aanslag
+      enum:
+      - beschikking_genomen
+      - beschikking_vernietigd
+      - beschikking_herzien
+      - bezwaar_ingediend
+      - bezwaar_gehandhaafd
+      - bezwaar_veranderd
+      - waarde_ambtshalve_verminderd
+      - beroep_aangetekend
+      - beroep_gehandhaafd
+      - beroep_veranderd
+      - hoger_beroep_aangetekend
+      - hoger_beroep_gehandhaafd
+      - hoger_beroep_veranderd
+      - cassatie_ingesteld
+      - hoge_raad_gehandhaafd
+      - hoge_raad_veranderd
+      - hoge_raad_geding_verwezen
+      - voorlopige_aanslag
+      type: string
     Waarde:
       description: Waarde op de meest recente beschikking met betrekking tot de peildatum
       properties:
         vastgesteldeWaarde:
           description: Waarde van het WOZ-object op de peildatum in Euro
+          example: 127000
           type: integer
-        indicatieBezwaarBeroep:
-          description: Bij waarde true is er een lopende zaak voor bezwaar, beroep,
-            hoger beroep of cassatie
-          type: boolean
         waardepeildatum:
           description: Datum waarvoor de vastgestelde waarde geldt
           example: 2019-01-01
           format: date
           type: string
+        ingangsdatum:
+          description: Datum vanaf wanneer de vastgestelde waarde geldt
+          example: 2020-01-01
+          format: date
+          type: string
+        beschikkingsStatussen:
+          description: Een of meer actuele statussen van de vastgestelde waarde
+          items:
+            $ref: '#/components/schemas/StatusBeschikkingEnum'
+          type: array
       type: object
     WozObject:
       properties:
@@ -440,7 +590,7 @@ components:
             type: string
           type: array
         belanghebbendeEigenaar:
-          $ref: '#/components/schemas/BelanghebbendeEigenaar'
+          $ref: '#/components/schemas/Belanghebbende'
         belanghebbendeGebruiker:
           $ref: '#/components/schemas/Belanghebbende'
         grondoppervlakte:
@@ -451,11 +601,9 @@ components:
           description: Unieke identificatie van het WOZ-object
           title: WOZ-objectnummer
           type: string
-        kadastraalOnroerendeZaakIdentificaties:
-          description: De identificaties van kadastraal onroerende zaken die geheel
-            of gedeeltelijk deel uitmaken van het WOZ-object
+        kadastraalOnroerendeZaken:
           items:
-            type: string
+            $ref: '#/components/schemas/KadastraalOnroerendeZaak'
           type: array
         pandIdentificaties:
           items:
@@ -474,7 +622,7 @@ components:
           $ref: '#/components/schemas/HalLink'
         adres:
           $ref: '#/components/schemas/HalLink'
-        adresseerbaarObjecten:
+        adresseerbareObjecten:
           items:
             $ref: '#/components/schemas/HalLink'
           type: array
@@ -486,6 +634,10 @@ components:
           items:
             $ref: '#/components/schemas/HalLink'
           type: array
+        kadastraalOnroerendeZaken:
+          items:
+            $ref: '#/components/schemas/HalLink'
+          type: array
       type: object
     WozObjectHal:
       allOf:
@@ -494,7 +646,7 @@ components:
     WozObjectHalCollectie:
       properties:
         _links:
-          $ref: '#/components/schemas/HalCollectionLinks'
+          $ref: '#/components/schemas/HalPaginationLinks'
         _embedded:
           $ref: '#/components/schemas/WozObjectHalCollectieEmbedded'
       type: object
@@ -619,22 +771,34 @@ components:
     Href:
       example: https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}
       type: string
+    HalPaginationLinks:
+      allOf:
+      - $ref: '#/components/schemas/HalCollectionLinks'
+      - $ref: '#/components/schemas/HalPaginationLinks_allOf'
+      description: |
+        HalPaginationLinks bevat de link properties die nodig zijn om te kunnen navigeren in een collectie:
+
+        - first: uri voor het opvragen van de eerste pagina van deze collectie
+        - previous: uri voor het opvragen van de vorige pagina van deze collectie
+        - next: uri voor het opvragen van de volgende pagina van deze collectie
+      example:
+        self:
+          href: /resourcenaam?page=4
+        first:
+          href: /resourcenaam?page=1
+          title: Eerste pagina
+        previous:
+          href: /resourcenaam?page=3
+          title: Vorige pagina
+        next:
+          href: /resourcenaam?page=5
+          title: Volgende pagina
     HalCollectionLinks:
       description: |
         HalCollectionLinks bevat de self link die elke HAL Resource minimaal moet hebben in zijn _links property
       properties:
         self:
           $ref: '#/components/schemas/HalLink'
-      type: object
-    BelanghebbendeEigenaar_allOf:
-      description: Belanghebbende eigenaar, erfpachter of houder van een opstalrecht
-        of een vruchtgebruiker
-      properties:
-        soort:
-          description: omschrijving van het soort zakelijk recht dat de eigenaar heeft
-            op het WOZ-object
-          example: recht van erfpacht
-          type: string
       type: object
     ObjectAanduiding_allOf:
       description: De aanduiding van het WOZ-object zoals wordt weergegeven op de
@@ -665,5 +829,14 @@ components:
           items:
             $ref: '#/components/schemas/InvalidParams'
           type: array
+      type: object
+    HalPaginationLinks_allOf:
+      properties:
+        first:
+          $ref: '#/components/schemas/HalLink'
+        previous:
+          $ref: '#/components/schemas/HalLink'
+        next:
+          $ref: '#/components/schemas/HalLink'
       type: object
 

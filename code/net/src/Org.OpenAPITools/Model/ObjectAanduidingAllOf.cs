@@ -1,4 +1,4 @@
-/* 
+/*
  * Waardering onroerende zaken
  *
  * Deze API levert actuele gegevens over WOZ-objecten 
@@ -40,7 +40,7 @@ namespace Org.OpenAPITools.Model
             this.Locatieomschrijving = locatieomschrijving;
             this.NummeraanduidingIdentificatie = nummeraanduidingIdentificatie;
         }
-        
+
         /// <summary>
         /// De aanvullende omschrijving van de ligging van een WOZ-object ten opzichte van de dichtstbijzijnde verblijfsobject, standplaats, ligplaats of openbare ruimte.
         /// </summary>
@@ -68,7 +68,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>

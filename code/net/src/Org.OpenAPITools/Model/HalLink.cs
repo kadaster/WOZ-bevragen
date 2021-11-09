@@ -1,4 +1,4 @@
-/* 
+/*
  * Waardering onroerende zaken
  *
  * Deze API levert actuele gegevens over WOZ-objecten 
@@ -52,11 +52,11 @@ namespace Org.OpenAPITools.Model
             {
                 this.Href = href;
             }
-            
+
             this.Templated = templated;
             this.Title = title;
         }
-        
+
         /// <summary>
         /// Gets or Sets Href
         /// </summary>
@@ -90,7 +90,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>

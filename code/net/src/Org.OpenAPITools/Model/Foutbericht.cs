@@ -1,4 +1,4 @@
-/* 
+/*
  * Waardering onroerende zaken
  *
  * Deze API levert actuele gegevens over WOZ-objecten 
@@ -48,7 +48,7 @@ namespace Org.OpenAPITools.Model
             this.Instance = instance;
             this.Code = code;
         }
-        
+
         /// <summary>
         /// Link naar meer informatie over deze fout
         /// </summary>
@@ -108,7 +108,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -209,7 +209,7 @@ namespace Org.OpenAPITools.Model
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Code, length must be greater than 1.", new [] { "Code" });
             }
-            
+
             yield break;
         }
     }

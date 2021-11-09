@@ -1,4 +1,4 @@
-/* 
+/*
  * Waardering onroerende zaken
  *
  * Deze API levert actuele gegevens over WOZ-objecten 
@@ -35,17 +35,17 @@ namespace Org.OpenAPITools.Model
         /// </summary>
         /// <param name="links">links.</param>
         /// <param name="embedded">embedded.</param>
-        public WozObjectHalCollectie(HalCollectionLinks links = default(HalCollectionLinks), WozObjectHalCollectieEmbedded embedded = default(WozObjectHalCollectieEmbedded))
+        public WozObjectHalCollectie(HalPaginationLinks links = default(HalPaginationLinks), WozObjectHalCollectieEmbedded embedded = default(WozObjectHalCollectieEmbedded))
         {
             this.Links = links;
             this.Embedded = embedded;
         }
-        
+
         /// <summary>
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name="_links", EmitDefaultValue=false)]
-        public HalCollectionLinks Links { get; set; }
+        public HalPaginationLinks Links { get; set; }
 
         /// <summary>
         /// Gets or Sets Embedded
@@ -66,7 +66,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>

@@ -26,7 +26,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import org.openapitools.client.model.Belanghebbende;
-import org.openapitools.client.model.BelanghebbendeEigenaar;
+import org.openapitools.client.model.KadastraalOnroerendeZaak;
 import org.openapitools.client.model.ObjectAanduiding;
 import org.openapitools.client.model.Waarde;
 import org.openapitools.client.model.Waardetabel;
@@ -34,11 +34,11 @@ import org.openapitools.client.model.Waardetabel;
 /**
  * WozObject
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-29T15:06:01.841Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-09T07:56:59.068811Z[Etc/UTC]")
 public class WozObject {
   public static final String SERIALIZED_NAME_AANDUIDING = "aanduiding";
   @SerializedName(SERIALIZED_NAME_AANDUIDING)
-  private ObjectAanduiding aanduiding = null;
+  private ObjectAanduiding aanduiding;
 
   public static final String SERIALIZED_NAME_ADRESSEERBAAR_OBJECT_IDENTIFICATIES = "adresseerbaarObjectIdentificaties";
   @SerializedName(SERIALIZED_NAME_ADRESSEERBAAR_OBJECT_IDENTIFICATIES)
@@ -46,7 +46,7 @@ public class WozObject {
 
   public static final String SERIALIZED_NAME_BELANGHEBBENDE_EIGENAAR = "belanghebbendeEigenaar";
   @SerializedName(SERIALIZED_NAME_BELANGHEBBENDE_EIGENAAR)
-  private BelanghebbendeEigenaar belanghebbendeEigenaar = null;
+  private Belanghebbende belanghebbendeEigenaar;
 
   public static final String SERIALIZED_NAME_BELANGHEBBENDE_GEBRUIKER = "belanghebbendeGebruiker";
   @SerializedName(SERIALIZED_NAME_BELANGHEBBENDE_GEBRUIKER)
@@ -60,9 +60,9 @@ public class WozObject {
   @SerializedName(SERIALIZED_NAME_IDENTIFICATIE)
   private String identificatie;
 
-  public static final String SERIALIZED_NAME_KADASTRAAL_ONROERENDE_ZAAK_IDENTIFICATIES = "kadastraalOnroerendeZaakIdentificaties";
-  @SerializedName(SERIALIZED_NAME_KADASTRAAL_ONROERENDE_ZAAK_IDENTIFICATIES)
-  private List<String> kadastraalOnroerendeZaakIdentificaties = null;
+  public static final String SERIALIZED_NAME_KADASTRAAL_ONROERENDE_ZAKEN = "kadastraalOnroerendeZaken";
+  @SerializedName(SERIALIZED_NAME_KADASTRAAL_ONROERENDE_ZAKEN)
+  private List<KadastraalOnroerendeZaak> kadastraalOnroerendeZaken = null;
 
   public static final String SERIALIZED_NAME_PAND_IDENTIFICATIES = "pandIdentificaties";
   @SerializedName(SERIALIZED_NAME_PAND_IDENTIFICATIES)
@@ -131,7 +131,7 @@ public class WozObject {
   }
 
 
-  public WozObject belanghebbendeEigenaar(BelanghebbendeEigenaar belanghebbendeEigenaar) {
+  public WozObject belanghebbendeEigenaar(Belanghebbende belanghebbendeEigenaar) {
     
     this.belanghebbendeEigenaar = belanghebbendeEigenaar;
     return this;
@@ -144,12 +144,12 @@ public class WozObject {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public BelanghebbendeEigenaar getBelanghebbendeEigenaar() {
+  public Belanghebbende getBelanghebbendeEigenaar() {
     return belanghebbendeEigenaar;
   }
 
 
-  public void setBelanghebbendeEigenaar(BelanghebbendeEigenaar belanghebbendeEigenaar) {
+  public void setBelanghebbendeEigenaar(Belanghebbende belanghebbendeEigenaar) {
     this.belanghebbendeEigenaar = belanghebbendeEigenaar;
   }
 
@@ -223,34 +223,34 @@ public class WozObject {
   }
 
 
-  public WozObject kadastraalOnroerendeZaakIdentificaties(List<String> kadastraalOnroerendeZaakIdentificaties) {
+  public WozObject kadastraalOnroerendeZaken(List<KadastraalOnroerendeZaak> kadastraalOnroerendeZaken) {
     
-    this.kadastraalOnroerendeZaakIdentificaties = kadastraalOnroerendeZaakIdentificaties;
+    this.kadastraalOnroerendeZaken = kadastraalOnroerendeZaken;
     return this;
   }
 
-  public WozObject addKadastraalOnroerendeZaakIdentificatiesItem(String kadastraalOnroerendeZaakIdentificatiesItem) {
-    if (this.kadastraalOnroerendeZaakIdentificaties == null) {
-      this.kadastraalOnroerendeZaakIdentificaties = new ArrayList<>();
+  public WozObject addKadastraalOnroerendeZakenItem(KadastraalOnroerendeZaak kadastraalOnroerendeZakenItem) {
+    if (this.kadastraalOnroerendeZaken == null) {
+      this.kadastraalOnroerendeZaken = new ArrayList<>();
     }
-    this.kadastraalOnroerendeZaakIdentificaties.add(kadastraalOnroerendeZaakIdentificatiesItem);
+    this.kadastraalOnroerendeZaken.add(kadastraalOnroerendeZakenItem);
     return this;
   }
 
    /**
-   * De identificaties van kadastraal onroerende zaken die geheel of gedeeltelijk deel uitmaken van het WOZ-object
-   * @return kadastraalOnroerendeZaakIdentificaties
+   * Get kadastraalOnroerendeZaken
+   * @return kadastraalOnroerendeZaken
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "De identificaties van kadastraal onroerende zaken die geheel of gedeeltelijk deel uitmaken van het WOZ-object")
+  @ApiModelProperty(value = "")
 
-  public List<String> getKadastraalOnroerendeZaakIdentificaties() {
-    return kadastraalOnroerendeZaakIdentificaties;
+  public List<KadastraalOnroerendeZaak> getKadastraalOnroerendeZaken() {
+    return kadastraalOnroerendeZaken;
   }
 
 
-  public void setKadastraalOnroerendeZaakIdentificaties(List<String> kadastraalOnroerendeZaakIdentificaties) {
-    this.kadastraalOnroerendeZaakIdentificaties = kadastraalOnroerendeZaakIdentificaties;
+  public void setKadastraalOnroerendeZaken(List<KadastraalOnroerendeZaak> kadastraalOnroerendeZaken) {
+    this.kadastraalOnroerendeZaken = kadastraalOnroerendeZaken;
   }
 
 
@@ -354,7 +354,7 @@ public class WozObject {
         Objects.equals(this.belanghebbendeGebruiker, wozObject.belanghebbendeGebruiker) &&
         Objects.equals(this.grondoppervlakte, wozObject.grondoppervlakte) &&
         Objects.equals(this.identificatie, wozObject.identificatie) &&
-        Objects.equals(this.kadastraalOnroerendeZaakIdentificaties, wozObject.kadastraalOnroerendeZaakIdentificaties) &&
+        Objects.equals(this.kadastraalOnroerendeZaken, wozObject.kadastraalOnroerendeZaken) &&
         Objects.equals(this.pandIdentificaties, wozObject.pandIdentificaties) &&
         Objects.equals(this.verantwoordelijkeGemeente, wozObject.verantwoordelijkeGemeente) &&
         Objects.equals(this.waarden, wozObject.waarden);
@@ -362,9 +362,8 @@ public class WozObject {
 
   @Override
   public int hashCode() {
-    return Objects.hash(aanduiding, adresseerbaarObjectIdentificaties, belanghebbendeEigenaar, belanghebbendeGebruiker, grondoppervlakte, identificatie, kadastraalOnroerendeZaakIdentificaties, pandIdentificaties, verantwoordelijkeGemeente, waarden);
+    return Objects.hash(aanduiding, adresseerbaarObjectIdentificaties, belanghebbendeEigenaar, belanghebbendeGebruiker, grondoppervlakte, identificatie, kadastraalOnroerendeZaken, pandIdentificaties, verantwoordelijkeGemeente, waarden);
   }
-
 
   @Override
   public String toString() {
@@ -376,7 +375,7 @@ public class WozObject {
     sb.append("    belanghebbendeGebruiker: ").append(toIndentedString(belanghebbendeGebruiker)).append("\n");
     sb.append("    grondoppervlakte: ").append(toIndentedString(grondoppervlakte)).append("\n");
     sb.append("    identificatie: ").append(toIndentedString(identificatie)).append("\n");
-    sb.append("    kadastraalOnroerendeZaakIdentificaties: ").append(toIndentedString(kadastraalOnroerendeZaakIdentificaties)).append("\n");
+    sb.append("    kadastraalOnroerendeZaken: ").append(toIndentedString(kadastraalOnroerendeZaken)).append("\n");
     sb.append("    pandIdentificaties: ").append(toIndentedString(pandIdentificaties)).append("\n");
     sb.append("    verantwoordelijkeGemeente: ").append(toIndentedString(verantwoordelijkeGemeente)).append("\n");
     sb.append("    waarden: ").append(toIndentedString(waarden)).append("\n");

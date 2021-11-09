@@ -1,4 +1,4 @@
-/* 
+/*
  * Waardering onroerende zaken
  *
  * Deze API levert actuele gegevens over WOZ-objecten 
@@ -34,16 +34,33 @@ namespace Org.OpenAPITools.Model
         /// Initializes a new instance of the <see cref="KadastraalOnroerendeZaak" /> class.
         /// </summary>
         /// <param name="identificatie">identificatie.</param>
-        public KadastraalOnroerendeZaak(string identificatie = default(string))
+        /// <param name="aanduiding">aanduiding.</param>
+        /// <param name="aanduidingMetGemeentenaam">De volledige kadastraleAanduiding waarbij alle delen zijn samengevoegd en waarbij de gemeentenaam is gebruikt..</param>
+        public KadastraalOnroerendeZaak(string identificatie = default(string), KadastraleAanduiding aanduiding = default(KadastraleAanduiding), string aanduidingMetGemeentenaam = default(string))
         {
             this.Identificatie = identificatie;
+            this.Aanduiding = aanduiding;
+            this.AanduidingMetGemeentenaam = aanduidingMetGemeentenaam;
         }
-        
+
         /// <summary>
         /// Gets or Sets Identificatie
         /// </summary>
         [DataMember(Name="identificatie", EmitDefaultValue=false)]
         public string Identificatie { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Aanduiding
+        /// </summary>
+        [DataMember(Name="aanduiding", EmitDefaultValue=false)]
+        public KadastraleAanduiding Aanduiding { get; set; }
+
+        /// <summary>
+        /// De volledige kadastraleAanduiding waarbij alle delen zijn samengevoegd en waarbij de gemeentenaam is gebruikt.
+        /// </summary>
+        /// <value>De volledige kadastraleAanduiding waarbij alle delen zijn samengevoegd en waarbij de gemeentenaam is gebruikt.</value>
+        [DataMember(Name="aanduidingMetGemeentenaam", EmitDefaultValue=false)]
+        public string AanduidingMetGemeentenaam { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -54,10 +71,12 @@ namespace Org.OpenAPITools.Model
             var sb = new StringBuilder();
             sb.Append("class KadastraalOnroerendeZaak {\n");
             sb.Append("  Identificatie: ").Append(Identificatie).Append("\n");
+            sb.Append("  Aanduiding: ").Append(Aanduiding).Append("\n");
+            sb.Append("  AanduidingMetGemeentenaam: ").Append(AanduidingMetGemeentenaam).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -92,6 +111,16 @@ namespace Org.OpenAPITools.Model
                     this.Identificatie == input.Identificatie ||
                     (this.Identificatie != null &&
                     this.Identificatie.Equals(input.Identificatie))
+                ) && 
+                (
+                    this.Aanduiding == input.Aanduiding ||
+                    (this.Aanduiding != null &&
+                    this.Aanduiding.Equals(input.Aanduiding))
+                ) && 
+                (
+                    this.AanduidingMetGemeentenaam == input.AanduidingMetGemeentenaam ||
+                    (this.AanduidingMetGemeentenaam != null &&
+                    this.AanduidingMetGemeentenaam.Equals(input.AanduidingMetGemeentenaam))
                 );
         }
 
@@ -106,6 +135,10 @@ namespace Org.OpenAPITools.Model
                 int hashCode = 41;
                 if (this.Identificatie != null)
                     hashCode = hashCode * 59 + this.Identificatie.GetHashCode();
+                if (this.Aanduiding != null)
+                    hashCode = hashCode * 59 + this.Aanduiding.GetHashCode();
+                if (this.AanduidingMetGemeentenaam != null)
+                    hashCode = hashCode * 59 + this.AanduidingMetGemeentenaam.GetHashCode();
                 return hashCode;
             }
         }

@@ -28,7 +28,7 @@ import org.openapitools.client.model.WozObjectBasisLinks;
 /**
  * WozObjectHalAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-29T15:06:01.841Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-09T07:56:59.068811Z[Etc/UTC]")
 public class WozObjectHalAllOf {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -74,7 +74,6 @@ public class WozObjectHalAllOf {
   public int hashCode() {
     return Objects.hash(links);
   }
-
 
   @Override
   public String toString() {

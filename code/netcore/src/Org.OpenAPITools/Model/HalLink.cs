@@ -45,7 +45,10 @@ namespace Org.OpenAPITools.Model
         public HalLink(string href = default(string), bool templated = default(bool), string title = default(string))
         {
             // to ensure "href" is required (not null)
-            this.Href = href ?? throw new ArgumentNullException("href is a required property for HalLink and cannot be null");
+            if (href == null) {
+                throw new ArgumentNullException("href is a required property for HalLink and cannot be null");
+            }
+            this.Href = href;
             this.Templated = templated;
             this.Title = title;
         }
@@ -59,7 +62,7 @@ namespace Org.OpenAPITools.Model
         /// <summary>
         /// Gets or Sets Templated
         /// </summary>
-        [DataMember(Name = "templated", EmitDefaultValue = false)]
+        [DataMember(Name = "templated", EmitDefaultValue = true)]
         public bool Templated { get; set; }
 
         /// <summary>
@@ -153,7 +156,7 @@ namespace Org.OpenAPITools.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }
