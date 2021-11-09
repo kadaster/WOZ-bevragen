@@ -26,7 +26,7 @@ Je kunt op de volgende manieren WOZ objecten (met WOZ waardes) zoeken en raadple
 
 - Opvragen van 1 specifiek WOZ-object met een identificatie van het WOZ object.
 - Opvragen van 1 specifiek WOZ-object met de identificatie van het adres.
-- Opvragen van 1 specifiek WOZ-object met de postcode en het huisnummer eventueel aangevuld met huisletter en/of huisnummertoevoeging.
+- Opvragen van 1 of meerdere WOZ-objecten met de postcode en het huisnummer eventueel aangevuld met huisletter en/of huisnummertoevoeging.
 - Opvragen van collectie WOZ-objecten met een niet-natuurlijk persoon (rsin) of een maatschappelijke activiteit (kvknr) die in het Handelsregister is ingeschreven.
 - Opvragen van collectie WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven maatschappelijke activiteit of een van de daaronder vallende ondernemingen en vestigingen.
 - Opvragen van collectie WOZ-objecten met de identificatie van een adresseerbaar object (verblijfsobject, ligplaats, standplaats).
@@ -63,12 +63,12 @@ We hebben al een [Postman collection](https://github.com/VNG-Realisatie/Haal-Cen
 7. Vul bij baseUrl INITIAL VALUE en bij CURRENT VALUE de url
 8. Klik op de knop Update
 
-De testomgeving van de API is te benaderen via de volgende urls:
+De testomgeving van de API is te benaderen via de volgende url:
 - _Beveiligde verbinding met alleen API-key: https://api.kadaster.nl/lvwoz-eto/huidigebevragingen_
     - Voor deze connectie met de testomgeving van deze API is vereist:
         - Een geldige API-key. Deze wordt bij de request opgenomen in request header "X-Api-Key". Wanneer je je aanmeldt voor het gebruiken van de API ontvang je de API-key.
 
-### Testgevallen
+<!-- ### Testgevallen
 Onderstaande tabellen bevatten testgevallen voor specifieke situaties waarmee de werking van de API kan worden getest op de test omgeving.
 
 <table>
@@ -126,7 +126,7 @@ Onderstaande tabellen bevatten testgevallen voor specifieke situaties waarmee de
 		<td>2517GL 84</td>
     <td><li>3 adresseerbaar object identificaties</li></td>
 	</tr>
-</table>
+</table> -->
 
 ### URL
 De productieomgeving van de API is te benaderen via de volgende url: ??????????????????????????
