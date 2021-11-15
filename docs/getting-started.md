@@ -14,7 +14,7 @@ Om aan te sluiten kun je de volgende stappen doorlopen:
 5. [Sluit aan op productie](#aansluiten-op-productie)
 
 ## Aanmelden om aan te sluiten
-Meld je aan bij het kadaster om [aan te sluiten en voor toegang tot de testomgeving](???????????????????????????). Je ontvangt dan o.a. een API-key die nodig is voor toegang tot de testomgeving.
+Meld je aan bij het kadaster om [aan te sluiten en voor toegang tot de testomgeving](https://www.kadaster.nl/zakelijk/producten/adressen-en-gebouwen/woz-api-huidige-bevragingen). Aansluiten is voorbehouden aan gemeenten met als gebruiksdoel het heffen van belastingen. Je ontvangt dan o.a. een API-key die nodig is voor toegang tot de testomgeving.
 
 ## Functionaliteit en specificaties
 Je kunt een visuele representatie van de specificatie bekijken met [Swagger UI]({{ site.baseurl }}/swagger-ui) of [Redoc]({{ site.baseurl }}/redoc).
@@ -49,8 +49,7 @@ Zit jouw gewenste ontwikkelomgeving er niet bij, dan kan je zelf ook code genere
 
 ## Probeer en test de API
 De werking van de API is het makkelijkst te testen met behulp van [Postman](https://www.getpostman.com/).
-We hebben al een project voor je gemaakt die je kan gebruiken: [WOZ-Bevragen-postman-collection.json](../test/WOZ-Bevragen-postman-collection.json). Hierin moet je alleen de endpoints en authenticatie (API-key) nog invullen.
-We hebben al een [Postman collection](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/blob/master/test/WOZ-Bevragen-postman-collection.json){:target="_blank" rel="noopener"} voor je klaargezet. Deze kun je importeren in Postman.
+We hebben al een project voor je gemaakt die je kan gebruiken: [WOZ-Bevragen-postman-collection.json](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/blob/master/test/WOZ-Bevragen-postman-collection.json). Deze kun je importeren in Postman waarna je alleen de endpoints en authenticatie (API-key) nog moet invullen.
 
 ### Configureer de url en api key
 
@@ -127,6 +126,3 @@ Onderstaande tabellen bevatten testgevallen voor specifieke situaties waarmee de
     <td><li>3 adresseerbaar object identificaties</li></td>
 	</tr>
 </table> -->
-
-### URL
-De productieomgeving van de API is te benaderen via de volgende url: ??????????????????????????
