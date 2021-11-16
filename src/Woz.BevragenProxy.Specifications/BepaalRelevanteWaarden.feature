@@ -24,13 +24,13 @@ Scenario: meerdere jaren met zelfde eigenaar en zonder bezwaar of beroep
 	| 308000             | 2014-01-01      | 2015-01-01   | beschikking_genomen   |
 	Als de relevante waarden zijn bepaald voor het WOZ-object
 	Dan bevat het WOZ-object de volgende waarden
-	| vastgesteldeWaarde | waardepeildatum | ingangsdatum | beschikkingsStatussen |
-	| 431000             | 2019-01-01      | 2020-01-01   | beschikking_genomen   |
-	| 390000             | 2018-01-01      | 2019-01-01   | beschikking_genomen   |
-	| 340000             | 2017-01-01      | 2018-01-01   | beschikking_genomen   |
-	| 340000             | 2016-01-01      | 2017-01-01   | beschikking_genomen   |
-	| 310000             | 2015-01-01      | 2016-01-01   | beschikking_genomen   |
-	| 308000             | 2014-01-01      | 2015-01-01   | beschikking_genomen   |
+	| vastgesteldeWaarde | waardepeildatum |
+	| 431000             | 2019-01-01      |
+	| 390000             | 2018-01-01      |
+	| 340000             | 2017-01-01      |
+	| 340000             | 2016-01-01      |
+	| 310000             | 2015-01-01      |
+	| 308000             | 2014-01-01      |
 
 Scenario: WOZ-object wijzigt gedurende een jaar van eigenaar: bij meerdere waarden met zelfde waardepeildatum gebruiken we de waarde met de meest recente ingangsdatum
 	Gegeven een WOZ-object bevat de volgende waarden
@@ -42,11 +42,11 @@ Scenario: WOZ-object wijzigt gedurende een jaar van eigenaar: bij meerdere waard
 	| 149000             | 2016-01-01      | 2017-01-01   | beschikking_genomen   |
 	Als de relevante waarden zijn bepaald voor het WOZ-object
 	Dan bevat het WOZ-object de volgende waarden
-	| vastgesteldeWaarde | waardepeildatum | ingangsdatum | beschikkingsStatussen |
-	| 171000             | 2019-01-01      | 2020-01-01   | beschikking_genomen   |
-	| 163000             | 2018-01-01      | 2019-03-17   | beschikking_genomen   |
-	| 155000             | 2017-01-01      | 2018-01-01   | beschikking_genomen   |
-	| 149000             | 2016-01-01      | 2017-01-01   | beschikking_genomen   |
+	| vastgesteldeWaarde | waardepeildatum |
+	| 171000             | 2019-01-01      |
+	| 163000             | 2018-01-01      |
+	| 155000             | 2017-01-01      |
+	| 149000             | 2016-01-01      |
 
 Scenario: Belanghebbende krijgt verlaging van de WOZ-waarde na bezwaar
 	Gegeven een WOZ-object bevat de volgende waarden
@@ -57,11 +57,11 @@ Scenario: Belanghebbende krijgt verlaging van de WOZ-waarde na bezwaar
 	| 164000             | 2016-01-01      | 2017-01-01   | beschikking_genomen   |
 	Als de relevante waarden zijn bepaald voor het WOZ-object
 	Dan bevat het WOZ-object de volgende waarden
-	| vastgesteldeWaarde | waardepeildatum | ingangsdatum | beschikkingsStatussen | indicatieBezwaarBeroep |
-	| 195000             | 2019-01-01      | 2020-01-01   | beschikking_genomen   |                        |
-	| 176000             | 2018-01-01      | 2019-01-01   | bezwaar_ingediend     | true                   |
-	| 152000             | 2017-01-01      | 2018-01-01   | bezwaar_veranderd     |                        |
-	| 164000             | 2016-01-01      | 2017-01-01   | beschikking_genomen   |                        |
+	| vastgesteldeWaarde | waardepeildatum | indicatieBezwaarBeroep |
+	| 195000             | 2019-01-01      |                        |
+	| 176000             | 2018-01-01      | true                   |
+	| 152000             | 2017-01-01      |                        |
+	| 164000             | 2016-01-01      |                        |
 
 Scenario: verlaging van de WOZ-waarde na beroep niet zichtbaar door latere ingangsdatum nieuwe belanghebbende eigenaar
 	Gegeven een WOZ-object bevat de volgende waarden
@@ -72,10 +72,10 @@ Scenario: verlaging van de WOZ-waarde na beroep niet zichtbaar door latere ingan
 	| 189000             | 2017-01-01      | 2018-01-01   | beschikking_genomen   |
 	Als de relevante waarden zijn bepaald voor het WOZ-object
 	Dan bevat het WOZ-object de volgende waarden
-	| vastgesteldeWaarde | waardepeildatum | ingangsdatum | beschikkingsStatussen |
-	| 266000             | 2019-01-01      | 2020-01-01   | beschikking_genomen   |
-	| 223000             | 2018-01-01      | 2019-05-01   | beschikking_genomen   |
-	| 189000             | 2017-01-01      | 2018-01-01   | beschikking_genomen   |
+	| vastgesteldeWaarde | waardepeildatum |
+	| 266000             | 2019-01-01      |
+	| 223000             | 2018-01-01      |
+	| 189000             | 2017-01-01      |
 
 Scenario: een vernietigde beschikking wordt genegeerd
 	Gegeven een WOZ-object bevat de volgende waarden
@@ -86,10 +86,10 @@ Scenario: een vernietigde beschikking wordt genegeerd
 	| 274000             | 2017-01-01      | 2018-01-01   | beschikking_genomen    |
 	Als de relevante waarden zijn bepaald voor het WOZ-object
 	Dan bevat het WOZ-object de volgende waarden
-	| vastgesteldeWaarde | waardepeildatum | ingangsdatum | beschikkingsStatussen |
-	| 295000             | 2019-01-01      | 2020-01-01   | beschikking_genomen   |
-	| 283000             | 2018-01-01      | 2019-01-01   | beschikking_genomen   |
-	| 274000             | 2017-01-01      | 2018-01-01   | beschikking_genomen   |
+	| vastgesteldeWaarde | waardepeildatum |
+	| 295000             | 2019-01-01      |
+	| 283000             | 2018-01-01      |
+	| 274000             | 2017-01-01      |
 
 Scenario: een vernietigde beschikking wordt genegeerd, maar de andere beschikking(en) voor dezelfde peildatum en ingangsdatum niet
 	Gegeven een WOZ-object bevat de volgende waarden
@@ -100,10 +100,10 @@ Scenario: een vernietigde beschikking wordt genegeerd, maar de andere beschikkin
 	| 266000             | 2017-01-01      | 2018-01-01   | beschikking_genomen                         |
 	Als de relevante waarden zijn bepaald voor het WOZ-object
 	Dan bevat het WOZ-object de volgende waarden
-	| vastgesteldeWaarde | waardepeildatum | ingangsdatum | beschikkingsStatussen                       |
-	| 317000             | 2019-01-01      | 2020-01-01   | beschikking_genomen                         |
-	| 282000             | 2018-01-01      | 2019-07-01   | beschikking_vernietigd, bezwaar_gehandhaafd |
-	| 266000             | 2017-01-01      | 2018-01-01   | beschikking_genomen                         |
+	| vastgesteldeWaarde | waardepeildatum |
+	| 317000             | 2019-01-01      |
+	| 282000             | 2018-01-01      |
+	| 266000             | 2017-01-01      |
 
 Scenario: meerdere vernietigde beschikkingen met zelfde peildatum en ingangsdatum worden genegeerd
 	Gegeven een WOZ-object bevat de volgende waarden
@@ -114,10 +114,10 @@ Scenario: meerdere vernietigde beschikkingen met zelfde peildatum en ingangsdatu
 	| 410000             | 2017-01-01      | 2018-01-01   | beschikking_genomen                            |
 	Als de relevante waarden zijn bepaald voor het WOZ-object
 	Dan bevat het WOZ-object de volgende waarden
-	| vastgesteldeWaarde | waardepeildatum | ingangsdatum | beschikkingsStatussen |
-	| 455000             | 2019-01-01      | 2020-01-01   | beschikking_genomen   |
-	| 430000             | 2018-01-01      | 2019-01-01   | beschikking_genomen   |
-	| 410000             | 2017-01-01      | 2018-01-01   | beschikking_genomen   |
+	| vastgesteldeWaarde | waardepeildatum |
+	| 455000             | 2019-01-01      |
+	| 430000             | 2018-01-01      |
+	| 410000             | 2017-01-01      |
 
 Abstract Scenario: indicatieBezwaarBeroep wanneer een van de statussen bezwaar, (hoger)beroep of cassatie ingesteld maar niet afgehandeld is.
 	Gegeven een WOZ-object bevat de volgende waarden
@@ -125,8 +125,8 @@ Abstract Scenario: indicatieBezwaarBeroep wanneer een van de statussen bezwaar, 
 	| 317000             | 2019-01-01      | 2020-01-01   | <status>              |
 	Als de relevante waarden zijn bepaald voor het WOZ-object
 	Dan bevat het WOZ-object de volgende waarden
-	| vastgesteldeWaarde | waardepeildatum | ingangsdatum | beschikkingsStatussen | indicatieBezwaarBeroep |
-	| 317000             | 2019-01-01      | 2020-01-01   | <status>              | true                   |
+	| vastgesteldeWaarde | waardepeildatum | indicatieBezwaarBeroep |
+	| 317000             | 2019-01-01      | true                   |
 
     Voorbeelden:
     | statuscode | status                   |
@@ -165,9 +165,9 @@ Scenario: indicatieBezwaarBeroep wanneer er meerdere statussen zijn bij een waar
 	| 392000             | 2018-01-01      | 2019-01-01   | hoger_beroep_aangetekend, beschikking_genomen |
 	Als de relevante waarden zijn bepaald voor het WOZ-object
 	Dan bevat het WOZ-object de volgende waarden
-	| vastgesteldeWaarde | waardepeildatum | ingangsdatum | beschikkingsStatussen                         | indicatieBezwaarBeroep |
-	| 437000             | 2019-01-01      | 2020-01-01   | beroep_gehandhaafd, beroep_aangetekend        | true                   |
-	| 392000             | 2018-01-01      | 2019-01-01   | hoger_beroep_aangetekend, beschikking_genomen | true                   |
+	| vastgesteldeWaarde | waardepeildatum | indicatieBezwaarBeroep |
+	| 437000             | 2019-01-01      | true                   |
+	| 392000             | 2018-01-01      | true                   |
 
 Scenario: indicatieBezwaarBeroep wanneer er bezwaar, (hoger)beroep of cassatie loopt bij niet de meest recente ingangsdatum
 	Gegeven een WOZ-object bevat de volgende waarden
@@ -176,5 +176,5 @@ Scenario: indicatieBezwaarBeroep wanneer er bezwaar, (hoger)beroep of cassatie l
 	| 215000             | 2018-01-01      | 2019-01-01   | beroep_aangetekend    |
 	Als de relevante waarden zijn bepaald voor het WOZ-object
 	Dan bevat het WOZ-object de volgende waarden
-	| vastgesteldeWaarde | waardepeildatum | ingangsdatum | beschikkingsStatussen |
-	| 215000             | 2018-01-01      | 2019-05-01   | beschikking_genomen   |
+	| vastgesteldeWaarde | waardepeildatum |
+	| 215000             | 2018-01-01      |

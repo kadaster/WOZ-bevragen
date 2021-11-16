@@ -243,39 +243,25 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
                 TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                             "vastgesteldeWaarde",
-                            "waardepeildatum",
-                            "ingangsdatum",
-                            "beschikkingsStatussen"});
+                            "waardepeildatum"});
                 table4.AddRow(new string[] {
                             "431000",
-                            "2019-01-01",
-                            "2020-01-01",
-                            "beschikking_genomen"});
+                            "2019-01-01"});
                 table4.AddRow(new string[] {
                             "390000",
-                            "2018-01-01",
-                            "2019-01-01",
-                            "beschikking_genomen"});
+                            "2018-01-01"});
                 table4.AddRow(new string[] {
                             "340000",
-                            "2017-01-01",
-                            "2018-01-01",
-                            "beschikking_genomen"});
+                            "2017-01-01"});
                 table4.AddRow(new string[] {
                             "340000",
-                            "2016-01-01",
-                            "2017-01-01",
-                            "beschikking_genomen"});
+                            "2016-01-01"});
                 table4.AddRow(new string[] {
                             "310000",
-                            "2015-01-01",
-                            "2016-01-01",
-                            "beschikking_genomen"});
+                            "2015-01-01"});
                 table4.AddRow(new string[] {
                             "308000",
-                            "2014-01-01",
-                            "2015-01-01",
-                            "beschikking_genomen"});
+                            "2014-01-01"});
 #line 26
  testRunner.Then("bevat het WOZ-object de volgende waarden", ((string)(null)), table4, "Dan ");
 #line hidden
@@ -352,29 +338,19 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
                 TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                             "vastgesteldeWaarde",
-                            "waardepeildatum",
-                            "ingangsdatum",
-                            "beschikkingsStatussen"});
+                            "waardepeildatum"});
                 table6.AddRow(new string[] {
                             "171000",
-                            "2019-01-01",
-                            "2020-01-01",
-                            "beschikking_genomen"});
+                            "2019-01-01"});
                 table6.AddRow(new string[] {
                             "163000",
-                            "2018-01-01",
-                            "2019-03-17",
-                            "beschikking_genomen"});
+                            "2018-01-01"});
                 table6.AddRow(new string[] {
                             "155000",
-                            "2017-01-01",
-                            "2018-01-01",
-                            "beschikking_genomen"});
+                            "2017-01-01"});
                 table6.AddRow(new string[] {
                             "149000",
-                            "2016-01-01",
-                            "2017-01-01",
-                            "beschikking_genomen"});
+                            "2016-01-01"});
 #line 44
  testRunner.Then("bevat het WOZ-object de volgende waarden", ((string)(null)), table6, "Dan ");
 #line hidden
@@ -444,32 +420,22 @@ this.ScenarioInitialize(scenarioInfo);
                 TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
                             "vastgesteldeWaarde",
                             "waardepeildatum",
-                            "ingangsdatum",
-                            "beschikkingsStatussen",
                             "indicatieBezwaarBeroep"});
                 table8.AddRow(new string[] {
                             "195000",
                             "2019-01-01",
-                            "2020-01-01",
-                            "beschikking_genomen",
                             ""});
                 table8.AddRow(new string[] {
                             "176000",
                             "2018-01-01",
-                            "2019-01-01",
-                            "bezwaar_ingediend",
                             "true"});
                 table8.AddRow(new string[] {
                             "152000",
                             "2017-01-01",
-                            "2018-01-01",
-                            "bezwaar_veranderd",
                             ""});
                 table8.AddRow(new string[] {
                             "164000",
                             "2016-01-01",
-                            "2017-01-01",
-                            "beschikking_genomen",
                             ""});
 #line 59
  testRunner.Then("bevat het WOZ-object de volgende waarden", ((string)(null)), table8, "Dan ");
@@ -542,24 +508,16 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
                 TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
                             "vastgesteldeWaarde",
-                            "waardepeildatum",
-                            "ingangsdatum",
-                            "beschikkingsStatussen"});
+                            "waardepeildatum"});
                 table10.AddRow(new string[] {
                             "266000",
-                            "2019-01-01",
-                            "2020-01-01",
-                            "beschikking_genomen"});
+                            "2019-01-01"});
                 table10.AddRow(new string[] {
                             "223000",
-                            "2018-01-01",
-                            "2019-05-01",
-                            "beschikking_genomen"});
+                            "2018-01-01"});
                 table10.AddRow(new string[] {
                             "189000",
-                            "2017-01-01",
-                            "2018-01-01",
-                            "beschikking_genomen"});
+                            "2017-01-01"});
 #line 74
  testRunner.Then("bevat het WOZ-object de volgende waarden", ((string)(null)), table10, "Dan ");
 #line hidden
@@ -628,24 +586,16 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
                 TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
                             "vastgesteldeWaarde",
-                            "waardepeildatum",
-                            "ingangsdatum",
-                            "beschikkingsStatussen"});
+                            "waardepeildatum"});
                 table12.AddRow(new string[] {
                             "295000",
-                            "2019-01-01",
-                            "2020-01-01",
-                            "beschikking_genomen"});
+                            "2019-01-01"});
                 table12.AddRow(new string[] {
                             "283000",
-                            "2018-01-01",
-                            "2019-01-01",
-                            "beschikking_genomen"});
+                            "2018-01-01"});
                 table12.AddRow(new string[] {
                             "274000",
-                            "2017-01-01",
-                            "2018-01-01",
-                            "beschikking_genomen"});
+                            "2017-01-01"});
 #line 88
  testRunner.Then("bevat het WOZ-object de volgende waarden", ((string)(null)), table12, "Dan ");
 #line hidden
@@ -717,24 +667,16 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
                 TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
                             "vastgesteldeWaarde",
-                            "waardepeildatum",
-                            "ingangsdatum",
-                            "beschikkingsStatussen"});
+                            "waardepeildatum"});
                 table14.AddRow(new string[] {
                             "317000",
-                            "2019-01-01",
-                            "2020-01-01",
-                            "beschikking_genomen"});
+                            "2019-01-01"});
                 table14.AddRow(new string[] {
                             "282000",
-                            "2018-01-01",
-                            "2019-07-01",
-                            "beschikking_vernietigd, bezwaar_gehandhaafd"});
+                            "2018-01-01"});
                 table14.AddRow(new string[] {
                             "266000",
-                            "2017-01-01",
-                            "2018-01-01",
-                            "beschikking_genomen"});
+                            "2017-01-01"});
 #line 102
  testRunner.Then("bevat het WOZ-object de volgende waarden", ((string)(null)), table14, "Dan ");
 #line hidden
@@ -806,24 +748,16 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
                 TechTalk.SpecFlow.Table table16 = new TechTalk.SpecFlow.Table(new string[] {
                             "vastgesteldeWaarde",
-                            "waardepeildatum",
-                            "ingangsdatum",
-                            "beschikkingsStatussen"});
+                            "waardepeildatum"});
                 table16.AddRow(new string[] {
                             "455000",
-                            "2019-01-01",
-                            "2020-01-01",
-                            "beschikking_genomen"});
+                            "2019-01-01"});
                 table16.AddRow(new string[] {
                             "430000",
-                            "2018-01-01",
-                            "2019-01-01",
-                            "beschikking_genomen"});
+                            "2018-01-01"});
                 table16.AddRow(new string[] {
                             "410000",
-                            "2017-01-01",
-                            "2018-01-01",
-                            "beschikking_genomen"});
+                            "2017-01-01"});
 #line 116
  testRunner.Then("bevat het WOZ-object de volgende waarden", ((string)(null)), table16, "Dan ");
 #line hidden
@@ -887,14 +821,10 @@ this.ScenarioInitialize(scenarioInfo);
                 TechTalk.SpecFlow.Table table18 = new TechTalk.SpecFlow.Table(new string[] {
                             "vastgesteldeWaarde",
                             "waardepeildatum",
-                            "ingangsdatum",
-                            "beschikkingsStatussen",
                             "indicatieBezwaarBeroep"});
                 table18.AddRow(new string[] {
                             "317000",
                             "2019-01-01",
-                            "2020-01-01",
-                            string.Format("{0}", status),
                             "true"});
 #line 127
  testRunner.Then("bevat het WOZ-object de volgende waarden", ((string)(null)), table18, "Dan ");
@@ -1028,20 +958,14 @@ this.ScenarioInitialize(scenarioInfo);
                 TechTalk.SpecFlow.Table table21 = new TechTalk.SpecFlow.Table(new string[] {
                             "vastgesteldeWaarde",
                             "waardepeildatum",
-                            "ingangsdatum",
-                            "beschikkingsStatussen",
                             "indicatieBezwaarBeroep"});
                 table21.AddRow(new string[] {
                             "437000",
                             "2019-01-01",
-                            "2020-01-01",
-                            "beroep_gehandhaafd, beroep_aangetekend",
                             "true"});
                 table21.AddRow(new string[] {
                             "392000",
                             "2018-01-01",
-                            "2019-01-01",
-                            "hoger_beroep_aangetekend, beschikking_genomen",
                             "true"});
 #line 167
  testRunner.Then("bevat het WOZ-object de volgende waarden", ((string)(null)), table21, "Dan ");
@@ -1104,14 +1028,10 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
                 TechTalk.SpecFlow.Table table23 = new TechTalk.SpecFlow.Table(new string[] {
                             "vastgesteldeWaarde",
-                            "waardepeildatum",
-                            "ingangsdatum",
-                            "beschikkingsStatussen"});
+                            "waardepeildatum"});
                 table23.AddRow(new string[] {
                             "215000",
-                            "2018-01-01",
-                            "2019-05-01",
-                            "beschikking_genomen"});
+                            "2018-01-01"});
 #line 178
  testRunner.Then("bevat het WOZ-object de volgende waarden", ((string)(null)), table23, "Dan ");
 #line hidden

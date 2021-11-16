@@ -23,6 +23,7 @@ namespace Woz.BevragenProxy.Domain
                     if(!waarde.BeschikkingsStatussen.All(x => x == StatusBeschikkingEnum.Beschikking_vernietigd))
                     {
                         waarde.ZetIndicatieBezwaarBeroep();
+                        waarde.ResetNietRelevanteProperties();
                         retval.Add(waarde);
                     }
                 }
@@ -32,13 +33,13 @@ namespace Woz.BevragenProxy.Domain
                     {
                         retval.Remove(val);
                         waarde.ZetIndicatieBezwaarBeroep();
+                        waarde.ResetNietRelevanteProperties();
                         retval.Add(waarde);
                     }
                 }
             }
 
-            return retval.OrderByDescending(x => x.Waardepeildatum)
-                         .ThenByDescending(x => x.Ingangsdatum);
+            return retval.OrderByDescending(x => x.Waardepeildatum);
         }
 
         public static void ZetIndicatieBezwaarBeroep(this Waarde waarde)
@@ -50,6 +51,12 @@ namespace Woz.BevragenProxy.Domain
             {
                 waarde.IndicatieBezwaarBeroep = true;
             }
+        }
+
+        public static void ResetNietRelevanteProperties(this Waarde waarde)
+        {
+            waarde.Ingangsdatum = null;
+            waarde.BeschikkingsStatussen = null;
         }
     }
 }
