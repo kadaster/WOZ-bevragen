@@ -118,3 +118,63 @@ Scenario: meerdere vernietigde beschikkingen met zelfde peildatum en ingangsdatu
 	| 455000             | 2019-01-01      | 2020-01-01   | beschikking_genomen   |
 	| 430000             | 2018-01-01      | 2019-01-01   | beschikking_genomen   |
 	| 410000             | 2017-01-01      | 2018-01-01   | beschikking_genomen   |
+
+Abstract Scenario: indicatieBezwaarBeroep wanneer een van de statussen bezwaar, (hoger)beroep of cassatie ingesteld maar niet afgehandeld is.
+	Gegeven een WOZ-object bevat de volgende waarden
+	| vastgesteldeWaarde | waardepeildatum | ingangsdatum | beschikkingsStatussen |
+	| 317000             | 2019-01-01      | 2020-01-01   | <status>              |
+	Als de relevante waarden zijn bepaald voor het WOZ-object
+	Dan bevat het WOZ-object de volgende waarden
+	| vastgesteldeWaarde | waardepeildatum | ingangsdatum | beschikkingsStatussen | indicatieBezwaarBeroep |
+	| 317000             | 2019-01-01      | 2020-01-01   | <status>              | true                   |
+
+    Voorbeelden:
+    | statuscode | status                   |
+    | 10         | bezwaar_ingediend        |
+    | 20         | beroep_aangetekend       |
+    | 23         | hoger_beroep_aangetekend |
+    | 30         | cassatie_ingesteld       |
+
+Abstract Scenario: indicatieBezwaarBeroep wordt niet opgenomen wanneer er geen bezwaar, (hoger)beroep of cassatie is ingesteld, of deze is afgehandeld.
+	Gegeven een WOZ-object bevat de volgende waarden
+	| vastgesteldeWaarde | waardepeildatum | ingangsdatum | beschikkingsStatussen |
+	| 317000             | 2019-01-01      | 2020-01-01   | <status_enum>         |
+	Als de relevante waarden zijn bepaald voor het WOZ-object
+	Dan heeft de waarden van het WOZ-object geen property indicatieBezwaarBeroep
+
+    Voorbeelden:
+    | status_enum                  | statuscode | status                                                |
+    | beschikking_genomen          | 01         | beschikking genomen                                   |
+    | beschikking_herzien          | 03         | herzieningsbeschikking                                |
+    | bezwaar_gehandhaafd          | 11         | bezwaar afgehandeld, beschikking gehandhaafd          |
+    | bezwaar_veranderd            | 12         | bezwaar afgehandeld, vastgestelde waarde veranderd    |
+    | waarde_ambtshalve_verminderd | 13         | waardeambtshalveverminderd                            |
+    | beroep_gehandhaafd           | 21         | uitspraak beroep, beschikking gehandhaafd             |
+    | beroep_veranderd             | 22         | uitspraak beroep, vastgestelde waarde veranderd       |
+    | hoger_beroep_gehandhaafd     | 24         | uitspraak hoger beroep, beschikking gehandhaafd       |
+    | hoger_beroep_veranderd       | 25         | uitspraak hoger beroep, vastgestelde waarde veranderd |
+    | hoge_raad_gehandhaafd        | 31         | arrest Hoge Raad, beschikking gehandhaafd             |
+    | hoge_raad_veranderd          | 32         | arrest Hoge Raad, vastgestelde waarde veranderd       |
+    | hoge_raad_geding_verwezen    | 33         | arrestHogeRaad,gedingverwezen                         |
+    | voorlopige_aanslag           | 99         | waarde te gebruiken voor voorlopige aanslag           |
+
+Scenario: indicatieBezwaarBeroep wanneer er meerdere statussen zijn bij een waardepeildatum en ingangsdatum
+	Gegeven een WOZ-object bevat de volgende waarden
+	| vastgesteldeWaarde | waardepeildatum | ingangsdatum | beschikkingsStatussen                         |
+	| 437000             | 2019-01-01      | 2020-01-01   | beroep_gehandhaafd, beroep_aangetekend        |
+	| 392000             | 2018-01-01      | 2019-01-01   | hoger_beroep_aangetekend, beschikking_genomen |
+	Als de relevante waarden zijn bepaald voor het WOZ-object
+	Dan bevat het WOZ-object de volgende waarden
+	| vastgesteldeWaarde | waardepeildatum | ingangsdatum | beschikkingsStatussen                         | indicatieBezwaarBeroep |
+	| 437000             | 2019-01-01      | 2020-01-01   | beroep_gehandhaafd, beroep_aangetekend        | true                   |
+	| 392000             | 2018-01-01      | 2019-01-01   | hoger_beroep_aangetekend, beschikking_genomen | true                   |
+
+Scenario: indicatieBezwaarBeroep wanneer er bezwaar, (hoger)beroep of cassatie loopt bij niet de meest recente ingangsdatum
+	Gegeven een WOZ-object bevat de volgende waarden
+	| vastgesteldeWaarde | waardepeildatum | ingangsdatum | beschikkingsStatussen |
+	| 215000             | 2018-01-01      | 2019-05-01   | beschikking_genomen   |
+	| 215000             | 2018-01-01      | 2019-01-01   | beroep_aangetekend    |
+	Als de relevante waarden zijn bepaald voor het WOZ-object
+	Dan bevat het WOZ-object de volgende waarden
+	| vastgesteldeWaarde | waardepeildatum | ingangsdatum | beschikkingsStatussen |
+	| 215000             | 2018-01-01      | 2019-05-01   | beschikking_genomen   |

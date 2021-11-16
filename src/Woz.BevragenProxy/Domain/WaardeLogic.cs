@@ -22,6 +22,7 @@ namespace Woz.BevragenProxy.Domain
                 {
                     if(!waarde.BeschikkingsStatussen.All(x => x == StatusBeschikkingEnum.Beschikking_vernietigd))
                     {
+                        waarde.ZetIndicatieBezwaarBeroep();
                         retval.Add(waarde);
                     }
                 }
@@ -30,6 +31,7 @@ namespace Woz.BevragenProxy.Domain
                     if(waarde.Ingangsdatum > val.Ingangsdatum)
                     {
                         retval.Remove(val);
+                        waarde.ZetIndicatieBezwaarBeroep();
                         retval.Add(waarde);
                     }
                 }
@@ -37,6 +39,17 @@ namespace Woz.BevragenProxy.Domain
 
             return retval.OrderByDescending(x => x.Waardepeildatum)
                          .ThenByDescending(x => x.Ingangsdatum);
+        }
+
+        public static void ZetIndicatieBezwaarBeroep(this Waarde waarde)
+        {
+            if(waarde.BeschikkingsStatussen.Any(x => x is StatusBeschikkingEnum.Bezwaar_ingediend
+                                                       or StatusBeschikkingEnum.Beroep_aangetekend
+                                                       or StatusBeschikkingEnum.Hoger_beroep_aangetekend
+                                                       or StatusBeschikkingEnum.Cassatie_ingesteld))
+            {
+                waarde.IndicatieBezwaarBeroep = true;
+            }
         }
     }
 }

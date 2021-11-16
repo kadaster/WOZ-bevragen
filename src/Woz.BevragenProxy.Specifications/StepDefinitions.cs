@@ -49,5 +49,11 @@ namespace Woz.BevragenProxy.Specifications
         {
             actual.Should().BeEquivalentTo(table.CreateSet<DataTransferObjects.Waarde>());
         }
+
+        [Then(@"heeft de waarden van het WOZ-object geen property indicatieBezwaarBeroep")]
+        public void ThenHeeftDeWaardenVanHetWOZ_ObjectGeenProperty()
+        {
+            actual.All(x => x.IndicatieBezwaarBeroep == null).Should().BeTrue();
+        }
     }
 }

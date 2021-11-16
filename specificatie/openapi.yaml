@@ -293,6 +293,15 @@ components:
           items:
             $ref: "#/components/schemas/StatusBeschikkingEnum"
           description: "Een of meer actuele statussen van de vastgestelde waarde"
+        indicatieBezwaarBeroep:
+          description: |
+            Heeft de waarde true als de vastgestelde waarde één van de volgende statussen heeft:
+            
+            - bezwaar_ingediend
+            - beroep_aangetekend
+            - hoger_beroep_aangetekend
+            - cassatie_ingesteld
+          type: boolean
     WozObject:
       type: object
       properties:

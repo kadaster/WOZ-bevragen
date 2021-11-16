@@ -831,6 +831,294 @@ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioCleanup();
         }
         
+        [Xunit.SkippableTheoryAttribute(DisplayName="indicatieBezwaarBeroep wanneer een van de statussen bezwaar, (hoger)beroep of cas" +
+            "satie ingesteld maar niet afgehandeld is.")]
+        [Xunit.TraitAttribute("FeatureTitle", "Bepaal relevante waarden voor een WOZ-object")]
+        [Xunit.TraitAttribute("Description", "indicatieBezwaarBeroep wanneer een van de statussen bezwaar, (hoger)beroep of cas" +
+            "satie ingesteld maar niet afgehandeld is.")]
+        [Xunit.InlineDataAttribute("10", "bezwaar_ingediend", new string[0])]
+        [Xunit.InlineDataAttribute("20", "beroep_aangetekend", new string[0])]
+        [Xunit.InlineDataAttribute("23", "hoger_beroep_aangetekend", new string[0])]
+        [Xunit.InlineDataAttribute("30", "cassatie_ingesteld", new string[0])]
+        public virtual void IndicatieBezwaarBeroepWanneerEenVanDeStatussenBezwaarHogerBeroepOfCassatieIngesteldMaarNietAfgehandeldIs_(string statuscode, string status, string[] exampleTags)
+        {
+            string[] tagsOfScenario = exampleTags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("statuscode", statuscode);
+            argumentsOfScenario.Add("status", status);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("indicatieBezwaarBeroep wanneer een van de statussen bezwaar, (hoger)beroep of cas" +
+                    "satie ingesteld maar niet afgehandeld is.", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 122
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+                TechTalk.SpecFlow.Table table17 = new TechTalk.SpecFlow.Table(new string[] {
+                            "vastgesteldeWaarde",
+                            "waardepeildatum",
+                            "ingangsdatum",
+                            "beschikkingsStatussen"});
+                table17.AddRow(new string[] {
+                            "317000",
+                            "2019-01-01",
+                            "2020-01-01",
+                            string.Format("{0}", status)});
+#line 123
+ testRunner.Given("een WOZ-object bevat de volgende waarden", ((string)(null)), table17, "Gegeven ");
+#line hidden
+#line 126
+ testRunner.When("de relevante waarden zijn bepaald voor het WOZ-object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Als ");
+#line hidden
+                TechTalk.SpecFlow.Table table18 = new TechTalk.SpecFlow.Table(new string[] {
+                            "vastgesteldeWaarde",
+                            "waardepeildatum",
+                            "ingangsdatum",
+                            "beschikkingsStatussen",
+                            "indicatieBezwaarBeroep"});
+                table18.AddRow(new string[] {
+                            "317000",
+                            "2019-01-01",
+                            "2020-01-01",
+                            string.Format("{0}", status),
+                            "true"});
+#line 127
+ testRunner.Then("bevat het WOZ-object de volgende waarden", ((string)(null)), table18, "Dan ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableTheoryAttribute(DisplayName="indicatieBezwaarBeroep wordt niet opgenomen wanneer er geen bezwaar, (hoger)beroe" +
+            "p of cassatie is ingesteld, of deze is afgehandeld.")]
+        [Xunit.TraitAttribute("FeatureTitle", "Bepaal relevante waarden voor een WOZ-object")]
+        [Xunit.TraitAttribute("Description", "indicatieBezwaarBeroep wordt niet opgenomen wanneer er geen bezwaar, (hoger)beroe" +
+            "p of cassatie is ingesteld, of deze is afgehandeld.")]
+        [Xunit.InlineDataAttribute("beschikking_genomen", "01", "beschikking genomen", new string[0])]
+        [Xunit.InlineDataAttribute("beschikking_herzien", "03", "herzieningsbeschikking", new string[0])]
+        [Xunit.InlineDataAttribute("bezwaar_gehandhaafd", "11", "bezwaar afgehandeld, beschikking gehandhaafd", new string[0])]
+        [Xunit.InlineDataAttribute("bezwaar_veranderd", "12", "bezwaar afgehandeld, vastgestelde waarde veranderd", new string[0])]
+        [Xunit.InlineDataAttribute("waarde_ambtshalve_verminderd", "13", "waardeambtshalveverminderd", new string[0])]
+        [Xunit.InlineDataAttribute("beroep_gehandhaafd", "21", "uitspraak beroep, beschikking gehandhaafd", new string[0])]
+        [Xunit.InlineDataAttribute("beroep_veranderd", "22", "uitspraak beroep, vastgestelde waarde veranderd", new string[0])]
+        [Xunit.InlineDataAttribute("hoger_beroep_gehandhaafd", "24", "uitspraak hoger beroep, beschikking gehandhaafd", new string[0])]
+        [Xunit.InlineDataAttribute("hoger_beroep_veranderd", "25", "uitspraak hoger beroep, vastgestelde waarde veranderd", new string[0])]
+        [Xunit.InlineDataAttribute("hoge_raad_gehandhaafd", "31", "arrest Hoge Raad, beschikking gehandhaafd", new string[0])]
+        [Xunit.InlineDataAttribute("hoge_raad_veranderd", "32", "arrest Hoge Raad, vastgestelde waarde veranderd", new string[0])]
+        [Xunit.InlineDataAttribute("hoge_raad_geding_verwezen", "33", "arrestHogeRaad,gedingverwezen", new string[0])]
+        [Xunit.InlineDataAttribute("voorlopige_aanslag", "99", "waarde te gebruiken voor voorlopige aanslag", new string[0])]
+        public virtual void IndicatieBezwaarBeroepWordtNietOpgenomenWanneerErGeenBezwaarHogerBeroepOfCassatieIsIngesteldOfDezeIsAfgehandeld_(string status_Enum, string statuscode, string status, string[] exampleTags)
+        {
+            string[] tagsOfScenario = exampleTags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("status_enum", status_Enum);
+            argumentsOfScenario.Add("statuscode", statuscode);
+            argumentsOfScenario.Add("status", status);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("indicatieBezwaarBeroep wordt niet opgenomen wanneer er geen bezwaar, (hoger)beroe" +
+                    "p of cassatie is ingesteld, of deze is afgehandeld.", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 138
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+                TechTalk.SpecFlow.Table table19 = new TechTalk.SpecFlow.Table(new string[] {
+                            "vastgesteldeWaarde",
+                            "waardepeildatum",
+                            "ingangsdatum",
+                            "beschikkingsStatussen"});
+                table19.AddRow(new string[] {
+                            "317000",
+                            "2019-01-01",
+                            "2020-01-01",
+                            string.Format("{0}", status_Enum)});
+#line 139
+ testRunner.Given("een WOZ-object bevat de volgende waarden", ((string)(null)), table19, "Gegeven ");
+#line hidden
+#line 142
+ testRunner.When("de relevante waarden zijn bepaald voor het WOZ-object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Als ");
+#line hidden
+#line 143
+ testRunner.Then("heeft de waarden van het WOZ-object geen property indicatieBezwaarBeroep", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dan ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="indicatieBezwaarBeroep wanneer er meerdere statussen zijn bij een waardepeildatum" +
+            " en ingangsdatum")]
+        [Xunit.TraitAttribute("FeatureTitle", "Bepaal relevante waarden voor een WOZ-object")]
+        [Xunit.TraitAttribute("Description", "indicatieBezwaarBeroep wanneer er meerdere statussen zijn bij een waardepeildatum" +
+            " en ingangsdatum")]
+        public virtual void IndicatieBezwaarBeroepWanneerErMeerdereStatussenZijnBijEenWaardepeildatumEnIngangsdatum()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("indicatieBezwaarBeroep wanneer er meerdere statussen zijn bij een waardepeildatum" +
+                    " en ingangsdatum", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 161
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+                TechTalk.SpecFlow.Table table20 = new TechTalk.SpecFlow.Table(new string[] {
+                            "vastgesteldeWaarde",
+                            "waardepeildatum",
+                            "ingangsdatum",
+                            "beschikkingsStatussen"});
+                table20.AddRow(new string[] {
+                            "437000",
+                            "2019-01-01",
+                            "2020-01-01",
+                            "beroep_gehandhaafd, beroep_aangetekend"});
+                table20.AddRow(new string[] {
+                            "392000",
+                            "2018-01-01",
+                            "2019-01-01",
+                            "hoger_beroep_aangetekend, beschikking_genomen"});
+#line 162
+ testRunner.Given("een WOZ-object bevat de volgende waarden", ((string)(null)), table20, "Gegeven ");
+#line hidden
+#line 166
+ testRunner.When("de relevante waarden zijn bepaald voor het WOZ-object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Als ");
+#line hidden
+                TechTalk.SpecFlow.Table table21 = new TechTalk.SpecFlow.Table(new string[] {
+                            "vastgesteldeWaarde",
+                            "waardepeildatum",
+                            "ingangsdatum",
+                            "beschikkingsStatussen",
+                            "indicatieBezwaarBeroep"});
+                table21.AddRow(new string[] {
+                            "437000",
+                            "2019-01-01",
+                            "2020-01-01",
+                            "beroep_gehandhaafd, beroep_aangetekend",
+                            "true"});
+                table21.AddRow(new string[] {
+                            "392000",
+                            "2018-01-01",
+                            "2019-01-01",
+                            "hoger_beroep_aangetekend, beschikking_genomen",
+                            "true"});
+#line 167
+ testRunner.Then("bevat het WOZ-object de volgende waarden", ((string)(null)), table21, "Dan ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="indicatieBezwaarBeroep wanneer er bezwaar, (hoger)beroep of cassatie loopt bij ni" +
+            "et de meest recente ingangsdatum")]
+        [Xunit.TraitAttribute("FeatureTitle", "Bepaal relevante waarden voor een WOZ-object")]
+        [Xunit.TraitAttribute("Description", "indicatieBezwaarBeroep wanneer er bezwaar, (hoger)beroep of cassatie loopt bij ni" +
+            "et de meest recente ingangsdatum")]
+        public virtual void IndicatieBezwaarBeroepWanneerErBezwaarHogerBeroepOfCassatieLooptBijNietDeMeestRecenteIngangsdatum()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("indicatieBezwaarBeroep wanneer er bezwaar, (hoger)beroep of cassatie loopt bij ni" +
+                    "et de meest recente ingangsdatum", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 172
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+                TechTalk.SpecFlow.Table table22 = new TechTalk.SpecFlow.Table(new string[] {
+                            "vastgesteldeWaarde",
+                            "waardepeildatum",
+                            "ingangsdatum",
+                            "beschikkingsStatussen"});
+                table22.AddRow(new string[] {
+                            "215000",
+                            "2018-01-01",
+                            "2019-05-01",
+                            "beschikking_genomen"});
+                table22.AddRow(new string[] {
+                            "215000",
+                            "2018-01-01",
+                            "2019-01-01",
+                            "beroep_aangetekend"});
+#line 173
+ testRunner.Given("een WOZ-object bevat de volgende waarden", ((string)(null)), table22, "Gegeven ");
+#line hidden
+#line 177
+ testRunner.When("de relevante waarden zijn bepaald voor het WOZ-object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Als ");
+#line hidden
+                TechTalk.SpecFlow.Table table23 = new TechTalk.SpecFlow.Table(new string[] {
+                            "vastgesteldeWaarde",
+                            "waardepeildatum",
+                            "ingangsdatum",
+                            "beschikkingsStatussen"});
+                table23.AddRow(new string[] {
+                            "215000",
+                            "2018-01-01",
+                            "2019-05-01",
+                            "beschikking_genomen"});
+#line 178
+ testRunner.Then("bevat het WOZ-object de volgende waarden", ((string)(null)), table23, "Dan ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
         [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
         [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
         public class FixtureData : System.IDisposable
