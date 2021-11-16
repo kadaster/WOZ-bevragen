@@ -2,7 +2,7 @@
   "Routes": [
     {
       "UpstreamPathTemplate": "/{everything}",
-      "DownstreamPathTemplate": "/lvwoz-eto-apikey/api/v1/{everything}",
+      "DownstreamPathTemplate": "/lvwoz-eto/huidigebevragingen/{everything}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
