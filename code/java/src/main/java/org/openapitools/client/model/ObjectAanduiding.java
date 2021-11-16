@@ -29,7 +29,7 @@ import org.openapitools.client.model.ObjectAanduidingAllOf;
 /**
  * ObjectAanduiding
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-29T15:06:01.841Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-09T07:56:59.068811Z[Etc/UTC]")
 public class ObjectAanduiding {
   public static final String SERIALIZED_NAME_STRAAT = "straat";
   @SerializedName(SERIALIZED_NAME_STRAAT)
@@ -271,7 +271,6 @@ public class ObjectAanduiding {
   public int hashCode() {
     return Objects.hash(straat, huisnummer, huisletter, huisnummertoevoeging, postcode, woonplaats, locatieomschrijving, nummeraanduidingIdentificatie);
   }
-
 
   @Override
   public String toString() {

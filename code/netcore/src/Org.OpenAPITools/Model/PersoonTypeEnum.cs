@@ -26,24 +26,22 @@ using OpenAPIDateConverter = Org.OpenAPITools.Client.OpenAPIDateConverter;
 namespace Org.OpenAPITools.Model
 {
     /// <summary>
-    /// Defines PersoonType_enum
+    /// Defines PersoonTypeEnum
     /// </summary>
-    
     [JsonConverter(typeof(StringEnumConverter))]
-    
     public enum PersoonTypeEnum
     {
         /// <summary>
-        /// Enum Natuurlijkpersoon for value: natuurlijk_persoon
+        /// Enum NatuurlijkPersoon for value: natuurlijk_persoon
         /// </summary>
         [EnumMember(Value = "natuurlijk_persoon")]
-        Natuurlijkpersoon = 1,
+        NatuurlijkPersoon = 1,
 
         /// <summary>
-        /// Enum Nietnatuurlijkpersoon for value: niet_natuurlijk_persoon
+        /// Enum NietNatuurlijkPersoon for value: niet_natuurlijk_persoon
         /// </summary>
         [EnumMember(Value = "niet_natuurlijk_persoon")]
-        Nietnatuurlijkpersoon = 2,
+        NietNatuurlijkPersoon = 2,
 
         /// <summary>
         /// Enum Vestiging for value: vestiging

@@ -28,7 +28,7 @@ import org.openapitools.client.model.PersoonTypeEnum;
 /**
  * Belanghebbende
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-29T15:06:01.841Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-09T07:56:59.068811Z[Etc/UTC]")
 public class Belanghebbende {
   public static final String SERIALIZED_NAME_BURGERSERVICENUMMER = "burgerservicenummer";
   @SerializedName(SERIALIZED_NAME_BURGERSERVICENUMMER)
@@ -242,7 +242,6 @@ public class Belanghebbende {
   public int hashCode() {
     return Objects.hash(burgerservicenummer, geheimhoudingPersoonsgegevens, kvkNummer, naam, rsin, type, vestigingsnummer);
   }
-
 
   @Override
   public String toString() {

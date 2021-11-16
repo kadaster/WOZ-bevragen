@@ -35,13 +35,15 @@ namespace Org.OpenAPITools.Model
         /// Initializes a new instance of the <see cref="Waarde" /> class.
         /// </summary>
         /// <param name="vastgesteldeWaarde">Waarde van het WOZ-object op de peildatum in Euro.</param>
-        /// <param name="indicatieBezwaarBeroep">Bij waarde true is er een lopende zaak voor bezwaar, beroep, hoger beroep of cassatie.</param>
         /// <param name="waardepeildatum">Datum waarvoor de vastgestelde waarde geldt.</param>
-        public Waarde(int vastgesteldeWaarde = default(int), bool indicatieBezwaarBeroep = default(bool), DateTime waardepeildatum = default(DateTime))
+        /// <param name="ingangsdatum">Datum vanaf wanneer de vastgestelde waarde geldt.</param>
+        /// <param name="beschikkingsStatussen">Een of meer actuele statussen van de vastgestelde waarde.</param>
+        public Waarde(int vastgesteldeWaarde = default(int), DateTime waardepeildatum = default(DateTime), DateTime ingangsdatum = default(DateTime), List<StatusBeschikkingEnum> beschikkingsStatussen = default(List<StatusBeschikkingEnum>))
         {
             this.VastgesteldeWaarde = vastgesteldeWaarde;
-            this.IndicatieBezwaarBeroep = indicatieBezwaarBeroep;
             this.Waardepeildatum = waardepeildatum;
+            this.Ingangsdatum = ingangsdatum;
+            this.BeschikkingsStatussen = beschikkingsStatussen;
         }
 
         /// <summary>
@@ -52,19 +54,27 @@ namespace Org.OpenAPITools.Model
         public int VastgesteldeWaarde { get; set; }
 
         /// <summary>
-        /// Bij waarde true is er een lopende zaak voor bezwaar, beroep, hoger beroep of cassatie
-        /// </summary>
-        /// <value>Bij waarde true is er een lopende zaak voor bezwaar, beroep, hoger beroep of cassatie</value>
-        [DataMember(Name = "indicatieBezwaarBeroep", EmitDefaultValue = false)]
-        public bool IndicatieBezwaarBeroep { get; set; }
-
-        /// <summary>
         /// Datum waarvoor de vastgestelde waarde geldt
         /// </summary>
         /// <value>Datum waarvoor de vastgestelde waarde geldt</value>
         [DataMember(Name = "waardepeildatum", EmitDefaultValue = false)]
         [JsonConverter(typeof(OpenAPIDateConverter))]
         public DateTime Waardepeildatum { get; set; }
+
+        /// <summary>
+        /// Datum vanaf wanneer de vastgestelde waarde geldt
+        /// </summary>
+        /// <value>Datum vanaf wanneer de vastgestelde waarde geldt</value>
+        [DataMember(Name = "ingangsdatum", EmitDefaultValue = false)]
+        [JsonConverter(typeof(OpenAPIDateConverter))]
+        public DateTime Ingangsdatum { get; set; }
+
+        /// <summary>
+        /// Een of meer actuele statussen van de vastgestelde waarde
+        /// </summary>
+        /// <value>Een of meer actuele statussen van de vastgestelde waarde</value>
+        [DataMember(Name = "beschikkingsStatussen", EmitDefaultValue = false)]
+        public List<StatusBeschikkingEnum> BeschikkingsStatussen { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -75,8 +85,9 @@ namespace Org.OpenAPITools.Model
             var sb = new StringBuilder();
             sb.Append("class Waarde {\n");
             sb.Append("  VastgesteldeWaarde: ").Append(VastgesteldeWaarde).Append("\n");
-            sb.Append("  IndicatieBezwaarBeroep: ").Append(IndicatieBezwaarBeroep).Append("\n");
             sb.Append("  Waardepeildatum: ").Append(Waardepeildatum).Append("\n");
+            sb.Append("  Ingangsdatum: ").Append(Ingangsdatum).Append("\n");
+            sb.Append("  BeschikkingsStatussen: ").Append(BeschikkingsStatussen).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -116,13 +127,20 @@ namespace Org.OpenAPITools.Model
                     this.VastgesteldeWaarde.Equals(input.VastgesteldeWaarde)
                 ) && 
                 (
-                    this.IndicatieBezwaarBeroep == input.IndicatieBezwaarBeroep ||
-                    this.IndicatieBezwaarBeroep.Equals(input.IndicatieBezwaarBeroep)
-                ) && 
-                (
                     this.Waardepeildatum == input.Waardepeildatum ||
                     (this.Waardepeildatum != null &&
                     this.Waardepeildatum.Equals(input.Waardepeildatum))
+                ) && 
+                (
+                    this.Ingangsdatum == input.Ingangsdatum ||
+                    (this.Ingangsdatum != null &&
+                    this.Ingangsdatum.Equals(input.Ingangsdatum))
+                ) && 
+                (
+                    this.BeschikkingsStatussen == input.BeschikkingsStatussen ||
+                    this.BeschikkingsStatussen != null &&
+                    input.BeschikkingsStatussen != null &&
+                    this.BeschikkingsStatussen.SequenceEqual(input.BeschikkingsStatussen)
                 );
         }
 
@@ -136,9 +154,12 @@ namespace Org.OpenAPITools.Model
             {
                 int hashCode = 41;
                 hashCode = hashCode * 59 + this.VastgesteldeWaarde.GetHashCode();
-                hashCode = hashCode * 59 + this.IndicatieBezwaarBeroep.GetHashCode();
                 if (this.Waardepeildatum != null)
                     hashCode = hashCode * 59 + this.Waardepeildatum.GetHashCode();
+                if (this.Ingangsdatum != null)
+                    hashCode = hashCode * 59 + this.Ingangsdatum.GetHashCode();
+                if (this.BeschikkingsStatussen != null)
+                    hashCode = hashCode * 59 + this.BeschikkingsStatussen.GetHashCode();
                 return hashCode;
             }
         }
@@ -148,7 +169,7 @@ namespace Org.OpenAPITools.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -1,4 +1,4 @@
-/* 
+/*
  * Waardering onroerende zaken
  *
  * Deze API levert actuele gegevens over WOZ-objecten 
@@ -39,12 +39,12 @@ namespace Org.OpenAPITools.Model
         /// <param name="belanghebbendeGebruiker">belanghebbendeGebruiker.</param>
         /// <param name="grondoppervlakte">De oppervlakte grond in vierkante meters die behoort tot het WOZ-object..</param>
         /// <param name="identificatie">Unieke identificatie van het WOZ-object.</param>
-        /// <param name="kadastraalOnroerendeZaakIdentificaties">De identificaties van kadastraal onroerende zaken die geheel of gedeeltelijk deel uitmaken van het WOZ-object.</param>
+        /// <param name="kadastraalOnroerendeZaken">kadastraalOnroerendeZaken.</param>
         /// <param name="pandIdentificaties">pandIdentificaties.</param>
         /// <param name="verantwoordelijkeGemeente">verantwoordelijkeGemeente.</param>
         /// <param name="waarden">waarden.</param>
         /// <param name="links">links.</param>
-        public WozObjectHal(ObjectAanduiding aanduiding = default(ObjectAanduiding), List<string> adresseerbaarObjectIdentificaties = default(List<string>), BelanghebbendeEigenaar belanghebbendeEigenaar = default(BelanghebbendeEigenaar), Belanghebbende belanghebbendeGebruiker = default(Belanghebbende), int grondoppervlakte = default(int), string identificatie = default(string), List<string> kadastraalOnroerendeZaakIdentificaties = default(List<string>), List<string> pandIdentificaties = default(List<string>), Waardetabel verantwoordelijkeGemeente = default(Waardetabel), List<Waarde> waarden = default(List<Waarde>), WozObjectBasisLinks links = default(WozObjectBasisLinks))
+        public WozObjectHal(ObjectAanduiding aanduiding = default(ObjectAanduiding), List<string> adresseerbaarObjectIdentificaties = default(List<string>), Belanghebbende belanghebbendeEigenaar = default(Belanghebbende), Belanghebbende belanghebbendeGebruiker = default(Belanghebbende), int grondoppervlakte = default(int), string identificatie = default(string), List<KadastraalOnroerendeZaak> kadastraalOnroerendeZaken = default(List<KadastraalOnroerendeZaak>), List<string> pandIdentificaties = default(List<string>), Waardetabel verantwoordelijkeGemeente = default(Waardetabel), List<Waarde> waarden = default(List<Waarde>), WozObjectBasisLinks links = default(WozObjectBasisLinks))
         {
             this.Aanduiding = aanduiding;
             this.AdresseerbaarObjectIdentificaties = adresseerbaarObjectIdentificaties;
@@ -52,13 +52,13 @@ namespace Org.OpenAPITools.Model
             this.BelanghebbendeGebruiker = belanghebbendeGebruiker;
             this.Grondoppervlakte = grondoppervlakte;
             this.Identificatie = identificatie;
-            this.KadastraalOnroerendeZaakIdentificaties = kadastraalOnroerendeZaakIdentificaties;
+            this.KadastraalOnroerendeZaken = kadastraalOnroerendeZaken;
             this.PandIdentificaties = pandIdentificaties;
             this.VerantwoordelijkeGemeente = verantwoordelijkeGemeente;
             this.Waarden = waarden;
             this.Links = links;
         }
-        
+
         /// <summary>
         /// Gets or Sets Aanduiding
         /// </summary>
@@ -76,7 +76,7 @@ namespace Org.OpenAPITools.Model
         /// Gets or Sets BelanghebbendeEigenaar
         /// </summary>
         [DataMember(Name="belanghebbendeEigenaar", EmitDefaultValue=false)]
-        public BelanghebbendeEigenaar BelanghebbendeEigenaar { get; set; }
+        public Belanghebbende BelanghebbendeEigenaar { get; set; }
 
         /// <summary>
         /// Gets or Sets BelanghebbendeGebruiker
@@ -99,11 +99,10 @@ namespace Org.OpenAPITools.Model
         public string Identificatie { get; set; }
 
         /// <summary>
-        /// De identificaties van kadastraal onroerende zaken die geheel of gedeeltelijk deel uitmaken van het WOZ-object
+        /// Gets or Sets KadastraalOnroerendeZaken
         /// </summary>
-        /// <value>De identificaties van kadastraal onroerende zaken die geheel of gedeeltelijk deel uitmaken van het WOZ-object</value>
-        [DataMember(Name="kadastraalOnroerendeZaakIdentificaties", EmitDefaultValue=false)]
-        public List<string> KadastraalOnroerendeZaakIdentificaties { get; set; }
+        [DataMember(Name="kadastraalOnroerendeZaken", EmitDefaultValue=false)]
+        public List<KadastraalOnroerendeZaak> KadastraalOnroerendeZaken { get; set; }
 
         /// <summary>
         /// Gets or Sets PandIdentificaties
@@ -143,7 +142,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  BelanghebbendeGebruiker: ").Append(BelanghebbendeGebruiker).Append("\n");
             sb.Append("  Grondoppervlakte: ").Append(Grondoppervlakte).Append("\n");
             sb.Append("  Identificatie: ").Append(Identificatie).Append("\n");
-            sb.Append("  KadastraalOnroerendeZaakIdentificaties: ").Append(KadastraalOnroerendeZaakIdentificaties).Append("\n");
+            sb.Append("  KadastraalOnroerendeZaken: ").Append(KadastraalOnroerendeZaken).Append("\n");
             sb.Append("  PandIdentificaties: ").Append(PandIdentificaties).Append("\n");
             sb.Append("  VerantwoordelijkeGemeente: ").Append(VerantwoordelijkeGemeente).Append("\n");
             sb.Append("  Waarden: ").Append(Waarden).Append("\n");
@@ -151,7 +150,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -214,10 +213,10 @@ namespace Org.OpenAPITools.Model
                     this.Identificatie.Equals(input.Identificatie))
                 ) && 
                 (
-                    this.KadastraalOnroerendeZaakIdentificaties == input.KadastraalOnroerendeZaakIdentificaties ||
-                    this.KadastraalOnroerendeZaakIdentificaties != null &&
-                    input.KadastraalOnroerendeZaakIdentificaties != null &&
-                    this.KadastraalOnroerendeZaakIdentificaties.SequenceEqual(input.KadastraalOnroerendeZaakIdentificaties)
+                    this.KadastraalOnroerendeZaken == input.KadastraalOnroerendeZaken ||
+                    this.KadastraalOnroerendeZaken != null &&
+                    input.KadastraalOnroerendeZaken != null &&
+                    this.KadastraalOnroerendeZaken.SequenceEqual(input.KadastraalOnroerendeZaken)
                 ) && 
                 (
                     this.PandIdentificaties == input.PandIdentificaties ||
@@ -264,8 +263,8 @@ namespace Org.OpenAPITools.Model
                     hashCode = hashCode * 59 + this.Grondoppervlakte.GetHashCode();
                 if (this.Identificatie != null)
                     hashCode = hashCode * 59 + this.Identificatie.GetHashCode();
-                if (this.KadastraalOnroerendeZaakIdentificaties != null)
-                    hashCode = hashCode * 59 + this.KadastraalOnroerendeZaakIdentificaties.GetHashCode();
+                if (this.KadastraalOnroerendeZaken != null)
+                    hashCode = hashCode * 59 + this.KadastraalOnroerendeZaken.GetHashCode();
                 if (this.PandIdentificaties != null)
                     hashCode = hashCode * 59 + this.PandIdentificaties.GetHashCode();
                 if (this.VerantwoordelijkeGemeente != null)

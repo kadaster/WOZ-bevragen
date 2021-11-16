@@ -23,24 +23,24 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.openapitools.client.model.HalCollectionLinks;
+import org.openapitools.client.model.HalPaginationLinks;
 import org.openapitools.client.model.WozObjectHalCollectieEmbedded;
 
 /**
  * WozObjectHalCollectie
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-29T15:06:01.841Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-09T07:56:59.068811Z[Etc/UTC]")
 public class WozObjectHalCollectie {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
-  private HalCollectionLinks links;
+  private HalPaginationLinks links;
 
   public static final String SERIALIZED_NAME_EMBEDDED = "_embedded";
   @SerializedName(SERIALIZED_NAME_EMBEDDED)
   private WozObjectHalCollectieEmbedded embedded;
 
 
-  public WozObjectHalCollectie links(HalCollectionLinks links) {
+  public WozObjectHalCollectie links(HalPaginationLinks links) {
     
     this.links = links;
     return this;
@@ -53,12 +53,12 @@ public class WozObjectHalCollectie {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public HalCollectionLinks getLinks() {
+  public HalPaginationLinks getLinks() {
     return links;
   }
 
 
-  public void setLinks(HalCollectionLinks links) {
+  public void setLinks(HalPaginationLinks links) {
     this.links = links;
   }
 
@@ -103,7 +103,6 @@ public class WozObjectHalCollectie {
   public int hashCode() {
     return Objects.hash(links, embedded);
   }
-
 
   @Override
   public String toString() {

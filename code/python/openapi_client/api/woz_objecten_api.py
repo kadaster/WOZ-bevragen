@@ -11,7 +11,7 @@
 import re  # noqa: F401
 import sys  # noqa: F401
 
-from openapi_client.api_client import ApiClient, Endpoint
+from openapi_client.api_client import ApiClient, Endpoint as _Endpoint
 from openapi_client.model_utils import (  # noqa: F401
     check_allowed_values,
     check_validations,
@@ -38,75 +38,7 @@ class WOZObjectenApi(object):
         if api_client is None:
             api_client = ApiClient()
         self.api_client = api_client
-
-        def __raadpleeg_actueel_wozobject(
-            self,
-            identificatie,
-            **kwargs
-        ):
-            """Raadpleeg een WOZ-object  # noqa: E501
-
-            Raadpleeg de actuele eigenschappen van een WOZ-object  # noqa: E501
-            This method makes a synchronous HTTP request by default. To make an
-            asynchronous HTTP request, please pass async_req=True
-
-            >>> thread = api.raadpleeg_actueel_wozobject(identificatie, async_req=True)
-            >>> result = thread.get()
-
-            Args:
-                identificatie (str): Unieke identificatie van een WOZ-object
-
-            Keyword Args:
-                fields (str): Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.2.0/features/fields.feature). [optional]
-                _return_http_data_only (bool): response data without head status
-                    code and headers. Default is True.
-                _preload_content (bool): if False, the urllib3.HTTPResponse object
-                    will be returned without reading/decoding response data.
-                    Default is True.
-                _request_timeout (float/tuple): timeout setting for this request. If one
-                    number provided, it will be total request timeout. It can also
-                    be a pair (tuple) of (connection, read) timeouts.
-                    Default is None.
-                _check_input_type (bool): specifies if type checking
-                    should be done one the data sent to the server.
-                    Default is True.
-                _check_return_type (bool): specifies if type checking
-                    should be done one the data received from the server.
-                    Default is True.
-                _host_index (int/None): specifies the index of the server
-                    that we want to use.
-                    Default is read from the configuration.
-                async_req (bool): execute request asynchronously
-
-            Returns:
-                WozObjectHal
-                    If the method is called asynchronously, returns the request
-                    thread.
-            """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
-            )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index')
-            kwargs['identificatie'] = \
-                identificatie
-            return self.call_with_http_info(**kwargs)
-
-        self.raadpleeg_actueel_wozobject = Endpoint(
+        self.raadpleeg_actueel_wozobject_endpoint = _Endpoint(
             settings={
                 'response_type': (WozObjectHal,),
                 'auth': [],
@@ -128,10 +60,17 @@ class WOZObjectenApi(object):
                 'enum': [
                 ],
                 'validation': [
+                    'identificatie',
                 ]
             },
             root_map={
                 'validations': {
+                    ('identificatie',): {
+
+                        'regex': {
+                            'pattern': r'^[0-9]{12}$',  # noqa: E501
+                        },
+                    },
                 },
                 'allowed_values': {
                 },
@@ -159,79 +98,9 @@ class WOZObjectenApi(object):
                 ],
                 'content_type': [],
             },
-            api_client=api_client,
-            callable=__raadpleeg_actueel_wozobject
+            api_client=api_client
         )
-
-        def __zoek_actuele_wozobjecten(
-            self,
-            **kwargs
-        ):
-            """Zoek WOZ-objecten  # noqa: E501
-
-            Zoek WOZ-objecten op eigenaar of adres. Het resultaat zijn de actuele gegevens van de gevonden objecten.  # noqa: E501
-            This method makes a synchronous HTTP request by default. To make an
-            asynchronous HTTP request, please pass async_req=True
-
-            >>> thread = api.zoek_actuele_wozobjecten(async_req=True)
-            >>> result = thread.get()
-
-
-            Keyword Args:
-                rsin (str): Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven niet-natuurlijk persoon. [optional]
-                kvk_nummer (str): Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven maatschappelijke activiteit of een van de daaronder vallende ondernemingen en vestigingen. [optional]
-                adresseerbaar_object_identificatie (str): Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is of waar het object zijn aanduiding aan ontleent. [optional]
-                nummeraanduiding_identificatie (str): Zoek op de BAG identificatie van een nummeraanduiding (adres) waarmee het WOZ-object wordt aangeduid. [optional]
-                postcode (str): Zoek WOZ-objecten met postcode. [optional]
-                huisnummer (int): Zoek WOZ-objecten met huisnummer\". [optional]
-                fields (str): Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.2.0/features/fields.feature). [optional]
-                _return_http_data_only (bool): response data without head status
-                    code and headers. Default is True.
-                _preload_content (bool): if False, the urllib3.HTTPResponse object
-                    will be returned without reading/decoding response data.
-                    Default is True.
-                _request_timeout (float/tuple): timeout setting for this request. If one
-                    number provided, it will be total request timeout. It can also
-                    be a pair (tuple) of (connection, read) timeouts.
-                    Default is None.
-                _check_input_type (bool): specifies if type checking
-                    should be done one the data sent to the server.
-                    Default is True.
-                _check_return_type (bool): specifies if type checking
-                    should be done one the data received from the server.
-                    Default is True.
-                _host_index (int/None): specifies the index of the server
-                    that we want to use.
-                    Default is read from the configuration.
-                async_req (bool): execute request asynchronously
-
-            Returns:
-                WozObjectHalCollectie
-                    If the method is called asynchronously, returns the request
-                    thread.
-            """
-            kwargs['async_req'] = kwargs.get(
-                'async_req', False
-            )
-            kwargs['_return_http_data_only'] = kwargs.get(
-                '_return_http_data_only', True
-            )
-            kwargs['_preload_content'] = kwargs.get(
-                '_preload_content', True
-            )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
-            kwargs['_check_input_type'] = kwargs.get(
-                '_check_input_type', True
-            )
-            kwargs['_check_return_type'] = kwargs.get(
-                '_check_return_type', True
-            )
-            kwargs['_host_index'] = kwargs.get('_host_index')
-            return self.call_with_http_info(**kwargs)
-
-        self.zoek_actuele_wozobjecten = Endpoint(
+        self.zoek_actuele_wozobjecten_endpoint = _Endpoint(
             settings={
                 'response_type': (WozObjectHalCollectie,),
                 'auth': [],
@@ -248,7 +117,11 @@ class WOZObjectenApi(object):
                     'nummeraanduiding_identificatie',
                     'postcode',
                     'huisnummer',
+                    'huisnummertoevoeging',
+                    'huisletter',
                     'fields',
+                    'page',
+                    'page_size',
                 ],
                 'required': [],
                 'nullable': [
@@ -256,21 +129,74 @@ class WOZObjectenApi(object):
                 'enum': [
                 ],
                 'validation': [
+                    'rsin',
+                    'kvk_nummer',
+                    'adresseerbaar_object_identificatie',
+                    'nummeraanduiding_identificatie',
                     'postcode',
                     'huisnummer',
+                    'huisnummertoevoeging',
+                    'huisletter',
+                    'page',
+                    'page_size',
                 ]
             },
             root_map={
                 'validations': {
+                    ('rsin',): {
+
+                        'regex': {
+                            'pattern': r'^[0-9]{9}$',  # noqa: E501
+                        },
+                    },
+                    ('kvk_nummer',): {
+
+                        'regex': {
+                            'pattern': r'^[0-9]{8}$',  # noqa: E501
+                        },
+                    },
+                    ('adresseerbaar_object_identificatie',): {
+
+                        'regex': {
+                            'pattern': r'^[0-9]{16}$',  # noqa: E501
+                        },
+                    },
+                    ('nummeraanduiding_identificatie',): {
+
+                        'regex': {
+                            'pattern': r'^[0-9]{16}$',  # noqa: E501
+                        },
+                    },
                     ('postcode',): {
 
                         'regex': {
-                            'pattern': r'^[1-9][0-9][0-9][0-9][A-Z][A-Z]$',  # noqa: E501
+                            'pattern': r'^[1-9][0-9]{3}[A-Z]{2}$',  # noqa: E501
                         },
                     },
                     ('huisnummer',): {
 
                         'inclusive_maximum': 99999,
+                        'inclusive_minimum': 1,
+                    },
+                    ('huisnummertoevoeging',): {
+
+                        'regex': {
+                            'pattern': r'^[0-9a-zA-Z]{1,4}$',  # noqa: E501
+                        },
+                    },
+                    ('huisletter',): {
+
+                        'regex': {
+                            'pattern': r'^[a-zA-Z]$',  # noqa: E501
+                        },
+                    },
+                    ('page',): {
+
+                        'inclusive_minimum': 1,
+                    },
+                    ('page_size',): {
+
+                        'inclusive_maximum': 100,
                         'inclusive_minimum': 1,
                     },
                 },
@@ -289,8 +215,16 @@ class WOZObjectenApi(object):
                         (str,),
                     'huisnummer':
                         (int,),
+                    'huisnummertoevoeging':
+                        (str,),
+                    'huisletter':
+                        (str,),
                     'fields':
                         (str,),
+                    'page':
+                        (int,),
+                    'page_size':
+                        (int,),
                 },
                 'attribute_map': {
                     'rsin': 'rsin',
@@ -299,7 +233,11 @@ class WOZObjectenApi(object):
                     'nummeraanduiding_identificatie': 'nummeraanduidingIdentificatie',
                     'postcode': 'postcode',
                     'huisnummer': 'huisnummer',
+                    'huisnummertoevoeging': 'huisnummertoevoeging',
+                    'huisletter': 'huisletter',
                     'fields': 'fields',
+                    'page': 'page',
+                    'page_size': 'pageSize',
                 },
                 'location_map': {
                     'rsin': 'query',
@@ -308,7 +246,11 @@ class WOZObjectenApi(object):
                     'nummeraanduiding_identificatie': 'query',
                     'postcode': 'query',
                     'huisnummer': 'query',
+                    'huisnummertoevoeging': 'query',
+                    'huisletter': 'query',
                     'fields': 'query',
+                    'page': 'query',
+                    'page_size': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -320,6 +262,145 @@ class WOZObjectenApi(object):
                 ],
                 'content_type': [],
             },
-            api_client=api_client,
-            callable=__zoek_actuele_wozobjecten
+            api_client=api_client
         )
+
+    def raadpleeg_actueel_wozobject(
+        self,
+        identificatie,
+        **kwargs
+    ):
+        """Raadpleeg een WOZ-object  # noqa: E501
+
+        Raadpleeg de actuele eigenschappen van een WOZ-object  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.raadpleeg_actueel_wozobject(identificatie, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            identificatie (str): Unieke identificatie van een WOZ-object
+
+        Keyword Args:
+            fields (str): Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.2.0/features/fields.feature). [optional]
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            WozObjectHal
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['identificatie'] = \
+            identificatie
+        return self.raadpleeg_actueel_wozobject_endpoint.call_with_http_info(**kwargs)
+
+    def zoek_actuele_wozobjecten(
+        self,
+        **kwargs
+    ):
+        """Zoek WOZ-objecten  # noqa: E501
+
+        Zoek WOZ-objecten op eigenaar of adres. Het resultaat zijn de actuele gegevens van de gevonden objecten.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.zoek_actuele_wozobjecten(async_req=True)
+        >>> result = thread.get()
+
+
+        Keyword Args:
+            rsin (str): Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven niet-natuurlijk persoon. [optional]
+            kvk_nummer (str): Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven maatschappelijke activiteit of een van de daaronder vallende ondernemingen en vestigingen. [optional]
+            adresseerbaar_object_identificatie (str): Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is. [optional]
+            nummeraanduiding_identificatie (str): Zoek op de BAG identificatie van een nummeraanduiding (adres) waarmee het WOZ-object wordt aangeduid. [optional]
+            postcode (str): Zoek WOZ-objecten met postcode, in combinatie met huisnummer en eventueel met huisletter en/of huisnummertoevoeging. [optional]
+            huisnummer (int): Zoek WOZ-objecten met huisnummer, in combinatie met postcode en eventueel met huisletter en/of huisnummertoevoeging\". [optional]
+            huisnummertoevoeging (str): Zoek met een huisnummertoevoeging, in combinatie met postcode en huisnummer en eventueel huisletter. Dit is een toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter. Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging . [optional]
+            huisletter (str): Zoek met een huisletter, in combinatie met postcode en huisnummer en eventueel huisnummertoevoeging. Dit is een toevoeging aan een huisnummer en huisnummertoevoeging. Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging . [optional]
+            fields (str): Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.2.0/features/fields.feature). [optional]
+            page (int): Pagina nummer. [optional] if omitted the server will use the default value of 1
+            page_size (int): [optional] if omitted the server will use the default value of 20
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            WozObjectHalCollectie
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        return self.zoek_actuele_wozobjecten_endpoint.call_with_http_info(**kwargs)
+

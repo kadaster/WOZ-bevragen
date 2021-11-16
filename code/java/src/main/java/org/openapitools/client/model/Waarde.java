@@ -24,24 +24,31 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+import org.openapitools.client.model.StatusBeschikkingEnum;
 
 /**
  * Waarde op de meest recente beschikking met betrekking tot de peildatum
  */
 @ApiModel(description = "Waarde op de meest recente beschikking met betrekking tot de peildatum")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-29T15:06:01.841Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-09T07:56:59.068811Z[Etc/UTC]")
 public class Waarde {
   public static final String SERIALIZED_NAME_VASTGESTELDE_WAARDE = "vastgesteldeWaarde";
   @SerializedName(SERIALIZED_NAME_VASTGESTELDE_WAARDE)
   private Integer vastgesteldeWaarde;
 
-  public static final String SERIALIZED_NAME_INDICATIE_BEZWAAR_BEROEP = "indicatieBezwaarBeroep";
-  @SerializedName(SERIALIZED_NAME_INDICATIE_BEZWAAR_BEROEP)
-  private Boolean indicatieBezwaarBeroep;
-
   public static final String SERIALIZED_NAME_WAARDEPEILDATUM = "waardepeildatum";
   @SerializedName(SERIALIZED_NAME_WAARDEPEILDATUM)
   private LocalDate waardepeildatum;
+
+  public static final String SERIALIZED_NAME_INGANGSDATUM = "ingangsdatum";
+  @SerializedName(SERIALIZED_NAME_INGANGSDATUM)
+  private LocalDate ingangsdatum;
+
+  public static final String SERIALIZED_NAME_BESCHIKKINGS_STATUSSEN = "beschikkingsStatussen";
+  @SerializedName(SERIALIZED_NAME_BESCHIKKINGS_STATUSSEN)
+  private List<StatusBeschikkingEnum> beschikkingsStatussen = null;
 
 
   public Waarde vastgesteldeWaarde(Integer vastgesteldeWaarde) {
@@ -55,7 +62,7 @@ public class Waarde {
    * @return vastgesteldeWaarde
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Waarde van het WOZ-object op de peildatum in Euro")
+  @ApiModelProperty(example = "127000", value = "Waarde van het WOZ-object op de peildatum in Euro")
 
   public Integer getVastgesteldeWaarde() {
     return vastgesteldeWaarde;
@@ -64,29 +71,6 @@ public class Waarde {
 
   public void setVastgesteldeWaarde(Integer vastgesteldeWaarde) {
     this.vastgesteldeWaarde = vastgesteldeWaarde;
-  }
-
-
-  public Waarde indicatieBezwaarBeroep(Boolean indicatieBezwaarBeroep) {
-    
-    this.indicatieBezwaarBeroep = indicatieBezwaarBeroep;
-    return this;
-  }
-
-   /**
-   * Bij waarde true is er een lopende zaak voor bezwaar, beroep, hoger beroep of cassatie
-   * @return indicatieBezwaarBeroep
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Bij waarde true is er een lopende zaak voor bezwaar, beroep, hoger beroep of cassatie")
-
-  public Boolean getIndicatieBezwaarBeroep() {
-    return indicatieBezwaarBeroep;
-  }
-
-
-  public void setIndicatieBezwaarBeroep(Boolean indicatieBezwaarBeroep) {
-    this.indicatieBezwaarBeroep = indicatieBezwaarBeroep;
   }
 
 
@@ -113,6 +97,60 @@ public class Waarde {
   }
 
 
+  public Waarde ingangsdatum(LocalDate ingangsdatum) {
+    
+    this.ingangsdatum = ingangsdatum;
+    return this;
+  }
+
+   /**
+   * Datum vanaf wanneer de vastgestelde waarde geldt
+   * @return ingangsdatum
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "Wed Jan 01 00:00:00 UTC 2020", value = "Datum vanaf wanneer de vastgestelde waarde geldt")
+
+  public LocalDate getIngangsdatum() {
+    return ingangsdatum;
+  }
+
+
+  public void setIngangsdatum(LocalDate ingangsdatum) {
+    this.ingangsdatum = ingangsdatum;
+  }
+
+
+  public Waarde beschikkingsStatussen(List<StatusBeschikkingEnum> beschikkingsStatussen) {
+    
+    this.beschikkingsStatussen = beschikkingsStatussen;
+    return this;
+  }
+
+  public Waarde addBeschikkingsStatussenItem(StatusBeschikkingEnum beschikkingsStatussenItem) {
+    if (this.beschikkingsStatussen == null) {
+      this.beschikkingsStatussen = new ArrayList<>();
+    }
+    this.beschikkingsStatussen.add(beschikkingsStatussenItem);
+    return this;
+  }
+
+   /**
+   * Een of meer actuele statussen van de vastgestelde waarde
+   * @return beschikkingsStatussen
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Een of meer actuele statussen van de vastgestelde waarde")
+
+  public List<StatusBeschikkingEnum> getBeschikkingsStatussen() {
+    return beschikkingsStatussen;
+  }
+
+
+  public void setBeschikkingsStatussen(List<StatusBeschikkingEnum> beschikkingsStatussen) {
+    this.beschikkingsStatussen = beschikkingsStatussen;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -123,23 +161,24 @@ public class Waarde {
     }
     Waarde waarde = (Waarde) o;
     return Objects.equals(this.vastgesteldeWaarde, waarde.vastgesteldeWaarde) &&
-        Objects.equals(this.indicatieBezwaarBeroep, waarde.indicatieBezwaarBeroep) &&
-        Objects.equals(this.waardepeildatum, waarde.waardepeildatum);
+        Objects.equals(this.waardepeildatum, waarde.waardepeildatum) &&
+        Objects.equals(this.ingangsdatum, waarde.ingangsdatum) &&
+        Objects.equals(this.beschikkingsStatussen, waarde.beschikkingsStatussen);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(vastgesteldeWaarde, indicatieBezwaarBeroep, waardepeildatum);
+    return Objects.hash(vastgesteldeWaarde, waardepeildatum, ingangsdatum, beschikkingsStatussen);
   }
-
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Waarde {\n");
     sb.append("    vastgesteldeWaarde: ").append(toIndentedString(vastgesteldeWaarde)).append("\n");
-    sb.append("    indicatieBezwaarBeroep: ").append(toIndentedString(indicatieBezwaarBeroep)).append("\n");
     sb.append("    waardepeildatum: ").append(toIndentedString(waardepeildatum)).append("\n");
+    sb.append("    ingangsdatum: ").append(toIndentedString(ingangsdatum)).append("\n");
+    sb.append("    beschikkingsStatussen: ").append(toIndentedString(beschikkingsStatussen)).append("\n");
     sb.append("}");
     return sb.toString();
   }

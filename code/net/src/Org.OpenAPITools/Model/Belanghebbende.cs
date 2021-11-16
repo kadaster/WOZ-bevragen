@@ -1,4 +1,4 @@
-/* 
+/*
  * Waardering onroerende zaken
  *
  * Deze API levert actuele gegevens over WOZ-objecten 
@@ -31,6 +31,11 @@ namespace Org.OpenAPITools.Model
     public partial class Belanghebbende :  IEquatable<Belanghebbende>, IValidatableObject
     {
         /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public PersoonTypeEnum? Type { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="Belanghebbende" /> class.
         /// </summary>
         /// <param name="burgerservicenummer">burgerservicenummer.</param>
@@ -40,7 +45,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="rsin">unieke identificatie van een niet-natuurlijk persoon (rechtspersoon of samenwerkingsverband).</param>
         /// <param name="type">type.</param>
         /// <param name="vestigingsnummer">vestigingsnummer.</param>
-        public Belanghebbende(string burgerservicenummer = default(string), bool geheimhoudingPersoonsgegevens = default(bool), string kvkNummer = default(string), string naam = default(string), string rsin = default(string), PersoonTypeEnum type = default(PersoonTypeEnum), string vestigingsnummer = default(string))
+        public Belanghebbende(string burgerservicenummer = default(string), bool geheimhoudingPersoonsgegevens = default(bool), string kvkNummer = default(string), string naam = default(string), string rsin = default(string), PersoonTypeEnum? type = default(PersoonTypeEnum?), string vestigingsnummer = default(string))
         {
             this.Burgerservicenummer = burgerservicenummer;
             this.GeheimhoudingPersoonsgegevens = geheimhoudingPersoonsgegevens;
@@ -50,7 +55,7 @@ namespace Org.OpenAPITools.Model
             this.Type = type;
             this.Vestigingsnummer = vestigingsnummer;
         }
-        
+
         /// <summary>
         /// Gets or Sets Burgerservicenummer
         /// </summary>
@@ -83,11 +88,6 @@ namespace Org.OpenAPITools.Model
         [DataMember(Name="rsin", EmitDefaultValue=false)]
         public string Rsin { get; set; }
 
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public PersoonTypeEnum Type { get; set; }
 
         /// <summary>
         /// Gets or Sets Vestigingsnummer
@@ -113,7 +113,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>

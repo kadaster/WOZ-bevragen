@@ -109,12 +109,11 @@ Rule: Een zoek actuele WOZ-objecten aanroep mag slechts één identificatie para
     Abstract Scenario: Er zijn meerdere identificatie parameters opgegeven
     Als '/wozobjecten<query string>' wordt aangeroepen
     Dan bevat de response de volgende kenmerken
-        | title  | De combinatie van opgegeven parameters is niet toegestaan. |
-        | status | 400                                                        |
-    En bevat de response de volgende invalidParams
-        | name     | reason                                                                      |
-        | <param1> | parameter '<param1>' kan niet worden opgegeven in combinatie met '<param2>' |
-        | <param2> | parameter '<param2>' kan niet worden opgegeven in combinatie met '<param1>' |
+        | title  | De combinatie van opgegeven parameters is niet toegestaan.             |
+        | status | 400                                                                    |
+        | detail | Er zijn meerdere zoekingangen opgegeven. Graag 1 zoekingang gebruiken. |
+        | code   | unsupportedCombi                                                       |
+    En bevat de response geen invalidParams
 
     Voorbeelden:
         | query string                                                      | param1                           | param2    |

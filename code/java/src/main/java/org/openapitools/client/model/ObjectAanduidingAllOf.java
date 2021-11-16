@@ -28,7 +28,7 @@ import java.io.IOException;
  * De aanduiding van het WOZ-object zoals wordt weergegeven op de WOZ-beschikking
  */
 @ApiModel(description = "De aanduiding van het WOZ-object zoals wordt weergegeven op de WOZ-beschikking")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-29T15:06:01.841Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-09T07:56:59.068811Z[Etc/UTC]")
 public class ObjectAanduidingAllOf {
   public static final String SERIALIZED_NAME_LOCATIEOMSCHRIJVING = "locatieomschrijving";
   @SerializedName(SERIALIZED_NAME_LOCATIEOMSCHRIJVING)
@@ -102,7 +102,6 @@ public class ObjectAanduidingAllOf {
   public int hashCode() {
     return Objects.hash(locatieomschrijving, nummeraanduidingIdentificatie);
   }
-
 
   @Override
   public String toString() {

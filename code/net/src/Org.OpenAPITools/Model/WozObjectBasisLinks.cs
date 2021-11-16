@@ -1,4 +1,4 @@
-/* 
+/*
  * Waardering onroerende zaken
  *
  * Deze API levert actuele gegevens over WOZ-objecten 
@@ -35,20 +35,22 @@ namespace Org.OpenAPITools.Model
         /// </summary>
         /// <param name="self">self.</param>
         /// <param name="adres">adres.</param>
-        /// <param name="adresseerbaarObjecten">adresseerbaarObjecten.</param>
+        /// <param name="adresseerbareObjecten">adresseerbareObjecten.</param>
         /// <param name="belanghebbendeEigenaar">belanghebbendeEigenaar.</param>
         /// <param name="belanghebbendeGebruiker">belanghebbendeGebruiker.</param>
         /// <param name="panden">panden.</param>
-        public WozObjectBasisLinks(HalLink self = default(HalLink), HalLink adres = default(HalLink), List<HalLink> adresseerbaarObjecten = default(List<HalLink>), HalLink belanghebbendeEigenaar = default(HalLink), HalLink belanghebbendeGebruiker = default(HalLink), List<HalLink> panden = default(List<HalLink>))
+        /// <param name="kadastraalOnroerendeZaken">kadastraalOnroerendeZaken.</param>
+        public WozObjectBasisLinks(HalLink self = default(HalLink), HalLink adres = default(HalLink), List<HalLink> adresseerbareObjecten = default(List<HalLink>), HalLink belanghebbendeEigenaar = default(HalLink), HalLink belanghebbendeGebruiker = default(HalLink), List<HalLink> panden = default(List<HalLink>), List<HalLink> kadastraalOnroerendeZaken = default(List<HalLink>))
         {
             this.Self = self;
             this.Adres = adres;
-            this.AdresseerbaarObjecten = adresseerbaarObjecten;
+            this.AdresseerbareObjecten = adresseerbareObjecten;
             this.BelanghebbendeEigenaar = belanghebbendeEigenaar;
             this.BelanghebbendeGebruiker = belanghebbendeGebruiker;
             this.Panden = panden;
+            this.KadastraalOnroerendeZaken = kadastraalOnroerendeZaken;
         }
-        
+
         /// <summary>
         /// Gets or Sets Self
         /// </summary>
@@ -62,10 +64,10 @@ namespace Org.OpenAPITools.Model
         public HalLink Adres { get; set; }
 
         /// <summary>
-        /// Gets or Sets AdresseerbaarObjecten
+        /// Gets or Sets AdresseerbareObjecten
         /// </summary>
-        [DataMember(Name="adresseerbaarObjecten", EmitDefaultValue=false)]
-        public List<HalLink> AdresseerbaarObjecten { get; set; }
+        [DataMember(Name="adresseerbareObjecten", EmitDefaultValue=false)]
+        public List<HalLink> AdresseerbareObjecten { get; set; }
 
         /// <summary>
         /// Gets or Sets BelanghebbendeEigenaar
@@ -86,6 +88,12 @@ namespace Org.OpenAPITools.Model
         public List<HalLink> Panden { get; set; }
 
         /// <summary>
+        /// Gets or Sets KadastraalOnroerendeZaken
+        /// </summary>
+        [DataMember(Name="kadastraalOnroerendeZaken", EmitDefaultValue=false)]
+        public List<HalLink> KadastraalOnroerendeZaken { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -95,14 +103,15 @@ namespace Org.OpenAPITools.Model
             sb.Append("class WozObjectBasisLinks {\n");
             sb.Append("  Self: ").Append(Self).Append("\n");
             sb.Append("  Adres: ").Append(Adres).Append("\n");
-            sb.Append("  AdresseerbaarObjecten: ").Append(AdresseerbaarObjecten).Append("\n");
+            sb.Append("  AdresseerbareObjecten: ").Append(AdresseerbareObjecten).Append("\n");
             sb.Append("  BelanghebbendeEigenaar: ").Append(BelanghebbendeEigenaar).Append("\n");
             sb.Append("  BelanghebbendeGebruiker: ").Append(BelanghebbendeGebruiker).Append("\n");
             sb.Append("  Panden: ").Append(Panden).Append("\n");
+            sb.Append("  KadastraalOnroerendeZaken: ").Append(KadastraalOnroerendeZaken).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -144,10 +153,10 @@ namespace Org.OpenAPITools.Model
                     this.Adres.Equals(input.Adres))
                 ) && 
                 (
-                    this.AdresseerbaarObjecten == input.AdresseerbaarObjecten ||
-                    this.AdresseerbaarObjecten != null &&
-                    input.AdresseerbaarObjecten != null &&
-                    this.AdresseerbaarObjecten.SequenceEqual(input.AdresseerbaarObjecten)
+                    this.AdresseerbareObjecten == input.AdresseerbareObjecten ||
+                    this.AdresseerbareObjecten != null &&
+                    input.AdresseerbareObjecten != null &&
+                    this.AdresseerbareObjecten.SequenceEqual(input.AdresseerbareObjecten)
                 ) && 
                 (
                     this.BelanghebbendeEigenaar == input.BelanghebbendeEigenaar ||
@@ -164,6 +173,12 @@ namespace Org.OpenAPITools.Model
                     this.Panden != null &&
                     input.Panden != null &&
                     this.Panden.SequenceEqual(input.Panden)
+                ) && 
+                (
+                    this.KadastraalOnroerendeZaken == input.KadastraalOnroerendeZaken ||
+                    this.KadastraalOnroerendeZaken != null &&
+                    input.KadastraalOnroerendeZaken != null &&
+                    this.KadastraalOnroerendeZaken.SequenceEqual(input.KadastraalOnroerendeZaken)
                 );
         }
 
@@ -180,14 +195,16 @@ namespace Org.OpenAPITools.Model
                     hashCode = hashCode * 59 + this.Self.GetHashCode();
                 if (this.Adres != null)
                     hashCode = hashCode * 59 + this.Adres.GetHashCode();
-                if (this.AdresseerbaarObjecten != null)
-                    hashCode = hashCode * 59 + this.AdresseerbaarObjecten.GetHashCode();
+                if (this.AdresseerbareObjecten != null)
+                    hashCode = hashCode * 59 + this.AdresseerbareObjecten.GetHashCode();
                 if (this.BelanghebbendeEigenaar != null)
                     hashCode = hashCode * 59 + this.BelanghebbendeEigenaar.GetHashCode();
                 if (this.BelanghebbendeGebruiker != null)
                     hashCode = hashCode * 59 + this.BelanghebbendeGebruiker.GetHashCode();
                 if (this.Panden != null)
                     hashCode = hashCode * 59 + this.Panden.GetHashCode();
+                if (this.KadastraalOnroerendeZaken != null)
+                    hashCode = hashCode * 59 + this.KadastraalOnroerendeZaken.GetHashCode();
                 return hashCode;
             }
         }

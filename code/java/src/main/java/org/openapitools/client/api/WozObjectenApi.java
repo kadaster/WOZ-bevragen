@@ -205,18 +205,22 @@ public class WozObjectenApi {
      * Build call for zoekActueleWozobjecten
      * @param rsin Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven niet-natuurlijk persoon (optional)
      * @param kvkNummer Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven maatschappelijke activiteit of een van de daaronder vallende ondernemingen en vestigingen (optional)
-     * @param adresseerbaarObjectIdentificatie Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is of waar het object zijn aanduiding aan ontleent (optional)
+     * @param adresseerbaarObjectIdentificatie Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is (optional)
      * @param nummeraanduidingIdentificatie Zoek op de BAG identificatie van een nummeraanduiding (adres) waarmee het WOZ-object wordt aangeduid (optional)
-     * @param postcode Zoek WOZ-objecten met postcode (optional)
-     * @param huisnummer Zoek WOZ-objecten met huisnummer\&quot; (optional)
+     * @param postcode Zoek WOZ-objecten met postcode, in combinatie met huisnummer en eventueel met huisletter en/of huisnummertoevoeging (optional)
+     * @param huisnummer Zoek WOZ-objecten met huisnummer, in combinatie met postcode en eventueel met huisletter en/of huisnummertoevoeging\&quot; (optional)
+     * @param huisnummertoevoeging Zoek met een huisnummertoevoeging, in combinatie met postcode en huisnummer en eventueel huisletter. Dit is een toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter. Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging  (optional)
+     * @param huisletter Zoek met een huisletter, in combinatie met postcode en huisnummer en eventueel huisnummertoevoeging. Dit is een toevoeging aan een huisnummer en huisnummertoevoeging. Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging  (optional)
      * @param fields Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma&#39;s gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.2.0/features/fields.feature) (optional)
+     * @param page Pagina nummer (optional, default to 1)
+     * @param pageSize  (optional, default to 20)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> OK </td><td>  * api-version -  <br>  * warning -  <br>  </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * api-version -  <br>  * X-Pagination-Page -  <br>  * X-Pagination-Limit -  <br>  * warning -  <br>  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * api-version -  <br>  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  * api-version -  <br>  </td></tr>
         <tr><td> 403 </td><td> Forbidden </td><td>  * api-version -  <br>  </td></tr>
@@ -224,7 +228,7 @@ public class WozObjectenApi {
         <tr><td> 500 </td><td> Internal Server Error </td><td>  * api-version -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call zoekActueleWozobjectenCall(String rsin, String kvkNummer, String adresseerbaarObjectIdentificatie, String nummeraanduidingIdentificatie, String postcode, Integer huisnummer, String fields, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call zoekActueleWozobjectenCall(String rsin, String kvkNummer, String adresseerbaarObjectIdentificatie, String nummeraanduidingIdentificatie, String postcode, Integer huisnummer, String huisnummertoevoeging, String huisletter, String fields, Integer page, Integer pageSize, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -260,8 +264,24 @@ public class WozObjectenApi {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("huisnummer", huisnummer));
         }
 
+        if (huisnummertoevoeging != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("huisnummertoevoeging", huisnummertoevoeging));
+        }
+
+        if (huisletter != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("huisletter", huisletter));
+        }
+
         if (fields != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("fields", fields));
+        }
+
+        if (page != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("page", page));
+        }
+
+        if (pageSize != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("pageSize", pageSize));
         }
 
         final String[] localVarAccepts = {
@@ -283,10 +303,10 @@ public class WozObjectenApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call zoekActueleWozobjectenValidateBeforeCall(String rsin, String kvkNummer, String adresseerbaarObjectIdentificatie, String nummeraanduidingIdentificatie, String postcode, Integer huisnummer, String fields, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call zoekActueleWozobjectenValidateBeforeCall(String rsin, String kvkNummer, String adresseerbaarObjectIdentificatie, String nummeraanduidingIdentificatie, String postcode, Integer huisnummer, String huisnummertoevoeging, String huisletter, String fields, Integer page, Integer pageSize, final ApiCallback _callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = zoekActueleWozobjectenCall(rsin, kvkNummer, adresseerbaarObjectIdentificatie, nummeraanduidingIdentificatie, postcode, huisnummer, fields, _callback);
+        okhttp3.Call localVarCall = zoekActueleWozobjectenCall(rsin, kvkNummer, adresseerbaarObjectIdentificatie, nummeraanduidingIdentificatie, postcode, huisnummer, huisnummertoevoeging, huisletter, fields, page, pageSize, _callback);
         return localVarCall;
 
     }
@@ -296,17 +316,21 @@ public class WozObjectenApi {
      * Zoek WOZ-objecten op eigenaar of adres. Het resultaat zijn de actuele gegevens van de gevonden objecten.
      * @param rsin Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven niet-natuurlijk persoon (optional)
      * @param kvkNummer Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven maatschappelijke activiteit of een van de daaronder vallende ondernemingen en vestigingen (optional)
-     * @param adresseerbaarObjectIdentificatie Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is of waar het object zijn aanduiding aan ontleent (optional)
+     * @param adresseerbaarObjectIdentificatie Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is (optional)
      * @param nummeraanduidingIdentificatie Zoek op de BAG identificatie van een nummeraanduiding (adres) waarmee het WOZ-object wordt aangeduid (optional)
-     * @param postcode Zoek WOZ-objecten met postcode (optional)
-     * @param huisnummer Zoek WOZ-objecten met huisnummer\&quot; (optional)
+     * @param postcode Zoek WOZ-objecten met postcode, in combinatie met huisnummer en eventueel met huisletter en/of huisnummertoevoeging (optional)
+     * @param huisnummer Zoek WOZ-objecten met huisnummer, in combinatie met postcode en eventueel met huisletter en/of huisnummertoevoeging\&quot; (optional)
+     * @param huisnummertoevoeging Zoek met een huisnummertoevoeging, in combinatie met postcode en huisnummer en eventueel huisletter. Dit is een toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter. Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging  (optional)
+     * @param huisletter Zoek met een huisletter, in combinatie met postcode en huisnummer en eventueel huisnummertoevoeging. Dit is een toevoeging aan een huisnummer en huisnummertoevoeging. Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging  (optional)
      * @param fields Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma&#39;s gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.2.0/features/fields.feature) (optional)
+     * @param page Pagina nummer (optional, default to 1)
+     * @param pageSize  (optional, default to 20)
      * @return WozObjectHalCollectie
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> OK </td><td>  * api-version -  <br>  * warning -  <br>  </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * api-version -  <br>  * X-Pagination-Page -  <br>  * X-Pagination-Limit -  <br>  * warning -  <br>  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * api-version -  <br>  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  * api-version -  <br>  </td></tr>
         <tr><td> 403 </td><td> Forbidden </td><td>  * api-version -  <br>  </td></tr>
@@ -314,8 +338,8 @@ public class WozObjectenApi {
         <tr><td> 500 </td><td> Internal Server Error </td><td>  * api-version -  <br>  </td></tr>
      </table>
      */
-    public WozObjectHalCollectie zoekActueleWozobjecten(String rsin, String kvkNummer, String adresseerbaarObjectIdentificatie, String nummeraanduidingIdentificatie, String postcode, Integer huisnummer, String fields) throws ApiException {
-        ApiResponse<WozObjectHalCollectie> localVarResp = zoekActueleWozobjectenWithHttpInfo(rsin, kvkNummer, adresseerbaarObjectIdentificatie, nummeraanduidingIdentificatie, postcode, huisnummer, fields);
+    public WozObjectHalCollectie zoekActueleWozobjecten(String rsin, String kvkNummer, String adresseerbaarObjectIdentificatie, String nummeraanduidingIdentificatie, String postcode, Integer huisnummer, String huisnummertoevoeging, String huisletter, String fields, Integer page, Integer pageSize) throws ApiException {
+        ApiResponse<WozObjectHalCollectie> localVarResp = zoekActueleWozobjectenWithHttpInfo(rsin, kvkNummer, adresseerbaarObjectIdentificatie, nummeraanduidingIdentificatie, postcode, huisnummer, huisnummertoevoeging, huisletter, fields, page, pageSize);
         return localVarResp.getData();
     }
 
@@ -324,17 +348,21 @@ public class WozObjectenApi {
      * Zoek WOZ-objecten op eigenaar of adres. Het resultaat zijn de actuele gegevens van de gevonden objecten.
      * @param rsin Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven niet-natuurlijk persoon (optional)
      * @param kvkNummer Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven maatschappelijke activiteit of een van de daaronder vallende ondernemingen en vestigingen (optional)
-     * @param adresseerbaarObjectIdentificatie Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is of waar het object zijn aanduiding aan ontleent (optional)
+     * @param adresseerbaarObjectIdentificatie Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is (optional)
      * @param nummeraanduidingIdentificatie Zoek op de BAG identificatie van een nummeraanduiding (adres) waarmee het WOZ-object wordt aangeduid (optional)
-     * @param postcode Zoek WOZ-objecten met postcode (optional)
-     * @param huisnummer Zoek WOZ-objecten met huisnummer\&quot; (optional)
+     * @param postcode Zoek WOZ-objecten met postcode, in combinatie met huisnummer en eventueel met huisletter en/of huisnummertoevoeging (optional)
+     * @param huisnummer Zoek WOZ-objecten met huisnummer, in combinatie met postcode en eventueel met huisletter en/of huisnummertoevoeging\&quot; (optional)
+     * @param huisnummertoevoeging Zoek met een huisnummertoevoeging, in combinatie met postcode en huisnummer en eventueel huisletter. Dit is een toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter. Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging  (optional)
+     * @param huisletter Zoek met een huisletter, in combinatie met postcode en huisnummer en eventueel huisnummertoevoeging. Dit is een toevoeging aan een huisnummer en huisnummertoevoeging. Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging  (optional)
      * @param fields Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma&#39;s gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.2.0/features/fields.feature) (optional)
+     * @param page Pagina nummer (optional, default to 1)
+     * @param pageSize  (optional, default to 20)
      * @return ApiResponse&lt;WozObjectHalCollectie&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> OK </td><td>  * api-version -  <br>  * warning -  <br>  </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * api-version -  <br>  * X-Pagination-Page -  <br>  * X-Pagination-Limit -  <br>  * warning -  <br>  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * api-version -  <br>  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  * api-version -  <br>  </td></tr>
         <tr><td> 403 </td><td> Forbidden </td><td>  * api-version -  <br>  </td></tr>
@@ -342,8 +370,8 @@ public class WozObjectenApi {
         <tr><td> 500 </td><td> Internal Server Error </td><td>  * api-version -  <br>  </td></tr>
      </table>
      */
-    public ApiResponse<WozObjectHalCollectie> zoekActueleWozobjectenWithHttpInfo(String rsin, String kvkNummer, String adresseerbaarObjectIdentificatie, String nummeraanduidingIdentificatie, String postcode, Integer huisnummer, String fields) throws ApiException {
-        okhttp3.Call localVarCall = zoekActueleWozobjectenValidateBeforeCall(rsin, kvkNummer, adresseerbaarObjectIdentificatie, nummeraanduidingIdentificatie, postcode, huisnummer, fields, null);
+    public ApiResponse<WozObjectHalCollectie> zoekActueleWozobjectenWithHttpInfo(String rsin, String kvkNummer, String adresseerbaarObjectIdentificatie, String nummeraanduidingIdentificatie, String postcode, Integer huisnummer, String huisnummertoevoeging, String huisletter, String fields, Integer page, Integer pageSize) throws ApiException {
+        okhttp3.Call localVarCall = zoekActueleWozobjectenValidateBeforeCall(rsin, kvkNummer, adresseerbaarObjectIdentificatie, nummeraanduidingIdentificatie, postcode, huisnummer, huisnummertoevoeging, huisletter, fields, page, pageSize, null);
         Type localVarReturnType = new TypeToken<WozObjectHalCollectie>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -353,18 +381,22 @@ public class WozObjectenApi {
      * Zoek WOZ-objecten op eigenaar of adres. Het resultaat zijn de actuele gegevens van de gevonden objecten.
      * @param rsin Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven niet-natuurlijk persoon (optional)
      * @param kvkNummer Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven maatschappelijke activiteit of een van de daaronder vallende ondernemingen en vestigingen (optional)
-     * @param adresseerbaarObjectIdentificatie Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is of waar het object zijn aanduiding aan ontleent (optional)
+     * @param adresseerbaarObjectIdentificatie Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is (optional)
      * @param nummeraanduidingIdentificatie Zoek op de BAG identificatie van een nummeraanduiding (adres) waarmee het WOZ-object wordt aangeduid (optional)
-     * @param postcode Zoek WOZ-objecten met postcode (optional)
-     * @param huisnummer Zoek WOZ-objecten met huisnummer\&quot; (optional)
+     * @param postcode Zoek WOZ-objecten met postcode, in combinatie met huisnummer en eventueel met huisletter en/of huisnummertoevoeging (optional)
+     * @param huisnummer Zoek WOZ-objecten met huisnummer, in combinatie met postcode en eventueel met huisletter en/of huisnummertoevoeging\&quot; (optional)
+     * @param huisnummertoevoeging Zoek met een huisnummertoevoeging, in combinatie met postcode en huisnummer en eventueel huisletter. Dit is een toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter. Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging  (optional)
+     * @param huisletter Zoek met een huisletter, in combinatie met postcode en huisnummer en eventueel huisnummertoevoeging. Dit is een toevoeging aan een huisnummer en huisnummertoevoeging. Bijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging  (optional)
      * @param fields Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma&#39;s gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.2.0/features/fields.feature) (optional)
+     * @param page Pagina nummer (optional, default to 1)
+     * @param pageSize  (optional, default to 20)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> OK </td><td>  * api-version -  <br>  * warning -  <br>  </td></tr>
+        <tr><td> 200 </td><td> OK </td><td>  * api-version -  <br>  * X-Pagination-Page -  <br>  * X-Pagination-Limit -  <br>  * warning -  <br>  </td></tr>
         <tr><td> 400 </td><td> Bad Request </td><td>  * api-version -  <br>  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  * api-version -  <br>  </td></tr>
         <tr><td> 403 </td><td> Forbidden </td><td>  * api-version -  <br>  </td></tr>
@@ -372,9 +404,9 @@ public class WozObjectenApi {
         <tr><td> 500 </td><td> Internal Server Error </td><td>  * api-version -  <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call zoekActueleWozobjectenAsync(String rsin, String kvkNummer, String adresseerbaarObjectIdentificatie, String nummeraanduidingIdentificatie, String postcode, Integer huisnummer, String fields, final ApiCallback<WozObjectHalCollectie> _callback) throws ApiException {
+    public okhttp3.Call zoekActueleWozobjectenAsync(String rsin, String kvkNummer, String adresseerbaarObjectIdentificatie, String nummeraanduidingIdentificatie, String postcode, Integer huisnummer, String huisnummertoevoeging, String huisletter, String fields, Integer page, Integer pageSize, final ApiCallback<WozObjectHalCollectie> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = zoekActueleWozobjectenValidateBeforeCall(rsin, kvkNummer, adresseerbaarObjectIdentificatie, nummeraanduidingIdentificatie, postcode, huisnummer, fields, _callback);
+        okhttp3.Call localVarCall = zoekActueleWozobjectenValidateBeforeCall(rsin, kvkNummer, adresseerbaarObjectIdentificatie, nummeraanduidingIdentificatie, postcode, huisnummer, huisnummertoevoeging, huisletter, fields, page, pageSize, _callback);
         Type localVarReturnType = new TypeToken<WozObjectHalCollectie>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

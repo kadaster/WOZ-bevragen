@@ -31,6 +31,12 @@ namespace Org.OpenAPITools.Model
     [DataContract(Name = "Belanghebbende")]
     public partial class Belanghebbende : IEquatable<Belanghebbende>, IValidatableObject
     {
+
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name = "type", EmitDefaultValue = false)]
+        public PersoonTypeEnum? Type { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="Belanghebbende" /> class.
         /// </summary>
@@ -41,7 +47,7 @@ namespace Org.OpenAPITools.Model
         /// <param name="rsin">unieke identificatie van een niet-natuurlijk persoon (rechtspersoon of samenwerkingsverband).</param>
         /// <param name="type">type.</param>
         /// <param name="vestigingsnummer">vestigingsnummer.</param>
-        public Belanghebbende(string burgerservicenummer = default(string), bool geheimhoudingPersoonsgegevens = default(bool), string kvkNummer = default(string), string naam = default(string), string rsin = default(string), PersoonTypeEnum type = default(PersoonTypeEnum), string vestigingsnummer = default(string))
+        public Belanghebbende(string burgerservicenummer = default(string), bool geheimhoudingPersoonsgegevens = default(bool), string kvkNummer = default(string), string naam = default(string), string rsin = default(string), PersoonTypeEnum? type = default(PersoonTypeEnum?), string vestigingsnummer = default(string))
         {
             this.Burgerservicenummer = burgerservicenummer;
             this.GeheimhoudingPersoonsgegevens = geheimhoudingPersoonsgegevens;
@@ -62,7 +68,7 @@ namespace Org.OpenAPITools.Model
         /// Indien true: op verzoek van deze persoon is het verstrekken van gegevens over deze persoon aan bepaalde derden niet toegestaan.
         /// </summary>
         /// <value>Indien true: op verzoek van deze persoon is het verstrekken van gegevens over deze persoon aan bepaalde derden niet toegestaan.</value>
-        [DataMember(Name = "geheimhoudingPersoonsgegevens", EmitDefaultValue = false)]
+        [DataMember(Name = "geheimhoudingPersoonsgegevens", EmitDefaultValue = true)]
         public bool GeheimhoudingPersoonsgegevens { get; set; }
 
         /// <summary>
@@ -83,12 +89,6 @@ namespace Org.OpenAPITools.Model
         /// <value>unieke identificatie van een niet-natuurlijk persoon (rechtspersoon of samenwerkingsverband)</value>
         [DataMember(Name = "rsin", EmitDefaultValue = false)]
         public string Rsin { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name = "type", EmitDefaultValue = false)]
-        public PersoonTypeEnum Type { get; set; }
 
         /// <summary>
         /// Gets or Sets Vestigingsnummer
@@ -171,8 +171,7 @@ namespace Org.OpenAPITools.Model
                 ) && 
                 (
                     this.Type == input.Type ||
-                    (this.Type != null &&
-                    this.Type.Equals(input.Type))
+                    this.Type.Equals(input.Type)
                 ) && 
                 (
                     this.Vestigingsnummer == input.Vestigingsnummer ||
@@ -199,8 +198,7 @@ namespace Org.OpenAPITools.Model
                     hashCode = hashCode * 59 + this.Naam.GetHashCode();
                 if (this.Rsin != null)
                     hashCode = hashCode * 59 + this.Rsin.GetHashCode();
-                if (this.Type != null)
-                    hashCode = hashCode * 59 + this.Type.GetHashCode();
+                hashCode = hashCode * 59 + this.Type.GetHashCode();
                 if (this.Vestigingsnummer != null)
                     hashCode = hashCode * 59 + this.Vestigingsnummer.GetHashCode();
                 return hashCode;
@@ -212,7 +210,7 @@ namespace Org.OpenAPITools.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

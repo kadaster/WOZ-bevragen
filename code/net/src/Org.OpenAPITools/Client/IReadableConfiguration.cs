@@ -1,4 +1,4 @@
-/* 
+/*
  * Waardering onroerende zaken
  *
  * Deze API levert actuele gegevens over WOZ-objecten 
@@ -45,7 +45,7 @@ namespace Org.OpenAPITools.Client
         /// <summary>
         /// Gets the date time format.
         /// </summary>
-        /// <value>Date time foramt.</value>
+        /// <value>Date time format.</value>
         string DateTimeFormat { get; }
 
         /// <summary>

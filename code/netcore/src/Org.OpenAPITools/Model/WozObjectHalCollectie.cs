@@ -36,7 +36,7 @@ namespace Org.OpenAPITools.Model
         /// </summary>
         /// <param name="links">links.</param>
         /// <param name="embedded">embedded.</param>
-        public WozObjectHalCollectie(HalCollectionLinks links = default(HalCollectionLinks), WozObjectHalCollectieEmbedded embedded = default(WozObjectHalCollectieEmbedded))
+        public WozObjectHalCollectie(HalPaginationLinks links = default(HalPaginationLinks), WozObjectHalCollectieEmbedded embedded = default(WozObjectHalCollectieEmbedded))
         {
             this.Links = links;
             this.Embedded = embedded;
@@ -46,7 +46,7 @@ namespace Org.OpenAPITools.Model
         /// Gets or Sets Links
         /// </summary>
         [DataMember(Name = "_links", EmitDefaultValue = false)]
-        public HalCollectionLinks Links { get; set; }
+        public HalPaginationLinks Links { get; set; }
 
         /// <summary>
         /// Gets or Sets Embedded
@@ -132,7 +132,7 @@ namespace Org.OpenAPITools.Model
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        public IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> Validate(ValidationContext validationContext)
         {
             yield break;
         }

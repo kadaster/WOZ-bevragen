@@ -68,7 +68,7 @@ configuration = openapi_client.Configuration(
 with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = woz_objecten_api.WOZObjectenApi(api_client)
-    identificatie = "identificatie_example" # str | Unieke identificatie van een WOZ-object
+    identificatie = "048072888001" # str | Unieke identificatie van een WOZ-object
 fields = "fields_example" # str | Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.2.0/features/fields.feature) (optional)
 
     try:
@@ -95,15 +95,18 @@ Class | Method | HTTP request | Description
  - [BadRequestFoutbericht](docs/BadRequestFoutbericht.md)
  - [BadRequestFoutberichtAllOf](docs/BadRequestFoutberichtAllOf.md)
  - [Belanghebbende](docs/Belanghebbende.md)
- - [BelanghebbendeEigenaar](docs/BelanghebbendeEigenaar.md)
- - [BelanghebbendeEigenaarAllOf](docs/BelanghebbendeEigenaarAllOf.md)
  - [Foutbericht](docs/Foutbericht.md)
  - [HalCollectionLinks](docs/HalCollectionLinks.md)
  - [HalLink](docs/HalLink.md)
+ - [HalPaginationLinks](docs/HalPaginationLinks.md)
+ - [HalPaginationLinksAllOf](docs/HalPaginationLinksAllOf.md)
  - [InvalidParams](docs/InvalidParams.md)
+ - [KadastraalOnroerendeZaak](docs/KadastraalOnroerendeZaak.md)
+ - [KadastraleAanduiding](docs/KadastraleAanduiding.md)
  - [ObjectAanduiding](docs/ObjectAanduiding.md)
  - [ObjectAanduidingAllOf](docs/ObjectAanduidingAllOf.md)
  - [PersoonTypeEnum](docs/PersoonTypeEnum.md)
+ - [StatusBeschikkingEnum](docs/StatusBeschikkingEnum.md)
  - [Waarde](docs/Waarde.md)
  - [Waardetabel](docs/Waardetabel.md)
  - [WozObject](docs/WozObject.md)
@@ -132,7 +135,7 @@ Use specific imports for apis and models like:
 - `from openapi_client.api.default_api import DefaultApi`
 - `from openapi_client.model.pet import Pet`
 
-Solution 1:
+Solution 2:
 Before importing the package, adjust the maximum recursion limit as shown below:
 ```
 import sys
