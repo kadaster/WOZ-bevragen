@@ -14,7 +14,7 @@ Om aan te sluiten kun je de volgende stappen doorlopen:
 5. [Sluit aan op productie](#aansluiten-op-productie)
 
 ## Aanmelden om aan te sluiten
-Meld je aan bij het kadaster om [aan te sluiten en voor toegang tot de testomgeving](https://www.kadaster.nl/zakelijk/producten/adressen-en-gebouwen/woz-api-huidige-bevragingen). Aansluiten is voorbehouden aan gemeenten met als gebruiksdoel het heffen van belastingen. Je ontvangt dan o.a. een API-key die nodig is voor toegang tot de testomgeving.
+Meld je aan bij het kadaster om [aan te sluiten en voor toegang](https://www.kadaster.nl/zakelijk/producten/adressen-en-gebouwen/woz-api-huidige-bevragingen). Aansluiten is voorbehouden aan gemeenten met als gebruiksdoel het heffen van belastingen. Je ontvangt dan o.a. een API-key die nodig is voor toegang tot de testomgeving.
 
 ## Functionaliteit en specificaties
 Je kunt een visuele representatie van de specificatie bekijken met [Swagger UI]({{ site.baseurl }}/swagger-ui) of [Redoc]({{ site.baseurl }}/redoc).
@@ -66,63 +66,3 @@ De testomgeving van de API is te benaderen via de volgende url:
 - _Beveiligde verbinding met alleen API-key: https://api.kadaster.nl/lvwoz-eto/huidigebevragingen_
     - Voor deze connectie met de testomgeving van deze API is vereist:
         - Een geldige API-key. Deze wordt bij de request opgenomen in request header "X-Api-Key". Wanneer je je aanmeldt voor het gebruiken van de API ontvang je de API-key.
-
-<!-- ### Testgevallen
-Onderstaande tabellen bevatten testgevallen voor specifieke situaties waarmee de werking van de API kan worden getest op de test omgeving.
-
-<table>
-	<tr>
-		<th>Testgeval</th>
-		<th>WOZ-objectidentificatie</th>
-		<th>Postcode / huisnummer (evt. huisnummertoevoeging)</th>
-		<th>Bijzonderheden</th>
-	</tr>                                                                    
-	<tr>
-		<td>Natuurlijk persoon als belanghebbend eigenaar</td>
-		<td>800000093455</td>
-		<td>8513GB 2</td>
-    <td><li>1 adresseerbaar object identificatie</li><li>1 pandidentificatie</li></td>
-	</tr>
-	<tr>
-		<td>Natuurlijk persoon als belanghebbend eigenaar</td>
-		<td>800000014669</td>
-		<td>2517GN 28</td>
-    <td><li>4 waarden</li><li>1 adresseerbaar object identificatie</li></td>
-	</tr>
-	<tr>
-		<td>Natuurlijk persoon als belanghebbend eigenaar</td>
-		<td>800000003118</td>
-		<td>2211TS 10</td>
-    <td><li>5 waarden</li><li>1 adresseerbaar object identificatie</li></td>
-	</tr>
-	<tr>
-		<td>Niet natuurlijk persoon als belanghebbend eigenaar</td>
-		<td>800000051111</td>
-		<td>8000GB 1</td>
-    <td><li>4 waarden</li><li>1 adresseerbaar object identificatie</li><li>belanghebbend gebruiker</li><li>3 kadastraal onroerende zaken</li><li>3 pandidentificaties</li></td>
-	</tr>
-	<tr>
-		<td>Niet natuurlijk persoon als belanghebbend eigenaar</td>
-		<td>800000200021</td>
-		<td>8621AC 2 LP02</td>
-    <td><li>huisnummertoevoeging</li></td>
-	</tr>
-	<tr>
-		<td>Niet natuurlijk persoon als belanghebbend eigenaar</td>
-		<td>800000200022</td>
-		<td>8621AC 2 SP03</td>
-    <td></td>
-	</tr>
-	<tr>
-		<td>Vestiging als belanghebbend eigenaar</td>
-		<td>800000823525</td>
-		<td>2211TS 8</td>
-    <td><li>6 waarden</li><li>1 adresseerbaar object identificatie</li></td>
-	</tr>
-	<tr>
-		<td>Geen belanghebbend eigenaar</td>
-		<td>800012345678</td>
-		<td>2517GL 84</td>
-    <td><li>3 adresseerbaar object identificaties</li></td>
-	</tr>
-</table> -->
