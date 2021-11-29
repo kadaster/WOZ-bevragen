@@ -23,7 +23,7 @@ Functionaliteit: leveren van waarden bij een WOZ-object
 
 
   Scenario: meerdere jaren met zelfde eigenaar en zonder bezwaar of beroep
-    Gegeven WOZ object met identificatie "051800823525" heeft de volgende beschikkingen:
+    Gegeven WOZ object met identificatie "800000823525" heeft de volgende beschikkingen:
     | Peildatum  | WOZ-waarde   | Ingangsdatum | Datum beschikking |
     | 01-01-2019 | 431.000 euro | 01-01-2020   | 11-02-2020        |
     | 01-01-2018 | 390.000 euro | 01-01-2019   | 12-02-2019        |
@@ -31,7 +31,7 @@ Functionaliteit: leveren van waarden bij een WOZ-object
     | 01-01-2016 | 340.000 euro | 01-01-2017   | 14-02-2017        |
     | 01-01-2015 | 310.000 euro | 01-01-2016   | 16-02-2016        |
     | 01-01-2014 | 308.000 euro | 01-01-2015   | 17-02-2015        |
-    Als het WOZ object wordt opgevraagd met /wozobjecten/051800823525
+    Als het WOZ object wordt opgevraagd met /wozobjecten/800000823525
     Dan levert de API de volgende waarden:
     """
     [
@@ -94,20 +94,20 @@ Functionaliteit: leveren van waarden bij een WOZ-object
     """
 
   Scenario: WOZ-object wijzigt gedurende een jaar van eigenaar: bij meerdere waarden met zelfde waardepeildatum gebruiken we de waarde met de meest recente ingangsdatum
-    Gegeven WOZ-object met objectnummer "002500003118"
+    Gegeven WOZ-object met objectnummer "800000003118"
     En dit WOZ-object heeft per 17-03-2019 een nieuwe eigenaar
     En de nieuwe eigenaar heeft een beschikking gevraagd over peildatum 01-01-2018
     En de beschikking over peildatum 01-01-2018 voor de nieuwe eigenaar heeft een andere vastgestelde waarde dan de oude eigenaar
-    En WOZ-object met objectnummer "002500003118" heeft de volgende beschikkingen voor de oude eigenaar:
+    En WOZ-object met objectnummer "800000003118" heeft de volgende beschikkingen voor de oude eigenaar:
     | Peildatum  | WOZ-waarde   | Ingangsdatum | Datum beschikking |
     | 01-01-2018 | 160.000 euro | 01-01-2019   | 12-02-2019        |
     | 01-01-2017 | 155.000 euro | 01-01-2018   | 13-02-2018        |
     | 01-01-2016 | 149.000 euro | 01-01-2017   | 14-02-2017        |
-    En WOZ-object met objectnummer "002500003118" heeft de volgende beschikkingen voor de nieuwe eigenaar:
+    En WOZ-object met objectnummer "800000003118" heeft de volgende beschikkingen voor de nieuwe eigenaar:
     | Peildatum  | WOZ-waarde   | Ingangsdatum | Datum beschikking |
     | 01-01-2019 | 171.000 euro | 01-01-2020   | 11-02-2020        |
     | 01-01-2018 | 163.000 euro | 17-03-2019   | 06-04-2019        |
-    Als het WOZ object wordt opgevraagd met /wozobjecten/002500003118
+    Als het WOZ object wordt opgevraagd met /wozobjecten/800000003118
     Dan levert de API de volgende waarden:
     """
     [
@@ -162,18 +162,18 @@ Functionaliteit: leveren van waarden bij een WOZ-object
     """
 
   Scenario: Belanghebbende krijgt verlaging van de WOZ-waarde na bezwaar
-    Gegeven WOZ-object met objectnummer "082600014669" heeft de belanghebbende eigenaar bezwaar ingediend over de WOZ-waarde met peildatum 01-01-2017
+    Gegeven WOZ-object met objectnummer "800000014669" heeft de belanghebbende eigenaar bezwaar ingediend over de WOZ-waarde met peildatum 01-01-2017
     En dat bezwaar is afgehandeld met de status "bezwaar afgehandeld, vastgestelde waarde veranderd" (12)
     En de belanghebbende eigenaar heeft bezwaar ingediend over de WOZ-waarde met peildatum 01-01-2018
     En dat bezwaar heeft de status "bezwaaringediend" (20)
-    En WOZ-object met objectnummer "082600014669" heeft de volgende beschikkingen:
+    En WOZ-object met objectnummer "800000014669" heeft de volgende beschikkingen:
     | Peildatum  | WOZ-waarde   | Ingangsdatum | Datum beschikking |
     | 01-01-2019 | 195.000 euro | 01-01-2020   | 13-01-2020        |
     | 01-01-2017 | 152.000 euro | 01-01-2018   | 03-02-2019        |
     | 01-01-2018 | 176.000 euro | 01-01-2019   | 14-01-2019        |
     | 01-01-2017 | 171.000 euro | 01-01-2018   | 15-01-2018        |
     | 01-01-2016 | 164.000 euro | 01-01-2017   | 16-01-2017        |
-    Als het WOZ object wordt opgevraagd met /wozobjecten/082600014669
+    Als het WOZ object wordt opgevraagd met /wozobjecten/800000014669
     Dan levert de API de volgende waarden:
     """
     [
@@ -188,7 +188,7 @@ Functionaliteit: leveren van waarden bij een WOZ-object
         "ingangsdatum": "2019-01-01",
         "beschikkingsStatussen": [ "bezwaar_ingediend" ]
       },{
-        "vastgesteldeWaarde": 152000,
+        "vastgesteldeWaarde": 171000,
         "waardepeildatum": "2017-01-01",
         "ingangsdatum": "2018-01-01",
         "beschikkingsStatussen": [ "bezwaar_veranderd" ]
@@ -213,7 +213,7 @@ Functionaliteit: leveren van waarden bij een WOZ-object
         "indicatieBezwaarBeroep": true
       },
       {
-        "vastgesteldeWaarde": 152000,
+        "vastgesteldeWaarde": 171000,
         "waardepeildatum": "2017-01-01"
       },
       {
@@ -300,11 +300,6 @@ Functionaliteit: leveren van waarden bij een WOZ-object
           "waardepeildatum": "2019-01-01",
           "ingangsdatum": "2020-01-01",
           "beschikkingsStatussen": [ "beschikking_genomen" ]
-        },{
-          "vastgesteldeWaarde": 210000,
-          "waardepeildatum": "2018-01-01",
-          "ingangsdatum": "2019-07-01",
-          "beschikkingsStatussen": [ "beschikking_vernietigd" ]
         },{
           "vastgesteldeWaarde": 283000,
           "waardepeildatum": "2018-01-01",
@@ -412,11 +407,6 @@ Functionaliteit: leveren van waarden bij een WOZ-object
           "waardepeildatum": "2019-01-01",
           "ingangsdatum": "2020-01-01",
           "beschikkingsStatussen": [ "beschikking_genomen" ]
-        },{
-          "vastgesteldeWaarde": 440000,
-          "waardepeildatum": "2018-01-01",
-          "ingangsdatum": "2019-07-01",
-          "beschikkingsStatussen": [ "beschikking_vernietigd", "beschikking_vernietigd" ]
         },{
           "vastgesteldeWaarde": 430000,
           "waardepeildatum": "2018-01-01",

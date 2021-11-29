@@ -6,7 +6,9 @@ title: Features
 Deze voorbeelden illustreren en specificeren zoveel mogelijk de functionaliteit van de API:
 - [leveren van waarden bij een WOZ-object](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/blob/master/features/waarden.feature){:target="_blank" rel="noopener"}
 - [zoeken van WOZ-objecten](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/blob/master/features/zoeken.feature){:target="_blank" rel="noopener"}
-
+- [sorteren van zoekresultaten op aanduiding (adres)](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/blob/master/features/sortering.feature){:target="_blank" rel="noopener"}
+- [tonen van de naam van de geleverde belanghebbende](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/blob/master/features/belanghebbende_naam.feature){:target="_blank" rel="noopener"}
+- [gebruiksvriendelijke foutmeldingen](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/blob/master/features/fout-meldingen.feature){:target="_blank" rel="noopener"}
 
 ## Algemene Haal Centraal features
 Naast API specifieke features zijn er ook features voor alle Haal Centraal API's. Zij staan in Haal Centraal common:
