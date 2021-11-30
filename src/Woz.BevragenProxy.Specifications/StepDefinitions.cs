@@ -32,6 +32,15 @@ namespace Woz.BevragenProxy.Specifications
             };
         }
 
+        [Given(@"een WOZ-object bevat een lege collectie waarden")]
+        public void GivenEenWOZ_ObjectBevatEenLegeCollectieWaarden()
+        {
+            WozObject = new DataTransferObjects.WozObject
+            {
+                Waarden = new List<DataTransferObjects.Waarde>()
+            };
+        }
+
         [When(@"de relevante waarden zijn bepaald voor het WOZ-object")]
         public void WhenDeRelevanteWaardenZijnBepaaldVoorHetWOZ_Object()
         {

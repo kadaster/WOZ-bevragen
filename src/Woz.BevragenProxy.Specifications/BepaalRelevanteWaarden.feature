@@ -7,8 +7,7 @@ Scenario: geen waarden
 	Dan bevat het WOZ-object geen waarden
 
 Scenario: leeg waarden lijst
-	Gegeven een WOZ-object bevat de volgende waarden
-	| vastgesteldeWaarde | waardepeildatum | ingangsdatum | beschikkingsStatussen |
+	Gegeven een WOZ-object bevat een lege collectie waarden 
 	Als de relevante waarden zijn bepaald voor het WOZ-object
 	Dan bevat het WOZ-object de volgende waarden
 	| vastgesteldeWaarde | waardepeildatum | ingangsdatum | beschikkingsStatussen |
