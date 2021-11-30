@@ -158,7 +158,7 @@ Abstract Scenario: indicatieBezwaarBeroep wordt niet opgenomen wanneer er geen b
     | hoge_raad_geding_verwezen    | 33         | arrestHogeRaad,gedingverwezen                         |
     | voorlopige_aanslag           | 99         | waarde te gebruiken voor voorlopige aanslag           |
 
-Scenario: indicatieBezwaarBeroep wanneer er meerdere statussen zijn bij een waardepeildatum en ingangsdatum
+Scenario: indicatieBezwaarBeroep wordt opgenomen wanneer er meerdere statussen zijn bij een waardepeildatum en ingangsdatum en minimaal één van de statussen gelijk is aan bezwaar, (hoger)beroep of cassatie ingesteld
 	Gegeven een WOZ-object bevat de volgende waarden
 	| vastgesteldeWaarde | waardepeildatum | ingangsdatum | beschikkingsStatussen                         |
 	| 437000             | 2019-01-01      | 2020-01-01   | beroep_gehandhaafd, beroep_aangetekend        |
@@ -169,12 +169,12 @@ Scenario: indicatieBezwaarBeroep wanneer er meerdere statussen zijn bij een waar
 	| 437000             | 2019-01-01      | true                   |
 	| 392000             | 2018-01-01      | true                   |
 
-Scenario: indicatieBezwaarBeroep wanneer er bezwaar, (hoger)beroep of cassatie loopt bij niet de meest recente ingangsdatum
+Scenario: indicatieBezwaarBeroep wordt niet opgenomen wanneer er bezwaar, (hoger)beroep of cassatie loopt bij niet de meest recente ingangsdatum
 	Gegeven een WOZ-object bevat de volgende waarden
 	| vastgesteldeWaarde | waardepeildatum | ingangsdatum | beschikkingsStatussen |
 	| 215000             | 2018-01-01      | 2019-05-01   | beschikking_genomen   |
 	| 215000             | 2018-01-01      | 2019-01-01   | beroep_aangetekend    |
 	Als de relevante waarden zijn bepaald voor het WOZ-object
 	Dan bevat het WOZ-object de volgende waarden
-	| vastgesteldeWaarde | waardepeildatum |
-	| 215000             | 2018-01-01      |
+	| vastgesteldeWaarde | waardepeildatum | indicatieBezwaarBeroep |
+	| 215000             | 2018-01-01      |						|

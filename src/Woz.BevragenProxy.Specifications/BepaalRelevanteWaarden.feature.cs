@@ -903,17 +903,20 @@ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="indicatieBezwaarBeroep wanneer er meerdere statussen zijn bij een waardepeildatum" +
-            " en ingangsdatum")]
+        [Xunit.SkippableFactAttribute(DisplayName="indicatieBezwaarBeroep wordt opgenomen wanneer er meerdere statussen zijn bij een" +
+            " waardepeildatum en ingangsdatum en minimaal één van de statussen gelijk is aan " +
+            "bezwaar, (hoger)beroep of cassatie ingesteld")]
         [Xunit.TraitAttribute("FeatureTitle", "Bepaal relevante waarden voor een WOZ-object")]
-        [Xunit.TraitAttribute("Description", "indicatieBezwaarBeroep wanneer er meerdere statussen zijn bij een waardepeildatum" +
-            " en ingangsdatum")]
-        public virtual void IndicatieBezwaarBeroepWanneerErMeerdereStatussenZijnBijEenWaardepeildatumEnIngangsdatum()
+        [Xunit.TraitAttribute("Description", "indicatieBezwaarBeroep wordt opgenomen wanneer er meerdere statussen zijn bij een" +
+            " waardepeildatum en ingangsdatum en minimaal één van de statussen gelijk is aan " +
+            "bezwaar, (hoger)beroep of cassatie ingesteld")]
+        public virtual void IndicatieBezwaarBeroepWordtOpgenomenWanneerErMeerdereStatussenZijnBijEenWaardepeildatumEnIngangsdatumEnMinimaalEenVanDeStatussenGelijkIsAanBezwaarHogerBeroepOfCassatieIngesteld()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("indicatieBezwaarBeroep wanneer er meerdere statussen zijn bij een waardepeildatum" +
-                    " en ingangsdatum", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("indicatieBezwaarBeroep wordt opgenomen wanneer er meerdere statussen zijn bij een" +
+                    " waardepeildatum en ingangsdatum en minimaal één van de statussen gelijk is aan " +
+                    "bezwaar, (hoger)beroep of cassatie ingesteld", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 161
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -974,17 +977,17 @@ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="indicatieBezwaarBeroep wanneer er bezwaar, (hoger)beroep of cassatie loopt bij ni" +
-            "et de meest recente ingangsdatum")]
+        [Xunit.SkippableFactAttribute(DisplayName="indicatieBezwaarBeroep wordt niet opgenomen wanneer er bezwaar, (hoger)beroep of " +
+            "cassatie loopt bij niet de meest recente ingangsdatum")]
         [Xunit.TraitAttribute("FeatureTitle", "Bepaal relevante waarden voor een WOZ-object")]
-        [Xunit.TraitAttribute("Description", "indicatieBezwaarBeroep wanneer er bezwaar, (hoger)beroep of cassatie loopt bij ni" +
-            "et de meest recente ingangsdatum")]
-        public virtual void IndicatieBezwaarBeroepWanneerErBezwaarHogerBeroepOfCassatieLooptBijNietDeMeestRecenteIngangsdatum()
+        [Xunit.TraitAttribute("Description", "indicatieBezwaarBeroep wordt niet opgenomen wanneer er bezwaar, (hoger)beroep of " +
+            "cassatie loopt bij niet de meest recente ingangsdatum")]
+        public virtual void IndicatieBezwaarBeroepWordtNietOpgenomenWanneerErBezwaarHogerBeroepOfCassatieLooptBijNietDeMeestRecenteIngangsdatum()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("indicatieBezwaarBeroep wanneer er bezwaar, (hoger)beroep of cassatie loopt bij ni" +
-                    "et de meest recente ingangsdatum", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("indicatieBezwaarBeroep wordt niet opgenomen wanneer er bezwaar, (hoger)beroep of " +
+                    "cassatie loopt bij niet de meest recente ingangsdatum", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 172
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -1028,10 +1031,12 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
                 TechTalk.SpecFlow.Table table23 = new TechTalk.SpecFlow.Table(new string[] {
                             "vastgesteldeWaarde",
-                            "waardepeildatum"});
+                            "waardepeildatum",
+                            "indicatieBezwaarBeroep"});
                 table23.AddRow(new string[] {
                             "215000",
-                            "2018-01-01"});
+                            "2018-01-01",
+                            ""});
 #line 178
  testRunner.Then("bevat het WOZ-object de volgende waarden", ((string)(null)), table23, "Dan ");
 #line hidden
