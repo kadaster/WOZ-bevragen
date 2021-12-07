@@ -6,7 +6,6 @@ title: Haal Centraal WOZ bevragen
 # Haal Centraal WOZ bevragen v1.0 is live!
 
 ![lint oas](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/workflows/lint-oas/badge.svg)
-![generate sdks](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/workflows/generate-sdks/badge.svg)
 ![generate postman collection](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/workflows/generate-postman-collection/badge.svg)
 
 API voor het zoeken en raadplegen van WOZ objecten en WOZ waardes.
