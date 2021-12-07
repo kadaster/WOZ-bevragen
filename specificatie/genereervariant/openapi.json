@@ -609,16 +609,20 @@
           },
           "ingangsdatum" : {
             "type" : "string",
-            "description" : "Datum vanaf wanneer de vastgestelde waarde geldt",
+            "description" : "Datum vanaf wanneer de vastgestelde waarde geldt.\n\nDeze property wordt verwijderd door de BevragenProxy.\n",
             "format" : "date",
             "example" : "2020-01-01"
           },
           "beschikkingsStatussen" : {
             "type" : "array",
-            "description" : "Een of meer actuele statussen van de vastgestelde waarde",
+            "description" : "Een of meer actuele statussen van de vastgestelde waarde.\n\nDeze property wordt verwijderd door de BevragenProxy.\n",
             "items" : {
               "$ref" : "#/components/schemas/StatusBeschikkingEnum"
             }
+          },
+          "indicatieBezwaarBeroep" : {
+            "type" : "boolean",
+            "description" : "Heeft de waarde true als de vastgestelde waarde één van de volgende statussen heeft:\n\n- bezwaar_ingediend\n- beroep_aangetekend\n- hoger_beroep_aangetekend\n- cassatie_ingesteld\n\nDeze property wordt gezet door de BevragenProxy.\n"
           }
         },
         "description" : "Waarde op de meest recente beschikking met betrekking tot de peildatum"

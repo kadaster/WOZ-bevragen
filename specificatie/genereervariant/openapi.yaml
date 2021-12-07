@@ -538,14 +538,31 @@ components:
           example: 2019-01-01
         ingangsdatum:
           type: string
-          description: Datum vanaf wanneer de vastgestelde waarde geldt
+          description: |
+            Datum vanaf wanneer de vastgestelde waarde geldt.
+
+            Deze property wordt verwijderd door de BevragenProxy.
           format: date
           example: 2020-01-01
         beschikkingsStatussen:
           type: array
-          description: Een of meer actuele statussen van de vastgestelde waarde
+          description: |
+            Een of meer actuele statussen van de vastgestelde waarde.
+
+            Deze property wordt verwijderd door de BevragenProxy.
           items:
             $ref: '#/components/schemas/StatusBeschikkingEnum'
+        indicatieBezwaarBeroep:
+          type: boolean
+          description: |
+            Heeft de waarde true als de vastgestelde waarde één van de volgende statussen heeft:
+
+            - bezwaar_ingediend
+            - beroep_aangetekend
+            - hoger_beroep_aangetekend
+            - cassatie_ingesteld
+
+            Deze property wordt gezet door de BevragenProxy.
       description: Waarde op de meest recente beschikking met betrekking tot de peildatum
     WozObject:
       type: object
