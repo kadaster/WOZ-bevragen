@@ -284,7 +284,10 @@ components:
           format: date
           example: "2019-01-01"
         ingangsdatum:
-          description: "Datum vanaf wanneer de vastgestelde waarde geldt"
+          description: |
+            Datum vanaf wanneer de vastgestelde waarde geldt.
+
+            Deze property wordt verwijderd door de BevragenProxy.
           type: string
           format: date
           example: "2020-01-01"
@@ -292,7 +295,10 @@ components:
           type: array
           items:
             $ref: "#/components/schemas/StatusBeschikkingEnum"
-          description: "Een of meer actuele statussen van de vastgestelde waarde"
+          description: |
+            Een of meer actuele statussen van de vastgestelde waarde.
+
+            Deze property wordt verwijderd door de BevragenProxy.
         indicatieBezwaarBeroep:
           description: |
             Heeft de waarde true als de vastgestelde waarde één van de volgende statussen heeft:
@@ -301,6 +307,8 @@ components:
             - beroep_aangetekend
             - hoger_beroep_aangetekend
             - cassatie_ingesteld
+
+            Deze property wordt gezet door de BevragenProxy.
           type: boolean
     WozObject:
       type: object
