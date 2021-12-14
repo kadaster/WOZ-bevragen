@@ -15,7 +15,7 @@ Om aan te sluiten kun je de volgende stappen doorlopen:
 6. [Gebruik de WOZ.BevragenProxy om voor een WOZ-object alleen de relevante actuele waarde per waardepeildatum op te vragen](#Woz.BevragenProxy)
 
 ## Aanmelden om aan te sluiten
-Meld je aan bij het kadaster om [aan te sluiten en voor toegang](https://www.kadaster.nl/zakelijk/producten/adressen-en-gebouwen/woz-api-huidige-bevragingen). Aansluiten is voorbehouden aan gemeenten met als gebruiksdoel het heffen van belastingen. Je ontvangt dan o.a. een API-key die nodig is voor toegang tot de testomgeving.
+Meld je aan bij het kadaster om [aan te sluiten en voor toegang](https://www.kadaster.nl/zakelijk/producten/adressen-en-gebouwen/woz-api-huidige-bevragingen). Aansluiten mag alleen als je als afnemer bevoegd bent om WOZ gegevens te gebruiken op basis van een wettelijk voorschrift of als jouw gebruiksdoel belastingheffing is. Je ontvangt dan o.a. een API-key die nodig is voor toegang tot de testomgeving. 
 
 ## Functionaliteit en specificaties
 Je kunt een visuele representatie van de specificatie bekijken met [Swagger UI]({{ site.baseurl }}/swagger-ui) of [Redoc]({{ site.baseurl }}/redoc).
@@ -25,12 +25,11 @@ Je kunt de [functionele documentatie](./features) vinden in de [features](./feat
 ### Resource WOZ-object 
 Je kunt op de volgende manieren WOZ objecten (met WOZ waardes) zoeken en raadplegen:
 
-- Opvragen van 1 specifiek WOZ-object met een identificatie van het WOZ object.
-- Opvragen van 1 specifiek WOZ-object met de identificatie van het adres.
-- Opvragen van 1 of meerdere WOZ-objecten met de postcode en het huisnummer eventueel aangevuld met huisletter en/of huisnummertoevoeging.
-- Opvragen van collectie WOZ-objecten met een niet-natuurlijk persoon (rsin) of een maatschappelijke activiteit (kvknr) die in het Handelsregister is ingeschreven.
-- Opvragen van collectie WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven maatschappelijke activiteit of een van de daaronder vallende ondernemingen en vestigingen.
-- Opvragen van collectie WOZ-objecten met de identificatie van een adresseerbaar object (verblijfsobject, ligplaats, standplaats).
+- Opvragen van een WOZ-object met een identificatie.
+- Zoeken van een WOZ-object met de identificatie van het adres.
+- Zoeken van 1 of meer WOZ-objecten met een postcode en een huisnummer, eventueel aangevuld met huisletter en/of huisnummertoevoeging.
+- Zoeken van 1 of meer WOZ-objecten met een niet-natuurlijk persoon (rsin) of een maatschappelijke activiteit (kvknr).
+- Zoeken van 1 of meer WOZ-objecten met de identificatie van een adresseerbaar object (verblijfsobject, ligplaats, standplaats).
 
 ### Algemeen
 Verder zijn er nog een paar algemene functies die gelden voor alle bovenstaande aanvragen:
