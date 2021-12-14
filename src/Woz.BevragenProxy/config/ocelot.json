@@ -1,0 +1,18 @@
+{
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/{everything}",
+      "DownstreamPathTemplate": "/lvwoz-eto/huidigebevragingen/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "api.kadaster.nl",
+          "Port": "443"
+        }
+      ],
+      "UpstreamHeaderTransform": {
+        "x-api-key": "woz-api-key"
+      }
+    }
+  ]
+}

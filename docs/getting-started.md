@@ -12,6 +12,7 @@ Om aan te sluiten kun je de volgende stappen doorlopen:
 3. [Implementeer de API](#bouw-de-api)
 4. [Probeer en test de API](#probeer-en-test-de-api)
 5. [Sluit aan op productie](#aansluiten-op-productie)
+6. [Gebruik de WOZ.BevragenProxy om voor een WOZ-object alleen de relevante actuele waarde per waardepeildatum op te vragen](#Woz.BevragenProxy)
 
 ## Aanmelden om aan te sluiten
 Meld je aan bij het kadaster om [aan te sluiten en voor toegang](https://www.kadaster.nl/zakelijk/producten/adressen-en-gebouwen/woz-api-huidige-bevragingen). Aansluiten is voorbehouden aan gemeenten met als gebruiksdoel het heffen van belastingen. Je ontvangt dan o.a. een API-key die nodig is voor toegang tot de testomgeving.
@@ -66,3 +67,38 @@ De testomgeving van de API is te benaderen via de volgende url:
 - _Beveiligde verbinding met alleen API-key: https://api.kadaster.nl/lvwoz-eto/huidigebevragingen_
     - Voor deze connectie met de testomgeving van deze API is vereist:
         - Een geldige API-key. Deze wordt bij de request opgenomen in request header "X-Api-Key". Wanneer je je aanmeldt voor het gebruiken van de API ontvang je de API-key.
+
+## Woz.BevragenProxy
+
+Een WOZ-object opgevraagd via de WOZ Bevragen API bevat alle vastgestelde waarden per waardepeildatum voor het WOZ-object. Om voor een WOZ-object alleen de relevante actuele waarde per waardepeildatum op te vragen, kan gebruik worden gemaakt van de Woz.BevragenProxy.
+De Woz.BevragenProxy routeert een WOZ-object bevraging naar de WOZ Bevragen API en filtert de niet-relevante waarden uit de response voordat deze wordt geretourneerd naar de bevrager. De wijze waarop dit wordt gedaan is beschreven in het [waarden.feature](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/tree/master/features/waarden.feature) bestand.
+
+In de volgende paragrafen is beschreven hoe de Woz.BevragenProxy t.b.v. test doeleinden op een lokale machine kan worden geïnstalleerd en geconfigureerd.
+
+### Prerequisites
+
+- [Docker Desktop](https://www.docker.com/products/docker-desktop)
+- API-key voor het aanroepen van de WOZ Bevragen API op de test omgeving 
+
+### Bouwen van de Woz.BevragenProxy Container Image
+
+- Clone de Haal Centraal WOZ bevragen repository:
+  ```sh
+  git clone https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen.git
+  ```
+- Vervang in het src/config/Woz.BevragenProxy/ocelot.json bestand de **woz-api-key** placeholder met je API-key
+- Build de Woz.BevragenProxy Container Image. Dit kan enige tijd duren.
+  ```sh
+  docker-compose build
+  ```
+### Opstarten van de Woz.BevragenProxy Container
+
+- Start de Woz.BevragenProxy met de volgende statement
+  ```sh
+  docker-compose up -d
+  ```
+- Roep de WOZ Bevragen API aan met als base url: *http://localhost:5000*. Een aanroep met curl ziet er als volgt uit:
+  ```sh
+  curl --location --request GET 'http://localhost:5000/wozobjecten/800000003118'
+  ```
+ 

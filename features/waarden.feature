@@ -473,7 +473,7 @@ Functionaliteit: leveren van waarden bij een WOZ-object
         | hoge_raad_geding_verwezen    | 33         | arrestHogeRaad,gedingverwezen                         |
         | voorlopige_aanslag           | 99         | waarde te gebruiken voor voorlopige aanslag           |
 
-    Scenario: indicatieBezwaarBeroep wanneer er meerdere statussen zijn bij een waardepeildatum en ingangsdatum
+    Scenario: indicatieBezwaarBeroep wordt opgenomen wanneer er meerdere statussen zijn bij een waardepeildatum en ingangsdatum en minimaal één van de statussen gelijk is aan bezwaar, (hoger)beroep of cassatie ingesteld
       Gegeven WOZ-object met objectnummer "23280647970000" heeft de volgende beschikkingen:
       | Peildatum  | WOZ-waarde   | Ingangsdatum | Datum beschikking | Status |
       | 01-01-2019 | 437.000 euro | 01-01-2020   | 06-12-2020        | 21     |
@@ -513,7 +513,7 @@ Functionaliteit: leveren van waarden bij een WOZ-object
       ]
       """
 
-    Scenario: indicatieBezwaarBeroep wanneer er bezwaar, (hoger)beroep of cassatie loopt bij niet de meest recente ingangsdatum
+    Scenario: indicatieBezwaarBeroep wordt niet opgenomen wanneer er bezwaar, (hoger)beroep of cassatie loopt bij niet de meest recente ingangsdatum
       Gegeven WOZ-object met objectnummer "22310827210003" heeft met ingang van 01-05-2019 een nieuwe eigenaar
       En de gemeente heeft een beschikking gestuurd naar de nieuwe eigenaar over waardepeildatum 01-01-2018 met ingangsdatum 01-05-2019
       En de vorige eigenaar heeft beroep ingediend over de WOZ-waarde op waardepeildatum 01-01-2018

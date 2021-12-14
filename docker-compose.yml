@@ -1,0 +1,14 @@
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP .NET Core service.
+
+version: '3.4'
+
+services:
+  wozbevragenproxy:
+    image: wozbevragenproxy
+    build:
+      context: .
+      dockerfile: src/Woz.BevragenProxy/Dockerfile
+    ports:
+      - 5000:5000
+    volumes:
+      - ./src/config/Woz.BevragenProxy:/app/config

@@ -1,1 +1,9 @@
 node_modules
+
+bin
+obj
+.suo
+*.user
+.vs
+
+.vscode
