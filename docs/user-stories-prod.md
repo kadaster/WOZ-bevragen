@@ -7,6 +7,9 @@ title: User Stories in Productie
 
 ## Vanaf versie 1.0
 
+- [Als medewerker Erfpacht en Uitgifte (gemeente Amsterdam) wil ik ](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/issues/166){:target="_blank" rel="noopener"}
+- [Als medewerker wonen (gemeente Amsterdam) wil ik de WOZ waarde en temporele metakenmerken weten](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/issues/165){:target="_blank" rel="noopener"}
+- [Als medewerker team advies grondprijzen wil ik weten wat de WOZ waarde is met temporele metadata](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/issues/164){:target="_blank" rel="noopener"}
 - [Als medewerker Onderzoek, Informatie en Statistiek wil ik weten wat het waardegegeven en de temporele kenmerken van een adresseerbaar object is, ](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/issues/152){:target="_blank" rel="noopener"}
 - [Als medewerker Grond en Ontwikkeling wil ik inzicht in de waardegegevens, adresgegevens, en temporele kenmerken van adresseerbare objecten (woningen en niet-woningen)](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/issues/150){:target="_blank" rel="noopener"}
 - [Als beleidsmedewerker (aanpak van) ondermijning wil ik een overzicht met (voormalige) onroerende zaken in eigendom en hun WOZ-waarde ](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/issues/149){:target="_blank" rel="noopener"}
