@@ -10,9 +10,8 @@ Om aan te sluiten kun je de volgende stappen doorlopen:
 1. [Aanmelden](#aanmelden) bij het kadaster om toegang te krijgen
 2. Bekijk de [functionaliteit en specificaties](#functionaliteit-en-specificaties)
 3. [Implementeer de API Client](#implementeer-de-api-client)
-4. [Probeer en test de API](#probeer-en-test-de-api)
-5. [Sluit aan op productie](#aansluiten-op-productie)
-6. [Gebruik de WOZ.BevragenProxy om voor een WOZ-object alleen de relevante actuele waarde per waardepeildatum op te vragen](#wozbevragenproxy)
+4. [Probeer en test de API](#probeer-en-test-de-api)<!-- 5. [Sluit aan op productie](#aansluiten-op-productie) -->
+5. Gebruik de [WOZ.BevragenProxy](#wozbevragenproxy) om voor een WOZ-object alleen de relevante actuele waarde per waardepeildatum op te vragen
 
 ## Aanmelden
 Meld je aan bij het kadaster om [aan te sluiten en voor toegang](https://www.kadaster.nl/zakelijk/producten/adressen-en-gebouwen/woz-api-huidige-bevragingen). Aansluiten mag alleen als je als gemeentelijke afnemer bevoegd bent om WOZ gegevens te gebruiken op basis van een wettelijk voorschrift of als jouw gebruiksdoel belastingheffing is. Je ontvangt dan o.a. een API-key die nodig is voor toegang tot de testomgeving. 
