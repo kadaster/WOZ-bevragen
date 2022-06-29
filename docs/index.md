@@ -29,7 +29,7 @@ API voor het zoeken en raadplegen van WOZ objecten en WOZ waardes.
 * [Stelselcatalogus](https://www.stelselcatalogus.nl/registraties/WOZ/){:target="_blank" rel="noopener"}
 
 ## Contact
-* Product Owner: Cathy Dingemanse, [cathy.dingemanse@denhaag.nl](mailto:cathy.dingemanse@denhaag.nl)
+* Product Owner: Cathy Dingemanse, [c.dingemanse@comites.nl](mailto:c.dingemanse@comites.nl)
 * Designer/tester: Frank Samwel, [frank@quality-of-service.nl](mailto:frank@quality-of-service.nl)
 * Designer: Johan Boer, [johan.boer@vng.nl](mailto:johan.boer@vng.nl)
 * Designer: Robert Melskens, [robert.melskens@vng.nl](mailto:robert.melskens@vng.nl)
