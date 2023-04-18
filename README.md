@@ -19,11 +19,9 @@ API voor het zoeken en raadplegen van WOZ objecten en WOZ waardes.
 * [Stelselcatalogus](https://www.stelselcatalogus.nl/registraties/WOZ/)
 
 ## Contact
-* Product Owner: Cathy Dingemanse, [c.dingemanse@comites.nl](mailto:c.dingemanse@comites.nl)
-* Designer/tester: Frank Samwel, [frank.samwel@denhaag.nl](mailto:frank.samwel@denhaag.nl)
+* Productregiseur: Arjen Brienen, [standaarden.ondersteuning@VNG.NL](mailto:standaarden.ondersteuning@VNG.NL)
 * Designer: Johan Boer, [johan.boer@vng.nl](mailto:johan.boer@vng.nl)
 * Designer: Robert Melskens, [robert.melskens@vng.nl](mailto:robert.melskens@vng.nl)
-* Customer zero: Melvin Lee, [melvin.lee@iswish.nl](mailto:melvin.lee@iswish.nl)
 
 ## Licentie
 Copyright &copy; VNG Realisatie 2020
