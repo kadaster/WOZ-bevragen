@@ -28,7 +28,7 @@ API voor het zoeken en raadplegen van WOZ objecten en WOZ waardes.
 * [Stelselcatalogus](https://www.stelselcatalogus.nl/registraties/WOZ/){:target="_blank" rel="noopener"}
 
 ## Contact
-* Productregiseur: Patrick van der Spank, [standaarden.ondersteuning@VNG.NL](mailto:standaarden.ondersteuning@vng.nl)
+* Productregiseur: Arjen Brienen, [standaarden.ondersteuning@VNG.NL](mailto:standaarden.ondersteuning@VNG.NL)
 * Designer: Johan Boer, [johan.boer@vng.nl](mailto:johan.boer@vng.nl)
 * Designer: Robert Melskens, [robert.melskens@vng.nl](mailto:robert.melskens@vng.nl)
 
