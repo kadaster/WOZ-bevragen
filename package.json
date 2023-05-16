@@ -37,6 +37,6 @@
     "@openapitools/openapi-generator-cli": "^2.6.0",
     "@stoplight/spectral-cli": "^6.6.0",
     "mvn-dl": "^6.0.0",
-    "openapi-to-postmanv2": "^4.11.0"
+    "openapi-to-postmanv2": "^4.12.0"
   }
 }
