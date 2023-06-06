@@ -511,7 +511,7 @@
           },
           "naam" : {
             "type" : "string",
-            "example" : "Jan de Vries"
+            "example" : "J. de Vries"
           },
           "rsin" : {
             "type" : "string",
