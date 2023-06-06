@@ -174,7 +174,7 @@ components:
           type: string
         naam:
           type: string
-          example: "Jan de Vries"
+          example: "J. de Vries"
         rsin:
           type: string
           description: unieke identificatie van een niet-natuurlijk persoon (rechtspersoon of samenwerkingsverband)
