@@ -15,7 +15,7 @@ env:
   DOTNET_VERSION: 6.0.x
   DOTNET_SOLUTION: WOZ.sln
   NODE_VERSION: 18
-  CONTAINER_NAME: ghcr.io/vng-realisatie/wozbevragen-proxy
+  CONTAINER_NAME: ghcr.io/vng-realisatie/wozbevragen
 
 jobs:
   build:
