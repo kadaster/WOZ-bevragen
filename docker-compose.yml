@@ -4,10 +4,13 @@ version: '3.4'
 
 services:
   wozbevragenproxy:
-    image: wozbevragenproxy
+    image: ghcr.io/vng-realisatie/wozbevragenproxy
     build:
       context: .
       dockerfile: src/Woz.BevragenProxy/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Release
+      - ASPNETCORE_URLS=http://+:5000
     ports:
       - 5000:5000
     volumes:
