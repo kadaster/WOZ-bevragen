@@ -1,11 +1,7 @@
+using System.IO;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Woz.BevragenProxy
 {
@@ -20,7 +16,9 @@ namespace Woz.BevragenProxy
             Host.CreateDefaultBuilder(args)
                 .ConfigureAppConfiguration((hostBuilderContext, configBuilder) =>
                 {
-                    configBuilder.AddJsonFile("config/ocelot.json");
+                    configBuilder.AddJsonFile(Path.Combine("config", "ocelot.json"))
+                         .AddJsonFile(Path.Combine("config", $"ocelot.{hostBuilderContext.HostingEnvironment.EnvironmentName}.json"), true)
+                         .AddEnvironmentVariables();
                 })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {

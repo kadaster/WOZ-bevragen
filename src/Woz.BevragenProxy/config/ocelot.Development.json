@@ -1,0 +1,16 @@
+{
+    "Routes": [
+      {
+        "UpstreamPathTemplate": "/lvwoz-eto/huidigebevragingen/{everything}",
+        "DownstreamPathTemplate": "/lvwoz-eto/huidigebevragingen/{everything}",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": "5010"
+          }
+        ]
+      }
+    ]
+  }
+  
