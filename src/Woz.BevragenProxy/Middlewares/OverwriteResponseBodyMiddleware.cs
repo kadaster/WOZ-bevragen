@@ -8,115 +8,155 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Woz.BevragenProxy.Domain;
 
-namespace Woz.BevragenProxy.Middlewares
+namespace Woz.BevragenProxy.Middlewares;
+
+public class OverwriteResponseBodyMiddleware
 {
-    public class OverwriteResponseBodyMiddleware
+    private readonly RequestDelegate _next;
+    private readonly ILogger<OverwriteResponseBodyMiddleware> _logger;
+    private static readonly Regex _isRaadpleegActueelWozobjectEndpoint = new(@"\/wozobjecten\/\d{12}");
+
+    public OverwriteResponseBodyMiddleware(RequestDelegate next, ILogger<OverwriteResponseBodyMiddleware> logger)
     {
-        private readonly RequestDelegate _next;
-        private readonly ILogger<OverwriteResponseBodyMiddleware> _logger;
-        private static readonly Regex _isRaadpleegActueelWozobjectEndpoint = new(@"\/wozobjecten\/\d{12}");
-
-        public OverwriteResponseBodyMiddleware(RequestDelegate next, ILogger<OverwriteResponseBodyMiddleware> logger)
-        {
-            _next = next;
-            _logger = logger;
-        }
-
-        public async Task InvokeAsync(HttpContext context)
-        {
-            var orgBodyStream = context.Response.Body;
-
-            using var newBodyStream = new MemoryStream();
-            context.Response.Body = newBodyStream;
-
-            await _next(context);
-
-            var body = await context.Response.ReadBodyAsync();
-
-            _logger.LogInformation($"original:{body}");
-
-            if (context.Response.StatusCode == StatusCodes.Status200OK)
-            {
-                var modifiedBody = body.Transform(_isRaadpleegActueelWozobjectEndpoint.IsMatch(context.Request.Path));
-                _logger.LogInformation($"modified:{modifiedBody}");
-
-                using var modifiedBodyStream = modifiedBody.ToMemoryStream();
-
-                context.Response.ContentLength = modifiedBodyStream.Length;
-                await modifiedBodyStream.CopyToAsync(orgBodyStream);
-            }
-            else
-            {
-                _logger.LogInformation($"received status code:{context.Response.StatusCode}");
-
-                using var modifiedBodyStream = body.ToMemoryStream();
-
-                context.Response.ContentLength = modifiedBodyStream.Length;
-                await modifiedBodyStream.CopyToAsync(orgBodyStream);
-            }
-        }
+        _next = next;
+        _logger = logger;
     }
 
-    public static class WozObjectHelpers
+    public async Task InvokeAsync(HttpContext context)
     {
-        public static string Transform(this string payload, bool isObject)
-        {
-            string retval;
+        var orgBodyStream = context.Response.Body;
 
-            if (isObject)
+        using var newBodyStream = new MemoryStream();
+        context.Response.Body = newBodyStream;
+
+        await _next(context);
+
+        var body = await context.Response.ReadBodyAsync();
+
+        _logger.LogInformation($"original:{body}");
+
+        if (context.Response.StatusCode == StatusCodes.Status200OK)
+        {
+            var modifiedBody = body.Transform(_isRaadpleegActueelWozobjectEndpoint.IsMatch(context.Request.Path));
+            _logger.LogInformation($"modified:{modifiedBody}");
+
+            using var modifiedBodyStream = modifiedBody.ToMemoryStream(context.Response.UseGzip());
+
+            context.Response.ContentLength = modifiedBodyStream.Length;
+            await modifiedBodyStream.CopyToAsync(orgBodyStream);
+        }
+        else
+        {
+            _logger.LogInformation($"received status code:{context.Response.StatusCode}");
+
+            using var modifiedBodyStream = body.ToMemoryStream(context.Response.UseGzip());
+
+            context.Response.ContentLength = modifiedBodyStream.Length;
+            await modifiedBodyStream.CopyToAsync(orgBodyStream);
+        }
+    }
+}
+
+public static class WozObjectHelpers
+{
+    public static string Transform(this string payload, bool isObject)
+    {
+        string retval;
+
+        if (isObject)
+        {
+            var wozObject = JsonConvert.DeserializeObject<DataTransferObjects.WozObjectHal>(payload);
+            wozObject.Waarden = wozObject.Waarden.BepaalRelevanteWaarden()?.ToArray();
+
+            retval = JsonConvert.SerializeObject(wozObject);
+        }
+        else
+        {
+            var wozObjecten = JsonConvert.DeserializeObject<DataTransferObjects.WozObjectHalCollectie>(payload);
+            foreach (var wozObject in wozObjecten._embedded.WozObjecten)
             {
-                var wozObject = JsonConvert.DeserializeObject<DataTransferObjects.WozObjectHal>(payload);
                 wozObject.Waarden = wozObject.Waarden.BepaalRelevanteWaarden()?.ToArray();
+            }
 
-                retval = JsonConvert.SerializeObject(wozObject);
+            retval = JsonConvert.SerializeObject(wozObjecten);
+        }
+
+        return retval;
+    }
+}
+
+public static class HttpResponseHelpers
+{
+    public static bool UseGzip(this HttpResponse response) => response.Headers.ContentEncoding.Contains("gzip");
+
+    public static async Task<string> ReadBodyAsync(this HttpResponse response)
+    {
+        try
+        {
+            if (response.UseGzip())
+            {
+                return await ReadCompressedBodyAsync(response);
             }
             else
             {
-                var wozObjecten = JsonConvert.DeserializeObject<DataTransferObjects.WozObjectHalCollectie>(payload);
-                foreach (var wozObject in wozObjecten._embedded.WozObjecten)
-                {
-                    wozObject.Waarden = wozObject.Waarden.BepaalRelevanteWaarden()?.ToArray();
-                }
-
-                retval = JsonConvert.SerializeObject(wozObjecten);
+                return await ReadUncompressedBodyAsync(response);
             }
-
-            return retval;
+        }
+        catch (InvalidDataException)
+        {
+            return await ReadUncompressedBodyAsync(response);
         }
     }
 
-    public static class HttpResponseHelpers
+    private static async Task<string> ReadCompressedBodyAsync(this HttpResponse response)
     {
-        public static async Task<string> ReadBodyAsync(this HttpResponse response)
+        try
         {
             response.Body.Seek(0, SeekOrigin.Begin);
 
-            var gzipStream = new GZipStream(response.Body, CompressionMode.Decompress);
-            var streamReader = new StreamReader(gzipStream);
+            GZipStream gzipStream = new(response.Body, CompressionMode.Decompress);
+            StreamReader streamReader = new(gzipStream);
 
-            var retval = await streamReader.ReadToEndAsync();
-
+            return await streamReader.ReadToEndAsync();
+        }
+        finally
+        {
             response.Body.Seek(0, SeekOrigin.Begin);
-
-            return retval;
         }
     }
 
-    public static class MemoryStreamHelpers
+    private static async Task<string> ReadUncompressedBodyAsync(this HttpResponse response)
     {
-        public static MemoryStream ToMemoryStream(this string data)
+        try
         {
-            var retval = new MemoryStream();
+            response.Body.Seek(0, SeekOrigin.Begin);
 
-            var gzipStream = new GZipStream(retval, CompressionMode.Compress);
-            var streamWriter = new StreamWriter(gzipStream);
+            StreamReader streamReader = new(response.Body);
 
-            streamWriter.Write(data);
-            streamWriter.Flush();
-
-            retval.Seek(0, SeekOrigin.Begin);
-
-            return retval;
+            return await streamReader.ReadToEndAsync();
         }
+        finally
+        {
+            response.Body.Seek(0, SeekOrigin.Begin);
+        }
+    }
+}
+
+public static class MemoryStreamHelpers
+{
+    public static MemoryStream ToMemoryStream(this string data, bool gzipCompress)
+    {
+        MemoryStream retval = new();
+
+        StreamWriter streamWriter = gzipCompress
+            ? new StreamWriter(new GZipStream(retval, CompressionMode.Compress))
+            : new StreamWriter(retval);
+
+        streamWriter.Write(data);
+        streamWriter.Flush();
+
+        retval.Seek(0, SeekOrigin.Begin);
+
+        return retval;
     }
 }
