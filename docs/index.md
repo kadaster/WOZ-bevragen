@@ -10,6 +10,8 @@ title: Haal Centraal WOZ bevragen
 
 API voor het zoeken en raadplegen van WOZ objecten en WOZ waardes.
 
+Bezoek de [GitHub repository](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/).
+
 <!-- Bekijk de [release notes](./releasenotes). -->
 
 ## Direct aan de slag?
