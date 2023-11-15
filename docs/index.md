@@ -39,9 +39,10 @@ Bezoek de [GitHub repository](https://github.com/VNG-Realisatie/Haal-Centraal-WO
 * Community: Wil je geïnformeerd blijven over productwijzigingen of meepraten over de API meld je dan aan bij de community.<br/><a href="https://haalcentraal.pleio.nl/groups/view/6dc1ac46-ec6e-47cc-bcab-ce586d8962b0/community-woz-api">Ga naar de community>></a>
 
 
-* Regiseur API's: Arjen Brienen, [arjen.brienen@VNG.NL](mailto:arjen.brienen@VNG.NL)
-* Designer: Johan Boer, [johan.boer@vng.nl](mailto:johan.boer@vng.nl)
-* Designer: Robert Melskens, [robert.melskens@vng.nl](mailto:robert.melskens@vng.nl)
+* Regiseur API's: Arjen Brienen
+* Designer: Johan Boer
+* Designer: Robert Melskens
+U kunt hen bereiken via [standaarden.ondersteuning@vng.nl](mailto:standaarden.ondersteuning@vng.nl)
 
 ## Licentie
 Copyright &copy; VNG Realisatie 2020
