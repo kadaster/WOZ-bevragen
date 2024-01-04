@@ -5,7 +5,7 @@
 
 API voor het zoeken en raadplegen van WOZ objecten en WOZ waardes.
 
-## Direct uitproberen?
+## Direct aan de slag?
 * Lees de [Getting started](https://vng-realisatie.github.io/Haal-Centraal-WOZ-bevragen/getting-started)
 * Bekijk de specificaties met [Swagger UI](https://vng-realisatie.github.io/Haal-Centraal-WOZ-bevragen/swagger-ui) en in [Redoc](https://vng-realisatie.github.io/Haal-Centraal-WOZ-bevragen/redoc)
 * Download de [Technische specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/tree/master/specificatie/genereervariant/openapi.yaml)
