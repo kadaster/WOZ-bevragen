@@ -3,7 +3,7 @@ layout: page-with-side-nav
 title: Haal Centraal WOZ bevragen
 ---
 
-# Haal Centraal WOZ bevragen v1.0 is live!
+# Haal Centraal WOZ bevragen
 
 ![lint oas](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/workflows/lint-oas/badge.svg)
 ![generate postman collection](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/workflows/generate-postman-collection/badge.svg)
