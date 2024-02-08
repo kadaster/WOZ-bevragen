@@ -74,32 +74,23 @@ De testomgeving van de API is te benaderen via de volgende url:
     - Voor deze connectie met de testomgeving van deze API is vereist:
         - Een geldige API-key. Deze wordt bij de request opgenomen in request header "X-Api-Key". Wanneer je je aanmeldt voor het gebruiken van de API ontvang je de API-key.
 
-## Woz.BevragenProxy
+## wozbevragen-proxy
 
-Een WOZ-object opgevraagd via de WOZ Bevragen API bevat alle vastgestelde waarden per waardepeildatum voor het WOZ-object. Om voor een WOZ-object alleen de relevante actuele waarde per waardepeildatum op te vragen, kan gebruik worden gemaakt van de Woz.BevragenProxy.
-De Woz.BevragenProxy routeert een WOZ-object bevraging naar de WOZ Bevragen API en filtert de niet-relevante waarden uit de response voordat deze wordt geretourneerd naar de bevrager. De wijze waarop dit wordt gedaan is beschreven in het [waarden.feature](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/tree/master/features/waarden.feature) bestand.
+Een WOZ-object opgevraagd via de WOZ Bevragen API bevat alle vastgestelde waarden per waardepeildatum voor het WOZ-object. Om voor een WOZ-object alleen de relevante actuele waarde per waardepeildatum op te vragen, kan gebruik worden gemaakt van de wozbevragen-proxy.
+De wozbevragen-proxy routeert een WOZ-object bevraging naar de WOZ Bevragen API en filtert de niet-relevante waarden uit de response voordat deze wordt geretourneerd naar de bevrager. De wijze waarop dit wordt gedaan is beschreven in het [waarden.feature](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/tree/master/features/waarden.feature) bestand.
 
-In de volgende paragrafen is beschreven hoe de Woz.BevragenProxy t.b.v. test doeleinden op een lokale machine kan worden geïnstalleerd en geconfigureerd.
+In de volgende paragrafen is beschreven hoe de wozbevragen-proxy t.b.v. test doeleinden op een lokale machine kan worden geïnstalleerd en geconfigureerd.
 
 ### Prerequisites
 
-- [Docker Desktop](https://www.docker.com/products/docker-desktop)
+- [Docker Desktop](https://www.docker.com/products/docker-desktop){:target="_blank" rel="noopener"} om de wozbevragen-proxy container image lokaal op een Windows of Mac PC te draaien
 - API-key voor het aanroepen van de WOZ Bevragen API op de test omgeving 
+- Een docker compose bestand om de wozbevragen-proxy container image te configureren en op te starten. Het [docker compose bestand](https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/master/docker-compose.yml){:target="_blank" rel="noopener"} op de Haal-Centraal-WOZ-bevragen GitHub repository kan als referentie worden gebruikt
+- een ocelot.json bestand om de routering van de wozbevragen-proxy te configureren. Als referentie kan het [ocelot.json bestand](https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/master/src/config/Woz.BevragenProxy/ocelot.json){:target="_blank" rel="noopener"} worden gebruikt. Vervang de **woz-api-key** placeholder met je API-key
 
-### Bouwen van de Woz.BevragenProxy Container Image
-
-- Clone de Haal Centraal WOZ bevragen repository:
-  ```sh
-  git clone https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen.git
-  ```
-- Vervang in het src/config/Woz.BevragenProxy/ocelot.json bestand de **woz-api-key** placeholder met je API-key
-- Build de Woz.BevragenProxy Container Image. Dit kan enige tijd duren.
-  ```sh
-  docker-compose build
-  ```
 ### Opstarten van de Woz.BevragenProxy Container
 
-- Start de Woz.BevragenProxy met de volgende statement
+- Start de wozbevragen-proxy container image met de volgende statement
   ```sh
   docker-compose up -d
   ```
