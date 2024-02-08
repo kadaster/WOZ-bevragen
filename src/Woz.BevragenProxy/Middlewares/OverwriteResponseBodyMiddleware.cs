@@ -73,9 +73,12 @@ public static class WozObjectHelpers
         else
         {
             var wozObjecten = JsonConvert.DeserializeObject<DataTransferObjects.WozObjectHalCollectie>(payload);
-            foreach (var wozObject in wozObjecten._embedded.WozObjecten)
+            if(wozObjecten._embedded.WozObjecten != null)
             {
-                wozObject.Waarden = wozObject.Waarden.BepaalRelevanteWaarden()?.ToArray();
+                foreach (var wozObject in wozObjecten._embedded.WozObjecten)
+                {
+                    wozObject.Waarden = wozObject.Waarden.BepaalRelevanteWaarden()?.ToArray();
+                }
             }
 
             retval = JsonConvert.SerializeObject(wozObjecten);
