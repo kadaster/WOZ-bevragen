@@ -14,7 +14,7 @@ Om aan te sluiten kun je de volgende stappen doorlopen:
 5. Gebruik de [WOZ.BevragenProxy](#wozbevragenproxy) om voor een WOZ-object alleen de relevante actuele waarde per waardepeildatum op te vragen
 
 ## Aanmelden
-Meld je aan bij het kadaster om [aan te sluiten en voor toegang](https://www.kadaster.nl/zakelijk/producten/adressen-en-gebouwen/woz-api-huidige-bevragingen). Aansluiten mag alleen als jouw gebruiksdoel belastingheffing is. Je ontvangt dan o.a. een API-key die nodig is voor toegang tot de testomgeving. 
+Meld je aan bij het kadaster om [aan te sluiten en voor toegang](https://www.kadaster.nl/zakelijk/producten/adressen-en-gebouwen/woz-api-huidige-bevragingen). Aansluiten mag als je de API gebruikt in het kader van de [Huisvestingswet](https://wetten.overheid.nl/BWBR0035303/2024-01-01), de [Wet goed verhuurderschap](https://wetten.overheid.nl/BWBR0048028/2024-01-01) of Belastingheffing. Je ontvangt dan o.a. een API-key die nodig is voor toegang tot de testomgeving. 
 
 ## Functionaliteit en specificaties
 Je kunt een visuele representatie van de specificatie bekijken met [Swagger UI]({{ site.baseurl }}/swagger-ui) of [Redoc]({{ site.baseurl }}/redoc).
