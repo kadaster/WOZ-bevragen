@@ -30,7 +30,9 @@ Bezoek de [GitHub repository](https://github.com/VNG-Realisatie/Haal-Centraal-WO
 
 ## Contact
 
-* Bug Melden
+Op deze pagina treft u de documentatie over de WOZ api specificatie aan die in het kader van het programma Haal Centraal is gemaakt. Met het oog op de bredere transitie van het WOZ domein, vindt er op dit moment geen (door)ontwikkeling van deze api(-specificatie) plaats. Voor vragen over het bredere transitie traject kunt u contact opnemen met [Boris Bonsel](mailto:Boris.Bonsel@vng.nl). 
+
+<!--* Bug Melden
   [Maak een bug issue aan >>](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/issues/new?assignees=&labels=bug&template=bug_report.md&title=)
 * Verbeteringen doorgeven
   [Maak een verbeter issue aan >>](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/issues/new?assignees=&labels=enhancement&template=enhancement.md&title=)
@@ -43,7 +45,7 @@ Bezoek de [GitHub repository](https://github.com/VNG-Realisatie/Haal-Centraal-WO
 * Designer: Johan Boer
 * Designer: Robert Melskens
 
-U kunt hen bereiken via [standaarden.ondersteuning@vng.nl](mailto:standaarden.ondersteuning@vng.nl)
+U kunt hen bereiken via [standaarden.ondersteuning@vng.nl](mailto:standaarden.ondersteuning@vng.nl)-->
 
 ## Licentie
 Copyright &copy; VNG Realisatie 2020
