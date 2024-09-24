@@ -20,18 +20,9 @@ API voor het zoeken en raadplegen van WOZ objecten en WOZ waardes.
 
 ## Contact
 
-* Bug Melden
-  [Maak een bug issue aan >>](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/issues/new?assignees=&labels=bug&template=bug_report.md&title=)
-* Verbeteringen doorgeven
-  [Maak een verbeter issue aan >>](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/issues/new?assignees=&labels=enhancement&template=enhancement.md&title=)
-* Community: Wil je geïnformeerd blijven over productwijzigingen of meepraten over de API meld je dan aan bij de community.<br/><a href="https://haalcentraal.pleio.nl/groups/view/6dc1ac46-ec6e-47cc-bcab-ce586d8962b0/community-woz-api">Ga naar de community>></a>
+## Contact
 
-
-* Regiseur API's: Arjen Brienen
-* Designer: Johan Boer
-* Designer: Robert Melskens
-
-U kunt hen bereiken via [standaarden.ondersteuning@vng.nl](mailto:standaarden.ondersteuning@vng.nl)
+Op deze pagina treft u de documentatie over de WOZ api specificatie aan die in het kader van het programma Haal Centraal is gemaakt. Met het oog op de bredere transitie van het WOZ domein, vindt er op dit moment geen (door)ontwikkeling van deze api(-specificatie) plaats. Voor vragen over het bredere transitie traject kunt u contact opnemen met [Boris Bonsel](mailto:Boris.Bonsel@vng.nl). 
 
 ## Licentie
 Copyright &copy; VNG Realisatie 2020
