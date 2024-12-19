@@ -1,4 +1,4 @@
-baseurl: "/Haal-Centraal-WOZ-bevragen"
+baseurl: "/WOZ-bevragen"
 apiname: "WOZ Bevragen"
 url: "http://localhost:4000"
 # nav is t.b.v. generatie side-navigation menu.
@@ -18,7 +18,7 @@ nav:
       - title: Getting started
         path: /getting-started
       - title: User stories
-        url: https://vng-realisatie.github.io/Haal-Centraal-WOZ-bevragen/user-stories-prod
+        url: https://vng-realisatie.github.io/WOZ-bevragen/user-stories-prod
         path: /user-stories
       - title: Bevragen API (swagger-ui)
         path: /swagger-ui
@@ -33,8 +33,8 @@ plugins:
 
 remote_theme: VNG-Realisatie/jekyll-theme-haal-centraal
 
-github: VNG-Realisatie/Haal-Centraal-WOZ-bevragen
+github: kadaster/WOZ-bevragen
 
 theme: jekyll-theme-time-machine
 
-project_name: /Haal-Centraal-WOZ-bevragen
+project_name: /WOZ-bevragen
