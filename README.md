@@ -22,7 +22,8 @@ API voor het zoeken en raadplegen van WOZ objecten en WOZ waardes.
 
 ## Contact
 
-Op deze pagina treft u de documentatie over de WOZ api specificatie aan die in het kader van het programma Haal Centraal is gemaakt. Met het oog op de bredere transitie van het WOZ domein, vindt er op dit moment geen (door)ontwikkeling van deze api(-specificatie) plaats. Voor vragen over het bredere transitie traject kunt u contact opnemen met [Boris Bonsel](mailto:Boris.Bonsel@vng.nl). 
+Op deze pagina treft u de documentatie over de WOZ api specificatie aan die in het kader van het programma Haal Centraal is gemaakt. Voor meer informatie verwijzen wij u naar de website van het Kadaster: 
+[WOZ API Bevragen](https://www.kadaster.nl/zakelijk/producten/adressen-en-gebouwen/woz-api-bevragen)
 
 ## Licentie
 Copyright &copy; VNG Realisatie 2020
