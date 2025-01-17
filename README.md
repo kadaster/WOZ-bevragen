@@ -1,15 +1,15 @@
 # Haal Centraal WOZ bevragen
 
-![lint oas](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/workflows/lint-oas/badge.svg)
-![generate postman collection](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/workflows/generate-postman-collection/badge.svg)
+![lint oas](https://github.com/kadaster/WOZ-bevragen/workflows/lint-oas/badge.svg)
+![generate postman collection](https://github.com/kadaster/WOZ-bevragen/workflows/generate-postman-collection/badge.svg)
 
 API voor het zoeken en raadplegen van WOZ objecten en WOZ waardes.
 
 ## Direct aan de slag?
-* Lees de [Getting started](https://vng-realisatie.github.io/Haal-Centraal-WOZ-bevragen/getting-started)
-* Bekijk de specificaties met [Swagger UI](https://vng-realisatie.github.io/Haal-Centraal-WOZ-bevragen/swagger-ui) en in [Redoc](https://vng-realisatie.github.io/Haal-Centraal-WOZ-bevragen/redoc)
-* Download de [Technische specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/tree/master/specificatie/genereervariant/openapi.yaml)
-<!-- * [Vraag een API-key aan](https://formulieren.kadaster.nl/aanmelden_brk_bevragen) voor toegang tot de testomgeving.-->
+* Lees de [Getting started](https://kadaster.github.io/WOZ-bevragen/getting-started)
+* Bekijk de specificaties met [Swagger UI](https://kadaster.github.io/WOZ-bevragen/swagger-ui) en in [Redoc](https://kadaster.github.io/WOZ-bevragen/redoc)
+* Download de [Technische specificaties](https://github.com/kadaster/WOZ-bevragen/blob/master/specificatie/genereervariant/openapi.yaml)
+* Meer informatie en aanmelden [WOZ API Bevragen](https://www.kadaster.nl/zakelijk/producten/adressen-en-gebouwen/woz-api-bevragen)
 
 ## Bronnen
 
@@ -20,11 +20,9 @@ API voor het zoeken en raadplegen van WOZ objecten en WOZ waardes.
 
 ## Contact
 
-## Contact
-
 Op deze pagina treft u de documentatie over de WOZ api specificatie aan die in het kader van het programma Haal Centraal is gemaakt. Voor meer informatie verwijzen wij u naar de website van het Kadaster: 
 [WOZ API Bevragen](https://www.kadaster.nl/zakelijk/producten/adressen-en-gebouwen/woz-api-bevragen)
 
 ## Licentie
-Copyright &copy; VNG Realisatie 2020
-Licensed under the [EUPL](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/blob/master/LICENCE.md)
+Copyright &copy; Kadaster 2025
+Licensed under the [EUPL](https://github.com/kadaster/WOZ-bevragen/blob/master/LICENCE.md)
