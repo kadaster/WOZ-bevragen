@@ -73,7 +73,7 @@
                                     "disabled": false,
                                     "key": "fields",
                                     "value": "<string>",
-                                    "description": "Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.2.0/features/fields.feature)"
+                                    "description": "Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/kadaster/WOZ-bevragen/blob/master/features/common/fields.feature)"
                                 },
                                 {
                                     "disabled": false,
@@ -616,7 +616,7 @@
                                     "disabled": false,
                                     "key": "fields",
                                     "value": "<string>",
-                                    "description": "Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.2.0/features/fields.feature)"
+                                    "description": "Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/kadaster/WOZ-bevragen/blob/master/features/common/fields.feature)"
                                 }
                             ],
                             "variable": [
@@ -993,7 +993,7 @@
     "variable": [
         {
             "type": "string",
-            "value": "https://virtserver.swaggerhub.com/VNG-sandbox/Waardering-onroerende-zaken/1.0.0",
+            "value": "https://virtserver.swaggerhub.com/kadaster/WOZ-bevragen/1.0.0",
             "key": "baseUrl"
         }
     ],

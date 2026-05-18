@@ -4,7 +4,7 @@
     "title" : "Waardering onroerende zaken",
     "description" : "Deze API levert actuele gegevens over WOZ-objecten\n",
     "contact" : {
-      "url" : "https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen"
+      "url" : "https://github.com/kadaster/WOZ-bevragen"
     },
     "license" : {
       "name" : "European Union Public License, version 1.2 (EUPL-1.2)",
@@ -13,7 +13,13 @@
     "version" : "1.0.0"
   },
   "servers" : [ {
-    "url" : "https://virtserver.swaggerhub.com/VNG-sandbox/Waardering-onroerende-zaken/1.0.0",
+    "url" : "https://virtserver.swaggerhub.com/kadaster/WOZ-bevragen/1.0.0",
+    "description" : "ETO Omgeving WOZ-Bevragen"
+  }, {
+    "url" : "https://virtserver.swaggerhub.com/kadaster/WOZ-bevragen/1.0.0",
+    "description" : "Productie Omgeving WOZ-Bevragen"
+  }, {
+    "url" : "https://virtserver.swaggerhub.com/kadaster/WOZ-bevragen/1.0.0",
     "description" : "SwaggerHub API Auto Mocking"
   } ],
   "tags" : [ {
@@ -125,7 +131,7 @@
         }, {
           "name" : "fields",
           "in" : "query",
-          "description" : "Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.2.0/features/fields.feature)",
+          "description" : "Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/kadaster/WOZ-bevragen/blob/master/features/common/fields.feature)",
           "required" : false,
           "schema" : {
             "type" : "string"
@@ -320,7 +326,7 @@
         }, {
           "name" : "fields",
           "in" : "query",
-          "description" : "Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.2.0/features/fields.feature)",
+          "description" : "Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/kadaster/WOZ-bevragen/blob/master/features/common/fields.feature)",
           "required" : false,
           "schema" : {
             "type" : "string"
@@ -890,7 +896,7 @@
             "description" : "Voor mens leesbaar label bij de link"
           }
         },
-        "description" : "De Link Object zoals gespecificeerd in https://tools.ietf.org/html/draft-kelly-json-hal-08#section-5; Deze link kan als templated link worden aangeboden. [URI-templating is hier beschreven](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.2.0/features/uri-templating.feature)."
+        "description" : "De Link Object zoals gespecificeerd in https://tools.ietf.org/html/draft-kelly-json-hal-08#section-5; Deze link kan als templated link worden aangeboden. [URI-templating is hier beschreven](https://github.com/kadaster/WOZ-bevragen/blob/master/features/common/uri-templating.feature)."
       },
       "Href" : {
         "type" : "string",

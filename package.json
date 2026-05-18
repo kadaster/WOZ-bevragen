@@ -24,15 +24,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen.git"
+    "url": "git+https://github.com/kadaster/WOZ-bevragen.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/issues"
+    "url": "https://github.com/kadaster/WOZ-bevragen/issues"
   },
-  "homepage": "https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen#readme",
+  "homepage": "https://github.com/kadaster/WOZ-bevragen#readme",
   "devDependencies": {
     "@openapitools/openapi-generator-cli": "^2.5.2",
     "@stoplight/spectral-cli": "^6.10.1",

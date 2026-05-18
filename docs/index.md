@@ -5,12 +5,12 @@ title: Haal Centraal WOZ bevragen
 
 # Haal Centraal WOZ bevragen
 
-![lint oas](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/workflows/lint-oas/badge.svg)
-![generate postman collection](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/workflows/generate-postman-collection/badge.svg)
+![lint oas](https://github.com/kadaster/WOZ-bevragen/workflows/lint-oas/badge.svg)
+![generate postman collection](https://github.com/kadaster/WOZ-bevragen/workflows/generate-postman-collection/badge.svg)
 
 API voor het zoeken en raadplegen van WOZ objecten en WOZ waardes.
 
-Bezoek de [GitHub repository](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/).
+Bezoek de [GitHub repository](https://github.com/kadaster/WOZ-bevragen).
 
 <!-- Bekijk de [release notes](./releasenotes). -->
 
@@ -18,7 +18,7 @@ Bezoek de [GitHub repository](https://github.com/VNG-Realisatie/Haal-Centraal-WO
 
 * Bekijk de specificaties met [Swagger UI](./swagger-ui) of [Redoc](./redoc)
 * Lees de [Getting started](./getting-started)
-* Download de [Technische specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/blob/master/specificatie/genereervariant/openapi.yaml){:target="_blank" rel="noopener"}
+* Download de [Technische specificaties](https://github.com/kadaster/WOZ-bevragen/blob/master/specificatie/genereervariant/openapi.yaml){:target="_blank" rel="noopener"}
 <!-- * [Vraag een API-key aan](https://formulieren.kadaster.nl/aanmelden_brk_bevragen){:target="_blank" rel="noopener"} voor toegang tot de testomgeving.-->
 
 ## Bronnen
@@ -33,9 +33,9 @@ Bezoek de [GitHub repository](https://github.com/VNG-Realisatie/Haal-Centraal-WO
 Op deze pagina treft u de documentatie over de WOZ api specificatie aan die in het kader van het programma Haal Centraal is gemaakt. Met het oog op de bredere transitie van het WOZ domein, vindt er op dit moment geen (door)ontwikkeling van deze api(-specificatie) plaats. Voor vragen over het bredere transitie traject kunt u contact opnemen met [Boris Bonsel](mailto:Boris.Bonsel@vng.nl). 
 
 <!--* Bug Melden
-  [Maak een bug issue aan >>](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/issues/new?assignees=&labels=bug&template=bug_report.md&title=)
+  [Maak een bug issue aan >>](https://github.com/kadaster/WOZ-bevragen/issues/new?assignees=&labels=bug&template=bug_report.md&title=)
 * Verbeteringen doorgeven
-  [Maak een verbeter issue aan >>](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/issues/new?assignees=&labels=enhancement&template=enhancement.md&title=)
+  [Maak een verbeter issue aan >>](https://github.com/kadaster/WOZ-bevragen/issues/new?assignees=&labels=enhancement&template=enhancement.md&title=)
 * Storingen
   [Meld een storing](https://formulieren.kadaster.nl/contact_kadaster)
 * Community: Wil je geïnformeerd blijven over productwijzigingen of meepraten over de API meld je dan aan bij de community.<br/><a href="https://haalcentraal.pleio.nl/groups/view/6dc1ac46-ec6e-47cc-bcab-ce586d8962b0/community-woz-api">Ga naar de community>></a>
@@ -49,4 +49,4 @@ U kunt hen bereiken via [standaarden.ondersteuning@vng.nl](mailto:standaarden.on
 
 ## Licentie
 Copyright &copy; VNG Realisatie 2020
-Licensed under the [EUPL](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/blob/master/LICENCE.md)
+Licensed under the [EUPL](https://github.com/kadaster/WOZ-bevragen/blob/master/LICENCE.md)
