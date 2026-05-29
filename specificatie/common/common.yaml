@@ -167,7 +167,7 @@ components:
             instance: https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde
             code: paramsRequired
             invalidParams:
-              - type: https://www.vng.nl/realisatie/api/validaties/integer
+              - type: integer
                 name: verblijfplaats__huisnummer
                 code: integer
                 reason: Waarde is geen geldige integer.
@@ -502,7 +502,7 @@ components:
         type:
           type: string
           format: uri
-          example: "https://www.vng.nl/realisatie/api/{major-versie}/validaties/integer"
+          example: "integer"
         name:
           type: string
           description: Naam van de parameter

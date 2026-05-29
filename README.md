@@ -24,5 +24,5 @@ Op deze pagina treft u de documentatie over de WOZ api specificatie aan die in h
 [WOZ API Bevragen](https://www.kadaster.nl/zakelijk/producten/adressen-en-gebouwen/woz-api-bevragen)
 
 ## Licentie
-Copyright &copy; Kadaster 2025
+Copyright &copy; Het Kadaster 2026
 Licensed under the [EUPL](https://github.com/kadaster/WOZ-bevragen/blob/master/LICENCE.md)

@@ -215,7 +215,7 @@ components:
           type: string
     ObjectAanduiding:
       allOf:
-        - $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-BAG-bevragen/v1.1.0/specificatie/openapi.yaml#/components/schemas/Adres"
+        - $ref: "https://api.bag.kadaster.nl/lvbag/individuelebevragingen/v2/openapi.yaml#/components/schemas/Adres"
         - type: object
           description: "De aanduiding van het WOZ-object zoals wordt weergegeven op de WOZ-beschikking"
           properties:

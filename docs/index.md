@@ -30,23 +30,8 @@ Bezoek de [GitHub repository](https://github.com/kadaster/WOZ-bevragen).
 
 ## Contact
 
-Op deze pagina treft u de documentatie over de WOZ api specificatie aan die in het kader van het programma Haal Centraal is gemaakt. Met het oog op de bredere transitie van het WOZ domein, vindt er op dit moment geen (door)ontwikkeling van deze api(-specificatie) plaats. Voor vragen over het bredere transitie traject kunt u contact opnemen met [Boris Bonsel](mailto:Boris.Bonsel@vng.nl). 
-
-<!--* Bug Melden
-  [Maak een bug issue aan >>](https://github.com/kadaster/WOZ-bevragen/issues/new?assignees=&labels=bug&template=bug_report.md&title=)
-* Verbeteringen doorgeven
-  [Maak een verbeter issue aan >>](https://github.com/kadaster/WOZ-bevragen/issues/new?assignees=&labels=enhancement&template=enhancement.md&title=)
-* Storingen
-  [Meld een storing](https://formulieren.kadaster.nl/contact_kadaster)
-* Community: Wil je geïnformeerd blijven over productwijzigingen of meepraten over de API meld je dan aan bij de community.<br/><a href="https://haalcentraal.pleio.nl/groups/view/6dc1ac46-ec6e-47cc-bcab-ce586d8962b0/community-woz-api">Ga naar de community>></a>
-
-
-* Regisseur API's: Arjen Brienen
-* Designer: Johan Boer
-* Designer: Robert Melskens
-
-U kunt hen bereiken via [standaarden.ondersteuning@vng.nl](mailto:standaarden.ondersteuning@vng.nl)-->
+Op deze pagina treft u de documentatie over de WOZ api specificatie aan die in het kader van het programma Haal Centraal is gemaakt. Met het oog op de bredere transitie van het WOZ domein, vindt er op dit moment geen (door)ontwikkeling van deze api(-specificatie) plaats. Voor vragen over het bredere transitie traject kunt u contact opnemen met [Landelijke Voorziening WOZ](mailto:lvwoz@kadaster.nl). 
 
 ## Licentie
-Copyright &copy; VNG Realisatie 2020
+Copyright &copy; Het Kadaster 2026
 Licensed under the [EUPL](https://github.com/kadaster/WOZ-bevragen/blob/master/LICENCE.md)

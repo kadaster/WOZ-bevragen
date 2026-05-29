@@ -267,7 +267,7 @@
                                     "value": "application/problem+json"
                                 }
                             ],
-                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1\",\n \"title\": \"Ten minste één parameter moet worden opgegeven.\",\n \"status\": 400,\n \"detail\": \"The request could not be understood by the server due to malformed syntax. The client SHOULD NOT repeat the request without modification.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"paramsRequired\",\n \"invalidParams\": [\n  {\n   \"type\": \"https://www.vng.nl/realisatie/api/validaties/integer\",\n   \"name\": \"verblijfplaats__huisnummer\",\n   \"code\": \"integer\",\n   \"reason\": \"Waarde is geen geldige integer.\"\n  }\n ]\n}",
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1\",\n \"title\": \"Ten minste één parameter moet worden opgegeven.\",\n \"status\": 400,\n \"detail\": \"The request could not be understood by the server due to malformed syntax. The client SHOULD NOT repeat the request without modification.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"paramsRequired\",\n \"invalidParams\": [\n  {\n   \"type\": \"integer\",\n   \"name\": \"verblijfplaats__huisnummer\",\n   \"code\": \"integer\",\n   \"reason\": \"Waarde is geen geldige integer.\"\n  }\n ]\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
@@ -733,7 +733,7 @@
                                     "value": "application/problem+json"
                                 }
                             ],
-                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1\",\n \"title\": \"Ten minste één parameter moet worden opgegeven.\",\n \"status\": 400,\n \"detail\": \"The request could not be understood by the server due to malformed syntax. The client SHOULD NOT repeat the request without modification.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"paramsRequired\",\n \"invalidParams\": [\n  {\n   \"type\": \"https://www.vng.nl/realisatie/api/validaties/integer\",\n   \"name\": \"verblijfplaats__huisnummer\",\n   \"code\": \"integer\",\n   \"reason\": \"Waarde is geen geldige integer.\"\n  }\n ]\n}",
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1\",\n \"title\": \"Ten minste één parameter moet worden opgegeven.\",\n \"status\": 400,\n \"detail\": \"The request could not be understood by the server due to malformed syntax. The client SHOULD NOT repeat the request without modification.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"paramsRequired\",\n \"invalidParams\": [\n  {\n   \"type\": \"integer\",\n   \"name\": \"verblijfplaats__huisnummer\",\n   \"code\": \"integer\",\n   \"reason\": \"Waarde is geen geldige integer.\"\n  }\n ]\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
