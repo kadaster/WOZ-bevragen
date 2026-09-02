@@ -4,7 +4,6 @@ version: '3.4'
 
 services:
   wozbevragenproxy:
-    image: ghcr.io/kadaster/wozbevragen-proxy
     build:
       context: .
       dockerfile: src/Woz.BevragenProxy/Dockerfile
