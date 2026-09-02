@@ -32,17 +32,17 @@ Je kunt op de volgende manieren WOZ objecten (met WOZ waardes) zoeken en raadple
 
 ### Algemeen
 Verder zijn er nog een paar algemene functies die gelden voor alle bovenstaande aanvragen:
-- Gebruik van de fields parameter om de response te filteren. (Voor werking, zie feature [fields](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.2.0/features/fields.feature))
+- Gebruik van de fields parameter om de response te filteren. (Voor werking, zie feature [fields](https://github.com/kadaster/WOZ-bevragen/blob/master/features/common/fields.feature))
 - Velden die altijd worden geleverd.
 
 |Resource                           |Velden                         |
 |-----                              |------                         |
 |wozobjecten                        |identificatie, _links.self     |
 
-- [HAL links](https://tools.ietf.org/html/draft-kelly-json-hal-08), die soms [templated](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.2.0/features/uri-templating.feature) worden geleverd.
+- [HAL links](https://tools.ietf.org/html/draft-kelly-json-hal-08), die soms [templated](https://github.com/kadaster/WOZ-bevragen/blob/master/features/common/uri-templating.feature) worden geleverd.
 
 ## Implementeer de API client
-Client code kun je genereren met de "[genereervariant](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/blob/master/specificatie/genereervariant/openapi.yaml){:target="_blank" rel="noopener"}" van de API-specificaties en een code generator. Een overzicht met codegeneratoren kun je vinden op [OpenAPI.Tools](https://openapi.tools/#sdk){:target="_blank" rel="noopener"}.
+Client code kun je genereren met de "[genereervariant](https://github.com/kadaster/WOZ-bevragen/blob/master/specificatie/genereervariant/openapi.yaml){:target="_blank" rel="noopener"}" van de API-specificaties en een code generator. Een overzicht met codegeneratoren kun je vinden op [OpenAPI.Tools](https://openapi.tools/#sdk){:target="_blank" rel="noopener"}.
 
 Deze repo bevat scripts waarmee je met [OpenAPI Generator](https://openapi-generator.tech/){:target="_blank" rel="noopener"} client code kunt genereren in JAVA, .NET (Full Framework & Core) en Python. De makkelijkste manier om de code generatie scripts te gebruiken, is door deze repo te clonen. Na het clonen kun je met `npm install` de benodigde packages installeren en kun je met npm run <script naam> één van de volgende scripts uitvoeren:
 - oas:generate-java-client (voor JAVA client code)
@@ -56,7 +56,7 @@ Note. De prerequisite van OpenAPI Generator is JAVA. Je moet een JAVA runtime in
   
 ## Probeer en test de API
 De werking van de API is het makkelijkst te testen met behulp van [Postman](https://www.getpostman.com/).
-We hebben al een project voor je gemaakt die je kan gebruiken: [WOZ-Bevragen-postman-collection.json](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/blob/master/test/WOZ-Bevragen-postman-collection.json). Deze kun je importeren in Postman waarna je alleen de endpoints en authenticatie (API-key) nog moet invullen.
+We hebben al een project voor je gemaakt die je kan gebruiken: [WOZ-Bevragen-postman-collection.json](https://github.com/kadaster/WOZ-bevragen/blob/master/test/WOZ-Bevragen-postman-collection.json). Deze kun je importeren in Postman waarna je alleen de endpoints en authenticatie (API-key) nog moet invullen.
 
 ### Configureer de url en api key
 
@@ -77,7 +77,7 @@ De testomgeving van de API is te benaderen via de volgende url:
 ## wozbevragen-proxy
 
 Een WOZ-object opgevraagd via de WOZ Bevragen API bevat alle vastgestelde waarden per waardepeildatum voor het WOZ-object. Om voor een WOZ-object alleen de relevante actuele waarde per waardepeildatum op te vragen, kan gebruik worden gemaakt van de wozbevragen-proxy.
-De wozbevragen-proxy routeert een WOZ-object bevraging naar de WOZ Bevragen API en filtert de niet-relevante waarden uit de response voordat deze wordt geretourneerd naar de bevrager. De wijze waarop dit wordt gedaan is beschreven in het [waarden.feature](https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/tree/master/features/waarden.feature) bestand.
+De wozbevragen-proxy routeert een WOZ-object bevraging naar de WOZ Bevragen API en filtert de niet-relevante waarden uit de response voordat deze wordt geretourneerd naar de bevrager. De wijze waarop dit wordt gedaan is beschreven in het [waarden.feature](https://github.com/kadaster/WOZ-bevragen/blob/master/features/waarden.feature) bestand.
 
 In de volgende paragrafen is beschreven hoe de wozbevragen-proxy t.b.v. test doeleinden op een lokale machine kan worden geïnstalleerd en geconfigureerd.
 
@@ -85,8 +85,8 @@ In de volgende paragrafen is beschreven hoe de wozbevragen-proxy t.b.v. test doe
 
 - [Docker Desktop](https://www.docker.com/products/docker-desktop){:target="_blank" rel="noopener"} om de wozbevragen-proxy container image lokaal op een Windows of Mac PC te draaien
 - API-key voor het aanroepen van de WOZ Bevragen API op de test omgeving 
-- Een docker compose bestand om de wozbevragen-proxy container image te configureren en op te starten. Het [docker compose bestand](https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/master/docker-compose.yml){:target="_blank" rel="noopener"} op de Haal-Centraal-WOZ-bevragen GitHub repository kan als referentie worden gebruikt
-- een ocelot.json bestand om de routering van de wozbevragen-proxy te configureren. Als referentie kan het [ocelot.json bestand](https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/master/src/config/Woz.BevragenProxy/ocelot.json){:target="_blank" rel="noopener"} worden gebruikt. Vervang de **woz-api-key** placeholder met je API-key
+- Een docker compose bestand om de wozbevragen-proxy container image te configureren en op te starten. Het [docker compose bestand](https://raw.githubusercontent.com/kadaster/WOZ-bevragen/master/docker-compose.yml){:target="_blank" rel="noopener"} op de Haal-Centraal-WOZ-bevragen GitHub repository kan als referentie worden gebruikt
+- een ocelot.json bestand om de routering van de wozbevragen-proxy te configureren. Als referentie kan het [ocelot.json bestand](https://raw.githubusercontent.com/kadaster/WOZ-bevragen/master/src/config/Woz.BevragenProxy/ocelot.json){:target="_blank" rel="noopener"} worden gebruikt. Vervang de **woz-api-key** placeholder met je API-key
 
 ### Opstarten van de Woz.BevragenProxy Container
 

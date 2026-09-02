@@ -1,11 +1,11 @@
 {
     "item": [
         {
-            "id": "bf240539-fb13-459d-9f9c-833d754a15d2",
             "name": "wozobjecten",
+            "description": "",
             "item": [
                 {
-                    "id": "1b253be3-6d53-4c5a-b01b-36fcef8c616d",
+                    "id": "9afcaf97-0a44-4930-b1ab-5800c56614ac",
                     "name": "Zoek WOZ-objecten",
                     "request": {
                         "name": "Zoek WOZ-objecten",
@@ -23,78 +23,119 @@
                             "query": [
                                 {
                                     "disabled": false,
+                                    "description": {
+                                        "content": "Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven niet-natuurlijk persoon",
+                                        "type": "text/plain"
+                                    },
                                     "key": "rsin",
-                                    "value": "<string>",
-                                    "description": "Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven niet-natuurlijk persoon"
+                                    "value": "526209399"
                                 },
                                 {
                                     "disabled": false,
+                                    "description": {
+                                        "content": "Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven maatschappelijke activiteit of een van de daaronder vallende ondernemingen en vestigingen",
+                                        "type": "text/plain"
+                                    },
                                     "key": "kvkNummer",
-                                    "value": "<string>",
-                                    "description": "Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven maatschappelijke activiteit of een van de daaronder vallende ondernemingen en vestigingen"
+                                    "value": "32126494"
                                 },
                                 {
                                     "disabled": false,
+                                    "description": {
+                                        "content": "Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is",
+                                        "type": "text/plain"
+                                    },
                                     "key": "adresseerbaarObjectIdentificatie",
-                                    "value": "<string>",
-                                    "description": "Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is"
+                                    "value": "4395624167393811"
                                 },
                                 {
                                     "disabled": false,
+                                    "description": {
+                                        "content": "Zoek op de BAG identificatie van een nummeraanduiding (adres) waarmee het WOZ-object wordt aangeduid",
+                                        "type": "text/plain"
+                                    },
                                     "key": "nummeraanduidingIdentificatie",
-                                    "value": "<string>",
-                                    "description": "Zoek op de BAG identificatie van een nummeraanduiding (adres) waarmee het WOZ-object wordt aangeduid"
+                                    "value": "5773274723590544"
                                 },
                                 {
                                     "disabled": false,
+                                    "description": {
+                                        "content": "Zoek WOZ-objecten met postcode, in combinatie met huisnummer en eventueel met huisletter en/of huisnummertoevoeging",
+                                        "type": "text/plain"
+                                    },
                                     "key": "postcode",
-                                    "value": "<string>",
-                                    "description": "Zoek WOZ-objecten met postcode, in combinatie met huisnummer en eventueel met huisletter en/of huisnummertoevoeging"
+                                    "value": "2799KF"
                                 },
                                 {
                                     "disabled": false,
+                                    "description": {
+                                        "content": "Zoek WOZ-objecten met huisnummer, in combinatie met postcode en eventueel met huisletter en/of huisnummertoevoeging\"",
+                                        "type": "text/plain"
+                                    },
                                     "key": "huisnummer",
-                                    "value": "<integer>",
-                                    "description": "Zoek WOZ-objecten met huisnummer, in combinatie met postcode en eventueel met huisletter en/of huisnummertoevoeging\""
+                                    "value": "<integer>"
                                 },
                                 {
                                     "disabled": false,
+                                    "description": {
+                                        "content": "Zoek met een huisnummertoevoeging, in combinatie met postcode en huisnummer en eventueel huisletter.\nDit is een toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter.\nBijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging\n",
+                                        "type": "text/plain"
+                                    },
                                     "key": "huisnummertoevoeging",
-                                    "value": "<string>",
-                                    "description": "Zoek met een huisnummertoevoeging, in combinatie met postcode en huisnummer en eventueel huisletter.\nDit is een toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter.\nBijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging\n"
+                                    "value": "AC"
                                 },
                                 {
                                     "disabled": false,
+                                    "description": {
+                                        "content": "Zoek met een huisletter, in combinatie met postcode en huisnummer en eventueel huisnummertoevoeging.\nDit is een toevoeging aan een huisnummer en huisnummertoevoeging.\nBijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging\n",
+                                        "type": "text/plain"
+                                    },
                                     "key": "huisletter",
-                                    "value": "<string>",
-                                    "description": "Zoek met een huisletter, in combinatie met postcode en huisnummer en eventueel huisnummertoevoeging.\nDit is een toevoeging aan een huisnummer en huisnummertoevoeging.\nBijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging\n"
+                                    "value": "J"
                                 },
                                 {
                                     "disabled": false,
+                                    "description": {
+                                        "content": "Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/kadaster/WOZ-bevragen/blob/master/features/common/fields.feature)",
+                                        "type": "text/plain"
+                                    },
                                     "key": "fields",
-                                    "value": "<string>",
-                                    "description": "Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.2.0/features/fields.feature)"
+                                    "value": "<string>"
                                 },
                                 {
                                     "disabled": false,
+                                    "description": {
+                                        "content": "Pagina nummer",
+                                        "type": "text/plain"
+                                    },
                                     "key": "page",
-                                    "value": "1",
-                                    "description": "Pagina nummer"
+                                    "value": "1"
                                 },
                                 {
                                     "disabled": false,
+                                    "description": {
+                                        "content": "",
+                                        "type": "text/plain"
+                                    },
                                     "key": "pageSize",
                                     "value": "20"
                                 }
                             ],
                             "variable": []
                         },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/hal+json"
+                            }
+                        ],
                         "method": "GET",
+                        "body": {},
                         "auth": null
                     },
                     "response": [
                         {
-                            "id": "151acc0a-7f0a-40dc-bb49-b94ca193fe11",
+                            "id": "b3ca57b2-de9a-4d9a-b618-6c385a55fbae",
                             "name": "OK",
                             "originalRequest": {
                                 "url": {
@@ -106,52 +147,113 @@
                                     ],
                                     "query": [
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven niet-natuurlijk persoon",
+                                                "type": "text/plain"
+                                            },
                                             "key": "rsin",
-                                            "value": "857567433"
+                                            "value": "526209399"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven maatschappelijke activiteit of een van de daaronder vallende ondernemingen en vestigingen",
+                                                "type": "text/plain"
+                                            },
                                             "key": "kvkNummer",
-                                            "value": "68727720"
+                                            "value": "32126494"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is",
+                                                "type": "text/plain"
+                                            },
                                             "key": "adresseerbaarObjectIdentificatie",
-                                            "value": "0226010000038820"
+                                            "value": "4395624167393811"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek op de BAG identificatie van een nummeraanduiding (adres) waarmee het WOZ-object wordt aangeduid",
+                                                "type": "text/plain"
+                                            },
                                             "key": "nummeraanduidingIdentificatie",
-                                            "value": "0226200000038820"
+                                            "value": "5773274723590544"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek WOZ-objecten met postcode, in combinatie met huisnummer en eventueel met huisletter en/of huisnummertoevoeging",
+                                                "type": "text/plain"
+                                            },
                                             "key": "postcode",
-                                            "value": "1234AB"
+                                            "value": "2799KF"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek WOZ-objecten met huisnummer, in combinatie met postcode en eventueel met huisletter en/of huisnummertoevoeging\"",
+                                                "type": "text/plain"
+                                            },
                                             "key": "huisnummer",
                                             "value": "<integer>"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek met een huisnummertoevoeging, in combinatie met postcode en huisnummer en eventueel huisletter.\nDit is een toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter.\nBijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging\n",
+                                                "type": "text/plain"
+                                            },
                                             "key": "huisnummertoevoeging",
-                                            "value": "bis"
+                                            "value": "AC"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek met een huisletter, in combinatie met postcode en huisnummer en eventueel huisnummertoevoeging.\nDit is een toevoeging aan een huisnummer en huisnummertoevoeging.\nBijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging\n",
+                                                "type": "text/plain"
+                                            },
                                             "key": "huisletter",
-                                            "value": "A"
+                                            "value": "J"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/kadaster/WOZ-bevragen/blob/master/features/common/fields.feature)",
+                                                "type": "text/plain"
+                                            },
                                             "key": "fields",
                                             "value": "<string>"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Pagina nummer",
+                                                "type": "text/plain"
+                                            },
                                             "key": "page",
                                             "value": "1"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "",
+                                                "type": "text/plain"
+                                            },
                                             "key": "pageSize",
                                             "value": "20"
                                         }
                                     ],
                                     "variable": []
                                 },
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/hal+json"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -159,40 +261,52 @@
                             "code": 200,
                             "header": [
                                 {
-                                    "disabled": false,
-                                    "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
-                                },
-                                {
-                                    "disabled": false,
-                                    "key": "X-Pagination-Page",
-                                    "value": "3",
-                                    "description": ""
-                                },
-                                {
-                                    "disabled": false,
-                                    "key": "X-Pagination-Limit",
-                                    "value": "20",
-                                    "description": ""
-                                },
-                                {
-                                    "disabled": false,
-                                    "key": "warning",
-                                    "value": "299 https://service.../api/.../v1 \"Deze versie van de API is verouderd en zal uit dienst worden genomen op 2018-02-01. Raadpleeg voor meer informatie hier de documentatie: https://omgevingswet.../api/.../v1\".",
-                                    "description": ""
-                                },
-                                {
                                     "key": "Content-Type",
                                     "value": "application/hal+json"
+                                },
+                                {
+                                    "disabled": false,
+                                    "description": {
+                                        "content": "",
+                                        "type": "text/plain"
+                                    },
+                                    "key": "api-version",
+                                    "value": ""
+                                },
+                                {
+                                    "disabled": false,
+                                    "description": {
+                                        "content": "",
+                                        "type": "text/plain"
+                                    },
+                                    "key": "X-Pagination-Page",
+                                    "value": ""
+                                },
+                                {
+                                    "disabled": false,
+                                    "description": {
+                                        "content": "",
+                                        "type": "text/plain"
+                                    },
+                                    "key": "X-Pagination-Limit",
+                                    "value": ""
+                                },
+                                {
+                                    "disabled": false,
+                                    "description": {
+                                        "content": "",
+                                        "type": "text/plain"
+                                    },
+                                    "key": "warning",
+                                    "value": ""
                                 }
                             ],
-                            "body": "{\n \"_links\": {\n  \"self\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": true,\n   \"title\": \"aliquip et\"\n  },\n  \"first\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": false,\n   \"title\": \"exercitation esse\"\n  },\n  \"previous\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": false,\n   \"title\": \"nisi aute cupidatat culpa\"\n  },\n  \"next\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": false,\n   \"title\": \"amet ut\"\n  }\n },\n \"_embedded\": {\n  \"wozObjecten\": [\n   {\n    \"aanduiding\": {\n     \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n    },\n    \"adresseerbaarObjectIdentificaties\": [\n     \"0226010000038820\",\n     \"0226010000038820\"\n    ],\n    \"belanghebbendeEigenaar\": {\n     \"burgerservicenummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"geheimhoudingPersoonsgegevens\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"kvkNummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"naam\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"rsin\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"type\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"vestigingsnummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    },\n    \"belanghebbendeGebruiker\": {\n     \"burgerservicenummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"geheimhoudingPersoonsgegevens\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"kvkNummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"naam\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"rsin\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"type\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"vestigingsnummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    },\n    \"grondoppervlakte\": 19037804,\n    \"identificatie\": \"sunt mollit tempor cillum\",\n    \"kadastraalOnroerendeZaken\": [\n     {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    ],\n    \"pandIdentificaties\": [\n     \"occaeca\",\n     \"deserunt\"\n    ],\n    \"verantwoordelijkeGemeente\": {\n     \"code\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"omschrijving\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    },\n    \"waarden\": [\n     {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    ],\n    \"_links\": {\n     \"self\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": false,\n      \"title\": \"qui consectetur aliqua\"\n     },\n     \"adres\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": true,\n      \"title\": \"reprehenderit adipisicing sit est proident\"\n     },\n     \"adresseerbareObjecten\": [\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n     ],\n     \"belanghebbendeEigenaar\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": true,\n      \"title\": \"proident do v\"\n     },\n     \"belanghebbendeGebruiker\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": true,\n      \"title\": \"esse eiusmod non exercitation est\"\n     },\n     \"panden\": [\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n     ],\n     \"kadastraalOnroerendeZaken\": [\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n     ]\n    }\n   },\n   {\n    \"aanduiding\": {\n     \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n    },\n    \"adresseerbaarObjectIdentificaties\": [\n     \"0226010000038820\",\n     \"0226010000038820\"\n    ],\n    \"belanghebbendeEigenaar\": {\n     \"burgerservicenummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"geheimhoudingPersoonsgegevens\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"kvkNummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"naam\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"rsin\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"type\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"vestigingsnummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    },\n    \"belanghebbendeGebruiker\": {\n     \"burgerservicenummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"geheimhoudingPersoonsgegevens\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"kvkNummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"naam\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"rsin\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"type\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"vestigingsnummer\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    },\n    \"grondoppervlakte\": 76655690,\n    \"identificatie\": \"nisi minim voluptate sunt enim\",\n    \"kadastraalOnroerendeZaken\": [\n     {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    ],\n    \"pandIdentificaties\": [\n     \"in ut reprehenderit dolore ut\",\n     \"tempor dolore Lorem\"\n    ],\n    \"verantwoordelijkeGemeente\": {\n     \"code\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     \"omschrijving\": {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    },\n    \"waarden\": [\n     {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    ],\n    \"_links\": {\n     \"self\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": false,\n      \"title\": \"id\"\n     },\n     \"adres\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": true,\n      \"title\": \"pariatur\"\n     },\n     \"adresseerbareObjecten\": [\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n     ],\n     \"belanghebbendeEigenaar\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": true,\n      \"title\": \"ullamco esse non fugiat\"\n     },\n     \"belanghebbendeGebruiker\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": true,\n      \"title\": \"fugiat magna Lorem\"\n     },\n     \"panden\": [\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n     ],\n     \"kadastraalOnroerendeZaken\": [\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n     ]\n    }\n   }\n  ]\n }\n}",
+                            "body": "{\n  \"_links\": {\n    \"self\": {\n      \"href\": \"<string>\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n    },\n    \"first\": {\n      \"href\": \"<string>\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n    },\n    \"previous\": {\n      \"href\": \"<string>\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n    },\n    \"next\": {\n      \"href\": \"<string>\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n    }\n  },\n  \"_embedded\": {\n    \"wozObjecten\": [\n      {\n        \"aanduiding\": {\n          \"straat\": \"<string>\",\n          \"huisnummer\": \"<integer>\",\n          \"huisletter\": \"<string>\",\n          \"huisnummertoevoeging\": \"<string>\",\n          \"postcode\": \"<string>\",\n          \"woonplaats\": \"<string>\",\n          \"locatieomschrijving\": \"<string>\",\n          \"nummeraanduidingIdentificatie\": \"<string>\"\n        },\n        \"adresseerbaarObjectIdentificaties\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"belanghebbendeEigenaar\": {\n          \"burgerservicenummer\": \"<string>\",\n          \"geheimhoudingPersoonsgegevens\": \"<boolean>\",\n          \"kvkNummer\": \"<string>\",\n          \"naam\": \"<string>\",\n          \"rsin\": \"<string>\",\n          \"type\": \"vestiging\",\n          \"vestigingsnummer\": \"<string>\"\n        },\n        \"belanghebbendeGebruiker\": {\n          \"burgerservicenummer\": \"<string>\",\n          \"geheimhoudingPersoonsgegevens\": \"<boolean>\",\n          \"kvkNummer\": \"<string>\",\n          \"naam\": \"<string>\",\n          \"rsin\": \"<string>\",\n          \"type\": \"vestiging\",\n          \"vestigingsnummer\": \"<string>\"\n        },\n        \"grondoppervlakte\": \"<integer>\",\n        \"identificatie\": \"<string>\",\n        \"kadastraalOnroerendeZaken\": [\n          {\n            \"identificatie\": \"<string>\",\n            \"aanduiding\": {\n              \"gemeentecode\": \"<string>\",\n              \"sectie\": \"<string>\",\n              \"perceelnummer\": \"<integer>\",\n              \"deelperceelnummer\": \"<string>\",\n              \"appartementsindex\": \"<integer>\"\n            },\n            \"aanduidingMetGemeentenaam\": \"<string>\"\n          },\n          {\n            \"identificatie\": \"<string>\",\n            \"aanduiding\": {\n              \"gemeentecode\": \"<string>\",\n              \"sectie\": \"<string>\",\n              \"perceelnummer\": \"<integer>\",\n              \"deelperceelnummer\": \"<string>\",\n              \"appartementsindex\": \"<integer>\"\n            },\n            \"aanduidingMetGemeentenaam\": \"<string>\"\n          }\n        ],\n        \"pandIdentificaties\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"verantwoordelijkeGemeente\": {\n          \"code\": \"<string>\",\n          \"omschrijving\": \"<string>\"\n        },\n        \"waarden\": [\n          {\n            \"vastgesteldeWaarde\": \"<integer>\",\n            \"waardepeildatum\": \"<date>\",\n            \"ingangsdatum\": \"<date>\",\n            \"beschikkingsStatussen\": [\n              \"hoge_raad_veranderd\",\n              \"bezwaar_veranderd\"\n            ],\n            \"indicatieBezwaarBeroep\": \"<boolean>\"\n          },\n          {\n            \"vastgesteldeWaarde\": \"<integer>\",\n            \"waardepeildatum\": \"<date>\",\n            \"ingangsdatum\": \"<date>\",\n            \"beschikkingsStatussen\": [\n              \"beroep_gehandhaafd\",\n              \"beroep_gehandhaafd\"\n            ],\n            \"indicatieBezwaarBeroep\": \"<boolean>\"\n          }\n        ],\n        \"_links\": {\n          \"self\": {\n            \"href\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\"\n          },\n          \"adres\": {\n            \"href\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\"\n          },\n          \"adresseerbareObjecten\": [\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            },\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            }\n          ],\n          \"belanghebbendeEigenaar\": {\n            \"href\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\"\n          },\n          \"belanghebbendeGebruiker\": {\n            \"href\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\"\n          },\n          \"panden\": [\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            },\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            }\n          ],\n          \"kadastraalOnroerendeZaken\": [\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            },\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            }\n          ]\n        }\n      },\n      {\n        \"aanduiding\": {\n          \"straat\": \"<string>\",\n          \"huisnummer\": \"<integer>\",\n          \"huisletter\": \"<string>\",\n          \"huisnummertoevoeging\": \"<string>\",\n          \"postcode\": \"<string>\",\n          \"woonplaats\": \"<string>\",\n          \"locatieomschrijving\": \"<string>\",\n          \"nummeraanduidingIdentificatie\": \"<string>\"\n        },\n        \"adresseerbaarObjectIdentificaties\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"belanghebbendeEigenaar\": {\n          \"burgerservicenummer\": \"<string>\",\n          \"geheimhoudingPersoonsgegevens\": \"<boolean>\",\n          \"kvkNummer\": \"<string>\",\n          \"naam\": \"<string>\",\n          \"rsin\": \"<string>\",\n          \"type\": \"vestiging\",\n          \"vestigingsnummer\": \"<string>\"\n        },\n        \"belanghebbendeGebruiker\": {\n          \"burgerservicenummer\": \"<string>\",\n          \"geheimhoudingPersoonsgegevens\": \"<boolean>\",\n          \"kvkNummer\": \"<string>\",\n          \"naam\": \"<string>\",\n          \"rsin\": \"<string>\",\n          \"type\": \"vestiging\",\n          \"vestigingsnummer\": \"<string>\"\n        },\n        \"grondoppervlakte\": \"<integer>\",\n        \"identificatie\": \"<string>\",\n        \"kadastraalOnroerendeZaken\": [\n          {\n            \"identificatie\": \"<string>\",\n            \"aanduiding\": {\n              \"gemeentecode\": \"<string>\",\n              \"sectie\": \"<string>\",\n              \"perceelnummer\": \"<integer>\",\n              \"deelperceelnummer\": \"<string>\",\n              \"appartementsindex\": \"<integer>\"\n            },\n            \"aanduidingMetGemeentenaam\": \"<string>\"\n          },\n          {\n            \"identificatie\": \"<string>\",\n            \"aanduiding\": {\n              \"gemeentecode\": \"<string>\",\n              \"sectie\": \"<string>\",\n              \"perceelnummer\": \"<integer>\",\n              \"deelperceelnummer\": \"<string>\",\n              \"appartementsindex\": \"<integer>\"\n            },\n            \"aanduidingMetGemeentenaam\": \"<string>\"\n          }\n        ],\n        \"pandIdentificaties\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"verantwoordelijkeGemeente\": {\n          \"code\": \"<string>\",\n          \"omschrijving\": \"<string>\"\n        },\n        \"waarden\": [\n          {\n            \"vastgesteldeWaarde\": \"<integer>\",\n            \"waardepeildatum\": \"<date>\",\n            \"ingangsdatum\": \"<date>\",\n            \"beschikkingsStatussen\": [\n              \"beschikking_vernietigd\",\n              \"beroep_veranderd\"\n            ],\n            \"indicatieBezwaarBeroep\": \"<boolean>\"\n          },\n          {\n            \"vastgesteldeWaarde\": \"<integer>\",\n            \"waardepeildatum\": \"<date>\",\n            \"ingangsdatum\": \"<date>\",\n            \"beschikkingsStatussen\": [\n              \"beroep_gehandhaafd\",\n              \"beroep_veranderd\"\n            ],\n            \"indicatieBezwaarBeroep\": \"<boolean>\"\n          }\n        ],\n        \"_links\": {\n          \"self\": {\n            \"href\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\"\n          },\n          \"adres\": {\n            \"href\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\"\n          },\n          \"adresseerbareObjecten\": [\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            },\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            }\n          ],\n          \"belanghebbendeEigenaar\": {\n            \"href\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\"\n          },\n          \"belanghebbendeGebruiker\": {\n            \"href\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\"\n          },\n          \"panden\": [\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            },\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            }\n          ],\n          \"kadastraalOnroerendeZaken\": [\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            },\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            }\n          ]\n        }\n      }\n    ]\n  }\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "045675ac-c1c2-4cfe-b3b4-4e9ccfb77e84",
+                            "id": "a70be25f-bde7-4cb7-81bd-8d912b98e84c",
                             "name": "Bad Request",
                             "originalRequest": {
                                 "url": {
@@ -204,52 +318,113 @@
                                     ],
                                     "query": [
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven niet-natuurlijk persoon",
+                                                "type": "text/plain"
+                                            },
                                             "key": "rsin",
-                                            "value": "857567433"
+                                            "value": "526209399"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven maatschappelijke activiteit of een van de daaronder vallende ondernemingen en vestigingen",
+                                                "type": "text/plain"
+                                            },
                                             "key": "kvkNummer",
-                                            "value": "68727720"
+                                            "value": "32126494"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is",
+                                                "type": "text/plain"
+                                            },
                                             "key": "adresseerbaarObjectIdentificatie",
-                                            "value": "0226010000038820"
+                                            "value": "4395624167393811"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek op de BAG identificatie van een nummeraanduiding (adres) waarmee het WOZ-object wordt aangeduid",
+                                                "type": "text/plain"
+                                            },
                                             "key": "nummeraanduidingIdentificatie",
-                                            "value": "0226200000038820"
+                                            "value": "5773274723590544"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek WOZ-objecten met postcode, in combinatie met huisnummer en eventueel met huisletter en/of huisnummertoevoeging",
+                                                "type": "text/plain"
+                                            },
                                             "key": "postcode",
-                                            "value": "1234AB"
+                                            "value": "2799KF"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek WOZ-objecten met huisnummer, in combinatie met postcode en eventueel met huisletter en/of huisnummertoevoeging\"",
+                                                "type": "text/plain"
+                                            },
                                             "key": "huisnummer",
                                             "value": "<integer>"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek met een huisnummertoevoeging, in combinatie met postcode en huisnummer en eventueel huisletter.\nDit is een toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter.\nBijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging\n",
+                                                "type": "text/plain"
+                                            },
                                             "key": "huisnummertoevoeging",
-                                            "value": "bis"
+                                            "value": "AC"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek met een huisletter, in combinatie met postcode en huisnummer en eventueel huisnummertoevoeging.\nDit is een toevoeging aan een huisnummer en huisnummertoevoeging.\nBijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging\n",
+                                                "type": "text/plain"
+                                            },
                                             "key": "huisletter",
-                                            "value": "A"
+                                            "value": "J"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/kadaster/WOZ-bevragen/blob/master/features/common/fields.feature)",
+                                                "type": "text/plain"
+                                            },
                                             "key": "fields",
                                             "value": "<string>"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Pagina nummer",
+                                                "type": "text/plain"
+                                            },
                                             "key": "page",
                                             "value": "1"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "",
+                                                "type": "text/plain"
+                                            },
                                             "key": "pageSize",
                                             "value": "20"
                                         }
                                     ],
                                     "variable": []
                                 },
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/problem+json"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -257,22 +432,25 @@
                             "code": 400,
                             "header": [
                                 {
-                                    "disabled": false,
-                                    "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
-                                },
-                                {
                                     "key": "Content-Type",
                                     "value": "application/problem+json"
+                                },
+                                {
+                                    "disabled": false,
+                                    "description": {
+                                        "content": "",
+                                        "type": "text/plain"
+                                    },
+                                    "key": "api-version",
+                                    "value": ""
                                 }
                             ],
-                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1\",\n \"title\": \"Ten minste één parameter moet worden opgegeven.\",\n \"status\": 400,\n \"detail\": \"The request could not be understood by the server due to malformed syntax. The client SHOULD NOT repeat the request without modification.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"paramsRequired\",\n \"invalidParams\": [\n  {\n   \"type\": \"https://www.vng.nl/realisatie/api/validaties/integer\",\n   \"name\": \"verblijfplaats__huisnummer\",\n   \"code\": \"integer\",\n   \"reason\": \"Waarde is geen geldige integer.\"\n  }\n ]\n}",
+                            "body": "{\n  \"type\": \"<uri>\",\n  \"title\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"detail\": \"<string>\",\n  \"instance\": \"<uri>\",\n  \"code\": \"<string>\",\n  \"invalidParams\": [\n    {\n      \"type\": \"<uri>\",\n      \"name\": \"<string>\",\n      \"code\": \"<string>\",\n      \"reason\": \"<string>\"\n    },\n    {\n      \"type\": \"<uri>\",\n      \"name\": \"<string>\",\n      \"code\": \"<string>\",\n      \"reason\": \"<string>\"\n    }\n  ]\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "400d8461-2acd-4241-b5bb-05396285f68f",
+                            "id": "19cc19e2-b41d-4926-957e-111c303049d4",
                             "name": "Unauthorized",
                             "originalRequest": {
                                 "url": {
@@ -284,52 +462,113 @@
                                     ],
                                     "query": [
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven niet-natuurlijk persoon",
+                                                "type": "text/plain"
+                                            },
                                             "key": "rsin",
-                                            "value": "857567433"
+                                            "value": "526209399"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven maatschappelijke activiteit of een van de daaronder vallende ondernemingen en vestigingen",
+                                                "type": "text/plain"
+                                            },
                                             "key": "kvkNummer",
-                                            "value": "68727720"
+                                            "value": "32126494"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is",
+                                                "type": "text/plain"
+                                            },
                                             "key": "adresseerbaarObjectIdentificatie",
-                                            "value": "0226010000038820"
+                                            "value": "4395624167393811"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek op de BAG identificatie van een nummeraanduiding (adres) waarmee het WOZ-object wordt aangeduid",
+                                                "type": "text/plain"
+                                            },
                                             "key": "nummeraanduidingIdentificatie",
-                                            "value": "0226200000038820"
+                                            "value": "5773274723590544"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek WOZ-objecten met postcode, in combinatie met huisnummer en eventueel met huisletter en/of huisnummertoevoeging",
+                                                "type": "text/plain"
+                                            },
                                             "key": "postcode",
-                                            "value": "1234AB"
+                                            "value": "2799KF"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek WOZ-objecten met huisnummer, in combinatie met postcode en eventueel met huisletter en/of huisnummertoevoeging\"",
+                                                "type": "text/plain"
+                                            },
                                             "key": "huisnummer",
                                             "value": "<integer>"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek met een huisnummertoevoeging, in combinatie met postcode en huisnummer en eventueel huisletter.\nDit is een toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter.\nBijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging\n",
+                                                "type": "text/plain"
+                                            },
                                             "key": "huisnummertoevoeging",
-                                            "value": "bis"
+                                            "value": "AC"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek met een huisletter, in combinatie met postcode en huisnummer en eventueel huisnummertoevoeging.\nDit is een toevoeging aan een huisnummer en huisnummertoevoeging.\nBijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging\n",
+                                                "type": "text/plain"
+                                            },
                                             "key": "huisletter",
-                                            "value": "A"
+                                            "value": "J"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/kadaster/WOZ-bevragen/blob/master/features/common/fields.feature)",
+                                                "type": "text/plain"
+                                            },
                                             "key": "fields",
                                             "value": "<string>"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Pagina nummer",
+                                                "type": "text/plain"
+                                            },
                                             "key": "page",
                                             "value": "1"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "",
+                                                "type": "text/plain"
+                                            },
                                             "key": "pageSize",
                                             "value": "20"
                                         }
                                     ],
                                     "variable": []
                                 },
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/problem+json"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -337,22 +576,25 @@
                             "code": 401,
                             "header": [
                                 {
-                                    "disabled": false,
-                                    "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
-                                },
-                                {
                                     "key": "Content-Type",
                                     "value": "application/problem+json"
+                                },
+                                {
+                                    "disabled": false,
+                                    "description": {
+                                        "content": "",
+                                        "type": "text/plain"
+                                    },
+                                    "key": "api-version",
+                                    "value": ""
                                 }
                             ],
-                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.2\",\n \"title\": \"Niet correct geauthenticeerd.\",\n \"status\": 401,\n \"detail\": \"The request requires user authentication. The response MUST include a WWW-Authenticate header field (section 14.47) containing a challenge applicable to the requested resource.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"authentication\"\n}",
+                            "body": "{\n  \"type\": \"<uri>\",\n  \"title\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"detail\": \"<string>\",\n  \"instance\": \"<uri>\",\n  \"code\": \"<string>\"\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "11346c42-8848-42c2-8f55-2d1fff0b9080",
+                            "id": "13f88ffc-b25d-49a5-bdad-654b997bfc5b",
                             "name": "Forbidden",
                             "originalRequest": {
                                 "url": {
@@ -364,52 +606,113 @@
                                     ],
                                     "query": [
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven niet-natuurlijk persoon",
+                                                "type": "text/plain"
+                                            },
                                             "key": "rsin",
-                                            "value": "857567433"
+                                            "value": "526209399"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven maatschappelijke activiteit of een van de daaronder vallende ondernemingen en vestigingen",
+                                                "type": "text/plain"
+                                            },
                                             "key": "kvkNummer",
-                                            "value": "68727720"
+                                            "value": "32126494"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is",
+                                                "type": "text/plain"
+                                            },
                                             "key": "adresseerbaarObjectIdentificatie",
-                                            "value": "0226010000038820"
+                                            "value": "4395624167393811"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek op de BAG identificatie van een nummeraanduiding (adres) waarmee het WOZ-object wordt aangeduid",
+                                                "type": "text/plain"
+                                            },
                                             "key": "nummeraanduidingIdentificatie",
-                                            "value": "0226200000038820"
+                                            "value": "5773274723590544"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek WOZ-objecten met postcode, in combinatie met huisnummer en eventueel met huisletter en/of huisnummertoevoeging",
+                                                "type": "text/plain"
+                                            },
                                             "key": "postcode",
-                                            "value": "1234AB"
+                                            "value": "2799KF"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek WOZ-objecten met huisnummer, in combinatie met postcode en eventueel met huisletter en/of huisnummertoevoeging\"",
+                                                "type": "text/plain"
+                                            },
                                             "key": "huisnummer",
                                             "value": "<integer>"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek met een huisnummertoevoeging, in combinatie met postcode en huisnummer en eventueel huisletter.\nDit is een toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter.\nBijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging\n",
+                                                "type": "text/plain"
+                                            },
                                             "key": "huisnummertoevoeging",
-                                            "value": "bis"
+                                            "value": "AC"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek met een huisletter, in combinatie met postcode en huisnummer en eventueel huisnummertoevoeging.\nDit is een toevoeging aan een huisnummer en huisnummertoevoeging.\nBijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging\n",
+                                                "type": "text/plain"
+                                            },
                                             "key": "huisletter",
-                                            "value": "A"
+                                            "value": "J"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/kadaster/WOZ-bevragen/blob/master/features/common/fields.feature)",
+                                                "type": "text/plain"
+                                            },
                                             "key": "fields",
                                             "value": "<string>"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Pagina nummer",
+                                                "type": "text/plain"
+                                            },
                                             "key": "page",
                                             "value": "1"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "",
+                                                "type": "text/plain"
+                                            },
                                             "key": "pageSize",
                                             "value": "20"
                                         }
                                     ],
                                     "variable": []
                                 },
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/problem+json"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -417,22 +720,25 @@
                             "code": 403,
                             "header": [
                                 {
-                                    "disabled": false,
-                                    "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
-                                },
-                                {
                                     "key": "Content-Type",
                                     "value": "application/problem+json"
+                                },
+                                {
+                                    "disabled": false,
+                                    "description": {
+                                        "content": "",
+                                        "type": "text/plain"
+                                    },
+                                    "key": "api-version",
+                                    "value": ""
                                 }
                             ],
-                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.4\",\n \"title\": \"U bent niet geautoriseerd voor deze operatie.\",\n \"status\": 403,\n \"detail\": \"The server understood the request, but is refusing to fulfill it.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"autorisation\"\n}",
+                            "body": "{\n  \"type\": \"<uri>\",\n  \"title\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"detail\": \"<string>\",\n  \"instance\": \"<uri>\",\n  \"code\": \"<string>\"\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "db2326a8-efc1-4ad4-9093-1c09e9540c98",
+                            "id": "c59df3ed-de14-4c5c-b143-9ba2ea118722",
                             "name": "Not Acceptable",
                             "originalRequest": {
                                 "url": {
@@ -444,52 +750,113 @@
                                     ],
                                     "query": [
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven niet-natuurlijk persoon",
+                                                "type": "text/plain"
+                                            },
                                             "key": "rsin",
-                                            "value": "857567433"
+                                            "value": "526209399"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven maatschappelijke activiteit of een van de daaronder vallende ondernemingen en vestigingen",
+                                                "type": "text/plain"
+                                            },
                                             "key": "kvkNummer",
-                                            "value": "68727720"
+                                            "value": "32126494"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is",
+                                                "type": "text/plain"
+                                            },
                                             "key": "adresseerbaarObjectIdentificatie",
-                                            "value": "0226010000038820"
+                                            "value": "4395624167393811"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek op de BAG identificatie van een nummeraanduiding (adres) waarmee het WOZ-object wordt aangeduid",
+                                                "type": "text/plain"
+                                            },
                                             "key": "nummeraanduidingIdentificatie",
-                                            "value": "0226200000038820"
+                                            "value": "5773274723590544"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek WOZ-objecten met postcode, in combinatie met huisnummer en eventueel met huisletter en/of huisnummertoevoeging",
+                                                "type": "text/plain"
+                                            },
                                             "key": "postcode",
-                                            "value": "1234AB"
+                                            "value": "2799KF"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek WOZ-objecten met huisnummer, in combinatie met postcode en eventueel met huisletter en/of huisnummertoevoeging\"",
+                                                "type": "text/plain"
+                                            },
                                             "key": "huisnummer",
                                             "value": "<integer>"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek met een huisnummertoevoeging, in combinatie met postcode en huisnummer en eventueel huisletter.\nDit is een toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter.\nBijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging\n",
+                                                "type": "text/plain"
+                                            },
                                             "key": "huisnummertoevoeging",
-                                            "value": "bis"
+                                            "value": "AC"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek met een huisletter, in combinatie met postcode en huisnummer en eventueel huisnummertoevoeging.\nDit is een toevoeging aan een huisnummer en huisnummertoevoeging.\nBijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging\n",
+                                                "type": "text/plain"
+                                            },
                                             "key": "huisletter",
-                                            "value": "A"
+                                            "value": "J"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/kadaster/WOZ-bevragen/blob/master/features/common/fields.feature)",
+                                                "type": "text/plain"
+                                            },
                                             "key": "fields",
                                             "value": "<string>"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Pagina nummer",
+                                                "type": "text/plain"
+                                            },
                                             "key": "page",
                                             "value": "1"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "",
+                                                "type": "text/plain"
+                                            },
                                             "key": "pageSize",
                                             "value": "20"
                                         }
                                     ],
                                     "variable": []
                                 },
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/problem+json"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -497,22 +864,25 @@
                             "code": 406,
                             "header": [
                                 {
-                                    "disabled": false,
-                                    "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
-                                },
-                                {
                                     "key": "Content-Type",
                                     "value": "application/problem+json"
+                                },
+                                {
+                                    "disabled": false,
+                                    "description": {
+                                        "content": "",
+                                        "type": "text/plain"
+                                    },
+                                    "key": "api-version",
+                                    "value": ""
                                 }
                             ],
-                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.7\",\n \"title\": \"Gevraagde contenttype wordt niet ondersteund.\",\n \"status\": 406,\n \"detail\": \"The resource identified by the request is only capable of generating response entities which have content characteristics not acceptable according to thr accept headers sent in the request\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"notAcceptable\"\n}",
+                            "body": "{\n  \"type\": \"<uri>\",\n  \"title\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"detail\": \"<string>\",\n  \"instance\": \"<uri>\",\n  \"code\": \"<string>\"\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "411d1c48-8a33-42ea-9cd7-023615bc20e3",
+                            "id": "e4fb5078-c645-464f-b456-74270e5451ff",
                             "name": "Internal Server Error",
                             "originalRequest": {
                                 "url": {
@@ -524,52 +894,113 @@
                                     ],
                                     "query": [
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven niet-natuurlijk persoon",
+                                                "type": "text/plain"
+                                            },
                                             "key": "rsin",
-                                            "value": "857567433"
+                                            "value": "526209399"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek WOZ-objecten in eigendom van een bij het Handelsregister ingeschreven maatschappelijke activiteit of een van de daaronder vallende ondernemingen en vestigingen",
+                                                "type": "text/plain"
+                                            },
                                             "key": "kvkNummer",
-                                            "value": "68727720"
+                                            "value": "32126494"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek op de BAG identificatie van een adresseerbaar object (verblijfsobject, standplaats of ligplaats) waar het WOZ-object aan verbonden is",
+                                                "type": "text/plain"
+                                            },
                                             "key": "adresseerbaarObjectIdentificatie",
-                                            "value": "0226010000038820"
+                                            "value": "4395624167393811"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek op de BAG identificatie van een nummeraanduiding (adres) waarmee het WOZ-object wordt aangeduid",
+                                                "type": "text/plain"
+                                            },
                                             "key": "nummeraanduidingIdentificatie",
-                                            "value": "0226200000038820"
+                                            "value": "5773274723590544"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek WOZ-objecten met postcode, in combinatie met huisnummer en eventueel met huisletter en/of huisnummertoevoeging",
+                                                "type": "text/plain"
+                                            },
                                             "key": "postcode",
-                                            "value": "1234AB"
+                                            "value": "2799KF"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek WOZ-objecten met huisnummer, in combinatie met postcode en eventueel met huisletter en/of huisnummertoevoeging\"",
+                                                "type": "text/plain"
+                                            },
                                             "key": "huisnummer",
                                             "value": "<integer>"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek met een huisnummertoevoeging, in combinatie met postcode en huisnummer en eventueel huisletter.\nDit is een toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter.\nBijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging\n",
+                                                "type": "text/plain"
+                                            },
                                             "key": "huisnummertoevoeging",
-                                            "value": "bis"
+                                            "value": "AC"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Zoek met een huisletter, in combinatie met postcode en huisnummer en eventueel huisnummertoevoeging.\nDit is een toevoeging aan een huisnummer en huisnummertoevoeging.\nBijvoorbeeld bij Belgiëlaan 1 A3 is 1 het huisnummer, A de huisletter en 3 de huisnummertoevoeging\n",
+                                                "type": "text/plain"
+                                            },
                                             "key": "huisletter",
-                                            "value": "A"
+                                            "value": "J"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/kadaster/WOZ-bevragen/blob/master/features/common/fields.feature)",
+                                                "type": "text/plain"
+                                            },
                                             "key": "fields",
                                             "value": "<string>"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Pagina nummer",
+                                                "type": "text/plain"
+                                            },
                                             "key": "page",
                                             "value": "1"
                                         },
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "",
+                                                "type": "text/plain"
+                                            },
                                             "key": "pageSize",
                                             "value": "20"
                                         }
                                     ],
                                     "variable": []
                                 },
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/problem+json"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -577,66 +1008,42 @@
                             "code": 500,
                             "header": [
                                 {
-                                    "disabled": false,
-                                    "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
-                                },
-                                {
                                     "key": "Content-Type",
                                     "value": "application/problem+json"
+                                },
+                                {
+                                    "disabled": false,
+                                    "description": {
+                                        "content": "",
+                                        "type": "text/plain"
+                                    },
+                                    "key": "api-version",
+                                    "value": ""
                                 }
                             ],
-                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.5.1\",\n \"title\": \"Interne server fout.\",\n \"status\": 500,\n \"detail\": \"The server encountered an unexpected condition which prevented it from fulfilling the request.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"serverError\"\n}",
+                            "body": "{\n  \"type\": \"<uri>\",\n  \"title\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"detail\": \"<string>\",\n  \"instance\": \"<uri>\",\n  \"code\": \"<string>\"\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         }
                     ],
-                    "event": []
+                    "event": [],
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    }
                 },
                 {
-                    "id": "009004c5-45df-45f8-848e-f509690194f2",
-                    "name": "Raadpleeg een WOZ-object",
-                    "request": {
-                        "name": "Raadpleeg een WOZ-object",
-                        "description": {
-                            "content": "Raadpleeg de actuele eigenschappen van een WOZ-object",
-                            "type": "text/plain"
-                        },
-                        "url": {
-                            "path": [
-                                "wozobjecten",
-                                ":identificatie"
-                            ],
-                            "host": [
-                                "{{baseUrl}}"
-                            ],
-                            "query": [
-                                {
-                                    "disabled": false,
-                                    "key": "fields",
-                                    "value": "<string>",
-                                    "description": "Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.2.0/features/fields.feature)"
-                                }
-                            ],
-                            "variable": [
-                                {
-                                    "disabled": false,
-                                    "type": "any",
-                                    "value": "<string>",
-                                    "key": "identificatie",
-                                    "description": "(Required) Unieke identificatie van een WOZ-object"
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "auth": null
-                    },
-                    "response": [
+                    "name": "{identificatie}",
+                    "description": "",
+                    "item": [
                         {
-                            "id": "a215d8e1-2c06-423c-8090-98cec7345d3f",
-                            "name": "OK",
-                            "originalRequest": {
+                            "id": "f2aed1f5-7d7d-4f64-b283-0b21a3a866ea",
+                            "name": "Raadpleeg een WOZ-object",
+                            "request": {
+                                "name": "Raadpleeg een WOZ-object",
+                                "description": {
+                                    "content": "Raadpleeg de actuele eigenschappen van een WOZ-object",
+                                    "type": "text/plain"
+                                },
                                 "url": {
                                     "path": [
                                         "wozobjecten",
@@ -647,358 +1054,453 @@
                                     ],
                                     "query": [
                                         {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/kadaster/WOZ-bevragen/blob/master/features/common/fields.feature)",
+                                                "type": "text/plain"
+                                            },
                                             "key": "fields",
                                             "value": "<string>"
                                         }
                                     ],
                                     "variable": [
                                         {
-                                            "disabled": false,
                                             "type": "any",
-                                            "value": "<string>",
+                                            "value": "622294050713",
                                             "key": "identificatie",
-                                            "description": "(Required) Unieke identificatie van een WOZ-object"
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "(Required) Unieke identificatie van een WOZ-object",
+                                                "type": "text/plain"
+                                            }
                                         }
                                     ]
                                 },
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/hal+json"
+                                    }
+                                ],
                                 "method": "GET",
-                                "body": {}
+                                "body": {},
+                                "auth": null
                             },
-                            "status": "OK",
-                            "code": 200,
-                            "header": [
+                            "response": [
                                 {
-                                    "disabled": false,
-                                    "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
-                                },
-                                {
-                                    "disabled": false,
-                                    "key": "warning",
-                                    "value": "299 https://service.../api/.../v1 \"Deze versie van de API is verouderd en zal uit dienst worden genomen op 2018-02-01. Raadpleeg voor meer informatie hier de documentatie: https://omgevingswet.../api/.../v1\".",
-                                    "description": ""
-                                },
-                                {
-                                    "key": "Content-Type",
-                                    "value": "application/hal+json"
-                                }
-                            ],
-                            "body": "{\n \"aanduiding\": {\n  \"straat\": \"Laan van de landinrichtingscommissie Duiven-Westervoort\",\n  \"huisnummer\": 1,\n  \"huisletter\": \"A\",\n  \"huisnummertoevoeging\": \"bis\",\n  \"postcode\": \"6922KZ\",\n  \"woonplaats\": \"Duiven\",\n  \"locatieomschrijving\": \"Naast de derde brug\",\n  \"nummeraanduidingIdentificatie\": \"0226200000038923\"\n },\n \"adresseerbaarObjectIdentificaties\": [\n  \"0226010000038820\",\n  \"0226010000038820\"\n ],\n \"belanghebbendeEigenaar\": {\n  \"burgerservicenummer\": \"culpa nulla\",\n  \"geheimhoudingPersoonsgegevens\": true,\n  \"kvkNummer\": \"veniam\",\n  \"naam\": \"Jan de Vries\",\n  \"rsin\": \"consequat amet consect\",\n  \"type\": \"niet_natuurlijk_persoon\",\n  \"vestigingsnummer\": \"aliquip dolore\"\n },\n \"belanghebbendeGebruiker\": {\n  \"burgerservicenummer\": \"sed nostrud ut\",\n  \"geheimhoudingPersoonsgegevens\": true,\n  \"kvkNummer\": \"aute\",\n  \"naam\": \"Jan de Vries\",\n  \"rsin\": \"non conse\",\n  \"type\": \"niet_natuurlijk_persoon\",\n  \"vestigingsnummer\": \"minim Excepteur commodo sit\"\n },\n \"grondoppervlakte\": 75245259,\n \"identificatie\": \"pariatur sint elit sit\",\n \"kadastraalOnroerendeZaken\": [\n  {\n   \"identificatie\": \"sint voluptate\",\n   \"aanduiding\": {\n    \"gemeentecode\": \"elit ut dolor aliqua\",\n    \"sectie\": \"c\",\n    \"perceelnummer\": -57595003,\n    \"deelperceelnummer\": \"aute incididunt Ut\",\n    \"appartementsindex\": 26525731\n   },\n   \"aanduidingMetGemeentenaam\": \"laboris deserunt\"\n  },\n  {\n   \"identificatie\": \"esse dolore aliqua\",\n   \"aanduiding\": {\n    \"gemeentecode\": \"dolore sint fugiat esse\",\n    \"sectie\": \"non nulla quis\",\n    \"perceelnummer\": -80205314,\n    \"deelperceelnummer\": \"non\",\n    \"appartementsindex\": 68487042\n   },\n   \"aanduidingMetGemeentenaam\": \"minim nisi nulla in\"\n  }\n ],\n \"pandIdentificaties\": [\n  \"ut velit\",\n  \"enim mollit\"\n ],\n \"verantwoordelijkeGemeente\": {\n  \"code\": \"6030\",\n  \"omschrijving\": \"Nederland\"\n },\n \"waarden\": [\n  {\n   \"vastgesteldeWaarde\": 127000,\n   \"waardepeildatum\": \"1999-03-27\",\n   \"ingangsdatum\": \"1971-12-07\",\n   \"beschikkingsStatussen\": [\n    \"beroep_veranderd\",\n    \"hoge_raad_geding_verwezen\"\n   ],\n   \"indicatieBezwaarBeroep\": false\n  },\n  {\n   \"vastgesteldeWaarde\": 127000,\n   \"waardepeildatum\": \"1968-07-03\",\n   \"ingangsdatum\": \"1959-04-26\",\n   \"beschikkingsStatussen\": [\n    \"beroep_veranderd\",\n    \"hoge_raad_geding_verwezen\"\n   ],\n   \"indicatieBezwaarBeroep\": true\n  }\n ],\n \"_links\": {\n  \"self\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": false,\n   \"title\": \"sint sit occaecat\"\n  },\n  \"adres\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": true,\n   \"title\": \"in quis pariatur\"\n  },\n  \"adresseerbareObjecten\": [\n   {\n    \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n    \"templated\": false,\n    \"title\": \"irure magna eu ipsum minim\"\n   },\n   {\n    \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n    \"templated\": false,\n    \"title\": \"Lorem eu sed officia fugiat\"\n   }\n  ],\n  \"belanghebbendeEigenaar\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": false,\n   \"title\": \"eu\"\n  },\n  \"belanghebbendeGebruiker\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": true,\n   \"title\": \"qui pariatur reprehenderit\"\n  },\n  \"panden\": [\n   {\n    \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n    \"templated\": true,\n    \"title\": \"veniam fugiat tempor laborum\"\n   },\n   {\n    \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n    \"templated\": false,\n    \"title\": \"pariatur officia dolore anim\"\n   }\n  ],\n  \"kadastraalOnroerendeZaken\": [\n   {\n    \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n    \"templated\": true,\n    \"title\": \"deserunt nostrud quis cillum\"\n   },\n   {\n    \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n    \"templated\": true,\n    \"title\": \"in officia exercitati\"\n   }\n  ]\n }\n}",
-                            "cookie": [],
-                            "_postman_previewlanguage": "json"
-                        },
-                        {
-                            "id": "e95f5683-4507-4d14-b186-240fa5dbadca",
-                            "name": "Bad Request",
-                            "originalRequest": {
-                                "url": {
-                                    "path": [
-                                        "wozobjecten",
-                                        ":identificatie"
-                                    ],
-                                    "host": [
-                                        "{{baseUrl}}"
-                                    ],
-                                    "query": [
+                                    "id": "60e854fa-f1bd-4323-8b38-a84bb7882246",
+                                    "name": "OK",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "wozobjecten",
+                                                ":identificatie"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [
+                                                {
+                                                    "disabled": false,
+                                                    "description": {
+                                                        "content": "Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/kadaster/WOZ-bevragen/blob/master/features/common/fields.feature)",
+                                                        "type": "text/plain"
+                                                    },
+                                                    "key": "fields",
+                                                    "value": "<string>"
+                                                }
+                                            ],
+                                            "variable": []
+                                        },
+                                        "header": [
+                                            {
+                                                "key": "Accept",
+                                                "value": "application/hal+json"
+                                            }
+                                        ],
+                                        "method": "GET",
+                                        "body": {}
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "header": [
                                         {
-                                            "key": "fields",
-                                            "value": "<string>"
-                                        }
-                                    ],
-                                    "variable": [
+                                            "key": "Content-Type",
+                                            "value": "application/hal+json"
+                                        },
                                         {
                                             "disabled": false,
-                                            "type": "any",
-                                            "value": "<string>",
-                                            "key": "identificatie",
-                                            "description": "(Required) Unieke identificatie van een WOZ-object"
-                                        }
-                                    ]
-                                },
-                                "method": "GET",
-                                "body": {}
-                            },
-                            "status": "Bad Request",
-                            "code": 400,
-                            "header": [
-                                {
-                                    "disabled": false,
-                                    "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
-                                },
-                                {
-                                    "key": "Content-Type",
-                                    "value": "application/problem+json"
-                                }
-                            ],
-                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1\",\n \"title\": \"Ten minste één parameter moet worden opgegeven.\",\n \"status\": 400,\n \"detail\": \"The request could not be understood by the server due to malformed syntax. The client SHOULD NOT repeat the request without modification.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"paramsRequired\",\n \"invalidParams\": [\n  {\n   \"type\": \"https://www.vng.nl/realisatie/api/validaties/integer\",\n   \"name\": \"verblijfplaats__huisnummer\",\n   \"code\": \"integer\",\n   \"reason\": \"Waarde is geen geldige integer.\"\n  }\n ]\n}",
-                            "cookie": [],
-                            "_postman_previewlanguage": "json"
-                        },
-                        {
-                            "id": "9ba0d1ee-863b-4475-9a82-aefc7e6af050",
-                            "name": "Unauthorized",
-                            "originalRequest": {
-                                "url": {
-                                    "path": [
-                                        "wozobjecten",
-                                        ":identificatie"
-                                    ],
-                                    "host": [
-                                        "{{baseUrl}}"
-                                    ],
-                                    "query": [
-                                        {
-                                            "key": "fields",
-                                            "value": "<string>"
-                                        }
-                                    ],
-                                    "variable": [
+                                            "description": {
+                                                "content": "",
+                                                "type": "text/plain"
+                                            },
+                                            "key": "api-version",
+                                            "value": ""
+                                        },
                                         {
                                             "disabled": false,
-                                            "type": "any",
-                                            "value": "<string>",
-                                            "key": "identificatie",
-                                            "description": "(Required) Unieke identificatie van een WOZ-object"
+                                            "description": {
+                                                "content": "",
+                                                "type": "text/plain"
+                                            },
+                                            "key": "warning",
+                                            "value": ""
                                         }
-                                    ]
-                                },
-                                "method": "GET",
-                                "body": {}
-                            },
-                            "status": "Unauthorized",
-                            "code": 401,
-                            "header": [
-                                {
-                                    "disabled": false,
-                                    "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    ],
+                                    "body": "{\n  \"aanduiding\": {\n    \"straat\": \"<string>\",\n    \"huisnummer\": \"<integer>\",\n    \"huisletter\": \"<string>\",\n    \"huisnummertoevoeging\": \"<string>\",\n    \"postcode\": \"<string>\",\n    \"woonplaats\": \"<string>\",\n    \"locatieomschrijving\": \"<string>\",\n    \"nummeraanduidingIdentificatie\": \"<string>\"\n  },\n  \"adresseerbaarObjectIdentificaties\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"belanghebbendeEigenaar\": {\n    \"burgerservicenummer\": \"<string>\",\n    \"geheimhoudingPersoonsgegevens\": \"<boolean>\",\n    \"kvkNummer\": \"<string>\",\n    \"naam\": \"<string>\",\n    \"rsin\": \"<string>\",\n    \"type\": \"niet_natuurlijk_persoon\",\n    \"vestigingsnummer\": \"<string>\"\n  },\n  \"belanghebbendeGebruiker\": {\n    \"burgerservicenummer\": \"<string>\",\n    \"geheimhoudingPersoonsgegevens\": \"<boolean>\",\n    \"kvkNummer\": \"<string>\",\n    \"naam\": \"<string>\",\n    \"rsin\": \"<string>\",\n    \"type\": \"vestiging\",\n    \"vestigingsnummer\": \"<string>\"\n  },\n  \"grondoppervlakte\": \"<integer>\",\n  \"identificatie\": \"<string>\",\n  \"kadastraalOnroerendeZaken\": [\n    {\n      \"identificatie\": \"<string>\",\n      \"aanduiding\": {\n        \"gemeentecode\": \"<string>\",\n        \"sectie\": \"<string>\",\n        \"perceelnummer\": \"<integer>\",\n        \"deelperceelnummer\": \"<string>\",\n        \"appartementsindex\": \"<integer>\"\n      },\n      \"aanduidingMetGemeentenaam\": \"<string>\"\n    },\n    {\n      \"identificatie\": \"<string>\",\n      \"aanduiding\": {\n        \"gemeentecode\": \"<string>\",\n        \"sectie\": \"<string>\",\n        \"perceelnummer\": \"<integer>\",\n        \"deelperceelnummer\": \"<string>\",\n        \"appartementsindex\": \"<integer>\"\n      },\n      \"aanduidingMetGemeentenaam\": \"<string>\"\n    }\n  ],\n  \"pandIdentificaties\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"verantwoordelijkeGemeente\": {\n    \"code\": \"<string>\",\n    \"omschrijving\": \"<string>\"\n  },\n  \"waarden\": [\n    {\n      \"vastgesteldeWaarde\": \"<integer>\",\n      \"waardepeildatum\": \"<date>\",\n      \"ingangsdatum\": \"<date>\",\n      \"beschikkingsStatussen\": [\n        \"beschikking_vernietigd\",\n        \"waarde_ambtshalve_verminderd\"\n      ],\n      \"indicatieBezwaarBeroep\": \"<boolean>\"\n    },\n    {\n      \"vastgesteldeWaarde\": \"<integer>\",\n      \"waardepeildatum\": \"<date>\",\n      \"ingangsdatum\": \"<date>\",\n      \"beschikkingsStatussen\": [\n        \"beschikking_genomen\",\n        \"hoger_beroep_aangetekend\"\n      ],\n      \"indicatieBezwaarBeroep\": \"<boolean>\"\n    }\n  ],\n  \"_links\": {\n    \"self\": {\n      \"href\": \"<string>\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n    },\n    \"adres\": {\n      \"href\": \"<string>\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n    },\n    \"adresseerbareObjecten\": [\n      {\n        \"href\": \"<string>\",\n        \"templated\": \"<boolean>\",\n        \"title\": \"<string>\"\n      },\n      {\n        \"href\": \"<string>\",\n        \"templated\": \"<boolean>\",\n        \"title\": \"<string>\"\n      }\n    ],\n    \"belanghebbendeEigenaar\": {\n      \"href\": \"<string>\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n    },\n    \"belanghebbendeGebruiker\": {\n      \"href\": \"<string>\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n    },\n    \"panden\": [\n      {\n        \"href\": \"<string>\",\n        \"templated\": \"<boolean>\",\n        \"title\": \"<string>\"\n      },\n      {\n        \"href\": \"<string>\",\n        \"templated\": \"<boolean>\",\n        \"title\": \"<string>\"\n      }\n    ],\n    \"kadastraalOnroerendeZaken\": [\n      {\n        \"href\": \"<string>\",\n        \"templated\": \"<boolean>\",\n        \"title\": \"<string>\"\n      },\n      {\n        \"href\": \"<string>\",\n        \"templated\": \"<boolean>\",\n        \"title\": \"<string>\"\n      }\n    ]\n  }\n}",
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "json"
                                 },
                                 {
-                                    "key": "Content-Type",
-                                    "value": "application/problem+json"
-                                }
-                            ],
-                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.2\",\n \"title\": \"Niet correct geauthenticeerd.\",\n \"status\": 401,\n \"detail\": \"The request requires user authentication. The response MUST include a WWW-Authenticate header field (section 14.47) containing a challenge applicable to the requested resource.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"authentication\"\n}",
-                            "cookie": [],
-                            "_postman_previewlanguage": "json"
-                        },
-                        {
-                            "id": "6c8deac1-efb7-4936-8db0-62fe42d035f3",
-                            "name": "Forbidden",
-                            "originalRequest": {
-                                "url": {
-                                    "path": [
-                                        "wozobjecten",
-                                        ":identificatie"
-                                    ],
-                                    "host": [
-                                        "{{baseUrl}}"
-                                    ],
-                                    "query": [
+                                    "id": "4709ed15-8c22-4463-acc1-f292b8c9d1fa",
+                                    "name": "Bad Request",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "wozobjecten",
+                                                ":identificatie"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [
+                                                {
+                                                    "disabled": false,
+                                                    "description": {
+                                                        "content": "Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/kadaster/WOZ-bevragen/blob/master/features/common/fields.feature)",
+                                                        "type": "text/plain"
+                                                    },
+                                                    "key": "fields",
+                                                    "value": "<string>"
+                                                }
+                                            ],
+                                            "variable": []
+                                        },
+                                        "header": [
+                                            {
+                                                "key": "Accept",
+                                                "value": "application/problem+json"
+                                            }
+                                        ],
+                                        "method": "GET",
+                                        "body": {}
+                                    },
+                                    "status": "Bad Request",
+                                    "code": 400,
+                                    "header": [
                                         {
-                                            "key": "fields",
-                                            "value": "<string>"
-                                        }
-                                    ],
-                                    "variable": [
-                                        {
-                                            "disabled": false,
-                                            "type": "any",
-                                            "value": "<string>",
-                                            "key": "identificatie",
-                                            "description": "(Required) Unieke identificatie van een WOZ-object"
-                                        }
-                                    ]
-                                },
-                                "method": "GET",
-                                "body": {}
-                            },
-                            "status": "Forbidden",
-                            "code": 403,
-                            "header": [
-                                {
-                                    "disabled": false,
-                                    "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
-                                },
-                                {
-                                    "key": "Content-Type",
-                                    "value": "application/problem+json"
-                                }
-                            ],
-                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.4\",\n \"title\": \"U bent niet geautoriseerd voor deze operatie.\",\n \"status\": 403,\n \"detail\": \"The server understood the request, but is refusing to fulfill it.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"autorisation\"\n}",
-                            "cookie": [],
-                            "_postman_previewlanguage": "json"
-                        },
-                        {
-                            "id": "b024d0a6-d7c2-4132-b943-780bfb45d96e",
-                            "name": "Not Found",
-                            "originalRequest": {
-                                "url": {
-                                    "path": [
-                                        "wozobjecten",
-                                        ":identificatie"
-                                    ],
-                                    "host": [
-                                        "{{baseUrl}}"
-                                    ],
-                                    "query": [
-                                        {
-                                            "key": "fields",
-                                            "value": "<string>"
-                                        }
-                                    ],
-                                    "variable": [
+                                            "key": "Content-Type",
+                                            "value": "application/problem+json"
+                                        },
                                         {
                                             "disabled": false,
-                                            "type": "any",
-                                            "value": "<string>",
-                                            "key": "identificatie",
-                                            "description": "(Required) Unieke identificatie van een WOZ-object"
+                                            "description": {
+                                                "content": "",
+                                                "type": "text/plain"
+                                            },
+                                            "key": "api-version",
+                                            "value": ""
                                         }
-                                    ]
-                                },
-                                "method": "GET",
-                                "body": {}
-                            },
-                            "status": "Not Found",
-                            "code": 404,
-                            "header": [
-                                {
-                                    "disabled": false,
-                                    "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    ],
+                                    "body": "{\n  \"type\": \"<uri>\",\n  \"title\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"detail\": \"<string>\",\n  \"instance\": \"<uri>\",\n  \"code\": \"<string>\",\n  \"invalidParams\": [\n    {\n      \"type\": \"<uri>\",\n      \"name\": \"<string>\",\n      \"code\": \"<string>\",\n      \"reason\": \"<string>\"\n    },\n    {\n      \"type\": \"<uri>\",\n      \"name\": \"<string>\",\n      \"code\": \"<string>\",\n      \"reason\": \"<string>\"\n    }\n  ]\n}",
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "json"
                                 },
                                 {
-                                    "key": "Content-Type",
-                                    "value": "application/problem+json"
-                                }
-                            ],
-                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5\",\n \"title\": \"Opgevraagde resource bestaat niet.\",\n \"status\": 404,\n \"detail\": \"The server has not found anything matching the Request-URI.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"notFound\"\n}",
-                            "cookie": [],
-                            "_postman_previewlanguage": "json"
-                        },
-                        {
-                            "id": "6b958078-d1e6-4a42-a7a5-7370aa12ef01",
-                            "name": "Not Acceptable",
-                            "originalRequest": {
-                                "url": {
-                                    "path": [
-                                        "wozobjecten",
-                                        ":identificatie"
-                                    ],
-                                    "host": [
-                                        "{{baseUrl}}"
-                                    ],
-                                    "query": [
+                                    "id": "1f937795-5d75-453e-a76f-02c279d26013",
+                                    "name": "Unauthorized",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "wozobjecten",
+                                                ":identificatie"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [
+                                                {
+                                                    "disabled": false,
+                                                    "description": {
+                                                        "content": "Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/kadaster/WOZ-bevragen/blob/master/features/common/fields.feature)",
+                                                        "type": "text/plain"
+                                                    },
+                                                    "key": "fields",
+                                                    "value": "<string>"
+                                                }
+                                            ],
+                                            "variable": []
+                                        },
+                                        "header": [
+                                            {
+                                                "key": "Accept",
+                                                "value": "application/problem+json"
+                                            }
+                                        ],
+                                        "method": "GET",
+                                        "body": {}
+                                    },
+                                    "status": "Unauthorized",
+                                    "code": 401,
+                                    "header": [
                                         {
-                                            "key": "fields",
-                                            "value": "<string>"
-                                        }
-                                    ],
-                                    "variable": [
-                                        {
-                                            "disabled": false,
-                                            "type": "any",
-                                            "value": "<string>",
-                                            "key": "identificatie",
-                                            "description": "(Required) Unieke identificatie van een WOZ-object"
-                                        }
-                                    ]
-                                },
-                                "method": "GET",
-                                "body": {}
-                            },
-                            "status": "Not Acceptable",
-                            "code": 406,
-                            "header": [
-                                {
-                                    "disabled": false,
-                                    "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
-                                },
-                                {
-                                    "key": "Content-Type",
-                                    "value": "application/problem+json"
-                                }
-                            ],
-                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.7\",\n \"title\": \"Gevraagde contenttype wordt niet ondersteund.\",\n \"status\": 406,\n \"detail\": \"The resource identified by the request is only capable of generating response entities which have content characteristics not acceptable according to thr accept headers sent in the request\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"notAcceptable\"\n}",
-                            "cookie": [],
-                            "_postman_previewlanguage": "json"
-                        },
-                        {
-                            "id": "594f0c82-d2c8-4f76-be48-c9871ba79c5a",
-                            "name": "Internal Server Error",
-                            "originalRequest": {
-                                "url": {
-                                    "path": [
-                                        "wozobjecten",
-                                        ":identificatie"
-                                    ],
-                                    "host": [
-                                        "{{baseUrl}}"
-                                    ],
-                                    "query": [
-                                        {
-                                            "key": "fields",
-                                            "value": "<string>"
-                                        }
-                                    ],
-                                    "variable": [
+                                            "key": "Content-Type",
+                                            "value": "application/problem+json"
+                                        },
                                         {
                                             "disabled": false,
-                                            "type": "any",
-                                            "value": "<string>",
-                                            "key": "identificatie",
-                                            "description": "(Required) Unieke identificatie van een WOZ-object"
+                                            "description": {
+                                                "content": "",
+                                                "type": "text/plain"
+                                            },
+                                            "key": "api-version",
+                                            "value": ""
                                         }
-                                    ]
-                                },
-                                "method": "GET",
-                                "body": {}
-                            },
-                            "status": "Internal Server Error",
-                            "code": 500,
-                            "header": [
-                                {
-                                    "disabled": false,
-                                    "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    ],
+                                    "body": "{\n  \"type\": \"<uri>\",\n  \"title\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"detail\": \"<string>\",\n  \"instance\": \"<uri>\",\n  \"code\": \"<string>\"\n}",
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "json"
                                 },
                                 {
-                                    "key": "Content-Type",
-                                    "value": "application/problem+json"
+                                    "id": "101a2c48-1c17-44ce-b5f0-de86a3db8805",
+                                    "name": "Forbidden",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "wozobjecten",
+                                                ":identificatie"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [
+                                                {
+                                                    "disabled": false,
+                                                    "description": {
+                                                        "content": "Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/kadaster/WOZ-bevragen/blob/master/features/common/fields.feature)",
+                                                        "type": "text/plain"
+                                                    },
+                                                    "key": "fields",
+                                                    "value": "<string>"
+                                                }
+                                            ],
+                                            "variable": []
+                                        },
+                                        "header": [
+                                            {
+                                                "key": "Accept",
+                                                "value": "application/problem+json"
+                                            }
+                                        ],
+                                        "method": "GET",
+                                        "body": {}
+                                    },
+                                    "status": "Forbidden",
+                                    "code": 403,
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/problem+json"
+                                        },
+                                        {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "",
+                                                "type": "text/plain"
+                                            },
+                                            "key": "api-version",
+                                            "value": ""
+                                        }
+                                    ],
+                                    "body": "{\n  \"type\": \"<uri>\",\n  \"title\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"detail\": \"<string>\",\n  \"instance\": \"<uri>\",\n  \"code\": \"<string>\"\n}",
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "json"
+                                },
+                                {
+                                    "id": "1a642665-5f3e-4d66-96b8-4a7ad9f7af92",
+                                    "name": "Not Found",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "wozobjecten",
+                                                ":identificatie"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [
+                                                {
+                                                    "disabled": false,
+                                                    "description": {
+                                                        "content": "Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/kadaster/WOZ-bevragen/blob/master/features/common/fields.feature)",
+                                                        "type": "text/plain"
+                                                    },
+                                                    "key": "fields",
+                                                    "value": "<string>"
+                                                }
+                                            ],
+                                            "variable": []
+                                        },
+                                        "header": [
+                                            {
+                                                "key": "Accept",
+                                                "value": "application/problem+json"
+                                            }
+                                        ],
+                                        "method": "GET",
+                                        "body": {}
+                                    },
+                                    "status": "Not Found",
+                                    "code": 404,
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/problem+json"
+                                        },
+                                        {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "",
+                                                "type": "text/plain"
+                                            },
+                                            "key": "api-version",
+                                            "value": ""
+                                        }
+                                    ],
+                                    "body": "{\n  \"type\": \"<uri>\",\n  \"title\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"detail\": \"<string>\",\n  \"instance\": \"<uri>\",\n  \"code\": \"<string>\"\n}",
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "json"
+                                },
+                                {
+                                    "id": "c1f2a676-9e22-4933-bfc0-4bc7dc70cfbb",
+                                    "name": "Not Acceptable",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "wozobjecten",
+                                                ":identificatie"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [
+                                                {
+                                                    "disabled": false,
+                                                    "description": {
+                                                        "content": "Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/kadaster/WOZ-bevragen/blob/master/features/common/fields.feature)",
+                                                        "type": "text/plain"
+                                                    },
+                                                    "key": "fields",
+                                                    "value": "<string>"
+                                                }
+                                            ],
+                                            "variable": []
+                                        },
+                                        "header": [
+                                            {
+                                                "key": "Accept",
+                                                "value": "application/problem+json"
+                                            }
+                                        ],
+                                        "method": "GET",
+                                        "body": {}
+                                    },
+                                    "status": "Not Acceptable",
+                                    "code": 406,
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/problem+json"
+                                        },
+                                        {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "",
+                                                "type": "text/plain"
+                                            },
+                                            "key": "api-version",
+                                            "value": ""
+                                        }
+                                    ],
+                                    "body": "{\n  \"type\": \"<uri>\",\n  \"title\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"detail\": \"<string>\",\n  \"instance\": \"<uri>\",\n  \"code\": \"<string>\"\n}",
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "json"
+                                },
+                                {
+                                    "id": "78056b97-caa2-4d36-aac7-75dc6642ff79",
+                                    "name": "Internal Server Error",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "wozobjecten",
+                                                ":identificatie"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [
+                                                {
+                                                    "disabled": false,
+                                                    "description": {
+                                                        "content": "Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/kadaster/WOZ-bevragen/blob/master/features/common/fields.feature)",
+                                                        "type": "text/plain"
+                                                    },
+                                                    "key": "fields",
+                                                    "value": "<string>"
+                                                }
+                                            ],
+                                            "variable": []
+                                        },
+                                        "header": [
+                                            {
+                                                "key": "Accept",
+                                                "value": "application/problem+json"
+                                            }
+                                        ],
+                                        "method": "GET",
+                                        "body": {}
+                                    },
+                                    "status": "Internal Server Error",
+                                    "code": 500,
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/problem+json"
+                                        },
+                                        {
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "",
+                                                "type": "text/plain"
+                                            },
+                                            "key": "api-version",
+                                            "value": ""
+                                        }
+                                    ],
+                                    "body": "{\n  \"type\": \"<uri>\",\n  \"title\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"detail\": \"<string>\",\n  \"instance\": \"<uri>\",\n  \"code\": \"<string>\"\n}",
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "json"
                                 }
                             ],
-                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.5.1\",\n \"title\": \"Interne server fout.\",\n \"status\": 500,\n \"detail\": \"The server encountered an unexpected condition which prevented it from fulfilling the request.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"serverError\"\n}",
-                            "cookie": [],
-                            "_postman_previewlanguage": "json"
+                            "event": [],
+                            "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                            }
                         }
-                    ],
-                    "event": []
+                    ]
                 }
-            ],
-            "event": []
+            ]
         }
     ],
     "event": [],
     "variable": [
         {
-            "type": "string",
-            "value": "https://virtserver.swaggerhub.com/VNG-sandbox/Waardering-onroerende-zaken/1.0.0",
-            "key": "baseUrl"
+            "key": "baseUrl",
+            "value": "https://virtserver.swaggerhub.com/kadaster/WOZ-bevragen/1.0.0"
         }
     ],
     "info": {
-        "_postman_id": "d7ebe851-a1c4-4470-a8b1-dc38a67aefb9",
+        "_postman_id": "c66c5c89-844f-444a-8918-c52784fd1acc",
         "name": "Waardering onroerende zaken",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
         "description": {

@@ -5,7 +5,7 @@ Functionaliteit: Gebruiksvriendelijke foutmeldingen
     Wil ik gebruiksvriendelijke en duidelijke foutmeldingen
     Zodat ik deze één op één kan gebruiken in de UI van mijn applicatie
 
-Rule: minimaal één optionele parameter is opgegeven
+    Regel: minimaal één optionele parameter is opgegeven
 
     # Scenarionr. foutmeldingen-1
     Scenario: Er zijn geen parameters opgegeven
@@ -32,7 +32,7 @@ Rule: minimaal één optionele parameter is opgegeven
         | gebruik van een WOZ-object kenmerk die niet wordt ondersteund als zoek parameter | identificatie |
         | willekeurig string als zoek parameter                                            | bestaatniet   |
 
-Rule: opgegeven parameter(s) heeft een waarde
+    Regel: opgegeven parameter(s) heeft een waarde
 
     # Scenarionr. foutmeldingen-3
     Scenario: Er is geen waarde voor één parameter opgegeven
@@ -57,7 +57,7 @@ Rule: opgegeven parameter(s) heeft een waarde
         | rsin   | geen waarde opgegeven |
         | fields | geen waarde opgegeven |
 
-Rule: fields parameter bevat geen onbekende kenmerknamen
+    Regel: fields parameter bevat geen onbekende kenmerknamen
 
     # Scenarionr. foutmeldingen-5
     Abstract Scenario: Er is één of meerdere onbekende kenmerknamen opgegeven
@@ -75,7 +75,7 @@ Rule: fields parameter bevat geen onbekende kenmerknamen
         | bestaatniet                | ongeldige waarde: 'bestaatniet' opgegeven                    |
         | bestaatniet,bestaatookniet | ongeldige waarden: 'bestaatniet', 'bestaatookniet' opgegeven |
 
-Rule: type van parameter waarde is correct
+    Regel: type van parameter waarde is correct
 
     # Scenarionr. foutmeldingen-6
     Scenario: type van waarde van een parameter is niet correct
@@ -88,7 +88,7 @@ Rule: type van parameter waarde is correct
         | name       | reason                                     |
         | huisnummer | waarde 'A' is geen getal tussen 1 en 99999 |
 
-Rule: parameter waarde voldoet aan de opgegeven validaties van de parameter
+    Regel: parameter waarde voldoet aan de opgegeven validaties van de parameter
 
     # Scenarionr. foutmeldingen-7
     Scenario: parameter waarde is kleiner dan de gedefinieerde minimum waarde
@@ -112,7 +112,7 @@ Rule: parameter waarde voldoet aan de opgegeven validaties van de parameter
         | name     | reason                                                        |
         | pageSize | waarde '101' is groter dan de toegestane maximum waarde (100) |
 
-Rule: Een zoek actuele WOZ-objecten aanroep mag slechts één identificatie parameter bevatten
+    Regel: Een zoek actuele WOZ-objecten aanroep mag slechts één identificatie parameter bevatten
 
     # Scenarionr. foutmeldingen-9
     Abstract Scenario: Er zijn meerdere identificatie parameters opgegeven
@@ -129,7 +129,7 @@ Rule: Een zoek actuele WOZ-objecten aanroep mag slechts één identificatie para
         | ?rsin=857567433&kvkNummer=68727720                                | rsin                             | kvkNummer |
         | ?adresseerbaarObjectIdentificatie=0226010000038820&rsin=857567433 | adresseerbaarObjectIdentificatie | rsin      |
 
-Rule: Zoeken met postcode kan alleen in combinatie met huisnummer
+    Regel: Zoeken met postcode kan alleen in combinatie met huisnummer
 
     # Scenarionr. foutmeldingen-10
     Scenario: huisnummer is niet opgegeven
@@ -151,7 +151,7 @@ Rule: Zoeken met postcode kan alleen in combinatie met huisnummer
         | name     | reason                 |
         | postcode | parameter is verplicht |
 
-Rule: alle parameter fouten in een request worden samen geretourneerd
+    Regel: alle parameter fouten in een request worden samen geretourneerd
 
     # Scenarionr. foutmeldingen-12
     Scenario: er zijn meerdere verschillende fout soorten
@@ -165,7 +165,7 @@ Rule: alle parameter fouten in een request worden samen geretourneerd
         | rsin   | waarde 'abc' is geen 9 cijferig getal     |
         | fields | ongeldige waarde: 'bestaatniet' opgegeven |
 
-Rule: Raadplegen met valide wozobject identificatie
+    Regel: Raadplegen met valide wozobject identificatie
 
     # Scenarionr. foutmeldingen-13
     Abstract Scenario: invalide wozobject identificatie
