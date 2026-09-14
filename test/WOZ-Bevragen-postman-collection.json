@@ -5,7 +5,7 @@
             "description": "",
             "item": [
                 {
-                    "id": "9afcaf97-0a44-4930-b1ab-5800c56614ac",
+                    "id": "72ef69d8-d960-4877-bda5-a4a8c681fe45",
                     "name": "Zoek WOZ-objecten",
                     "request": {
                         "name": "Zoek WOZ-objecten",
@@ -28,7 +28,7 @@
                                         "type": "text/plain"
                                     },
                                     "key": "rsin",
-                                    "value": "526209399"
+                                    "value": "579092327"
                                 },
                                 {
                                     "disabled": false,
@@ -37,7 +37,7 @@
                                         "type": "text/plain"
                                     },
                                     "key": "kvkNummer",
-                                    "value": "32126494"
+                                    "value": "32812767"
                                 },
                                 {
                                     "disabled": false,
@@ -46,7 +46,7 @@
                                         "type": "text/plain"
                                     },
                                     "key": "adresseerbaarObjectIdentificatie",
-                                    "value": "4395624167393811"
+                                    "value": "1958063222860154"
                                 },
                                 {
                                     "disabled": false,
@@ -55,7 +55,7 @@
                                         "type": "text/plain"
                                     },
                                     "key": "nummeraanduidingIdentificatie",
-                                    "value": "5773274723590544"
+                                    "value": "2416245668606440"
                                 },
                                 {
                                     "disabled": false,
@@ -64,7 +64,7 @@
                                         "type": "text/plain"
                                     },
                                     "key": "postcode",
-                                    "value": "2799KF"
+                                    "value": "5090VW"
                                 },
                                 {
                                     "disabled": false,
@@ -82,7 +82,7 @@
                                         "type": "text/plain"
                                     },
                                     "key": "huisnummertoevoeging",
-                                    "value": "AC"
+                                    "value": "B"
                                 },
                                 {
                                     "disabled": false,
@@ -91,7 +91,7 @@
                                         "type": "text/plain"
                                     },
                                     "key": "huisletter",
-                                    "value": "J"
+                                    "value": "L"
                                 },
                                 {
                                     "disabled": false,
@@ -135,7 +135,7 @@
                     },
                     "response": [
                         {
-                            "id": "b3ca57b2-de9a-4d9a-b618-6c385a55fbae",
+                            "id": "40fd5627-b220-489c-bfe6-9fcd28f726b1",
                             "name": "OK",
                             "originalRequest": {
                                 "url": {
@@ -153,7 +153,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "rsin",
-                                            "value": "526209399"
+                                            "value": "579092327"
                                         },
                                         {
                                             "disabled": false,
@@ -162,7 +162,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "kvkNummer",
-                                            "value": "32126494"
+                                            "value": "32812767"
                                         },
                                         {
                                             "disabled": false,
@@ -171,7 +171,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "adresseerbaarObjectIdentificatie",
-                                            "value": "4395624167393811"
+                                            "value": "1958063222860154"
                                         },
                                         {
                                             "disabled": false,
@@ -180,7 +180,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "nummeraanduidingIdentificatie",
-                                            "value": "5773274723590544"
+                                            "value": "2416245668606440"
                                         },
                                         {
                                             "disabled": false,
@@ -189,7 +189,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "postcode",
-                                            "value": "2799KF"
+                                            "value": "5090VW"
                                         },
                                         {
                                             "disabled": false,
@@ -207,7 +207,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "huisnummertoevoeging",
-                                            "value": "AC"
+                                            "value": "B"
                                         },
                                         {
                                             "disabled": false,
@@ -216,7 +216,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "huisletter",
-                                            "value": "J"
+                                            "value": "L"
                                         },
                                         {
                                             "disabled": false,
@@ -301,12 +301,12 @@
                                     "value": ""
                                 }
                             ],
-                            "body": "{\n  \"_links\": {\n    \"self\": {\n      \"href\": \"<string>\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n    },\n    \"first\": {\n      \"href\": \"<string>\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n    },\n    \"previous\": {\n      \"href\": \"<string>\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n    },\n    \"next\": {\n      \"href\": \"<string>\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n    }\n  },\n  \"_embedded\": {\n    \"wozObjecten\": [\n      {\n        \"aanduiding\": {\n          \"straat\": \"<string>\",\n          \"huisnummer\": \"<integer>\",\n          \"huisletter\": \"<string>\",\n          \"huisnummertoevoeging\": \"<string>\",\n          \"postcode\": \"<string>\",\n          \"woonplaats\": \"<string>\",\n          \"locatieomschrijving\": \"<string>\",\n          \"nummeraanduidingIdentificatie\": \"<string>\"\n        },\n        \"adresseerbaarObjectIdentificaties\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"belanghebbendeEigenaar\": {\n          \"burgerservicenummer\": \"<string>\",\n          \"geheimhoudingPersoonsgegevens\": \"<boolean>\",\n          \"kvkNummer\": \"<string>\",\n          \"naam\": \"<string>\",\n          \"rsin\": \"<string>\",\n          \"type\": \"vestiging\",\n          \"vestigingsnummer\": \"<string>\"\n        },\n        \"belanghebbendeGebruiker\": {\n          \"burgerservicenummer\": \"<string>\",\n          \"geheimhoudingPersoonsgegevens\": \"<boolean>\",\n          \"kvkNummer\": \"<string>\",\n          \"naam\": \"<string>\",\n          \"rsin\": \"<string>\",\n          \"type\": \"vestiging\",\n          \"vestigingsnummer\": \"<string>\"\n        },\n        \"grondoppervlakte\": \"<integer>\",\n        \"identificatie\": \"<string>\",\n        \"kadastraalOnroerendeZaken\": [\n          {\n            \"identificatie\": \"<string>\",\n            \"aanduiding\": {\n              \"gemeentecode\": \"<string>\",\n              \"sectie\": \"<string>\",\n              \"perceelnummer\": \"<integer>\",\n              \"deelperceelnummer\": \"<string>\",\n              \"appartementsindex\": \"<integer>\"\n            },\n            \"aanduidingMetGemeentenaam\": \"<string>\"\n          },\n          {\n            \"identificatie\": \"<string>\",\n            \"aanduiding\": {\n              \"gemeentecode\": \"<string>\",\n              \"sectie\": \"<string>\",\n              \"perceelnummer\": \"<integer>\",\n              \"deelperceelnummer\": \"<string>\",\n              \"appartementsindex\": \"<integer>\"\n            },\n            \"aanduidingMetGemeentenaam\": \"<string>\"\n          }\n        ],\n        \"pandIdentificaties\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"verantwoordelijkeGemeente\": {\n          \"code\": \"<string>\",\n          \"omschrijving\": \"<string>\"\n        },\n        \"waarden\": [\n          {\n            \"vastgesteldeWaarde\": \"<integer>\",\n            \"waardepeildatum\": \"<date>\",\n            \"ingangsdatum\": \"<date>\",\n            \"beschikkingsStatussen\": [\n              \"hoge_raad_veranderd\",\n              \"bezwaar_veranderd\"\n            ],\n            \"indicatieBezwaarBeroep\": \"<boolean>\"\n          },\n          {\n            \"vastgesteldeWaarde\": \"<integer>\",\n            \"waardepeildatum\": \"<date>\",\n            \"ingangsdatum\": \"<date>\",\n            \"beschikkingsStatussen\": [\n              \"beroep_gehandhaafd\",\n              \"beroep_gehandhaafd\"\n            ],\n            \"indicatieBezwaarBeroep\": \"<boolean>\"\n          }\n        ],\n        \"_links\": {\n          \"self\": {\n            \"href\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\"\n          },\n          \"adres\": {\n            \"href\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\"\n          },\n          \"adresseerbareObjecten\": [\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            },\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            }\n          ],\n          \"belanghebbendeEigenaar\": {\n            \"href\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\"\n          },\n          \"belanghebbendeGebruiker\": {\n            \"href\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\"\n          },\n          \"panden\": [\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            },\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            }\n          ],\n          \"kadastraalOnroerendeZaken\": [\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            },\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            }\n          ]\n        }\n      },\n      {\n        \"aanduiding\": {\n          \"straat\": \"<string>\",\n          \"huisnummer\": \"<integer>\",\n          \"huisletter\": \"<string>\",\n          \"huisnummertoevoeging\": \"<string>\",\n          \"postcode\": \"<string>\",\n          \"woonplaats\": \"<string>\",\n          \"locatieomschrijving\": \"<string>\",\n          \"nummeraanduidingIdentificatie\": \"<string>\"\n        },\n        \"adresseerbaarObjectIdentificaties\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"belanghebbendeEigenaar\": {\n          \"burgerservicenummer\": \"<string>\",\n          \"geheimhoudingPersoonsgegevens\": \"<boolean>\",\n          \"kvkNummer\": \"<string>\",\n          \"naam\": \"<string>\",\n          \"rsin\": \"<string>\",\n          \"type\": \"vestiging\",\n          \"vestigingsnummer\": \"<string>\"\n        },\n        \"belanghebbendeGebruiker\": {\n          \"burgerservicenummer\": \"<string>\",\n          \"geheimhoudingPersoonsgegevens\": \"<boolean>\",\n          \"kvkNummer\": \"<string>\",\n          \"naam\": \"<string>\",\n          \"rsin\": \"<string>\",\n          \"type\": \"vestiging\",\n          \"vestigingsnummer\": \"<string>\"\n        },\n        \"grondoppervlakte\": \"<integer>\",\n        \"identificatie\": \"<string>\",\n        \"kadastraalOnroerendeZaken\": [\n          {\n            \"identificatie\": \"<string>\",\n            \"aanduiding\": {\n              \"gemeentecode\": \"<string>\",\n              \"sectie\": \"<string>\",\n              \"perceelnummer\": \"<integer>\",\n              \"deelperceelnummer\": \"<string>\",\n              \"appartementsindex\": \"<integer>\"\n            },\n            \"aanduidingMetGemeentenaam\": \"<string>\"\n          },\n          {\n            \"identificatie\": \"<string>\",\n            \"aanduiding\": {\n              \"gemeentecode\": \"<string>\",\n              \"sectie\": \"<string>\",\n              \"perceelnummer\": \"<integer>\",\n              \"deelperceelnummer\": \"<string>\",\n              \"appartementsindex\": \"<integer>\"\n            },\n            \"aanduidingMetGemeentenaam\": \"<string>\"\n          }\n        ],\n        \"pandIdentificaties\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"verantwoordelijkeGemeente\": {\n          \"code\": \"<string>\",\n          \"omschrijving\": \"<string>\"\n        },\n        \"waarden\": [\n          {\n            \"vastgesteldeWaarde\": \"<integer>\",\n            \"waardepeildatum\": \"<date>\",\n            \"ingangsdatum\": \"<date>\",\n            \"beschikkingsStatussen\": [\n              \"beschikking_vernietigd\",\n              \"beroep_veranderd\"\n            ],\n            \"indicatieBezwaarBeroep\": \"<boolean>\"\n          },\n          {\n            \"vastgesteldeWaarde\": \"<integer>\",\n            \"waardepeildatum\": \"<date>\",\n            \"ingangsdatum\": \"<date>\",\n            \"beschikkingsStatussen\": [\n              \"beroep_gehandhaafd\",\n              \"beroep_veranderd\"\n            ],\n            \"indicatieBezwaarBeroep\": \"<boolean>\"\n          }\n        ],\n        \"_links\": {\n          \"self\": {\n            \"href\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\"\n          },\n          \"adres\": {\n            \"href\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\"\n          },\n          \"adresseerbareObjecten\": [\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            },\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            }\n          ],\n          \"belanghebbendeEigenaar\": {\n            \"href\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\"\n          },\n          \"belanghebbendeGebruiker\": {\n            \"href\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\"\n          },\n          \"panden\": [\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            },\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            }\n          ],\n          \"kadastraalOnroerendeZaken\": [\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            },\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            }\n          ]\n        }\n      }\n    ]\n  }\n}",
+                            "body": "{\n  \"_links\": {\n    \"self\": {\n      \"href\": \"<string>\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n    },\n    \"first\": {\n      \"href\": \"<string>\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n    },\n    \"previous\": {\n      \"href\": \"<string>\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n    },\n    \"next\": {\n      \"href\": \"<string>\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n    }\n  },\n  \"_embedded\": {\n    \"wozObjecten\": [\n      {\n        \"aanduiding\": {\n          \"straat\": \"<string>\",\n          \"huisnummer\": \"<integer>\",\n          \"huisletter\": \"<string>\",\n          \"huisnummertoevoeging\": \"<string>\",\n          \"postcode\": \"<string>\",\n          \"woonplaats\": \"<string>\",\n          \"locatieomschrijving\": \"<string>\",\n          \"nummeraanduidingIdentificatie\": \"<string>\"\n        },\n        \"adresseerbaarObjectIdentificaties\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"belanghebbendeEigenaar\": {\n          \"burgerservicenummer\": \"<string>\",\n          \"geheimhoudingPersoonsgegevens\": \"<boolean>\",\n          \"kvkNummer\": \"<string>\",\n          \"naam\": \"<string>\",\n          \"rsin\": \"<string>\",\n          \"type\": \"niet_natuurlijk_persoon\",\n          \"vestigingsnummer\": \"<string>\"\n        },\n        \"belanghebbendeGebruiker\": {\n          \"burgerservicenummer\": \"<string>\",\n          \"geheimhoudingPersoonsgegevens\": \"<boolean>\",\n          \"kvkNummer\": \"<string>\",\n          \"naam\": \"<string>\",\n          \"rsin\": \"<string>\",\n          \"type\": \"natuurlijk_persoon\",\n          \"vestigingsnummer\": \"<string>\"\n        },\n        \"grondoppervlakte\": \"<integer>\",\n        \"identificatie\": \"<string>\",\n        \"kadastraalOnroerendeZaken\": [\n          {\n            \"identificatie\": \"<string>\",\n            \"aanduiding\": {\n              \"gemeentecode\": \"<string>\",\n              \"sectie\": \"<string>\",\n              \"perceelnummer\": \"<integer>\",\n              \"deelperceelnummer\": \"<string>\",\n              \"appartementsindex\": \"<integer>\"\n            },\n            \"aanduidingMetGemeentenaam\": \"<string>\"\n          },\n          {\n            \"identificatie\": \"<string>\",\n            \"aanduiding\": {\n              \"gemeentecode\": \"<string>\",\n              \"sectie\": \"<string>\",\n              \"perceelnummer\": \"<integer>\",\n              \"deelperceelnummer\": \"<string>\",\n              \"appartementsindex\": \"<integer>\"\n            },\n            \"aanduidingMetGemeentenaam\": \"<string>\"\n          }\n        ],\n        \"pandIdentificaties\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"verantwoordelijkeGemeente\": {\n          \"code\": \"<string>\",\n          \"omschrijving\": \"<string>\"\n        },\n        \"waarden\": [\n          {\n            \"vastgesteldeWaarde\": \"<integer>\",\n            \"waardepeildatum\": \"<date>\",\n            \"ingangsdatum\": \"<date>\",\n            \"beschikkingsStatussen\": [\n              \"hoger_beroep_veranderd\",\n              \"hoger_beroep_gehandhaafd\"\n            ],\n            \"indicatieBezwaarBeroep\": \"<boolean>\"\n          },\n          {\n            \"vastgesteldeWaarde\": \"<integer>\",\n            \"waardepeildatum\": \"<date>\",\n            \"ingangsdatum\": \"<date>\",\n            \"beschikkingsStatussen\": [\n              \"hoge_raad_veranderd\",\n              \"cassatie_ingesteld\"\n            ],\n            \"indicatieBezwaarBeroep\": \"<boolean>\"\n          }\n        ],\n        \"_links\": {\n          \"self\": {\n            \"href\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\"\n          },\n          \"adres\": {\n            \"href\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\"\n          },\n          \"adresseerbareObjecten\": [\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            },\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            }\n          ],\n          \"belanghebbendeEigenaar\": {\n            \"href\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\"\n          },\n          \"belanghebbendeGebruiker\": {\n            \"href\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\"\n          },\n          \"panden\": [\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            },\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            }\n          ],\n          \"kadastraalOnroerendeZaken\": [\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            },\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            }\n          ]\n        }\n      },\n      {\n        \"aanduiding\": {\n          \"straat\": \"<string>\",\n          \"huisnummer\": \"<integer>\",\n          \"huisletter\": \"<string>\",\n          \"huisnummertoevoeging\": \"<string>\",\n          \"postcode\": \"<string>\",\n          \"woonplaats\": \"<string>\",\n          \"locatieomschrijving\": \"<string>\",\n          \"nummeraanduidingIdentificatie\": \"<string>\"\n        },\n        \"adresseerbaarObjectIdentificaties\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"belanghebbendeEigenaar\": {\n          \"burgerservicenummer\": \"<string>\",\n          \"geheimhoudingPersoonsgegevens\": \"<boolean>\",\n          \"kvkNummer\": \"<string>\",\n          \"naam\": \"<string>\",\n          \"rsin\": \"<string>\",\n          \"type\": \"vestiging\",\n          \"vestigingsnummer\": \"<string>\"\n        },\n        \"belanghebbendeGebruiker\": {\n          \"burgerservicenummer\": \"<string>\",\n          \"geheimhoudingPersoonsgegevens\": \"<boolean>\",\n          \"kvkNummer\": \"<string>\",\n          \"naam\": \"<string>\",\n          \"rsin\": \"<string>\",\n          \"type\": \"niet_natuurlijk_persoon\",\n          \"vestigingsnummer\": \"<string>\"\n        },\n        \"grondoppervlakte\": \"<integer>\",\n        \"identificatie\": \"<string>\",\n        \"kadastraalOnroerendeZaken\": [\n          {\n            \"identificatie\": \"<string>\",\n            \"aanduiding\": {\n              \"gemeentecode\": \"<string>\",\n              \"sectie\": \"<string>\",\n              \"perceelnummer\": \"<integer>\",\n              \"deelperceelnummer\": \"<string>\",\n              \"appartementsindex\": \"<integer>\"\n            },\n            \"aanduidingMetGemeentenaam\": \"<string>\"\n          },\n          {\n            \"identificatie\": \"<string>\",\n            \"aanduiding\": {\n              \"gemeentecode\": \"<string>\",\n              \"sectie\": \"<string>\",\n              \"perceelnummer\": \"<integer>\",\n              \"deelperceelnummer\": \"<string>\",\n              \"appartementsindex\": \"<integer>\"\n            },\n            \"aanduidingMetGemeentenaam\": \"<string>\"\n          }\n        ],\n        \"pandIdentificaties\": [\n          \"<string>\",\n          \"<string>\"\n        ],\n        \"verantwoordelijkeGemeente\": {\n          \"code\": \"<string>\",\n          \"omschrijving\": \"<string>\"\n        },\n        \"waarden\": [\n          {\n            \"vastgesteldeWaarde\": \"<integer>\",\n            \"waardepeildatum\": \"<date>\",\n            \"ingangsdatum\": \"<date>\",\n            \"beschikkingsStatussen\": [\n              \"cassatie_ingesteld\",\n              \"beschikking_vernietigd\"\n            ],\n            \"indicatieBezwaarBeroep\": \"<boolean>\"\n          },\n          {\n            \"vastgesteldeWaarde\": \"<integer>\",\n            \"waardepeildatum\": \"<date>\",\n            \"ingangsdatum\": \"<date>\",\n            \"beschikkingsStatussen\": [\n              \"bezwaar_gehandhaafd\",\n              \"beroep_aangetekend\"\n            ],\n            \"indicatieBezwaarBeroep\": \"<boolean>\"\n          }\n        ],\n        \"_links\": {\n          \"self\": {\n            \"href\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\"\n          },\n          \"adres\": {\n            \"href\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\"\n          },\n          \"adresseerbareObjecten\": [\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            },\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            }\n          ],\n          \"belanghebbendeEigenaar\": {\n            \"href\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\"\n          },\n          \"belanghebbendeGebruiker\": {\n            \"href\": \"<string>\",\n            \"templated\": \"<boolean>\",\n            \"title\": \"<string>\"\n          },\n          \"panden\": [\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            },\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            }\n          ],\n          \"kadastraalOnroerendeZaken\": [\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            },\n            {\n              \"href\": \"<string>\",\n              \"templated\": \"<boolean>\",\n              \"title\": \"<string>\"\n            }\n          ]\n        }\n      }\n    ]\n  }\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "a70be25f-bde7-4cb7-81bd-8d912b98e84c",
+                            "id": "54f9f1f0-552f-4b9a-88ab-95e50cd1bd5f",
                             "name": "Bad Request",
                             "originalRequest": {
                                 "url": {
@@ -324,7 +324,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "rsin",
-                                            "value": "526209399"
+                                            "value": "579092327"
                                         },
                                         {
                                             "disabled": false,
@@ -333,7 +333,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "kvkNummer",
-                                            "value": "32126494"
+                                            "value": "32812767"
                                         },
                                         {
                                             "disabled": false,
@@ -342,7 +342,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "adresseerbaarObjectIdentificatie",
-                                            "value": "4395624167393811"
+                                            "value": "1958063222860154"
                                         },
                                         {
                                             "disabled": false,
@@ -351,7 +351,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "nummeraanduidingIdentificatie",
-                                            "value": "5773274723590544"
+                                            "value": "2416245668606440"
                                         },
                                         {
                                             "disabled": false,
@@ -360,7 +360,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "postcode",
-                                            "value": "2799KF"
+                                            "value": "5090VW"
                                         },
                                         {
                                             "disabled": false,
@@ -378,7 +378,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "huisnummertoevoeging",
-                                            "value": "AC"
+                                            "value": "B"
                                         },
                                         {
                                             "disabled": false,
@@ -387,7 +387,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "huisletter",
-                                            "value": "J"
+                                            "value": "L"
                                         },
                                         {
                                             "disabled": false,
@@ -450,7 +450,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "19cc19e2-b41d-4926-957e-111c303049d4",
+                            "id": "99ef5839-e29a-4338-95cf-3821a56610c4",
                             "name": "Unauthorized",
                             "originalRequest": {
                                 "url": {
@@ -468,7 +468,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "rsin",
-                                            "value": "526209399"
+                                            "value": "579092327"
                                         },
                                         {
                                             "disabled": false,
@@ -477,7 +477,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "kvkNummer",
-                                            "value": "32126494"
+                                            "value": "32812767"
                                         },
                                         {
                                             "disabled": false,
@@ -486,7 +486,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "adresseerbaarObjectIdentificatie",
-                                            "value": "4395624167393811"
+                                            "value": "1958063222860154"
                                         },
                                         {
                                             "disabled": false,
@@ -495,7 +495,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "nummeraanduidingIdentificatie",
-                                            "value": "5773274723590544"
+                                            "value": "2416245668606440"
                                         },
                                         {
                                             "disabled": false,
@@ -504,7 +504,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "postcode",
-                                            "value": "2799KF"
+                                            "value": "5090VW"
                                         },
                                         {
                                             "disabled": false,
@@ -522,7 +522,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "huisnummertoevoeging",
-                                            "value": "AC"
+                                            "value": "B"
                                         },
                                         {
                                             "disabled": false,
@@ -531,7 +531,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "huisletter",
-                                            "value": "J"
+                                            "value": "L"
                                         },
                                         {
                                             "disabled": false,
@@ -594,7 +594,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "13f88ffc-b25d-49a5-bdad-654b997bfc5b",
+                            "id": "6cc27b8a-6a76-4db0-bed0-f6af7303afa7",
                             "name": "Forbidden",
                             "originalRequest": {
                                 "url": {
@@ -612,7 +612,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "rsin",
-                                            "value": "526209399"
+                                            "value": "579092327"
                                         },
                                         {
                                             "disabled": false,
@@ -621,7 +621,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "kvkNummer",
-                                            "value": "32126494"
+                                            "value": "32812767"
                                         },
                                         {
                                             "disabled": false,
@@ -630,7 +630,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "adresseerbaarObjectIdentificatie",
-                                            "value": "4395624167393811"
+                                            "value": "1958063222860154"
                                         },
                                         {
                                             "disabled": false,
@@ -639,7 +639,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "nummeraanduidingIdentificatie",
-                                            "value": "5773274723590544"
+                                            "value": "2416245668606440"
                                         },
                                         {
                                             "disabled": false,
@@ -648,7 +648,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "postcode",
-                                            "value": "2799KF"
+                                            "value": "5090VW"
                                         },
                                         {
                                             "disabled": false,
@@ -666,7 +666,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "huisnummertoevoeging",
-                                            "value": "AC"
+                                            "value": "B"
                                         },
                                         {
                                             "disabled": false,
@@ -675,7 +675,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "huisletter",
-                                            "value": "J"
+                                            "value": "L"
                                         },
                                         {
                                             "disabled": false,
@@ -738,7 +738,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "c59df3ed-de14-4c5c-b143-9ba2ea118722",
+                            "id": "e7d61ea0-fdac-42a5-8730-743b9f8ebdf2",
                             "name": "Not Acceptable",
                             "originalRequest": {
                                 "url": {
@@ -756,7 +756,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "rsin",
-                                            "value": "526209399"
+                                            "value": "579092327"
                                         },
                                         {
                                             "disabled": false,
@@ -765,7 +765,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "kvkNummer",
-                                            "value": "32126494"
+                                            "value": "32812767"
                                         },
                                         {
                                             "disabled": false,
@@ -774,7 +774,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "adresseerbaarObjectIdentificatie",
-                                            "value": "4395624167393811"
+                                            "value": "1958063222860154"
                                         },
                                         {
                                             "disabled": false,
@@ -783,7 +783,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "nummeraanduidingIdentificatie",
-                                            "value": "5773274723590544"
+                                            "value": "2416245668606440"
                                         },
                                         {
                                             "disabled": false,
@@ -792,7 +792,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "postcode",
-                                            "value": "2799KF"
+                                            "value": "5090VW"
                                         },
                                         {
                                             "disabled": false,
@@ -810,7 +810,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "huisnummertoevoeging",
-                                            "value": "AC"
+                                            "value": "B"
                                         },
                                         {
                                             "disabled": false,
@@ -819,7 +819,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "huisletter",
-                                            "value": "J"
+                                            "value": "L"
                                         },
                                         {
                                             "disabled": false,
@@ -882,7 +882,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "e4fb5078-c645-464f-b456-74270e5451ff",
+                            "id": "2b375121-d03f-41a5-9b5d-1148ccb2efb0",
                             "name": "Internal Server Error",
                             "originalRequest": {
                                 "url": {
@@ -900,7 +900,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "rsin",
-                                            "value": "526209399"
+                                            "value": "579092327"
                                         },
                                         {
                                             "disabled": false,
@@ -909,7 +909,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "kvkNummer",
-                                            "value": "32126494"
+                                            "value": "32812767"
                                         },
                                         {
                                             "disabled": false,
@@ -918,7 +918,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "adresseerbaarObjectIdentificatie",
-                                            "value": "4395624167393811"
+                                            "value": "1958063222860154"
                                         },
                                         {
                                             "disabled": false,
@@ -927,7 +927,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "nummeraanduidingIdentificatie",
-                                            "value": "5773274723590544"
+                                            "value": "2416245668606440"
                                         },
                                         {
                                             "disabled": false,
@@ -936,7 +936,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "postcode",
-                                            "value": "2799KF"
+                                            "value": "5090VW"
                                         },
                                         {
                                             "disabled": false,
@@ -954,7 +954,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "huisnummertoevoeging",
-                                            "value": "AC"
+                                            "value": "B"
                                         },
                                         {
                                             "disabled": false,
@@ -963,7 +963,7 @@
                                                 "type": "text/plain"
                                             },
                                             "key": "huisletter",
-                                            "value": "J"
+                                            "value": "L"
                                         },
                                         {
                                             "disabled": false,
@@ -1036,7 +1036,7 @@
                     "description": "",
                     "item": [
                         {
-                            "id": "f2aed1f5-7d7d-4f64-b283-0b21a3a866ea",
+                            "id": "8b41781f-ddc6-4cbe-95cb-3c74181a9055",
                             "name": "Raadpleeg een WOZ-object",
                             "request": {
                                 "name": "Raadpleeg een WOZ-object",
@@ -1066,7 +1066,7 @@
                                     "variable": [
                                         {
                                             "type": "any",
-                                            "value": "622294050713",
+                                            "value": "722412805536",
                                             "key": "identificatie",
                                             "disabled": false,
                                             "description": {
@@ -1088,7 +1088,7 @@
                             },
                             "response": [
                                 {
-                                    "id": "60e854fa-f1bd-4323-8b38-a84bb7882246",
+                                    "id": "5fe3bca3-faa0-4a2d-83ba-80146bf13817",
                                     "name": "OK",
                                     "originalRequest": {
                                         "url": {
@@ -1147,12 +1147,12 @@
                                             "value": ""
                                         }
                                     ],
-                                    "body": "{\n  \"aanduiding\": {\n    \"straat\": \"<string>\",\n    \"huisnummer\": \"<integer>\",\n    \"huisletter\": \"<string>\",\n    \"huisnummertoevoeging\": \"<string>\",\n    \"postcode\": \"<string>\",\n    \"woonplaats\": \"<string>\",\n    \"locatieomschrijving\": \"<string>\",\n    \"nummeraanduidingIdentificatie\": \"<string>\"\n  },\n  \"adresseerbaarObjectIdentificaties\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"belanghebbendeEigenaar\": {\n    \"burgerservicenummer\": \"<string>\",\n    \"geheimhoudingPersoonsgegevens\": \"<boolean>\",\n    \"kvkNummer\": \"<string>\",\n    \"naam\": \"<string>\",\n    \"rsin\": \"<string>\",\n    \"type\": \"niet_natuurlijk_persoon\",\n    \"vestigingsnummer\": \"<string>\"\n  },\n  \"belanghebbendeGebruiker\": {\n    \"burgerservicenummer\": \"<string>\",\n    \"geheimhoudingPersoonsgegevens\": \"<boolean>\",\n    \"kvkNummer\": \"<string>\",\n    \"naam\": \"<string>\",\n    \"rsin\": \"<string>\",\n    \"type\": \"vestiging\",\n    \"vestigingsnummer\": \"<string>\"\n  },\n  \"grondoppervlakte\": \"<integer>\",\n  \"identificatie\": \"<string>\",\n  \"kadastraalOnroerendeZaken\": [\n    {\n      \"identificatie\": \"<string>\",\n      \"aanduiding\": {\n        \"gemeentecode\": \"<string>\",\n        \"sectie\": \"<string>\",\n        \"perceelnummer\": \"<integer>\",\n        \"deelperceelnummer\": \"<string>\",\n        \"appartementsindex\": \"<integer>\"\n      },\n      \"aanduidingMetGemeentenaam\": \"<string>\"\n    },\n    {\n      \"identificatie\": \"<string>\",\n      \"aanduiding\": {\n        \"gemeentecode\": \"<string>\",\n        \"sectie\": \"<string>\",\n        \"perceelnummer\": \"<integer>\",\n        \"deelperceelnummer\": \"<string>\",\n        \"appartementsindex\": \"<integer>\"\n      },\n      \"aanduidingMetGemeentenaam\": \"<string>\"\n    }\n  ],\n  \"pandIdentificaties\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"verantwoordelijkeGemeente\": {\n    \"code\": \"<string>\",\n    \"omschrijving\": \"<string>\"\n  },\n  \"waarden\": [\n    {\n      \"vastgesteldeWaarde\": \"<integer>\",\n      \"waardepeildatum\": \"<date>\",\n      \"ingangsdatum\": \"<date>\",\n      \"beschikkingsStatussen\": [\n        \"beschikking_vernietigd\",\n        \"waarde_ambtshalve_verminderd\"\n      ],\n      \"indicatieBezwaarBeroep\": \"<boolean>\"\n    },\n    {\n      \"vastgesteldeWaarde\": \"<integer>\",\n      \"waardepeildatum\": \"<date>\",\n      \"ingangsdatum\": \"<date>\",\n      \"beschikkingsStatussen\": [\n        \"beschikking_genomen\",\n        \"hoger_beroep_aangetekend\"\n      ],\n      \"indicatieBezwaarBeroep\": \"<boolean>\"\n    }\n  ],\n  \"_links\": {\n    \"self\": {\n      \"href\": \"<string>\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n    },\n    \"adres\": {\n      \"href\": \"<string>\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n    },\n    \"adresseerbareObjecten\": [\n      {\n        \"href\": \"<string>\",\n        \"templated\": \"<boolean>\",\n        \"title\": \"<string>\"\n      },\n      {\n        \"href\": \"<string>\",\n        \"templated\": \"<boolean>\",\n        \"title\": \"<string>\"\n      }\n    ],\n    \"belanghebbendeEigenaar\": {\n      \"href\": \"<string>\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n    },\n    \"belanghebbendeGebruiker\": {\n      \"href\": \"<string>\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n    },\n    \"panden\": [\n      {\n        \"href\": \"<string>\",\n        \"templated\": \"<boolean>\",\n        \"title\": \"<string>\"\n      },\n      {\n        \"href\": \"<string>\",\n        \"templated\": \"<boolean>\",\n        \"title\": \"<string>\"\n      }\n    ],\n    \"kadastraalOnroerendeZaken\": [\n      {\n        \"href\": \"<string>\",\n        \"templated\": \"<boolean>\",\n        \"title\": \"<string>\"\n      },\n      {\n        \"href\": \"<string>\",\n        \"templated\": \"<boolean>\",\n        \"title\": \"<string>\"\n      }\n    ]\n  }\n}",
+                                    "body": "{\n  \"aanduiding\": {\n    \"straat\": \"<string>\",\n    \"huisnummer\": \"<integer>\",\n    \"huisletter\": \"<string>\",\n    \"huisnummertoevoeging\": \"<string>\",\n    \"postcode\": \"<string>\",\n    \"woonplaats\": \"<string>\",\n    \"locatieomschrijving\": \"<string>\",\n    \"nummeraanduidingIdentificatie\": \"<string>\"\n  },\n  \"adresseerbaarObjectIdentificaties\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"belanghebbendeEigenaar\": {\n    \"burgerservicenummer\": \"<string>\",\n    \"geheimhoudingPersoonsgegevens\": \"<boolean>\",\n    \"kvkNummer\": \"<string>\",\n    \"naam\": \"<string>\",\n    \"rsin\": \"<string>\",\n    \"type\": \"vestiging\",\n    \"vestigingsnummer\": \"<string>\"\n  },\n  \"belanghebbendeGebruiker\": {\n    \"burgerservicenummer\": \"<string>\",\n    \"geheimhoudingPersoonsgegevens\": \"<boolean>\",\n    \"kvkNummer\": \"<string>\",\n    \"naam\": \"<string>\",\n    \"rsin\": \"<string>\",\n    \"type\": \"vestiging\",\n    \"vestigingsnummer\": \"<string>\"\n  },\n  \"grondoppervlakte\": \"<integer>\",\n  \"identificatie\": \"<string>\",\n  \"kadastraalOnroerendeZaken\": [\n    {\n      \"identificatie\": \"<string>\",\n      \"aanduiding\": {\n        \"gemeentecode\": \"<string>\",\n        \"sectie\": \"<string>\",\n        \"perceelnummer\": \"<integer>\",\n        \"deelperceelnummer\": \"<string>\",\n        \"appartementsindex\": \"<integer>\"\n      },\n      \"aanduidingMetGemeentenaam\": \"<string>\"\n    },\n    {\n      \"identificatie\": \"<string>\",\n      \"aanduiding\": {\n        \"gemeentecode\": \"<string>\",\n        \"sectie\": \"<string>\",\n        \"perceelnummer\": \"<integer>\",\n        \"deelperceelnummer\": \"<string>\",\n        \"appartementsindex\": \"<integer>\"\n      },\n      \"aanduidingMetGemeentenaam\": \"<string>\"\n    }\n  ],\n  \"pandIdentificaties\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"verantwoordelijkeGemeente\": {\n    \"code\": \"<string>\",\n    \"omschrijving\": \"<string>\"\n  },\n  \"waarden\": [\n    {\n      \"vastgesteldeWaarde\": \"<integer>\",\n      \"waardepeildatum\": \"<date>\",\n      \"ingangsdatum\": \"<date>\",\n      \"beschikkingsStatussen\": [\n        \"beschikking_herzien\",\n        \"hoge_raad_veranderd\"\n      ],\n      \"indicatieBezwaarBeroep\": \"<boolean>\"\n    },\n    {\n      \"vastgesteldeWaarde\": \"<integer>\",\n      \"waardepeildatum\": \"<date>\",\n      \"ingangsdatum\": \"<date>\",\n      \"beschikkingsStatussen\": [\n        \"cassatie_ingesteld\",\n        \"bezwaar_gehandhaafd\"\n      ],\n      \"indicatieBezwaarBeroep\": \"<boolean>\"\n    }\n  ],\n  \"_links\": {\n    \"self\": {\n      \"href\": \"<string>\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n    },\n    \"adres\": {\n      \"href\": \"<string>\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n    },\n    \"adresseerbareObjecten\": [\n      {\n        \"href\": \"<string>\",\n        \"templated\": \"<boolean>\",\n        \"title\": \"<string>\"\n      },\n      {\n        \"href\": \"<string>\",\n        \"templated\": \"<boolean>\",\n        \"title\": \"<string>\"\n      }\n    ],\n    \"belanghebbendeEigenaar\": {\n      \"href\": \"<string>\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n    },\n    \"belanghebbendeGebruiker\": {\n      \"href\": \"<string>\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n    },\n    \"panden\": [\n      {\n        \"href\": \"<string>\",\n        \"templated\": \"<boolean>\",\n        \"title\": \"<string>\"\n      },\n      {\n        \"href\": \"<string>\",\n        \"templated\": \"<boolean>\",\n        \"title\": \"<string>\"\n      }\n    ],\n    \"kadastraalOnroerendeZaken\": [\n      {\n        \"href\": \"<string>\",\n        \"templated\": \"<boolean>\",\n        \"title\": \"<string>\"\n      },\n      {\n        \"href\": \"<string>\",\n        \"templated\": \"<boolean>\",\n        \"title\": \"<string>\"\n      }\n    ]\n  }\n}",
                                     "cookie": [],
                                     "_postman_previewlanguage": "json"
                                 },
                                 {
-                                    "id": "4709ed15-8c22-4463-acc1-f292b8c9d1fa",
+                                    "id": "15a7befc-facd-4324-86a5-3274679cf98f",
                                     "name": "Bad Request",
                                     "originalRequest": {
                                         "url": {
@@ -1207,7 +1207,7 @@
                                     "_postman_previewlanguage": "json"
                                 },
                                 {
-                                    "id": "1f937795-5d75-453e-a76f-02c279d26013",
+                                    "id": "b1186f27-9df6-45a4-bc84-28653cae8f27",
                                     "name": "Unauthorized",
                                     "originalRequest": {
                                         "url": {
@@ -1262,7 +1262,7 @@
                                     "_postman_previewlanguage": "json"
                                 },
                                 {
-                                    "id": "101a2c48-1c17-44ce-b5f0-de86a3db8805",
+                                    "id": "564f850b-cca0-470d-aaab-dcd7108533c2",
                                     "name": "Forbidden",
                                     "originalRequest": {
                                         "url": {
@@ -1317,7 +1317,7 @@
                                     "_postman_previewlanguage": "json"
                                 },
                                 {
-                                    "id": "1a642665-5f3e-4d66-96b8-4a7ad9f7af92",
+                                    "id": "36dfe535-68ce-4707-8a41-0a5c3c49aa6b",
                                     "name": "Not Found",
                                     "originalRequest": {
                                         "url": {
@@ -1372,7 +1372,7 @@
                                     "_postman_previewlanguage": "json"
                                 },
                                 {
-                                    "id": "c1f2a676-9e22-4933-bfc0-4bc7dc70cfbb",
+                                    "id": "4397ec7b-b8bf-4812-95d1-2fc72570fee7",
                                     "name": "Not Acceptable",
                                     "originalRequest": {
                                         "url": {
@@ -1427,7 +1427,7 @@
                                     "_postman_previewlanguage": "json"
                                 },
                                 {
-                                    "id": "78056b97-caa2-4d36-aac7-75dc6642ff79",
+                                    "id": "6d06993f-d48a-4fc0-b643-c14709db9643",
                                     "name": "Internal Server Error",
                                     "originalRequest": {
                                         "url": {
@@ -1500,7 +1500,7 @@
         }
     ],
     "info": {
-        "_postman_id": "c66c5c89-844f-444a-8918-c52784fd1acc",
+        "_postman_id": "89f72f30-b4e1-4df7-8602-6d332ea7652b",
         "name": "Waardering onroerende zaken",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
         "description": {
