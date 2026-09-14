@@ -3,7 +3,7 @@
   "defaultVariables": null,
   "documentGenerator": {
     "fromDocument": {
-      "url": "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen/master/specificatie/genereervariant/openapi.yaml",
+      "url": "https://raw.githubusercontent.com/kadaster/WOZ-bevragen/master/specificatie/genereervariant/openapi.yaml",
       "output": null,
       "newLineBehavior": "Auto"
     }

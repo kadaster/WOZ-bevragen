@@ -5,13 +5,17 @@ info:
   version: "1.0.0"
   title: Waardering onroerende zaken
   contact:
-    url: https://github.com/VNG-Realisatie/Haal-Centraal-WOZ-bevragen
+    url: https://github.com/kadaster/WOZ-bevragen
   license:
     name: European Union Public License, version 1.2 (EUPL-1.2)
     url: https://eupl.eu/1.2/nl/
 servers:
+  - description: ETO Omgeving WOZ-Bevragen
+    url: https://virtserver.swaggerhub.com/kadaster/WOZ-bevragen/1.0.0
+  - description: Productie Omgeving WOZ-Bevragen
+    url: https://virtserver.swaggerhub.com/kadaster/WOZ-bevragen/1.0.0
   - description: SwaggerHub API Auto Mocking
-    url: https://virtserver.swaggerhub.com/VNG-sandbox/Waardering-onroerende-zaken/1.0.0
+    url: https://virtserver.swaggerhub.com/kadaster/WOZ-bevragen/1.0.0
 tags:
   - name: WOZ-objecten
 paths:
@@ -89,9 +93,9 @@ paths:
             type: string
             pattern: "^[a-zA-Z]$"
             example: "A"
-        - $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/parameters/fields"
-        - $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/parameters/page"
-        - $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/parameters/pageSize"
+        - $ref: "./common/common.yaml#/components/parameters/fields"
+        - $ref: "./common/common.yaml#/components/parameters/page"
+        - $ref: "./common/common.yaml#/components/parameters/pageSize"
       responses:
         '200':
           description: OK
@@ -101,23 +105,23 @@ paths:
                 $ref: '#/components/schemas/WozObjectHalCollectie'
           headers:
             api-version:
-              $ref: 'https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/headers/api_version'
+              $ref: './common/common.yaml#/components/headers/api_version'
             X-Pagination-Page:
-              $ref: 'https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/headers/X_Pagination_Page'
+              $ref: './common/common.yaml#/components/headers/X_Pagination_Page'
             X-Pagination-Limit:
-              $ref: 'https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/headers/X_Pagination_Limit'
+              $ref: './common/common.yaml#/components/headers/X_Pagination_Limit'
             warning:
-              $ref: 'https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/headers/warning'
+              $ref: './common/common.yaml#/components/headers/warning'
         '400':
-          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/responses/400"
+          $ref: "./common/common.yaml#/components/responses/400"
         '401':
-          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/responses/401"
+          $ref: "./common/common.yaml#/components/responses/401"
         '403':
-          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/responses/403"
+          $ref: "./common/common.yaml#/components/responses/403"
         '406':
-          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/responses/406"
+          $ref: "./common/common.yaml#/components/responses/406"
         '500':
-          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/responses/500"
+          $ref: "./common/common.yaml#/components/responses/500"
   /wozobjecten/{identificatie}:
     get:
       tags:
@@ -134,7 +138,7 @@ paths:
           schema:
             type: string
             pattern: "^[0-9]{12}$"
-        - $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/parameters/fields"
+        - $ref: "./common/common.yaml#/components/parameters/fields"
       responses:
         '200':
           description: OK
@@ -144,21 +148,21 @@ paths:
                 $ref: '#/components/schemas/WozObjectHal'
           headers:
             api-version:
-              $ref: 'https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/headers/api_version'
+              $ref: './common/common.yaml#/components/headers/api_version'
             warning:
-              $ref: 'https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/headers/warning'
+              $ref: './common/common.yaml#/components/headers/warning'
         '400':
-          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/responses/400"
+          $ref: "./common/common.yaml#/components/responses/400"
         '401':
-          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/responses/401"
+          $ref: "./common/common.yaml#/components/responses/401"
         '403':
-          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/responses/403"
+          $ref: "./common/common.yaml#/components/responses/403"
         '404':
-          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/responses/404"
+          $ref: "./common/common.yaml#/components/responses/404"
         '406':
-          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/responses/406"
+          $ref: "./common/common.yaml#/components/responses/406"
         '500':
-          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/responses/500"
+          $ref: "./common/common.yaml#/components/responses/500"
 components:
   schemas:
     Belanghebbende :
@@ -211,7 +215,7 @@ components:
           type: string
     ObjectAanduiding:
       allOf:
-        - $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-BAG-bevragen/v1.1.0/specificatie/openapi.yaml#/components/schemas/Adres"
+        - $ref: "https://api.bag.kadaster.nl/lvbag/individuelebevragingen/v2/openapi.yaml#/components/schemas/Adres"
         - type: object
           description: "De aanduiding van het WOZ-object zoals wordt weergegeven op de WOZ-beschikking"
           properties:
@@ -341,7 +345,7 @@ components:
           items:
             type: string
         verantwoordelijkeGemeente:
-          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/schemas/Waardetabel"
+          $ref: "./common/common.yaml#/components/schemas/Waardetabel"
         waarden:
           type: array
           items:
@@ -350,25 +354,25 @@ components:
       type: object
       properties:
         self:
-          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/schemas/HalLink"
+          $ref: "./common/common.yaml#/components/schemas/HalLink"
         adres:
-          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/schemas/HalLink"
+          $ref: "./common/common.yaml#/components/schemas/HalLink"
         adresseerbareObjecten:
           type: array
           items:
-            $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/schemas/HalLink"
+            $ref: "./common/common.yaml#/components/schemas/HalLink"
         belanghebbendeEigenaar:
-          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/schemas/HalLink"
+          $ref: "./common/common.yaml#/components/schemas/HalLink"
         belanghebbendeGebruiker:
-          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/schemas/HalLink"
+          $ref: "./common/common.yaml#/components/schemas/HalLink"
         panden:
           type: array
           items:
-            $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/schemas/HalLink"
+            $ref: "./common/common.yaml#/components/schemas/HalLink"
         kadastraalOnroerendeZaken:
           type: array
           items:
-            $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/schemas/HalLink"
+            $ref: "./common/common.yaml#/components/schemas/HalLink"
     WozObjectHal:
       allOf:
         - $ref: '#/components/schemas/WozObject'
@@ -380,7 +384,7 @@ components:
       type: object
       properties:
         _links:
-          $ref: 'https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.3.0/api-specificatie/common.yaml#/components/schemas/HalPaginationLinks'
+          $ref: './common/common.yaml#/components/schemas/HalPaginationLinks'
         _embedded:
           $ref: '#/components/schemas/WozObjectHalCollectieEmbedded'
     WozObjectHalCollectieEmbedded:

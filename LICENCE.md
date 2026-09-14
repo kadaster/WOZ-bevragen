@@ -1,7 +1,7 @@
 # Licence
 
-Copyright © VNG Realisatie 2018
-Licensed under the EUPL
+Copyright © Het Kadaster 2026
+Licensed under the [EUPL](https://github.com/kadaster/WOZ-bevragen/blob/master/LICENCE.md)
 
 **Table of Contents**
 
